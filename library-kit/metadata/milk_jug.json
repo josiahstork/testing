@@ -1,0 +1,180 @@
+{
+  "id": "milk_jug",
+  "asset": "milk_jug",
+  "label": "milk jug",
+  "transform": {
+    "x": 495,
+    "y": 691,
+    "width": 80,
+    "height": 73.2824,
+    "rotation_deg": 0,
+    "origin_uv": [
+      0,
+      0
+    ],
+    "scale": 0.061068702290076333
+  },
+  "z": 79,
+  "depth_sort": "explicit_z; held objects reparent to character hand",
+  "support": "tea_table",
+  "physics": {
+    "body_type": "dynamic",
+    "mass_kg_estimate": 0.2,
+    "material": "porcelain",
+    "gravity_m_s2": 9.81,
+    "gravity_projected_px_s2": 0,
+    "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+    "friction_static": 0.65,
+    "friction_dynamic": 0.45,
+    "restitution": 0.03,
+    "center_of_mass_uv": [
+      0.5,
+      0.62
+    ],
+    "contact_uv": [
+      0.5,
+      0.94
+    ],
+    "collision": {
+      "type": "convex_polygon",
+      "space": "source_uv",
+      "vertices": [
+        [
+          0.12,
+          0.18
+        ],
+        [
+          0.82,
+          0.12
+        ],
+        [
+          0.96,
+          0.5
+        ],
+        [
+          0.83,
+          0.94
+        ],
+        [
+          0.2,
+          0.94
+        ],
+        [
+          0.05,
+          0.55
+        ]
+      ],
+      "accuracy": "conservative authored proxy; alpha hit testing is separate"
+    },
+    "rotation_constraints_deg": [
+      -15,
+      15
+    ],
+    "free_fall_enabled": false,
+    "breakage_enabled": false,
+    "design_values_only": true
+  },
+  "hit_test": {
+    "mode": "source_alpha",
+    "alpha_threshold": 32,
+    "skip_transparent_holes": true,
+    "inverse_transform_pointer": true,
+    "minimum_target_css_px": 24,
+    "hit_slop_css_px": 3,
+    "priority": 79,
+    "accessible_label": "milk jug"
+  },
+  "anchors": {
+    "grip_handle": [
+      0.15,
+      0.35
+    ],
+    "spout_tip": [
+      0.946,
+      0.15
+    ],
+    "mouth_center": [
+      0.56,
+      0.225
+    ],
+    "base": [
+      0.57,
+      0.93
+    ]
+  },
+  "interaction": {
+    "clickable": true,
+    "draggable": true,
+    "pickup": true,
+    "return_on_invalid_drop": true,
+    "return_duration_ms": 300,
+    "keyboard": [
+      "Enter",
+      "Space"
+    ],
+    "actions": [
+      "inspect",
+      "pick_up",
+      "put_down",
+      "pour"
+    ]
+  },
+  "shadow": {
+    "implementation": "runtime ellipse on support; never bake into sprite",
+    "opacity": 0.2,
+    "blur_scene_px": 6,
+    "detach_on_pickup": false,
+    "fade_with_lift": true
+  },
+  "states": {
+    "initial": "idle",
+    "available_raster_states": [
+      "idle"
+    ],
+    "additional_pose_rasters_included": false
+  },
+  "calibration": {
+    "status": "first-pass authored placement",
+    "anchors": "visually estimated against this exact generated raster",
+    "physics": "plausible design estimates, not measured physical properties"
+  },
+  "liquid": {
+    "capacity_ml_estimate": 200,
+    "initial_volume_ml": 0,
+    "temperature_c": 20,
+    "spills_enabled": false,
+    "spill_warning_tilt_deg": 20,
+    "pour_start_tilt_deg": 35,
+    "pour_stop_tilt_deg": 20,
+    "flow_ml_s": 15,
+    "volume_conservation_required": true,
+    "stream": "procedural quadratic curve from world transformed spout to cup liquid_center",
+    "stream_gravity_scene_px_s2": 350,
+    "target_acceptance_radius_scene_px": 8,
+    "stop_when_empty_or_target_full": true,
+    "interior_fill_art_included": false,
+    "note": "Empty initial state matches supplied raster. Filled state needs masked surface rendering."
+  },
+  "pickup_contract": {
+    "hand_anchor": "grip_handle",
+    "approach_clearance_scene_px": 12,
+    "finger_occlusion": "split character hand into palm behind prop and fingers in front",
+    "preserve_world_transform_on_reparent": true,
+    "held_z": 100,
+    "held_gravity": false,
+    "max_lift_scene_px": 180,
+    "max_translation_speed_scene_px_s": 240,
+    "rotation_pivot": "grip_handle",
+    "rotation_limits_deg": [
+      -10,
+      60
+    ],
+    "surface_clearance_before_rotation_scene_px": 18,
+    "accept_drop_on": [
+      "tea_table"
+    ],
+    "collision_with_other_teaware": true,
+    "requires_character_pose": true,
+    "character_art_included": false
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "astrolabe",
+  "asset": "astrolabe",
+  "label": "astrolabe",
+  "transform": {
+    "x": 310,
+    "y": 419,
+    "width": 92,
+    "height": 110.4,
+    "rotation_deg": 0,
+    "origin_uv": [
+      0,
+      0
+    ],
+    "scale": 0.08034934497816594
+  },
+  "z": 47,
+  "depth_sort": "explicit_z; held objects reparent to character hand",
+  "support": "left_stone_shelf",
+  "physics": {
+    "body_type": "static",
+    "mass_kg_estimate": 5,
+    "material": "brass",
+    "gravity_m_s2": 0,
+    "gravity_projected_px_s2": 0,
+    "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+    "friction_static": 0.65,
+    "friction_dynamic": 0.45,
+    "restitution": 0.03,
+    "center_of_mass_uv": [
+      0.5,
+      0.62
+    ],
+    "contact_uv": [
+      0.5,
+      0.94
+    ],
+    "collision": {
+      "type": "convex_polygon",
+      "space": "source_uv",
+      "vertices": [
+        [
+          0.12,
+          0.18
+        ],
+        [
+          0.82,
+          0.12
+        ],
+        [
+          0.96,
+          0.5
+        ],
+        [
+          0.83,
+          0.94
+        ],
+        [
+          0.2,
+          0.94
+        ],
+        [
+          0.05,
+          0.55
+        ]
+      ],
+      "accuracy": "conservative authored proxy; alpha hit testing is separate"
+    },
+    "rotation_constraints_deg": [
+      0,
+      0
+    ],
+    "free_fall_enabled": false,
+    "breakage_enabled": false,
+    "design_values_only": true
+  },
+  "hit_test": {
+    "mode": "source_alpha",
+    "alpha_threshold": 32,
+    "skip_transparent_holes": true,
+    "inverse_transform_pointer": true,
+    "minimum_target_css_px": 24,
+    "hit_slop_css_px": 3,
+    "priority": 47,
+    "accessible_label": "astrolabe"
+  },
+  "anchors": {
+    "ring_center": [
+      0.51,
+      0.36
+    ],
+    "base": [
+      0.51,
+      0.95
+    ],
+    "ring_grip": [
+      0.8,
+      0.32
+    ]
+  },
+  "interaction": {
+    "clickable": true,
+    "draggable": false,
+    "pickup": false,
+    "return_on_invalid_drop": true,
+    "return_duration_ms": 300,
+    "keyboard": [
+      "Enter",
+      "Space"
+    ],
+    "actions": [
+      "inspect"
+    ]
+  },
+  "shadow": {
+    "implementation": "runtime ellipse on support; never bake into sprite",
+    "opacity": 0.2,
+    "blur_scene_px": 6,
+    "detach_on_pickup": false,
+    "fade_with_lift": true
+  },
+  "states": {
+    "initial": "idle",
+    "available_raster_states": [
+      "idle"
+    ],
+    "additional_pose_rasters_included": false
+  },
+  "calibration": {
+    "status": "first-pass authored placement",
+    "anchors": "visually estimated against this exact generated raster",
+    "physics": "plausible design estimates, not measured physical properties"
+  },
+  "mechanism": {
+    "type": "nested_gimbals",
+    "pivot_anchor": "ring_center",
+    "base_fixed": true,
+    "available": false,
+    "requires": "Separate ring rasters with back/front occlusion masks or 3D geometry. Whole-image rotation would wrongly rotate base.",
+    "ring_limits_deg": [
+      -35,
+      35
+    ]
+  }
+}

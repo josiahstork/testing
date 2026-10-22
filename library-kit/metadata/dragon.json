@@ -1,0 +1,228 @@
+{
+  "id": "dragon",
+  "asset": "dragon",
+  "label": "dragon",
+  "transform": {
+    "x": 850,
+    "y": 470,
+    "width": 450,
+    "height": 300.0,
+    "rotation_deg": 0,
+    "origin_uv": [
+      0,
+      0
+    ],
+    "scale": 0.29296875
+  },
+  "z": 50,
+  "depth_sort": "explicit_z; held objects reparent to character hand",
+  "support": "rug",
+  "physics": {
+    "body_type": "kinematic",
+    "mass_kg_estimate": 450,
+    "material": "living_creature",
+    "gravity_m_s2": 0,
+    "gravity_projected_px_s2": 0,
+    "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+    "friction_static": 0.65,
+    "friction_dynamic": 0.45,
+    "restitution": 0.03,
+    "center_of_mass_uv": [
+      0.5,
+      0.62
+    ],
+    "contact_uv": [
+      0.5,
+      0.94
+    ],
+    "collision": {
+      "type": "convex_polygon",
+      "space": "source_uv",
+      "vertices": [
+        [
+          0.035,
+          0.72
+        ],
+        [
+          0.32,
+          0.35
+        ],
+        [
+          0.46,
+          0.1
+        ],
+        [
+          0.84,
+          0.17
+        ],
+        [
+          0.98,
+          0.64
+        ],
+        [
+          0.94,
+          0.88
+        ],
+        [
+          0.55,
+          0.9
+        ],
+        [
+          0.12,
+          0.8
+        ]
+      ],
+      "accuracy": "conservative authored proxy; alpha hit testing is separate"
+    },
+    "rotation_constraints_deg": [
+      0,
+      0
+    ],
+    "free_fall_enabled": false,
+    "breakage_enabled": false,
+    "design_values_only": true
+  },
+  "hit_test": {
+    "mode": "source_alpha",
+    "alpha_threshold": 32,
+    "skip_transparent_holes": true,
+    "inverse_transform_pointer": true,
+    "minimum_target_css_px": 24,
+    "hit_slop_css_px": 3,
+    "priority": 50,
+    "accessible_label": "dragon"
+  },
+  "anchors": {
+    "nostril_near": [
+      0.076,
+      0.738
+    ],
+    "nostril_far": [
+      0.038,
+      0.751
+    ],
+    "chest": [
+      0.5,
+      0.63
+    ],
+    "head": [
+      0.17,
+      0.68
+    ],
+    "ground": [
+      0.62,
+      0.88
+    ]
+  },
+  "interaction": {
+    "clickable": true,
+    "draggable": false,
+    "pickup": false,
+    "return_on_invalid_drop": true,
+    "return_duration_ms": 300,
+    "keyboard": [
+      "Enter",
+      "Space"
+    ],
+    "actions": [
+      "inspect",
+      "exhale_smoke"
+    ]
+  },
+  "shadow": {
+    "implementation": "runtime ellipse on support; never bake into sprite",
+    "opacity": 0.2,
+    "blur_scene_px": 6,
+    "detach_on_pickup": false,
+    "fade_with_lift": true
+  },
+  "states": {
+    "initial": "idle",
+    "available_raster_states": [
+      "idle"
+    ],
+    "additional_pose_rasters_included": false
+  },
+  "calibration": {
+    "status": "first-pass authored placement",
+    "anchors": "visually estimated against this exact generated raster",
+    "physics": "plausible design estimates, not measured physical properties"
+  },
+  "animation": {
+    "idle_breath": {
+      "implementation": "optional subtle local mesh deformation",
+      "period_s": 4.5,
+      "chest_scale_y": [
+        1,
+        1.012
+      ],
+      "pin_anchor": "ground",
+      "whole_sprite_scaling": false,
+      "enabled_by_default": false,
+      "note": "No skeletal rig or alternate frames included. Do not scale floor-contact points."
+    },
+    "smoke": {
+      "type": "runtime_particles",
+      "raster_frames_included": false,
+      "trigger": "click",
+      "cooldown_s": 1.8,
+      "emitters": [
+        {
+          "anchor": "nostril_near",
+          "direction_uv": [
+            -0.95,
+            -0.32
+          ]
+        },
+        {
+          "anchor": "nostril_far",
+          "direction_uv": [
+            -0.95,
+            -0.28
+          ]
+        }
+      ],
+      "burst_count_per_nostril": [
+        5,
+        8
+      ],
+      "duration_s": 0.65,
+      "particle_lifetime_s": [
+        1.1,
+        2.1
+      ],
+      "speed_scene_px_s": [
+        12,
+        28
+      ],
+      "buoyancy_scene_px_s2": -16,
+      "wind_source": "weather.interior_draft",
+      "radius_scene_px": [
+        2,
+        14
+      ],
+      "opacity_curve": [
+        [
+          0,
+          0
+        ],
+        [
+          0.15,
+          0.4
+        ],
+        [
+          0.6,
+          0.22
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "color": "#b4b5c0",
+      "layer": "above dragon; respect foreground furnishing occlusion",
+      "max_live_particles": 48,
+      "reduced_motion": "single fading puff"
+    }
+  }
+}

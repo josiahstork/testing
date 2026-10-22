@@ -1,0 +1,180 @@
+{
+  "id": "cauldron",
+  "asset": "cauldron",
+  "label": "cauldron",
+  "transform": {
+    "x": 455,
+    "y": 380,
+    "width": 148,
+    "height": 135.253,
+    "rotation_deg": 0,
+    "origin_uv": [
+      0,
+      0
+    ],
+    "scale": 0.11280487804878049
+  },
+  "z": 46,
+  "depth_sort": "explicit_z; held objects reparent to character hand",
+  "support": "hearth",
+  "physics": {
+    "body_type": "static",
+    "mass_kg_estimate": 35,
+    "material": "cast_iron",
+    "gravity_m_s2": 0,
+    "gravity_projected_px_s2": 0,
+    "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+    "friction_static": 0.65,
+    "friction_dynamic": 0.45,
+    "restitution": 0.03,
+    "center_of_mass_uv": [
+      0.5,
+      0.62
+    ],
+    "contact_uv": [
+      0.5,
+      0.94
+    ],
+    "collision": {
+      "type": "convex_polygon",
+      "space": "source_uv",
+      "vertices": [
+        [
+          0.12,
+          0.18
+        ],
+        [
+          0.82,
+          0.12
+        ],
+        [
+          0.96,
+          0.5
+        ],
+        [
+          0.83,
+          0.94
+        ],
+        [
+          0.2,
+          0.94
+        ],
+        [
+          0.05,
+          0.55
+        ]
+      ],
+      "accuracy": "conservative authored proxy; alpha hit testing is separate"
+    },
+    "rotation_constraints_deg": [
+      0,
+      0
+    ],
+    "free_fall_enabled": false,
+    "breakage_enabled": false,
+    "design_values_only": true
+  },
+  "hit_test": {
+    "mode": "source_alpha",
+    "alpha_threshold": 32,
+    "skip_transparent_holes": true,
+    "inverse_transform_pointer": true,
+    "minimum_target_css_px": 24,
+    "hit_slop_css_px": 3,
+    "priority": 46,
+    "accessible_label": "cauldron"
+  },
+  "anchors": {
+    "rim_center": [
+      0.52,
+      0.22
+    ],
+    "handle_left": [
+      0.11,
+      0.37
+    ],
+    "handle_right": [
+      0.9,
+      0.39
+    ],
+    "steam_origin": [
+      0.52,
+      0.21
+    ],
+    "fire_origin": [
+      0.52,
+      0.91
+    ]
+  },
+  "interaction": {
+    "clickable": true,
+    "draggable": false,
+    "pickup": false,
+    "return_on_invalid_drop": true,
+    "return_duration_ms": 300,
+    "keyboard": [
+      "Enter",
+      "Space"
+    ],
+    "actions": [
+      "inspect",
+      "toggle_steam"
+    ]
+  },
+  "shadow": {
+    "implementation": "runtime ellipse on support; never bake into sprite",
+    "opacity": 0.2,
+    "blur_scene_px": 6,
+    "detach_on_pickup": false,
+    "fade_with_lift": true
+  },
+  "states": {
+    "initial": "idle",
+    "available_raster_states": [
+      "idle"
+    ],
+    "additional_pose_rasters_included": false
+  },
+  "calibration": {
+    "status": "first-pass authored placement",
+    "anchors": "visually estimated against this exact generated raster",
+    "physics": "plausible design estimates, not measured physical properties"
+  },
+  "liquid": {
+    "capacity_l_estimate": 20,
+    "fill_fraction": 0.65,
+    "temperature_c_estimate": 80,
+    "surface_ellipse_uv": [
+      0.52,
+      0.22,
+      0.32,
+      0.105
+    ],
+    "surface_art_baked": true,
+    "pourable": false,
+    "hot_surface": true
+  },
+  "animation": {
+    "steam": {
+      "anchor": "steam_origin",
+      "particle_count": 18,
+      "lifetime_s": [
+        1.2,
+        2.5
+      ],
+      "velocity_scene_px_s": [
+        0,
+        -15
+      ],
+      "spread_deg": 25,
+      "color": "#c3ddbe",
+      "opacity_max": 0.18
+    },
+    "fire": {
+      "anchor": "fire_origin",
+      "enabled": false,
+      "raster_included": false,
+      "note": "Fire must remain behind cauldron but in front of hearth."
+    }
+  }
+}

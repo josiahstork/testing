@@ -1,0 +1,149 @@
+{
+  "id": "teapot_lid",
+  "asset": "teapot_lid",
+  "label": "teapot lid",
+  "transform": {
+    "x": 213.628,
+    "y": 651.8667,
+    "width": 85,
+    "height": 56.6667,
+    "rotation_deg": 0,
+    "origin_uv": [
+      0,
+      0
+    ],
+    "scale": 0.055338541666666664
+  },
+  "z": 76,
+  "depth_sort": "explicit_z; held objects reparent to character hand",
+  "support": "teapot",
+  "physics": {
+    "body_type": "dynamic",
+    "mass_kg_estimate": 0.1,
+    "material": "porcelain",
+    "gravity_m_s2": 9.81,
+    "gravity_projected_px_s2": 0,
+    "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+    "friction_static": 0.65,
+    "friction_dynamic": 0.45,
+    "restitution": 0.03,
+    "center_of_mass_uv": [
+      0.5,
+      0.62
+    ],
+    "contact_uv": [
+      0.5,
+      0.94
+    ],
+    "collision": {
+      "type": "convex_polygon",
+      "space": "source_uv",
+      "vertices": [
+        [
+          0.12,
+          0.18
+        ],
+        [
+          0.82,
+          0.12
+        ],
+        [
+          0.96,
+          0.5
+        ],
+        [
+          0.83,
+          0.94
+        ],
+        [
+          0.2,
+          0.94
+        ],
+        [
+          0.05,
+          0.55
+        ]
+      ],
+      "accuracy": "conservative authored proxy; alpha hit testing is separate"
+    },
+    "rotation_constraints_deg": [
+      -15,
+      15
+    ],
+    "free_fall_enabled": false,
+    "breakage_enabled": false,
+    "design_values_only": true
+  },
+  "hit_test": {
+    "mode": "source_alpha",
+    "alpha_threshold": 32,
+    "skip_transparent_holes": true,
+    "inverse_transform_pointer": true,
+    "minimum_target_css_px": 24,
+    "hit_slop_css_px": 3,
+    "priority": 76,
+    "accessible_label": "teapot lid"
+  },
+  "anchors": {
+    "grip_knob": [
+      0.5,
+      0.18
+    ],
+    "seat": [
+      0.5,
+      0.76
+    ],
+    "base": [
+      0.5,
+      0.79
+    ]
+  },
+  "interaction": {
+    "clickable": true,
+    "draggable": true,
+    "pickup": true,
+    "return_on_invalid_drop": true,
+    "return_duration_ms": 300,
+    "keyboard": [
+      "Enter",
+      "Space"
+    ],
+    "actions": [
+      "inspect",
+      "pick_up",
+      "put_down"
+    ]
+  },
+  "shadow": {
+    "implementation": "runtime ellipse on support; never bake into sprite",
+    "opacity": 0.2,
+    "blur_scene_px": 6,
+    "detach_on_pickup": false,
+    "fade_with_lift": true
+  },
+  "states": {
+    "initial": "idle",
+    "available_raster_states": [
+      "idle"
+    ],
+    "additional_pose_rasters_included": false
+  },
+  "calibration": {
+    "status": "first-pass authored placement",
+    "anchors": "visually estimated against this exact generated raster",
+    "physics": "plausible design estimates, not measured physical properties"
+  },
+  "pickup_contract": {
+    "hand_anchor": "grip_knob",
+    "rotation_limits_deg": [
+      -10,
+      10
+    ],
+    "accept_drop_on": [
+      "tea_table",
+      "teapot.lid_seat"
+    ],
+    "snap_radius_scene_px": 12,
+    "snap_preserves_scale": true
+  }
+}

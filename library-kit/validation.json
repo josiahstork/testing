@@ -1,0 +1,155 @@
+{
+  "asset_count": 14,
+  "interactive_object_count": 11,
+  "checks": [
+    {
+      "id": "room",
+      "png_decodes": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "has_alpha": true,
+      "sha256": "4d123f960f25e7c47d26f4d94c988567b98052c67681976e940a3e2ad2e9b0a7"
+    },
+    {
+      "id": "outside_day",
+      "png_decodes": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "has_alpha": false,
+      "sha256": "1c340d9c353b5fe03468914b486547f56734e51d5c13b63c6a55befaba47c0b6"
+    },
+    {
+      "id": "furnishings",
+      "png_decodes": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "has_alpha": true,
+      "sha256": "94fa1344338e5549fab3fa886b02f575b6ccdd48cc619d1fe18b9da26d18059b"
+    },
+    {
+      "id": "dragon",
+      "png_decodes": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "has_alpha": true,
+      "sha256": "18e8494e169182a1f4941c8a0244ae3fd68f0b24ea88b08a9b137ab61df975f0"
+    },
+    {
+      "id": "gargoyle",
+      "png_decodes": true,
+      "size": [
+        1226,
+        1283
+      ],
+      "has_alpha": true,
+      "sha256": "c6ca869d1d34b42c1223f4b115259f2d831e598a10fd3f6c1dc827bf743a5643"
+    },
+    {
+      "id": "ladder",
+      "png_decodes": true,
+      "size": [
+        1024,
+        1536
+      ],
+      "has_alpha": true,
+      "sha256": "b9c934584c598008b5e1c98b621bfe1a670d399c18aca86273e1c9da4b335dfb"
+    },
+    {
+      "id": "chest",
+      "png_decodes": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "has_alpha": true,
+      "sha256": "145f6eef6403854f628615f19564f97836174b9ac810aa5262e4acd8b0c81e69"
+    },
+    {
+      "id": "cauldron",
+      "png_decodes": true,
+      "size": [
+        1312,
+        1199
+      ],
+      "has_alpha": true,
+      "sha256": "3ae15df422334e63773285eb70927e28efe9cadd9788fc26abc08a725c9c3f6c"
+    },
+    {
+      "id": "astrolabe",
+      "png_decodes": true,
+      "size": [
+        1145,
+        1374
+      ],
+      "has_alpha": true,
+      "sha256": "1f3f4f28207ce0043085402c83fe3be59a2e1e3fbc718702be91a82340f6390f"
+    },
+    {
+      "id": "teapot",
+      "png_decodes": true,
+      "size": [
+        1374,
+        1145
+      ],
+      "has_alpha": true,
+      "sha256": "0a5c6ddf4ba7a55dde5dbc9d18f146000a3711a54bb2817cd2e9272efacb19ee"
+    },
+    {
+      "id": "teapot_lid",
+      "png_decodes": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "has_alpha": true,
+      "sha256": "e1e7f58c875bcbc080037f5a144e3fbe136fa1d30e4da1c297c98a0ef5bd83a4"
+    },
+    {
+      "id": "teacup",
+      "png_decodes": true,
+      "size": [
+        1312,
+        1199
+      ],
+      "has_alpha": true,
+      "sha256": "9e5b2e4948e889803dd3324a833d81839c92f189c41d382c8ca849bf4d4d6fc6"
+    },
+    {
+      "id": "saucer",
+      "png_decodes": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "has_alpha": true,
+      "sha256": "3b2bfbafb1d03681fe8f9263857684dccb40f81c83cd8f758cc49c78ff97e028"
+    },
+    {
+      "id": "milk_jug",
+      "png_decodes": true,
+      "size": [
+        1310,
+        1200
+      ],
+      "has_alpha": true,
+      "sha256": "7eb08f8825281b0ff04929d71d487b4da2845d1ffabacfa25bab0240e62a7e5f"
+    },
+    {
+      "attachment": "teapot_lid -> teapot",
+      "anchor_error_px": 4.999999998744897e-05
+    },
+    {
+      "attachment": "teacup -> saucer",
+      "anchor_error_px": 4.549999994196696e-05
+    }
+  ],
+  "all_objects_in_canvas": true
+}

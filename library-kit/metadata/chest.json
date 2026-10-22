@@ -1,0 +1,159 @@
+{
+  "id": "chest",
+  "asset": "chest",
+  "label": "chest",
+  "transform": {
+    "x": 1260,
+    "y": 677,
+    "width": 238,
+    "height": 158.6667,
+    "rotation_deg": 0,
+    "origin_uv": [
+      0,
+      0
+    ],
+    "scale": 0.15494791666666666
+  },
+  "z": 57,
+  "depth_sort": "explicit_z; held objects reparent to character hand",
+  "support": "floor",
+  "physics": {
+    "body_type": "static",
+    "mass_kg_estimate": 45,
+    "material": "oak_brass",
+    "gravity_m_s2": 0,
+    "gravity_projected_px_s2": 0,
+    "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+    "friction_static": 0.65,
+    "friction_dynamic": 0.45,
+    "restitution": 0.03,
+    "center_of_mass_uv": [
+      0.5,
+      0.62
+    ],
+    "contact_uv": [
+      0.5,
+      0.94
+    ],
+    "collision": {
+      "type": "convex_polygon",
+      "space": "source_uv",
+      "vertices": [
+        [
+          0.12,
+          0.18
+        ],
+        [
+          0.82,
+          0.12
+        ],
+        [
+          0.96,
+          0.5
+        ],
+        [
+          0.83,
+          0.94
+        ],
+        [
+          0.2,
+          0.94
+        ],
+        [
+          0.05,
+          0.55
+        ]
+      ],
+      "accuracy": "conservative authored proxy; alpha hit testing is separate"
+    },
+    "rotation_constraints_deg": [
+      0,
+      0
+    ],
+    "free_fall_enabled": false,
+    "breakage_enabled": false,
+    "design_values_only": true
+  },
+  "hit_test": {
+    "mode": "source_alpha",
+    "alpha_threshold": 32,
+    "skip_transparent_holes": true,
+    "inverse_transform_pointer": true,
+    "minimum_target_css_px": 24,
+    "hit_slop_css_px": 3,
+    "priority": 57,
+    "accessible_label": "chest"
+  },
+  "anchors": {
+    "latch": [
+      0.384,
+      0.61
+    ],
+    "lid_hinge_left": [
+      0.185,
+      0.11
+    ],
+    "lid_hinge_right": [
+      0.83,
+      0.26
+    ],
+    "handle": [
+      0.85,
+      0.64
+    ],
+    "base": [
+      0.5,
+      0.92
+    ]
+  },
+  "interaction": {
+    "clickable": true,
+    "draggable": false,
+    "pickup": false,
+    "return_on_invalid_drop": true,
+    "return_duration_ms": 300,
+    "keyboard": [
+      "Enter",
+      "Space"
+    ],
+    "actions": [
+      "inspect"
+    ]
+  },
+  "shadow": {
+    "implementation": "runtime ellipse on support; never bake into sprite",
+    "opacity": 0.2,
+    "blur_scene_px": 6,
+    "detach_on_pickup": false,
+    "fade_with_lift": true
+  },
+  "states": {
+    "initial": "idle",
+    "available_raster_states": [
+      "idle"
+    ],
+    "additional_pose_rasters_included": false
+  },
+  "calibration": {
+    "status": "first-pass authored placement",
+    "anchors": "visually estimated against this exact generated raster",
+    "physics": "plausible design estimates, not measured physical properties"
+  },
+  "mechanism": {
+    "type": "rear_hinged_lid",
+    "hinge_anchors": [
+      "lid_hinge_left",
+      "lid_hinge_right"
+    ],
+    "open_angle_deg": 100,
+    "duration_ms": 900,
+    "requires": [
+      "separate chest body",
+      "separate lid",
+      "interior and treasure raster"
+    ],
+    "available": false,
+    "reason": "Only closed combined sprite exists; rotating whole chest cannot simulate lid opening.",
+    "latch_requires_unlock": true
+  }
+}

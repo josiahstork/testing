@@ -1,0 +1,176 @@
+{
+  "id": "ladder",
+  "asset": "ladder",
+  "label": "ladder",
+  "transform": {
+    "x": 1040,
+    "y": 200,
+    "width": 300,
+    "height": 450.0,
+    "rotation_deg": 0,
+    "origin_uv": [
+      0,
+      0
+    ],
+    "scale": 0.29296875
+  },
+  "z": 48,
+  "depth_sort": "explicit_z; held objects reparent to character hand",
+  "support": "library_rail",
+  "physics": {
+    "body_type": "kinematic",
+    "mass_kg_estimate": 20,
+    "material": "oak_brass",
+    "gravity_m_s2": 0,
+    "gravity_projected_px_s2": 0,
+    "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+    "friction_static": 0.65,
+    "friction_dynamic": 0.45,
+    "restitution": 0.03,
+    "center_of_mass_uv": [
+      0.5,
+      0.62
+    ],
+    "contact_uv": [
+      0.5,
+      0.94
+    ],
+    "collision": {
+      "type": "convex_polygon",
+      "space": "source_uv",
+      "vertices": [
+        [
+          0.12,
+          0.18
+        ],
+        [
+          0.82,
+          0.12
+        ],
+        [
+          0.96,
+          0.5
+        ],
+        [
+          0.83,
+          0.94
+        ],
+        [
+          0.2,
+          0.94
+        ],
+        [
+          0.05,
+          0.55
+        ]
+      ],
+      "accuracy": "conservative authored proxy; alpha hit testing is separate"
+    },
+    "rotation_constraints_deg": [
+      0,
+      0
+    ],
+    "free_fall_enabled": false,
+    "breakage_enabled": false,
+    "design_values_only": true
+  },
+  "hit_test": {
+    "mode": "source_alpha",
+    "alpha_threshold": 32,
+    "skip_transparent_holes": true,
+    "inverse_transform_pointer": true,
+    "minimum_target_css_px": 24,
+    "hit_slop_css_px": 3,
+    "priority": 48,
+    "accessible_label": "ladder"
+  },
+  "anchors": {
+    "rail_hook_left": [
+      0.61,
+      0.035
+    ],
+    "rail_hook_right": [
+      0.81,
+      0.035
+    ],
+    "foot_left": [
+      0.205,
+      0.9
+    ],
+    "foot_right": [
+      0.45,
+      0.97
+    ],
+    "grip": [
+      0.52,
+      0.53
+    ]
+  },
+  "interaction": {
+    "clickable": true,
+    "draggable": false,
+    "pickup": false,
+    "return_on_invalid_drop": true,
+    "return_duration_ms": 300,
+    "keyboard": [
+      "Enter",
+      "Space"
+    ],
+    "actions": [
+      "inspect",
+      "slide_along_rail"
+    ]
+  },
+  "shadow": {
+    "implementation": "runtime ellipse on support; never bake into sprite",
+    "opacity": 0.2,
+    "blur_scene_px": 6,
+    "detach_on_pickup": false,
+    "fade_with_lift": true
+  },
+  "states": {
+    "initial": "idle",
+    "available_raster_states": [
+      "idle"
+    ],
+    "additional_pose_rasters_included": false
+  },
+  "calibration": {
+    "status": "first-pass authored placement",
+    "anchors": "visually estimated against this exact generated raster",
+    "physics": "plausible design estimates, not measured physical properties"
+  },
+  "mechanism": {
+    "type": "guided_rail",
+    "axis_scene": [
+      1,
+      0
+    ],
+    "translation_range_scene_px": [
+      -100,
+      15
+    ],
+    "initial_offset_px": 0,
+    "movement_speed_px_s": 50,
+    "max_acceleration_px_s2": 80,
+    "top_hooks_remain_attached": true,
+    "foot_contact_must_follow_floor": true,
+    "climbable_in_current_art": false,
+    "dependencies": [
+      "rail must be provided by architecture or separate rail prop"
+    ],
+    "status": "prototype translation only; rail alignment needs final art calibration",
+    "rung_count_visible": 9,
+    "rung_uv_y": [
+      0.11,
+      0.195,
+      0.28,
+      0.365,
+      0.46,
+      0.55,
+      0.64,
+      0.73,
+      0.82
+    ]
+  }
+}

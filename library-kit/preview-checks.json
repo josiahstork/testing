@@ -1,0 +1,10 @@
+{
+  "loaded": true,
+  "errors": [],
+  "smoke_trigger": true,
+  "cup_drag_changed_position": true,
+  "alpha_hit_test": {
+    "inside": true,
+    "outside": false
+  }
+}
