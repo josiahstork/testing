@@ -1,12 +1,35 @@
 {
-  "revision": 3,
-  "loaded": true,
+  "revision": 4,
   "script_errors": [],
-  "smoke_cooldown_limits_to_two_wisps": true,
-  "smoke_origins_match_muzzle": true,
-  "smoke_uses_raster": true,
-  "cup_valid_drag": true,
-  "reset_restores_cup": true,
-  "blank_room_has_no_decor_or_effect_leaks": true,
-  "wizard_toggle_changes_only_character_region": true
+  "daylight_changes_interior": true,
+  "daylight_changes_exterior": true,
+  "hearth_independent_of_outside": true,
+  "candles_independent": true,
+  "temperature_changes_color": true,
+  "low_sun_lengthens_shadows": true,
+  "drag_moves_object_and_shadow": true,
+  "reset_restores_object": true,
+  "wizard_shadow_visibility": true,
+  "openings_remain_transparent": true,
+  "smoke_cooldown": true,
+  "neutral_blank_room_isolated": true,
+  "measurements": {
+    "interiorNoDaylight": 20.660674461840827,
+    "interiorFullDaylight": 50.768705777631084,
+    "exteriorNoDaylight": 21.870723015870848,
+    "exteriorFullDaylight": 224.58198414285613,
+    "hearthOff": 16.249496466666525,
+    "hearthOn": 37.29674883809501,
+    "lowSun": {
+      "alphaSum": 1912494,
+      "centroidX": 1085.0282453173709
+    },
+    "highSun": {
+      "alphaSum": 162356,
+      "centroidX": 884.5997006578137
+    }
+  },
+  "folder_picker_loads_images": true,
+  "folder_picker_supports_lighting_controls": true,
+  "folder_picker_script_errors": []
 }

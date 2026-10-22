@@ -135,5 +135,12 @@
   "render": {
     "clear_vines": true,
     "note": "Statue silhouette remains unobscured; vegetation removed in decor raster."
+  },
+  "lighting": {
+    "rule": "gargoyle",
+    "rebuild_shadow_when_moved": true,
+    "source_highlights": "baked",
+    "lighting_map": "shared interior gain map",
+    "keep_shadow_separate_from_sprite": true
   }
 }

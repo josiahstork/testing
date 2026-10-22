@@ -1,6 +1,7 @@
 {
-  "revision": 3,
+  "revision": 4,
   "asset_count": 23,
+  "lighting_layer_count": 48,
   "interactive_object_count": 14,
   "checks": [
     {
@@ -12,129 +13,26 @@
       "anchor_error_px": 2.069999936793465e-06
     },
     {
-      "support": "teapot",
-      "base_scene": [
-        213.0,
-        759.99999691
-      ],
-      "inside_tabletop": true
-    },
-    {
-      "support": "saucer",
-      "base_scene": [
-        474.0,
-        765.0000026199999
-      ],
-      "inside_tabletop": true
-    },
-    {
-      "support": "milk_jug",
-      "base_scene": [
-        590.8,
-        754.0000002300001
-      ],
-      "inside_tabletop": true
-    },
-    {
-      "support": "sugar_bowl",
-      "base_scene": [
-        349.0,
-        759.00000315
-      ],
-      "inside_tabletop": true
-    },
-    {
-      "support": "spoon",
-      "base_scene": [
-        669.52,
-        744.76
-      ],
-      "inside_tabletop": true
+      "support_contacts": "Tea bases, wizard feet, ladder feet and cauldron feet remain valid."
     },
     {
       "shelf_rows": 65,
-      "baselines_coincident_with_support": true,
-      "source_crops_in_bounds": true
+      "object_shadow_rules": 14
     },
     {
-      "static_prop": "potion_table",
-      "all_foot_contacts_in_floor_support": true,
-      "feet_scene": [
-        [
-          819.12,
-          634.6409298780488
-        ],
-        [
-          878.4,
-          613.7315396341463
-        ],
-        [
-          972.0,
-          690.478506097561
-        ],
-        [
-          1021.4,
-          653.6494664634146
-        ]
-      ]
+      "art_pngs_verified": 23,
+      "lighting_pngs_verified": 48,
+      "hashes_valid": true
     },
     {
-      "object": "cauldron",
-      "support": "hearth_floor",
-      "all_contact_points_inside_support": true,
-      "contact_points_scene": [
-        [
-          505.86,
-          467.73124029999997
-        ],
-        [
-          563.025,
-          467.73124029999997
-        ],
-        [
-          532.5,
-          476.9999965
-        ]
-      ]
+      "receiver_clipping_samples": 490,
+      "meaningful_shadow_pixels_outside_receiver": 0
     },
     {
-      "object": "ladder",
-      "support": "ladder_floor",
-      "all_contact_points_inside_support": true,
-      "contact_points_scene": [
-        [
-          1125.85,
-          617.3931308
-        ],
-        [
-          1198.75,
-          620.951922
-        ]
-      ]
-    },
-    {
-      "object": "wizard",
-      "support": "floor",
-      "all_contact_points_inside_support": true,
-      "contact_points_scene": [
-        [
-          817.25,
-          750.44
-        ],
-        [
-          909.375,
-          734.8625
-        ]
-      ]
-    },
-    {
-      "png_files_verified": 23,
-      "hashes_updated": true
-    },
-    {
-      "rug": "flat projective quad",
-      "z": 14,
-      "beneath_furniture_and_objects": true
+      "browser_checks": "passed",
+      "report": "preview-checks.json",
+      "daylight_changes_interior": true,
+      "interior_lights_independent": true
     }
   ]
 }

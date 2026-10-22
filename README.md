@@ -9,3 +9,5 @@
 ![Assembled wizard library](library-kit/composite.png)
 
 [Compare the room without the wizard](library-kit/composite-without-wizard.png) · [Wizard sprite](library-kit/assets/wizard.png)
+
+[Lighting presets](library-kit/lighting-comparison.png) · [Before / after lighting](library-kit/lighting-before-after.png) · [Open the interactive preview](library-kit/README.md#preview)

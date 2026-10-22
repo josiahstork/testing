@@ -1,0 +1,945 @@
+{
+  "version": "1.0.0",
+  "model": "2.5D image-based lighting, approximate diffuse light maps and alpha-silhouette shadow projection",
+  "preserve_original_rasters": true,
+  "color_pipeline": "sRGB artistic compositing; not radiometrically calibrated",
+  "defaults": {
+    "preset": "daylight",
+    "daylight": 70,
+    "kelvin": 6400,
+    "sunElevation": 38,
+    "candles": 65,
+    "hearth": 70,
+    "enabled": true,
+    "shadows": true
+  },
+  "controls": {
+    "daylight": {
+      "label": "Outdoor light",
+      "min": 0,
+      "max": 100,
+      "unit": "percent",
+      "affects": [
+        "exterior exposure",
+        "interior fill",
+        "floor light patch",
+        "cast-shadow strength"
+      ]
+    },
+    "kelvin": {
+      "label": "Outdoor warmth",
+      "min": 2800,
+      "max": 8500,
+      "unit": "K",
+      "affects": [
+        "daylight color",
+        "interior daylight tint"
+      ]
+    },
+    "sunElevation": {
+      "label": "Sun height",
+      "min": 12,
+      "max": 75,
+      "unit": "degrees",
+      "affects": [
+        "shadow length",
+        "floor-light direction"
+      ]
+    },
+    "candles": {
+      "label": "Candlelight",
+      "min": 0,
+      "max": 100,
+      "unit": "percent",
+      "independent_of_daylight": true
+    },
+    "hearth": {
+      "label": "Hearth light",
+      "min": 0,
+      "max": 100,
+      "unit": "percent",
+      "independent_of_daylight": true
+    },
+    "enabled": {
+      "label": "Shared lighting",
+      "type": "boolean"
+    },
+    "shadows": {
+      "label": "Contact and cast shadows",
+      "type": "boolean"
+    }
+  },
+  "presets": {
+    "daylight": {
+      "label": "Sunlit day",
+      "daylight": 70,
+      "kelvin": 6400,
+      "sunElevation": 38,
+      "candles": 65,
+      "hearth": 70,
+      "direct": 0.8,
+      "softness": 4,
+      "weather": "day"
+    },
+    "overcast": {
+      "label": "Overcast",
+      "daylight": 36,
+      "kelvin": 7600,
+      "sunElevation": 48,
+      "candles": 72,
+      "hearth": 76,
+      "direct": 0.2,
+      "softness": 11,
+      "weather": "rain"
+    },
+    "evening": {
+      "label": "Evening",
+      "daylight": 22,
+      "kelvin": 3400,
+      "sunElevation": 16,
+      "candles": 82,
+      "hearth": 86,
+      "direct": 0.6,
+      "softness": 7,
+      "weather": "day"
+    },
+    "night": {
+      "label": "Candlelit night",
+      "daylight": 3,
+      "kelvin": 8200,
+      "sunElevation": 35,
+      "candles": 90,
+      "hearth": 92,
+      "direct": 0.05,
+      "softness": 12,
+      "weather": "night"
+    }
+  },
+  "sources": [
+    {
+      "id": "arch_daylight",
+      "type": "large_opening",
+      "opening_polygon_scene": [
+        [
+          77,
+          489
+        ],
+        [
+          78,
+          174
+        ],
+        [
+          108,
+          105
+        ],
+        [
+          153,
+          93
+        ],
+        [
+          210,
+          143
+        ],
+        [
+          249,
+          215
+        ],
+        [
+          249,
+          489
+        ]
+      ],
+      "falloff_center_scene": [
+        185,
+        310
+      ],
+      "falloff_radius_px": 1050,
+      "light_direction_scene": [
+        1,
+        0.35
+      ],
+      "intensity_control": "daylight",
+      "color_control": "kelvin",
+      "casts_shadows": true
+    },
+    {
+      "id": "upper_window",
+      "type": "large_opening",
+      "opening_polygon_scene": [
+        [
+          983,
+          143
+        ],
+        [
+          982,
+          65
+        ],
+        [
+          1003,
+          30
+        ],
+        [
+          1028,
+          33
+        ],
+        [
+          1041,
+          67
+        ],
+        [
+          1042,
+          143
+        ]
+      ],
+      "falloff_center_scene": [
+        1008,
+        160
+      ],
+      "falloff_radius_px": 500,
+      "intensity_control": "daylight",
+      "relative_strength": 0.23
+    },
+    {
+      "id": "chandelier",
+      "type": "warm_area",
+      "position_scene": [
+        620,
+        145
+      ],
+      "floor_pool_center_scene": [
+        650,
+        540
+      ],
+      "falloff_radius_px": 620,
+      "color_rgb": [
+        255,
+        186,
+        103
+      ],
+      "intensity_control": "candles",
+      "casts_shadows": true
+    },
+    {
+      "id": "hearth",
+      "type": "warm_area",
+      "position_scene": [
+        534,
+        432
+      ],
+      "floor_pool_center_scene": [
+        545,
+        535
+      ],
+      "falloff_radius_px": 430,
+      "color_rgb": [
+        255,
+        137,
+        62
+      ],
+      "intensity_control": "hearth",
+      "casts_shadows": true
+    },
+    {
+      "id": "alchemy_flame",
+      "type": "small_warm_area",
+      "position_scene": [
+        980,
+        500
+      ],
+      "falloff_radius_px": 130,
+      "color_rgb": [
+        248,
+        172,
+        80
+      ],
+      "intensity_control": "candles",
+      "relative_strength": 0.12
+    }
+  ],
+  "receivers": {
+    "floor": {
+      "polygon_scene": [
+        [
+          0,
+          703
+        ],
+        [
+          320,
+          654
+        ],
+        [
+          450,
+          622
+        ],
+        [
+          840,
+          599
+        ],
+        [
+          1280,
+          610
+        ],
+        [
+          1536,
+          705
+        ],
+        [
+          1536,
+          1024
+        ],
+        [
+          0,
+          1024
+        ]
+      ],
+      "occluders_scene": [
+        [
+          [
+            1324,
+            383
+          ],
+          [
+            1512,
+            383
+          ],
+          [
+            1515,
+            711
+          ],
+          [
+            1320,
+            711
+          ]
+        ]
+      ]
+    },
+    "table": {
+      "polygon_scene": [
+        [
+          15,
+          716
+        ],
+        [
+          655,
+          699
+        ],
+        [
+          820,
+          745
+        ],
+        [
+          20,
+          792
+        ]
+      ]
+    },
+    "ledge": {
+      "polygon_scene": [
+        [
+          309,
+          519
+        ],
+        [
+          440,
+          511
+        ],
+        [
+          444,
+          534
+        ],
+        [
+          310,
+          539
+        ]
+      ]
+    },
+    "hearth_floor": {
+      "polygon_scene": [
+        [
+          469,
+          465
+        ],
+        [
+          590,
+          465
+        ],
+        [
+          594,
+          482
+        ],
+        [
+          467,
+          482
+        ]
+      ]
+    },
+    "pedestal": {
+      "polygon_scene": [
+        [
+          1346,
+          385
+        ],
+        [
+          1497,
+          385
+        ],
+        [
+          1502,
+          410
+        ],
+        [
+          1340,
+          410
+        ]
+      ]
+    }
+  },
+  "object_rules": {
+    "wizard": {
+      "receiver": "floor",
+      "contacts": [
+        "foot_left",
+        "foot_right"
+      ],
+      "radius": [
+        17,
+        4
+      ],
+      "opacity": 0.48,
+      "cast": true,
+      "height_scale": 1
+    },
+    "dragon": {
+      "receiver": "floor",
+      "contacts": [
+        "head_contact",
+        "torso_contact",
+        "tail_contact"
+      ],
+      "radii": [
+        [
+          30,
+          5
+        ],
+        [
+          84,
+          10
+        ],
+        [
+          35,
+          5
+        ]
+      ],
+      "opacity": 0.43,
+      "cast": true,
+      "height_scale": 0.65
+    },
+    "chest": {
+      "receiver": "floor",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        65,
+        9
+      ],
+      "opacity": 0.4,
+      "cast": true,
+      "height_scale": 0.8
+    },
+    "ladder": {
+      "receiver": "floor",
+      "contacts": [
+        "foot_left",
+        "foot_right"
+      ],
+      "radius": [
+        8,
+        2.5
+      ],
+      "opacity": 0.48,
+      "cast": true,
+      "height_scale": 0.85
+    },
+    "gargoyle": {
+      "receiver": "pedestal",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        65,
+        4
+      ],
+      "opacity": 0.47,
+      "cast": false
+    },
+    "astrolabe": {
+      "receiver": "ledge",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        23,
+        3
+      ],
+      "opacity": 0.4,
+      "cast": true,
+      "height_scale": 0.4
+    },
+    "cauldron": {
+      "receiver": "hearth_floor",
+      "contacts": [
+        "foot_left",
+        "foot_right",
+        "base"
+      ],
+      "radius": [
+        8,
+        2.5
+      ],
+      "opacity": 0.48,
+      "cast": false
+    },
+    "teapot": {
+      "receiver": "table",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        32.12,
+        2.3
+      ],
+      "opacity": 0.38,
+      "cast": true,
+      "height_scale": 0.6
+    },
+    "teapot_lid": {
+      "receiver": "table",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        13.64,
+        2.3
+      ],
+      "opacity": 0.38,
+      "cast": false,
+      "height_scale": 0.6
+    },
+    "teacup": {
+      "receiver": "table",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        17.16,
+        2.3
+      ],
+      "opacity": 0.38,
+      "cast": true,
+      "height_scale": 0.6
+    },
+    "saucer": {
+      "receiver": "table",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        21.56,
+        2.3
+      ],
+      "opacity": 0.38,
+      "cast": false,
+      "height_scale": 0.6
+    },
+    "milk_jug": {
+      "receiver": "table",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        17.6,
+        2.3
+      ],
+      "opacity": 0.38,
+      "cast": true,
+      "height_scale": 0.6
+    },
+    "sugar_bowl": {
+      "receiver": "table",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        19.36,
+        2.3
+      ],
+      "opacity": 0.38,
+      "cast": true,
+      "height_scale": 0.6
+    },
+    "spoon": {
+      "receiver": "table",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        14.52,
+        2.3
+      ],
+      "opacity": 0.38,
+      "cast": true,
+      "height_scale": 0.1
+    }
+  },
+  "static_contacts": [
+    {
+      "id": "foreground_table",
+      "receiver": "floor",
+      "points_scene": [
+        [
+          145,
+          1001
+        ],
+        [
+          603,
+          937
+        ],
+        [
+          746,
+          1009
+        ]
+      ],
+      "radius_scene_px": [
+        27,
+        5
+      ],
+      "opacity": 0.44
+    },
+    {
+      "id": "chair",
+      "receiver": "floor",
+      "points_scene": [
+        [
+          90,
+          825
+        ],
+        [
+          290,
+          840
+        ]
+      ],
+      "radius_scene_px": [
+        22,
+        5
+      ],
+      "opacity": 0.25
+    },
+    {
+      "id": "cushion",
+      "receiver": "floor",
+      "points_scene": [
+        [
+          1024,
+          987
+        ]
+      ],
+      "radius_scene_px": [
+        175,
+        22
+      ],
+      "opacity": 0.39
+    }
+  ],
+  "static_cast_proxies": [
+    {
+      "id": "foreground_table",
+      "receiver": "floor",
+      "polygon_scene": [
+        [
+          0,
+          948
+        ],
+        [
+          580,
+          915
+        ],
+        [
+          790,
+          983
+        ],
+        [
+          75,
+          1080
+        ]
+      ],
+      "opacity": 0.2,
+      "height_px": 190
+    },
+    {
+      "id": "chair",
+      "receiver": "floor",
+      "polygon_scene": [
+        [
+          0,
+          788
+        ],
+        [
+          180,
+          755
+        ],
+        [
+          363,
+          837
+        ],
+        [
+          234,
+          920
+        ]
+      ],
+      "opacity": 0.16,
+      "height_px": 200
+    }
+  ],
+  "shadow_projection": {
+    "formula": "worldX + directionX*(supportY-worldY)*k; supportY + directionY*(supportY-worldY)*k + floorSlope*(worldX-supportX)",
+    "floor_slope": 0.035,
+    "sun_height_length_factor": ".30 / tan(sunElevation), clamped .09..1.05",
+    "contact_shadows": "Soft receiver-clipped ellipses at explicit supports; independent of directional-light strength.",
+    "dominant_key": "Daylight when strong enough; otherwise hearth, then chandelier.",
+    "held_objects": "Contact darkening removed; tabletop shadow follows projected horizontal location, fades and softens with estimated lift.",
+    "rebuild_on": [
+      "object translation",
+      "object visibility",
+      "lighting controls",
+      "preset",
+      "reset"
+    ],
+    "limitations": "Authored 2.5D projection; no recovered depth map, normal map or 3D light transport.",
+    "sun_length_coefficient": 0.3,
+    "sun_length_min": 0.09,
+    "sun_length_max": 1.05,
+    "daylight_opacity_base": 0.16,
+    "daylight_direct_opacity": 0.23
+  },
+  "render_pipeline": [
+    "render outside with exposure and atmosphere",
+    "render room and neutral static layers into interior buffer",
+    "render floor contact/cast shadows above rug but below props",
+    "render local receiver shadows before props and teaware",
+    "render props, character, foreground furniture and effects",
+    "multiply shared illumination over interior buffer",
+    "restore original interior alpha to preserve outdoor openings",
+    "composite interior over outside"
+  ],
+  "export_contract": {
+    "lighting_maps": "RGB gain maps for multiply, not opaque scene overlays. Restore interior alpha after multiplying.",
+    "shadow_maps": "Transparent black rasters, source-over on the indicated receiver at the indicated depth.",
+    "neutral_assets": "Art assets remain unchanged; existing source highlights are not removed.",
+    "snapshot_states": "Daylight, overcast, evening, night with wizard; daylight also without wizard. All snapshot maps use the default object arrangement."
+  },
+  "limitations": [
+    "Existing painted highlights remain in the source images.",
+    "Light maps estimate broad surface illumination without per-pixel normals.",
+    "Night exterior is a graded version of the daylight landscape, not new night landscape art.",
+    "Static grouped furniture uses authored shadow proxies rather than recovered silhouettes."
+  ],
+  "illumination_fields": [
+    {
+      "id": "arch_fill",
+      "center_scene": [
+        185,
+        310
+      ],
+      "radius_px": 1030,
+      "scale": [
+        1.12,
+        0.92
+      ],
+      "temperature_driven": true,
+      "control": "daylight",
+      "gain": 0.62
+    },
+    {
+      "id": "upper_window_fill",
+      "center_scene": [
+        1008,
+        170
+      ],
+      "radius_px": 550,
+      "scale": [
+        0.88,
+        1.3
+      ],
+      "temperature_driven": true,
+      "control": "daylight",
+      "gain": 0.25
+    },
+    {
+      "id": "floor_bounce",
+      "center_scene": [
+        500,
+        790
+      ],
+      "radius_px": 680,
+      "scale": [
+        1.25,
+        0.52
+      ],
+      "temperature_driven": true,
+      "control": "daylight",
+      "gain": 0.18
+    },
+    {
+      "id": "chandelier_near",
+      "center_scene": [
+        620,
+        150
+      ],
+      "radius_px": 550,
+      "scale": [
+        1.08,
+        0.9
+      ],
+      "color_rgb": [
+        255,
+        185,
+        105
+      ],
+      "control": "candles",
+      "gain": 0.31
+    },
+    {
+      "id": "chandelier_floor",
+      "center_scene": [
+        650,
+        525
+      ],
+      "radius_px": 590,
+      "scale": [
+        1.1,
+        0.85
+      ],
+      "color_rgb": [
+        255,
+        184,
+        105
+      ],
+      "control": "candles",
+      "gain": 0.22
+    },
+    {
+      "id": "hearth_near",
+      "center_scene": [
+        534,
+        432
+      ],
+      "radius_px": 350,
+      "scale": [
+        1,
+        0.95
+      ],
+      "color_rgb": [
+        255,
+        133,
+        56
+      ],
+      "control": "hearth",
+      "gain": 0.47
+    },
+    {
+      "id": "hearth_floor",
+      "center_scene": [
+        545,
+        560
+      ],
+      "radius_px": 390,
+      "scale": [
+        1.2,
+        0.75
+      ],
+      "color_rgb": [
+        255,
+        147,
+        68
+      ],
+      "control": "hearth",
+      "gain": 0.24
+    },
+    {
+      "id": "alchemy",
+      "center_scene": [
+        980,
+        500
+      ],
+      "radius_px": 140,
+      "scale": [
+        1,
+        1
+      ],
+      "color_rgb": [
+        255,
+        183,
+        102
+      ],
+      "control": "candles",
+      "gain": 0.13
+    }
+  ],
+  "ambient_gain": {
+    "base_rgb": [
+      66,
+      69,
+      80
+    ],
+    "daylight_bounce_rgb": [
+      90,
+      92,
+      100
+    ],
+    "note": "RGB gain factors on 0..255 multiply scale, plus colored area-light fields."
+  },
+  "daylight_floor_patch": {
+    "polygon_scene": [
+      [
+        73,
+        492
+      ],
+      [
+        244,
+        493
+      ],
+      [
+        1045,
+        921
+      ],
+      [
+        796,
+        1010
+      ]
+    ],
+    "gradient_scene": [
+      [
+        150,
+        500
+      ],
+      [
+        1050,
+        950
+      ]
+    ],
+    "gain": 0.17,
+    "opacity_start": 0.9
+  },
+  "snapshot_manifest": "lighting/manifest.json",
+  "reference_renderer": "lighting.js",
+  "minimum_ambient": "At zero added daylight/candles/hearth, ambient_gain.base_rgb retains a small artistic readability fill. Edit this RGB term for total darkness.",
+  "snapshots": {
+    "daylight": "composite.png",
+    "overcast": "composite-overcast.png",
+    "evening": "composite-evening.png",
+    "night": "composite-night.png",
+    "comparison": "lighting-comparison.png",
+    "before_after": "lighting-before-after.png"
+  }
+}

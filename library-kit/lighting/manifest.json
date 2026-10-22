@@ -1,0 +1,1215 @@
+{
+  "format_version": "1.0.0",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "states": {
+    "daylight": {
+      "label": "Sunlit day",
+      "daylight": 70,
+      "kelvin": 6400,
+      "sunElevation": 38,
+      "candles": 65,
+      "hearth": 70,
+      "direct": 0.8,
+      "softness": 4,
+      "weather": "day"
+    },
+    "overcast": {
+      "label": "Overcast",
+      "daylight": 36,
+      "kelvin": 7600,
+      "sunElevation": 48,
+      "candles": 72,
+      "hearth": 76,
+      "direct": 0.2,
+      "softness": 11,
+      "weather": "rain"
+    },
+    "evening": {
+      "label": "Evening",
+      "daylight": 22,
+      "kelvin": 3400,
+      "sunElevation": 16,
+      "candles": 82,
+      "hearth": 86,
+      "direct": 0.6,
+      "softness": 7,
+      "weather": "day"
+    },
+    "night": {
+      "label": "Candlelit night",
+      "daylight": 3,
+      "kelvin": 8200,
+      "sunElevation": 35,
+      "candles": 90,
+      "hearth": 92,
+      "direct": 0.05,
+      "softness": 12,
+      "weather": "night"
+    }
+  },
+  "records": [
+    {
+      "id": "daylight-ambient-occlusion",
+      "file": "lighting/daylight-ambient-occlusion.png",
+      "preset": "daylight",
+      "kind": "ambient_occlusion",
+      "receiver": "shelves_and_rug_edge",
+      "blend": "source-over",
+      "z": 14.1,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        1535,
+        879
+      ],
+      "alpha_range": [
+        0,
+        58
+      ],
+      "sha256": "131dba6c2148d848661b4740d9380f15ee1fb74caec63d48fce62baa4f0dc8c1",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "daylight-floor-cast",
+      "file": "lighting/daylight-floor-cast.png",
+      "preset": "daylight",
+      "kind": "cast",
+      "receiver": "floor",
+      "blend": "source-over",
+      "z": 15,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        62,
+        609,
+        1515,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        61
+      ],
+      "sha256": "ee01412f45d370c29e74c81271a6dbc7c6a8afcedb2b3539f0013f37a69bf8fa",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "daylight-floor-contact",
+      "file": "lighting/daylight-floor-contact.png",
+      "preset": "daylight",
+      "kind": "contact",
+      "receiver": "floor",
+      "blend": "source-over",
+      "z": 15,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        68,
+        611,
+        1470,
+        1014
+      ],
+      "alpha_range": [
+        0,
+        120
+      ],
+      "sha256": "b1fe95ba801471fa726bd48e2d4c85075b319ac65b28248f0f24cc361fe4c2ad",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "daylight-hearth_floor-cast",
+      "file": "lighting/daylight-hearth_floor-cast.png",
+      "preset": "daylight",
+      "kind": "cast",
+      "receiver": "hearth_floor",
+      "blend": "source-over",
+      "z": 23.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": null,
+      "alpha_range": [
+        0,
+        0
+      ],
+      "sha256": "044661371291e22bda88afea69c22a3eaf109ba72801afd2acab2578060cc19b",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "daylight-hearth_floor-contact",
+      "file": "lighting/daylight-hearth_floor-contact.png",
+      "preset": "daylight",
+      "kind": "contact",
+      "receiver": "hearth_floor",
+      "blend": "source-over",
+      "z": 23.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        498,
+        465,
+        571,
+        479
+      ],
+      "alpha_range": [
+        0,
+        112
+      ],
+      "sha256": "ca6c5950228ab84476f16a41227792bed9284d186b3dbedf23cc61d85923729e",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "daylight-illumination-map",
+      "file": "lighting/daylight-illumination-map.png",
+      "preset": "daylight",
+      "kind": "illumination",
+      "receiver": "interior",
+      "blend": "multiply, then restore original interior alpha",
+      "z": "after interior scene composition",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "c550a32f047a435fb8b8d5a2e68b3c5a237084ca9e2dd40da98e342f887ba024",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "daylight-ledge-cast",
+      "file": "lighting/daylight-ledge-cast.png",
+      "preset": "daylight",
+      "kind": "cast",
+      "receiver": "ledge",
+      "blend": "source-over",
+      "z": 46.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        324,
+        516,
+        406,
+        537
+      ],
+      "alpha_range": [
+        0,
+        22
+      ],
+      "sha256": "2d5d4c1a7fdfe5cc4635bbce35b1dcbadbcc2a37141dfb934ca6a1e6d9ae48f4",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "daylight-ledge-contact",
+      "file": "lighting/daylight-ledge-contact.png",
+      "preset": "daylight",
+      "kind": "contact",
+      "receiver": "ledge",
+      "blend": "source-over",
+      "z": 46.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        333,
+        520,
+        378,
+        526
+      ],
+      "alpha_range": [
+        0,
+        88
+      ],
+      "sha256": "3acc061bb41b700cc950cc8831341df1256e3441856d764fa4c9a1c58d61babd",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "daylight-pedestal-cast",
+      "file": "lighting/daylight-pedestal-cast.png",
+      "preset": "daylight",
+      "kind": "cast",
+      "receiver": "pedestal",
+      "blend": "source-over",
+      "z": 64.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": null,
+      "alpha_range": [
+        0,
+        0
+      ],
+      "sha256": "044661371291e22bda88afea69c22a3eaf109ba72801afd2acab2578060cc19b",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "daylight-pedestal-contact",
+      "file": "lighting/daylight-pedestal-contact.png",
+      "preset": "daylight",
+      "kind": "contact",
+      "receiver": "pedestal",
+      "blend": "source-over",
+      "z": 64.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        1360,
+        391,
+        1489,
+        399
+      ],
+      "alpha_range": [
+        0,
+        112
+      ],
+      "sha256": "45ac5e3eebc3b487e12570d72c341e9e6b3bb8a808730d9e31163ec3ad4e7c77",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "daylight-table-cast",
+      "file": "lighting/daylight-table-cast.png",
+      "preset": "daylight",
+      "kind": "cast",
+      "receiver": "table",
+      "blend": "source-over",
+      "z": 70,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        149,
+        740,
+        714,
+        776
+      ],
+      "alpha_range": [
+        0,
+        30
+      ],
+      "sha256": "ff0c9ec663c160a587dc8796a085a1096fae9585a5650424b4a8c1a8809e5fd3",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "daylight-table-contact",
+      "file": "lighting/daylight-table-contact.png",
+      "preset": "daylight",
+      "kind": "contact",
+      "receiver": "table",
+      "blend": "source-over",
+      "z": 70,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        182,
+        742,
+        684,
+        767
+      ],
+      "alpha_range": [
+        0,
+        93
+      ],
+      "sha256": "545470a04ce12ceafb94ef1f885a70ede53cdf974df621aad8b1f0c5b2dd01ab",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "evening-ambient-occlusion",
+      "file": "lighting/evening-ambient-occlusion.png",
+      "preset": "evening",
+      "kind": "ambient_occlusion",
+      "receiver": "shelves_and_rug_edge",
+      "blend": "source-over",
+      "z": 14.1,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        1535,
+        879
+      ],
+      "alpha_range": [
+        0,
+        58
+      ],
+      "sha256": "131dba6c2148d848661b4740d9380f15ee1fb74caec63d48fce62baa4f0dc8c1",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "evening-floor-cast",
+      "file": "lighting/evening-floor-cast.png",
+      "preset": "evening",
+      "kind": "cast",
+      "receiver": "floor",
+      "blend": "source-over",
+      "z": 15,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        190,
+        608,
+        1536,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        31
+      ],
+      "sha256": "da15ebf16013073d887e8445f3a276a0f3fbd8551a43bb98315b5e102b4496a1",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "evening-floor-contact",
+      "file": "lighting/evening-floor-contact.png",
+      "preset": "evening",
+      "kind": "contact",
+      "receiver": "floor",
+      "blend": "source-over",
+      "z": 15,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        68,
+        611,
+        1470,
+        1014
+      ],
+      "alpha_range": [
+        0,
+        120
+      ],
+      "sha256": "b1fe95ba801471fa726bd48e2d4c85075b319ac65b28248f0f24cc361fe4c2ad",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "evening-hearth_floor-cast",
+      "file": "lighting/evening-hearth_floor-cast.png",
+      "preset": "evening",
+      "kind": "cast",
+      "receiver": "hearth_floor",
+      "blend": "source-over",
+      "z": 23.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": null,
+      "alpha_range": [
+        0,
+        0
+      ],
+      "sha256": "044661371291e22bda88afea69c22a3eaf109ba72801afd2acab2578060cc19b",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "evening-hearth_floor-contact",
+      "file": "lighting/evening-hearth_floor-contact.png",
+      "preset": "evening",
+      "kind": "contact",
+      "receiver": "hearth_floor",
+      "blend": "source-over",
+      "z": 23.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        498,
+        465,
+        571,
+        479
+      ],
+      "alpha_range": [
+        0,
+        112
+      ],
+      "sha256": "ca6c5950228ab84476f16a41227792bed9284d186b3dbedf23cc61d85923729e",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "evening-illumination-map",
+      "file": "lighting/evening-illumination-map.png",
+      "preset": "evening",
+      "kind": "illumination",
+      "receiver": "interior",
+      "blend": "multiply, then restore original interior alpha",
+      "z": "after interior scene composition",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "51e341b041c4dc7b8429b189842df136a8568535bcd78efd0ba060293f2ef59d",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "evening-ledge-cast",
+      "file": "lighting/evening-ledge-cast.png",
+      "preset": "evening",
+      "kind": "cast",
+      "receiver": "ledge",
+      "blend": "source-over",
+      "z": 46.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        332,
+        515,
+        426,
+        538
+      ],
+      "alpha_range": [
+        0,
+        8
+      ],
+      "sha256": "df35dce37baef65f87a11908b00f60845fa331cc407cce330b0f43082847e083",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "evening-ledge-contact",
+      "file": "lighting/evening-ledge-contact.png",
+      "preset": "evening",
+      "kind": "contact",
+      "receiver": "ledge",
+      "blend": "source-over",
+      "z": 46.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        333,
+        520,
+        378,
+        526
+      ],
+      "alpha_range": [
+        0,
+        88
+      ],
+      "sha256": "3acc061bb41b700cc950cc8831341df1256e3441856d764fa4c9a1c58d61babd",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "evening-pedestal-cast",
+      "file": "lighting/evening-pedestal-cast.png",
+      "preset": "evening",
+      "kind": "cast",
+      "receiver": "pedestal",
+      "blend": "source-over",
+      "z": 64.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": null,
+      "alpha_range": [
+        0,
+        0
+      ],
+      "sha256": "044661371291e22bda88afea69c22a3eaf109ba72801afd2acab2578060cc19b",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "evening-pedestal-contact",
+      "file": "lighting/evening-pedestal-contact.png",
+      "preset": "evening",
+      "kind": "contact",
+      "receiver": "pedestal",
+      "blend": "source-over",
+      "z": 64.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        1360,
+        391,
+        1489,
+        399
+      ],
+      "alpha_range": [
+        0,
+        112
+      ],
+      "sha256": "45ac5e3eebc3b487e12570d72c341e9e6b3bb8a808730d9e31163ec3ad4e7c77",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "evening-table-cast",
+      "file": "lighting/evening-table-cast.png",
+      "preset": "evening",
+      "kind": "cast",
+      "receiver": "table",
+      "blend": "source-over",
+      "z": 70,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        167,
+        742,
+        646,
+        782
+      ],
+      "alpha_range": [
+        0,
+        12
+      ],
+      "sha256": "d3cf657f2abe67945a0efe3bd7abf5adaff2006f4d049e19d7718df8a3aaaeda",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "evening-table-contact",
+      "file": "lighting/evening-table-contact.png",
+      "preset": "evening",
+      "kind": "contact",
+      "receiver": "table",
+      "blend": "source-over",
+      "z": 70,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        182,
+        742,
+        684,
+        767
+      ],
+      "alpha_range": [
+        0,
+        93
+      ],
+      "sha256": "545470a04ce12ceafb94ef1f885a70ede53cdf974df621aad8b1f0c5b2dd01ab",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "night-ambient-occlusion",
+      "file": "lighting/night-ambient-occlusion.png",
+      "preset": "night",
+      "kind": "ambient_occlusion",
+      "receiver": "shelves_and_rug_edge",
+      "blend": "source-over",
+      "z": 14.1,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        1535,
+        879
+      ],
+      "alpha_range": [
+        0,
+        58
+      ],
+      "sha256": "131dba6c2148d848661b4740d9380f15ee1fb74caec63d48fce62baa4f0dc8c1",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "night-floor-cast",
+      "file": "lighting/night-floor-cast.png",
+      "preset": "night",
+      "kind": "cast",
+      "receiver": "floor",
+      "blend": "source-over",
+      "z": 15,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        610,
+        1495,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        17
+      ],
+      "sha256": "76fbe5838f820c9c6e1cb342965285536cd8d3da337a8c49edc05e06436032cf",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "night-floor-contact",
+      "file": "lighting/night-floor-contact.png",
+      "preset": "night",
+      "kind": "contact",
+      "receiver": "floor",
+      "blend": "source-over",
+      "z": 15,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        68,
+        611,
+        1470,
+        1014
+      ],
+      "alpha_range": [
+        0,
+        120
+      ],
+      "sha256": "b1fe95ba801471fa726bd48e2d4c85075b319ac65b28248f0f24cc361fe4c2ad",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "night-hearth_floor-cast",
+      "file": "lighting/night-hearth_floor-cast.png",
+      "preset": "night",
+      "kind": "cast",
+      "receiver": "hearth_floor",
+      "blend": "source-over",
+      "z": 23.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": null,
+      "alpha_range": [
+        0,
+        0
+      ],
+      "sha256": "044661371291e22bda88afea69c22a3eaf109ba72801afd2acab2578060cc19b",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "night-hearth_floor-contact",
+      "file": "lighting/night-hearth_floor-contact.png",
+      "preset": "night",
+      "kind": "contact",
+      "receiver": "hearth_floor",
+      "blend": "source-over",
+      "z": 23.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        498,
+        465,
+        571,
+        479
+      ],
+      "alpha_range": [
+        0,
+        112
+      ],
+      "sha256": "ca6c5950228ab84476f16a41227792bed9284d186b3dbedf23cc61d85923729e",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "night-illumination-map",
+      "file": "lighting/night-illumination-map.png",
+      "preset": "night",
+      "kind": "illumination",
+      "receiver": "interior",
+      "blend": "multiply, then restore original interior alpha",
+      "z": "after interior scene composition",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "5197af82d1f3f0483c681c1925f3eaa0a82538ff8eeffbee396577167be1f1ea",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "night-ledge-cast",
+      "file": "lighting/night-ledge-cast.png",
+      "preset": "night",
+      "kind": "cast",
+      "receiver": "ledge",
+      "blend": "source-over",
+      "z": 46.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        326,
+        516,
+        382,
+        534
+      ],
+      "alpha_range": [
+        0,
+        1
+      ],
+      "sha256": "83e9e2eb5dde87ef857189b4e14f216a0714ec45bac15bc9875416772f077d31",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "night-ledge-contact",
+      "file": "lighting/night-ledge-contact.png",
+      "preset": "night",
+      "kind": "contact",
+      "receiver": "ledge",
+      "blend": "source-over",
+      "z": 46.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        333,
+        520,
+        378,
+        526
+      ],
+      "alpha_range": [
+        0,
+        88
+      ],
+      "sha256": "3acc061bb41b700cc950cc8831341df1256e3441856d764fa4c9a1c58d61babd",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "night-pedestal-cast",
+      "file": "lighting/night-pedestal-cast.png",
+      "preset": "night",
+      "kind": "cast",
+      "receiver": "pedestal",
+      "blend": "source-over",
+      "z": 64.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": null,
+      "alpha_range": [
+        0,
+        0
+      ],
+      "sha256": "044661371291e22bda88afea69c22a3eaf109ba72801afd2acab2578060cc19b",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "night-pedestal-contact",
+      "file": "lighting/night-pedestal-contact.png",
+      "preset": "night",
+      "kind": "contact",
+      "receiver": "pedestal",
+      "blend": "source-over",
+      "z": 64.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        1360,
+        391,
+        1489,
+        399
+      ],
+      "alpha_range": [
+        0,
+        112
+      ],
+      "sha256": "45ac5e3eebc3b487e12570d72c341e9e6b3bb8a808730d9e31163ec3ad4e7c77",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "night-table-cast",
+      "file": "lighting/night-table-cast.png",
+      "preset": "night",
+      "kind": "cast",
+      "receiver": "table",
+      "blend": "source-over",
+      "z": 70,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        137,
+        737,
+        629,
+        779
+      ],
+      "alpha_range": [
+        0,
+        6
+      ],
+      "sha256": "773857a178cbc4fc89e632a08c50b15ed8a62acc797d732cc199024ef5b6633e",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "night-table-contact",
+      "file": "lighting/night-table-contact.png",
+      "preset": "night",
+      "kind": "contact",
+      "receiver": "table",
+      "blend": "source-over",
+      "z": 70,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        182,
+        742,
+        684,
+        767
+      ],
+      "alpha_range": [
+        0,
+        93
+      ],
+      "sha256": "545470a04ce12ceafb94ef1f885a70ede53cdf974df621aad8b1f0c5b2dd01ab",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "overcast-ambient-occlusion",
+      "file": "lighting/overcast-ambient-occlusion.png",
+      "preset": "overcast",
+      "kind": "ambient_occlusion",
+      "receiver": "shelves_and_rug_edge",
+      "blend": "source-over",
+      "z": 14.1,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        1535,
+        879
+      ],
+      "alpha_range": [
+        0,
+        58
+      ],
+      "sha256": "131dba6c2148d848661b4740d9380f15ee1fb74caec63d48fce62baa4f0dc8c1",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "overcast-floor-cast",
+      "file": "lighting/overcast-floor-cast.png",
+      "preset": "overcast",
+      "kind": "cast",
+      "receiver": "floor",
+      "blend": "source-over",
+      "z": 15,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        38,
+        607,
+        1507,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        17
+      ],
+      "sha256": "ce3279d79d58485a5aa73be41173f22dc459c6c2c0d95cd9489b0e4dc4448b5f",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "overcast-floor-contact",
+      "file": "lighting/overcast-floor-contact.png",
+      "preset": "overcast",
+      "kind": "contact",
+      "receiver": "floor",
+      "blend": "source-over",
+      "z": 15,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        68,
+        611,
+        1470,
+        1014
+      ],
+      "alpha_range": [
+        0,
+        120
+      ],
+      "sha256": "b1fe95ba801471fa726bd48e2d4c85075b319ac65b28248f0f24cc361fe4c2ad",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "overcast-hearth_floor-cast",
+      "file": "lighting/overcast-hearth_floor-cast.png",
+      "preset": "overcast",
+      "kind": "cast",
+      "receiver": "hearth_floor",
+      "blend": "source-over",
+      "z": 23.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": null,
+      "alpha_range": [
+        0,
+        0
+      ],
+      "sha256": "044661371291e22bda88afea69c22a3eaf109ba72801afd2acab2578060cc19b",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "overcast-hearth_floor-contact",
+      "file": "lighting/overcast-hearth_floor-contact.png",
+      "preset": "overcast",
+      "kind": "contact",
+      "receiver": "hearth_floor",
+      "blend": "source-over",
+      "z": 23.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        498,
+        465,
+        571,
+        479
+      ],
+      "alpha_range": [
+        0,
+        112
+      ],
+      "sha256": "ca6c5950228ab84476f16a41227792bed9284d186b3dbedf23cc61d85923729e",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "overcast-illumination-map",
+      "file": "lighting/overcast-illumination-map.png",
+      "preset": "overcast",
+      "kind": "illumination",
+      "receiver": "interior",
+      "blend": "multiply, then restore original interior alpha",
+      "z": "after interior scene composition",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alpha_range": [
+        255,
+        255
+      ],
+      "sha256": "f24b8b4cfc7185d2d00064399e5ab7efa731d8708c2e3971903730dfc542ad57",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "overcast-ledge-cast",
+      "file": "lighting/overcast-ledge-cast.png",
+      "preset": "overcast",
+      "kind": "cast",
+      "receiver": "ledge",
+      "blend": "source-over",
+      "z": 46.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        332,
+        515,
+        393,
+        537
+      ],
+      "alpha_range": [
+        0,
+        1
+      ],
+      "sha256": "adad1b70bfeec468e41b421aa9e54a842b76e912177ced24860b68a97d6d4684",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "overcast-ledge-contact",
+      "file": "lighting/overcast-ledge-contact.png",
+      "preset": "overcast",
+      "kind": "contact",
+      "receiver": "ledge",
+      "blend": "source-over",
+      "z": 46.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        333,
+        520,
+        378,
+        526
+      ],
+      "alpha_range": [
+        0,
+        88
+      ],
+      "sha256": "3acc061bb41b700cc950cc8831341df1256e3441856d764fa4c9a1c58d61babd",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "overcast-pedestal-cast",
+      "file": "lighting/overcast-pedestal-cast.png",
+      "preset": "overcast",
+      "kind": "cast",
+      "receiver": "pedestal",
+      "blend": "source-over",
+      "z": 64.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": null,
+      "alpha_range": [
+        0,
+        0
+      ],
+      "sha256": "044661371291e22bda88afea69c22a3eaf109ba72801afd2acab2578060cc19b",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "overcast-pedestal-contact",
+      "file": "lighting/overcast-pedestal-contact.png",
+      "preset": "overcast",
+      "kind": "contact",
+      "receiver": "pedestal",
+      "blend": "source-over",
+      "z": 64.5,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        1360,
+        391,
+        1489,
+        399
+      ],
+      "alpha_range": [
+        0,
+        112
+      ],
+      "sha256": "45ac5e3eebc3b487e12570d72c341e9e6b3bb8a808730d9e31163ec3ad4e7c77",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "overcast-table-cast",
+      "file": "lighting/overcast-table-cast.png",
+      "preset": "overcast",
+      "kind": "cast",
+      "receiver": "table",
+      "blend": "source-over",
+      "z": 70,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        157,
+        740,
+        620,
+        781
+      ],
+      "alpha_range": [
+        0,
+        3
+      ],
+      "sha256": "dbc6ba536ae39a7722bec874f3a5407b7abcda318291c1ca3e6c9c6a0546a4f6",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    },
+    {
+      "id": "overcast-table-contact",
+      "file": "lighting/overcast-table-contact.png",
+      "preset": "overcast",
+      "kind": "contact",
+      "receiver": "table",
+      "blend": "source-over",
+      "z": 70,
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bounds": [
+        182,
+        742,
+        684,
+        767
+      ],
+      "alpha_range": [
+        0,
+        93
+      ],
+      "sha256": "545470a04ce12ceafb94ef1f885a70ede53cdf974df621aad8b1f0c5b2dd01ab",
+      "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
+      "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
+    }
+  ]
+}

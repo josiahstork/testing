@@ -154,5 +154,12 @@
     "view_angle_down_deg_estimate": 10,
     "main_axis": "upright",
     "base_alignment": "Shallow ellipse aligned to raised left stone ledge."
+  },
+  "lighting": {
+    "rule": "astrolabe",
+    "rebuild_shadow_when_moved": true,
+    "source_highlights": "baked",
+    "lighting_map": "shared interior gain map",
+    "keep_shadow_separate_from_sprite": true
   }
 }

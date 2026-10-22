@@ -195,5 +195,12 @@
       "#694e32"
     ],
     "reach_poses_included": false
+  },
+  "lighting": {
+    "rule": "wizard",
+    "rebuild_shadow_when_moved": true,
+    "source_highlights": "baked",
+    "lighting_map": "shared interior gain map",
+    "keep_shadow_separate_from_sprite": true
   }
 }

@@ -188,5 +188,12 @@
     },
     "light": "warm painterly celestial ivory/cobalt/gold",
     "view_angle_down_deg_estimate": 15
+  },
+  "lighting": {
+    "rule": "teacup",
+    "rebuild_shadow_when_moved": true,
+    "source_highlights": "baked",
+    "lighting_map": "shared interior gain map",
+    "keep_shadow_separate_from_sprite": true
   }
 }

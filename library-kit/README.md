@@ -1,12 +1,28 @@
-# Wizard library asset kit — revision 3
+# Wizard library asset kit — revision 4: light and depth
 
-[**View the scene with the wizard**](composite.png) · [**Compare without him**](composite-without-wizard.png) · [**Download the ZIP**](../library-kit.zip?raw=true) · [**Wizard sprite**](assets/wizard.png) · [**Scene JSON**](scene.json)
+[**Compare the lighting presets**](lighting-comparison.png) · [**Before / after**](lighting-before-after.png) · [**View the daylight scene**](composite.png) · [**Download the ZIP**](../library-kit.zip?raw=true) · [**Scene JSON**](scene.json)
 
-![Library with the wizard](composite.png)
+![Lighting presets](lighting-comparison.png)
 
-This revision adds the wizard as a separate idle sprite for scale and theme review, rebuilds the blue/ivory/gold celestial tea service from the supplied inspiration, and revises the hearth, adjacent bookcase, ladder, vines, chair palette, rug and instrument angle. The package contains **23 source/layer PNGs**, **14 interactive object records**, **65 shelf rows**, metadata and a browser preview.
+The room now has shared interior lighting, independently adjustable outdoor light, contact shadows, projected cast shadows, shelf occlusion, and separate candle/hearth light controls. The wizard, celestial tea service and scene layout are preserved. The package includes **23 art/layer PNGs**, **48 lighting/shadow PNG snapshots**, **14 interactive object records**, **65 shelf rows**, metadata, and the interactive preview.
 
-## Revision 3 changes
+## Light and depth controls
+
+| Control | Behavior |
+| --- | --- |
+| Outdoor light, 0–100% | Changes exterior exposure and the light entering the room, including bounce/fill and the floor light patch. |
+| Outdoor warmth, 2800–8500 K | Changes the daylight contribution from warm amber to cool blue. |
+| Sun height, 12–75° | Low sun produces longer floor/table shadows; high sun shortens them. |
+| Candlelight, 0–100% | Changes the chandelier and smaller warm light pools independently of daylight. |
+| Hearth light, 0–100% | Changes fire illumination and the separate flame effects independently of daylight. |
+| Shared lighting | Toggles the interior gain-map pass for comparison. |
+| Contact and cast shadows | Toggles receiver shadows and ambient occlusion. |
+
+Four presets are included: **Sunlit day, Overcast, Evening, and Candlelit night**. Manual controls produce a Custom state. Presets re-enable lighting/shadows; Reset restores the default scene and daylight preset. At zero daylight, candles and hearth can still illuminate the room. A small configurable ambient term retains readability when all added lights are zero.
+
+Contact darkening stays on supporting surfaces. Directional shadows project original sprite silhouettes onto the floor, tabletop or ledge; low daylight switches the dominant shadow source to the hearth or chandelier. Tea shadows respond to moving/lifting objects. Hiding the wizard removes both his sprite and his shadow. Shelf corners and the rug edge receive subtle occlusion. Static grouped furniture uses explicit shadow proxies and contact points.
+
+## Scene and character assets
 
 - **Wizard:** new full-body idle illustration based on the original character design: crooked olive hat and purple flower, dark hair, spectacles, gold earrings, olive coat, burgundy wrap shirt and boots. He stands in front of the workbench and behind the foreground tea table. `Show wizard` toggles him independently; he is excluded from the static furnishings raster. Both feet, both hand grip points and costume details are recorded in metadata.
 - **Tea service:** matching celestial ivory, cobalt-blue and gold teapot, removable lid, amber-filled cup, shallow saucer, creamer, sugar bowl and separate engraved spoon. The creamer now pours to the left from its right-side handle; attachment data was updated. Sugar cubes are grouped in the bowl artwork, rather than separately movable.
@@ -19,15 +35,14 @@ This revision adds the wizard as a separate idle sprite for scale and theme revi
 
 ## Preview
 
-From this folder, run:
+1. Download and unzip the kit.
+2. Open **preview.html** in your browser.
+3. If prompted, choose the kit's **assets** folder. This lets the preview load the images without a web server.
+4. Use **Lighting preset** and the sliders in **Light and depth**.
 
-```sh
-python -m http.server 8000 --bind 127.0.0.1
-```
+If your browser restricts local scripts, serve this folder with `python -m http.server 8000 --bind 127.0.0.1`, then open **http://127.0.0.1:8000/preview.html**. GitHub's file viewer shows the PNGs and source but does not execute the interactive HTML.
 
-Then open **http://127.0.0.1:8000/preview.html**. GitHub's file viewer does not run the interactive HTML; download the ZIP and run it locally.
-
-Use **Show wizard** to compare character scale and palette. Click the dragon for smoke or the cauldron for steam. Drag tea pieces onto the tabletop, or seat the cup on its saucer and lid on the teapot. Moving a seated parent carries its child. Invalid drops return to the last support; Escape cancels a drag; Reset restores initial placement. The object menu supports keyboard activation. Layer toggles expose the blank architecture. Rain and night controls are exterior-only demonstrations, not alternate painted weather backgrounds.
+Use **Show wizard** to compare character scale and palette. Click the dragon for smoke or the cauldron for steam. Drag tea pieces onto the tabletop, or seat the cup on its saucer and lid on the teapot. Moving a seated parent carries its child. Invalid drops return to the last support; Escape cancels a drag; Reset restores initial placement. The object menu supports keyboard activation. Layer toggles expose the blank architecture. Selecting the outside Night or Rain view also selects a matching lighting preset. The exterior uses the existing landscape with exposure/color grading and procedural rain; alternate painted weather landscapes are not included.
 
 ## Files
 
@@ -48,7 +63,13 @@ Use **Show wizard** to compare character scale and palette. Click the dragon for
 | `scene.json` | Authoritative transforms, depth, physics estimates, source crops, projective quads, anchors, contacts, click rules, weather and character-integration contracts. |
 | `metadata/*.json` | Object records plus shelf/rug/table placement data. |
 | `validation.json` | PNG/hash checks, attachment coincidence, table-foot support, tea-base support, book baselines, and hearth containment. |
-| `preview-checks.json` | Browser checks for dragging, reset, smoke cooldown, muzzle origins and blank-room isolation. |
+| `preview-checks.json` | Browser checks for daylight response, independent interior lights, shadow updates, temperature, sun height, dragging, reset, transparency, smoke, blank-room isolation and folder loading. |
+| `lighting.js` | Shared light-map and receiver-shadow renderer. |
+| `lighting/manifest.json` | Lighting PNG dimensions, hashes, presets, receivers, blend modes and placement. |
+| `lighting/*.png` | Separate contact/cast shadow maps, shelf/rug occlusion, and opaque RGB gain maps for four default-arrangement snapshots. |
+| `metadata/lighting.json` | Light sources, gain fields, controls, receiver geometry and export contracts. |
+| `lighting-comparison.png`, `lighting-before-after.png` | Labeled lighting comparisons. |
+| `composite.png`, `composite-overcast.png`, `composite-evening.png`, `composite-night.png` | Native-resolution lighting preset snapshots. |
 | `composite.png` | Native 1536 × 1024 assembled scene with wizard, without editor controls. |
 | `composite-without-wizard.png` | Matching scene without the wizard, for comparison. |
 | `preview.png` | Full browser workbench screenshot. |
@@ -74,8 +95,21 @@ Tea JSON includes grip points, seat constraints, pouring origins, tilt limits, v
 
 The chest remains a closed combined sprite; opening requires separate body/lid/interior artwork. The armillary sphere needs separate ring layers for gimbal motion. Ladder sliding/climbing needs a calibrated rail and character poses. No dragon skeletal rig is supplied; smoke is animated independently without moving its ground contacts.
 
-Warm highlights are baked into some props, so changing the exterior does not fully relight the room. Only daylight exterior art is included. Arbitrary character walk-behind still requires additional occlusion masks. Some generated opaque pixels remain at 254/255 alpha, allowing slight backdrop bleed. This remains a new interpretation of the reference rather than a pixel-exact reconstruction.
+Shared gain maps now change the room and props with exterior light, but the original painted highlights remain. This is an artistic 2.5D lighting approximation without per-pixel normal/depth maps or 3D light transport. Only daylight exterior art is included. Arbitrary character walk-behind still requires additional occlusion masks. Some generated opaque pixels remain at 254/255 alpha, allowing slight backdrop bleed. This remains a new interpretation of the reference rather than a pixel-exact reconstruction.
 
 ## Character and interaction limits
 
 The wizard is a new illustration based on the supplied design, not a pixel extraction from the original character sheet. His design height is estimated at 1.9 m for planning, not measured from the illustration. Scene scale is a 2.5D authored approximation. The idle pose provides a thematic and scale comparison; it does not yet perform pickups or walking. The metadata distinguishes the supplied idle art from required future interaction poses.
+
+## Applying the separate lighting rasters
+
+`scene.json` includes `lighting` configuration and `lighting_assets` records. The separate `lighting/manifest.json` lists every snapshot map with its receiver and blending contract. The snapshots assume the default object arrangement with wizard visible. Regenerate maps through the renderer when moving/hiding objects; the browser does this automatically.
+
+1. Render the exterior with its exposure and atmosphere.
+2. Render room architecture and the neutral static layers into a separate interior buffer. Draw floor shadows at z15, hearth shadows at z23.5, ledge shadows at z46.5, pedestal shadows at z64.5, and tabletop shadows at z70, respecting receiver polygons and object depth.
+3. Multiply the selected **illumination-map** into the interior buffer. Restore its original alpha afterward so transparent outdoor openings remain open.
+4. Composite the lit interior over the exterior. Do not multiply the exterior a second time.
+
+Contact/cast/AO PNGs contain transparent black shading and use source-over blending. The **illumination-map** PNGs are opaque RGB gain maps; they are not scene overlays and must not be drawn source-over. The supplied neutral `assets/furnishings.png` excludes these new shadow/light passes. The renderer and JSON preserve the source art separately from its lighting.
+
+The maps use artistic sRGB compositing, not calibrated physical illumination. The night view is a graded daylight landscape. Accurate relighting of every painted highlight, hard 3D wall/furniture shadows, and arbitrary character walk-behind need additional depth, normal or occlusion data.
