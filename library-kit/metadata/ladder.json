@@ -3,16 +3,16 @@
   "asset": "ladder",
   "label": "ladder",
   "transform": {
-    "x": 1040,
-    "y": 200,
-    "width": 300,
-    "height": 450.0,
+    "x": 1090,
+    "y": 185,
+    "width": 150,
+    "height": 444.8489,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.29296875
+    "scale": 0.20604395604395603
   },
   "z": 48,
   "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -40,28 +40,20 @@
       "space": "source_uv",
       "vertices": [
         [
-          0.12,
-          0.18
+          0.33,
+          0.01
         ],
         [
-          0.82,
-          0.12
+          0.75,
+          0.01
         ],
         [
-          0.96,
-          0.5
+          0.84,
+          0.99
         ],
         [
-          0.83,
-          0.94
-        ],
-        [
-          0.2,
-          0.94
-        ],
-        [
-          0.05,
-          0.55
+          0.15,
+          0.99
         ]
       ],
       "accuracy": "conservative authored proxy; alpha hit testing is separate"
@@ -86,24 +78,28 @@
   },
   "anchors": {
     "rail_hook_left": [
-      0.61,
-      0.035
+      0.36,
+      0.04
     ],
     "rail_hook_right": [
-      0.81,
-      0.035
+      0.68,
+      0.04
     ],
     "foot_left": [
-      0.205,
-      0.9
+      0.239,
+      0.972
     ],
     "foot_right": [
-      0.45,
-      0.97
+      0.725,
+      0.98
     ],
     "grip": [
-      0.52,
-      0.53
+      0.51,
+      0.52
+    ],
+    "base": [
+      0.48,
+      0.976
     ]
   },
   "interaction": {
@@ -136,7 +132,7 @@
     "additional_pose_rasters_included": false
   },
   "calibration": {
-    "status": "first-pass authored placement",
+    "status": "Revision 3: thematic and support pass with wizard present",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
   },
@@ -159,18 +155,50 @@
     "dependencies": [
       "rail must be provided by architecture or separate rail prop"
     ],
-    "status": "prototype translation only; rail alignment needs final art calibration",
+    "status": "Fixed corrected idle placement; no rail-slide animation supplied.",
     "rung_count_visible": 9,
     "rung_uv_y": [
-      0.11,
-      0.195,
-      0.28,
-      0.365,
-      0.46,
-      0.55,
-      0.64,
-      0.73,
-      0.82
-    ]
+      0.12,
+      0.22,
+      0.31,
+      0.41,
+      0.51,
+      0.61,
+      0.71,
+      0.81,
+      0.9
+    ],
+    "available": false,
+    "lean_back_deg_design_estimate": 12,
+    "contact_constraints": [
+      "both feet on floor",
+      "both hooks on brass rail"
+    ],
+    "hook_world_scene": [
+      [
+        1144.0,
+        202.793956
+      ],
+      [
+        1192.0,
+        202.793956
+      ]
+    ],
+    "floor_support": "ladder_floor"
+  },
+  "render": {
+    "contact_anchors": [
+      "foot_left",
+      "foot_right"
+    ],
+    "shadow": {
+      "anchor": "base",
+      "radius": [
+        8,
+        2.5
+      ],
+      "opacity": 0.35
+    },
+    "clear_vines": true
   }
 }

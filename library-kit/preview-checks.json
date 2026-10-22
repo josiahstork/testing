@@ -1,5 +1,5 @@
 {
-  "revision": 2,
+  "revision": 3,
   "loaded": true,
   "script_errors": [],
   "smoke_cooldown_limits_to_two_wisps": true,
@@ -7,5 +7,6 @@
   "smoke_uses_raster": true,
   "cup_valid_drag": true,
   "reset_restores_cup": true,
-  "blank_room_has_no_decor_or_effect_leaks": true
+  "blank_room_has_no_decor_or_effect_leaks": true,
+  "wizard_toggle_changes_only_character_region": true
 }

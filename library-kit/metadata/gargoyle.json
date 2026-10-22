@@ -14,7 +14,7 @@
     ],
     "scale": 0.14763458401305057
   },
-  "z": 45,
+  "z": 65,
   "depth_sort": "explicit_z; held objects reparent to character hand",
   "support": "pedestal",
   "physics": {
@@ -131,5 +131,9 @@
     "status": "first-pass authored placement",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
+  },
+  "render": {
+    "clear_vines": true,
+    "note": "Statue silhouette remains unobscured; vegetation removed in decor raster."
   }
 }

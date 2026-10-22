@@ -3,10 +3,10 @@
     "id": "rug",
     "asset": "rug",
     "source_rect": [
-      21,
-      58,
-      1495,
-      905
+      30,
+      50,
+      1478,
+      904
     ],
     "quad_scene": [
       [
@@ -28,8 +28,11 @@
     ],
     "z": 14,
     "render": "projective bilinear quad mesh",
-    "thickness_px": 0,
+    "thickness_px": 1,
     "casts_raised_shadow": false,
-    "clip_to_quad": true
+    "clip_to_quad": true,
+    "pile_height_m_estimate": 0.006,
+    "fringe": "short dark brown/tan; no bright white band",
+    "texture": "woven nap with subtle self-shading"
   }
 ]

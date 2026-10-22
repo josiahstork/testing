@@ -4,15 +4,15 @@
   "label": "astrolabe",
   "transform": {
     "x": 310,
-    "y": 419,
-    "width": 92,
-    "height": 110.4,
+    "y": 417.076,
+    "width": 91,
+    "height": 109.2,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.08034934497816594
+    "scale": 0.0794759825327511
   },
   "z": 47,
   "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -86,12 +86,12 @@
   },
   "anchors": {
     "ring_center": [
-      0.51,
-      0.36
+      0.5,
+      0.4
     ],
     "base": [
-      0.51,
-      0.95
+      0.5,
+      0.97
     ],
     "ring_grip": [
       0.8,
@@ -127,7 +127,7 @@
     "additional_pose_rasters_included": false
   },
   "calibration": {
-    "status": "first-pass authored placement",
+    "status": "Revision 3: thematic and support pass with wizard present",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
   },
@@ -141,5 +141,18 @@
       -35,
       35
     ]
+  },
+  "render": {
+    "shadow": {
+      "anchor": "base",
+      "radius": [
+        23,
+        3
+      ],
+      "opacity": 0.32
+    },
+    "view_angle_down_deg_estimate": 10,
+    "main_axis": "upright",
+    "base_alignment": "Shallow ellipse aligned to raised left stone ledge."
   }
 }

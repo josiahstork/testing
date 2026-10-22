@@ -1,42 +1,58 @@
 {
-  "revision": 2,
-  "asset_count": 20,
-  "interactive_object_count": 11,
+  "revision": 3,
+  "asset_count": 23,
+  "interactive_object_count": 14,
   "checks": [
     {
       "attachment": "teapot_lid -> teapot",
-      "anchor_error_px": 2.51999995271035e-06
+      "anchor_error_px": 4.450000005817856e-06
     },
     {
       "attachment": "teacup -> saucer",
-      "anchor_error_px": 4.569999987324991e-06
+      "anchor_error_px": 2.069999936793465e-06
     },
     {
       "support": "teapot",
       "base_scene": [
-        264.0,
-        759.0
+        213.0,
+        759.99999691
       ],
       "inside_tabletop": true
     },
     {
       "support": "saucer",
       "base_scene": [
-        434.0,
-        765.0000048
+        474.0,
+        765.0000026199999
       ],
       "inside_tabletop": true
     },
     {
       "support": "milk_jug",
       "base_scene": [
-        560.32,
-        754.0
+        590.8,
+        754.0000002300001
       ],
       "inside_tabletop": true
     },
     {
-      "shelf_rows": 64,
+      "support": "sugar_bowl",
+      "base_scene": [
+        349.0,
+        759.00000315
+      ],
+      "inside_tabletop": true
+    },
+    {
+      "support": "spoon",
+      "base_scene": [
+        669.52,
+        744.76
+      ],
+      "inside_tabletop": true
+    },
+    {
+      "shelf_rows": 65,
       "baselines_coincident_with_support": true,
       "source_crops_in_bounds": true
     },
@@ -63,11 +79,56 @@
       ]
     },
     {
-      "cauldron": "rim and base inside firebox",
-      "effects_clipped_to": "hearth_interior"
+      "object": "cauldron",
+      "support": "hearth_floor",
+      "all_contact_points_inside_support": true,
+      "contact_points_scene": [
+        [
+          505.86,
+          467.73124029999997
+        ],
+        [
+          563.025,
+          467.73124029999997
+        ],
+        [
+          532.5,
+          476.9999965
+        ]
+      ]
     },
     {
-      "png_files_verified": 20,
+      "object": "ladder",
+      "support": "ladder_floor",
+      "all_contact_points_inside_support": true,
+      "contact_points_scene": [
+        [
+          1125.85,
+          617.3931308
+        ],
+        [
+          1198.75,
+          620.951922
+        ]
+      ]
+    },
+    {
+      "object": "wizard",
+      "support": "floor",
+      "all_contact_points_inside_support": true,
+      "contact_points_scene": [
+        [
+          817.25,
+          750.44
+        ],
+        [
+          909.375,
+          734.8625
+        ]
+      ]
+    },
+    {
+      "png_files_verified": 23,
       "hashes_updated": true
     },
     {

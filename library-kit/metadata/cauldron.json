@@ -4,7 +4,7 @@
   "label": "cauldron",
   "transform": {
     "x": 477,
-    "y": 387.73778,
+    "y": 381.73778,
     "width": 111,
     "height": 102.98618,
     "rotation_deg": 0,
@@ -16,7 +16,7 @@
   },
   "z": 24,
   "depth_sort": "explicit_z; held objects reparent to character hand",
-  "support": "hearth",
+  "support": "hearth_floor",
   "physics": {
     "body_type": "static",
     "mass_kg_estimate": 35,
@@ -108,6 +108,14 @@
     "base": [
       0.5,
       0.925
+    ],
+    "foot_left": [
+      0.26,
+      0.835
+    ],
+    "foot_right": [
+      0.775,
+      0.835
     ]
   },
   "interaction": {
@@ -193,12 +201,17 @@
     "shadow": {
       "anchor": "base",
       "radius": [
-        36,
-        4
+        7,
+        2.2
       ],
       "opacity": 0.38
     },
     "view_angle_down_deg_estimate": 10,
-    "depth": "inside firebox; front masonry stays unobscured"
+    "depth": "inside firebox; front masonry stays unobscured",
+    "contact_anchors": [
+      "foot_left",
+      "foot_right",
+      "base"
+    ]
   }
 }

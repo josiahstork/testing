@@ -1,0 +1,199 @@
+{
+  "id": "wizard",
+  "asset": "wizard",
+  "label": "Wizard \u00b7 idle scale reference",
+  "transform": {
+    "x": 700,
+    "y": 260,
+    "width": 335,
+    "height": 502.5,
+    "rotation_deg": 0,
+    "origin_uv": [
+      0,
+      0
+    ],
+    "scale": 0.3271484375
+  },
+  "z": 54,
+  "depth_sort": "explicit_z; held objects reparent to character hand",
+  "support": "floor",
+  "physics": {
+    "body_type": "kinematic",
+    "mass_kg_estimate": 85,
+    "material": "character",
+    "gravity_m_s2": 0,
+    "gravity_projected_px_s2": 0,
+    "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+    "friction_static": 0.65,
+    "friction_dynamic": 0.45,
+    "restitution": 0.03,
+    "center_of_mass_uv": [
+      0.5,
+      0.55
+    ],
+    "contact_uv": [
+      0.5,
+      0.94
+    ],
+    "collision": {
+      "type": "convex_polygon",
+      "space": "source_uv",
+      "vertices": [
+        [
+          0.26,
+          0.15
+        ],
+        [
+          0.72,
+          0.15
+        ],
+        [
+          0.88,
+          0.9
+        ],
+        [
+          0.64,
+          0.99
+        ],
+        [
+          0.3,
+          0.99
+        ],
+        [
+          0.15,
+          0.8
+        ],
+        [
+          0.2,
+          0.3
+        ]
+      ],
+      "accuracy": "conservative authored proxy; alpha hit testing is separate"
+    },
+    "rotation_constraints_deg": [
+      0,
+      0
+    ],
+    "free_fall_enabled": false,
+    "breakage_enabled": false,
+    "design_values_only": true,
+    "note": "Idle pose for thematic scale review. No walking or reach animation is included.",
+    "world_footprint_m_estimate": [
+      0.46,
+      0.28
+    ],
+    "height_m_estimate": 1.9
+  },
+  "hit_test": {
+    "mode": "source_alpha",
+    "alpha_threshold": 32,
+    "skip_transparent_holes": true,
+    "inverse_transform_pointer": true,
+    "minimum_target_css_px": 24,
+    "hit_slop_css_px": 3,
+    "priority": 45,
+    "accessible_label": "gargoyle"
+  },
+  "anchors": {
+    "hat_flower": [
+      0.48,
+      0.073
+    ],
+    "face": [
+      0.55,
+      0.14
+    ],
+    "left_hand_grip": [
+      0.45,
+      0.44
+    ],
+    "right_hand_grip": [
+      0.72,
+      0.52
+    ],
+    "foot_left": [
+      0.35,
+      0.976
+    ],
+    "foot_right": [
+      0.625,
+      0.945
+    ],
+    "base": [
+      0.49,
+      0.961
+    ]
+  },
+  "interaction": {
+    "clickable": true,
+    "draggable": false,
+    "pickup": false,
+    "return_on_invalid_drop": true,
+    "return_duration_ms": 300,
+    "keyboard": [
+      "Enter",
+      "Space"
+    ],
+    "actions": [
+      "inspect"
+    ]
+  },
+  "shadow": {
+    "implementation": "runtime ellipse on support; never bake into sprite",
+    "opacity": 0.2,
+    "blur_scene_px": 6,
+    "detach_on_pickup": false,
+    "fade_with_lift": true
+  },
+  "states": {
+    "initial": "idle",
+    "available_raster_states": [
+      "idle"
+    ],
+    "additional_pose_rasters_included": false
+  },
+  "calibration": {
+    "status": "Revision 3: thematic and support pass with wizard present",
+    "anchors": "visually estimated against this exact generated raster",
+    "physics": "plausible design estimates, not measured physical properties"
+  },
+  "render": {
+    "contact_anchors": [
+      "foot_left",
+      "foot_right"
+    ],
+    "shadow": {
+      "anchor": "base",
+      "radius": [
+        18,
+        3.5
+      ],
+      "opacity": 0.36
+    },
+    "visibility_control": "wizard",
+    "foreground_occlusion": "Behind foreground tea table; in front of midground workbench."
+  },
+  "character": {
+    "height_m_design_estimate": 1.9,
+    "pose": "idle",
+    "identity_details": [
+      "olive crooked witch hat",
+      "purple flower",
+      "shaggy black hair",
+      "wire spectacles",
+      "gold earrings",
+      "olive coat",
+      "burgundy wrap shirt",
+      "dark trousers",
+      "brown boots"
+    ],
+    "reference_fidelity": "New illustration based on the supplied character design; not a pixel extraction.",
+    "costume_palette": [
+      "#534c2d",
+      "#50312b",
+      "#242321",
+      "#694e32"
+    ],
+    "reach_poses_included": false
+  }
+}

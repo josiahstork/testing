@@ -3,16 +3,16 @@
   "asset": "teacup",
   "label": "teacup",
   "transform": {
-    "x": 395.75,
-    "y": 707.26025,
-    "width": 85,
-    "height": 56.66667,
+    "x": 438.9,
+    "y": 711.094,
+    "width": 78,
+    "height": 52.0,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.055338541666666664
+    "scale": 0.05078125
   },
   "z": 78,
   "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -86,20 +86,20 @@
   },
   "anchors": {
     "grip_handle": [
-      0.86,
-      0.43
+      0.85,
+      0.42
     ],
     "rim_center": [
       0.45,
-      0.166
+      0.192
     ],
     "liquid_center": [
       0.45,
-      0.166
+      0.192
     ],
     "base": [
       0.45,
-      0.897
+      0.933
     ]
   },
   "interaction": {
@@ -133,14 +133,14 @@
     "additional_pose_rasters_included": false
   },
   "calibration": {
-    "status": "Revision 2: calibrated against architecture coordinate guide",
+    "status": "Revision 3: thematic and support pass with wizard present",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
   },
   "liquid": {
     "capacity_ml_estimate": 180,
-    "initial_volume_ml": 0,
-    "temperature_c": 20,
+    "initial_volume_ml": 120,
+    "temperature_c": 60,
     "spills_enabled": false,
     "spill_warning_tilt_deg": 20,
     "pour_start_tilt_deg": 35,
@@ -151,8 +151,8 @@
     "stream_gravity_scene_px_s2": 350,
     "target_acceptance_radius_scene_px": 8,
     "stop_when_empty_or_target_full": true,
-    "interior_fill_art_included": false,
-    "note": "Empty initial state matches supplied raster. Filled state needs masked surface rendering."
+    "interior_fill_art_included": true,
+    "note": "Amber tea surface is included in this initial filled cup raster. Arbitrary draining requires a separate liquid surface/interior mask."
   },
   "pickup_contract": {
     "hand_anchor": "grip_handle",
@@ -174,18 +174,19 @@
     ],
     "collision_with_other_teaware": true,
     "requires_character_pose": true,
-    "character_art_included": false
+    "character_art_included": false,
+    "idle_character_art_included": true
   },
   "render": {
     "shadow": {
       "anchor": "base",
       "radius": [
-        18.7,
+        17.16,
         2
       ],
       "opacity": 0.29
     },
-    "light": "warm upper-left; shaded underside",
-    "view_angle_down_deg_estimate": 12
+    "light": "warm painterly celestial ivory/cobalt/gold",
+    "view_angle_down_deg_estimate": 15
   }
 }

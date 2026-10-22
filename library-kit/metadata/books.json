@@ -1760,182 +1760,6 @@
     "shadow": "2 px ambient seam at support line"
   },
   {
-    "id": "center_arch_1",
-    "asset": "book_row",
-    "source_rect": [
-      1579,
-      116,
-      528,
-      499
-    ],
-    "quad_scene": [
-      [
-        655,
-        325
-      ],
-      [
-        726,
-        330
-      ],
-      [
-        726,
-        355
-      ],
-      [
-        655,
-        350
-      ]
-    ],
-    "support_line_scene": [
-      [
-        655,
-        350
-      ],
-      [
-        726,
-        355
-      ]
-    ],
-    "height_px": 25,
-    "z": 12,
-    "clip_to_quad": true,
-    "baseline_error_px": 0,
-    "render": "bilinear quad mesh",
-    "shadow": "2 px ambient seam at support line"
-  },
-  {
-    "id": "center_arch_2",
-    "asset": "book_row",
-    "source_rect": [
-      193,
-      116,
-      528,
-      499
-    ],
-    "quad_scene": [
-      [
-        655,
-        362
-      ],
-      [
-        726,
-        369
-      ],
-      [
-        726,
-        396
-      ],
-      [
-        655,
-        389
-      ]
-    ],
-    "support_line_scene": [
-      [
-        655,
-        389
-      ],
-      [
-        726,
-        396
-      ]
-    ],
-    "height_px": 27,
-    "z": 12,
-    "clip_to_quad": true,
-    "baseline_error_px": 0,
-    "render": "bilinear quad mesh",
-    "shadow": "2 px ambient seam at support line"
-  },
-  {
-    "id": "center_arch_3",
-    "asset": "book_row",
-    "source_rect": [
-      390,
-      116,
-      528,
-      499
-    ],
-    "quad_scene": [
-      [
-        655,
-        402
-      ],
-      [
-        726,
-        407
-      ],
-      [
-        726,
-        431
-      ],
-      [
-        655,
-        426
-      ]
-    ],
-    "support_line_scene": [
-      [
-        655,
-        426
-      ],
-      [
-        726,
-        431
-      ]
-    ],
-    "height_px": 24,
-    "z": 12,
-    "clip_to_quad": true,
-    "baseline_error_px": 0,
-    "render": "bilinear quad mesh",
-    "shadow": "2 px ambient seam at support line"
-  },
-  {
-    "id": "center_arch_4",
-    "asset": "book_row",
-    "source_rect": [
-      587,
-      116,
-      528,
-      499
-    ],
-    "quad_scene": [
-      [
-        655,
-        438
-      ],
-      [
-        726,
-        441
-      ],
-      [
-        726,
-        460
-      ],
-      [
-        655,
-        457
-      ]
-    ],
-    "support_line_scene": [
-      [
-        655,
-        457
-      ],
-      [
-        726,
-        460
-      ]
-    ],
-    "height_px": 19,
-    "z": 12,
-    "clip_to_quad": true,
-    "baseline_error_px": 0,
-    "render": "bilinear quad mesh",
-    "shadow": "2 px ambient seam at support line"
-  },
-  {
     "id": "upper_left_1",
     "asset": "book_row",
     "source_rect": [
@@ -2814,5 +2638,225 @@
     "baseline_error_px": 0,
     "render": "bilinear quad mesh",
     "shadow": "2 px ambient seam at support line"
+  },
+  {
+    "id": "new_straight_bookcase_1",
+    "asset": "book_row",
+    "source_rect": [
+      250,
+      116,
+      600,
+      499
+    ],
+    "quad_scene": [
+      [
+        664,
+        257
+      ],
+      [
+        734,
+        257
+      ],
+      [
+        734,
+        289
+      ],
+      [
+        664,
+        289
+      ]
+    ],
+    "support_line_scene": [
+      [
+        664,
+        289
+      ],
+      [
+        734,
+        289
+      ]
+    ],
+    "height_px": 32,
+    "z": 12,
+    "clip_to_quad": true,
+    "baseline_error_px": 0,
+    "render": "bilinear quad mesh",
+    "shadow": "2 px ambient seam"
+  },
+  {
+    "id": "new_straight_bookcase_2",
+    "asset": "book_row",
+    "source_rect": [
+      381,
+      116,
+      600,
+      499
+    ],
+    "quad_scene": [
+      [
+        664,
+        304
+      ],
+      [
+        734,
+        304
+      ],
+      [
+        734,
+        336
+      ],
+      [
+        664,
+        336
+      ]
+    ],
+    "support_line_scene": [
+      [
+        664,
+        336
+      ],
+      [
+        734,
+        336
+      ]
+    ],
+    "height_px": 32,
+    "z": 12,
+    "clip_to_quad": true,
+    "baseline_error_px": 0,
+    "render": "bilinear quad mesh",
+    "shadow": "2 px ambient seam"
+  },
+  {
+    "id": "new_straight_bookcase_3",
+    "asset": "book_row",
+    "source_rect": [
+      512,
+      116,
+      600,
+      499
+    ],
+    "quad_scene": [
+      [
+        664,
+        350
+      ],
+      [
+        734,
+        350
+      ],
+      [
+        734,
+        382
+      ],
+      [
+        664,
+        382
+      ]
+    ],
+    "support_line_scene": [
+      [
+        664,
+        382
+      ],
+      [
+        734,
+        382
+      ]
+    ],
+    "height_px": 32,
+    "z": 12,
+    "clip_to_quad": true,
+    "baseline_error_px": 0,
+    "render": "bilinear quad mesh",
+    "shadow": "2 px ambient seam"
+  },
+  {
+    "id": "new_straight_bookcase_4",
+    "asset": "book_row",
+    "source_rect": [
+      643,
+      116,
+      600,
+      499
+    ],
+    "quad_scene": [
+      [
+        664,
+        397
+      ],
+      [
+        734,
+        397
+      ],
+      [
+        734,
+        426
+      ],
+      [
+        664,
+        426
+      ]
+    ],
+    "support_line_scene": [
+      [
+        664,
+        426
+      ],
+      [
+        734,
+        426
+      ]
+    ],
+    "height_px": 29,
+    "z": 12,
+    "clip_to_quad": true,
+    "baseline_error_px": 0,
+    "render": "bilinear quad mesh",
+    "shadow": "2 px ambient seam"
+  },
+  {
+    "id": "new_straight_bookcase_5",
+    "asset": "book_row",
+    "source_rect": [
+      774,
+      116,
+      600,
+      499
+    ],
+    "quad_scene": [
+      [
+        664,
+        440
+      ],
+      [
+        734,
+        440
+      ],
+      [
+        734,
+        472
+      ],
+      [
+        664,
+        472
+      ]
+    ],
+    "support_line_scene": [
+      [
+        664,
+        472
+      ],
+      [
+        734,
+        472
+      ]
+    ],
+    "height_px": 32,
+    "z": 12,
+    "clip_to_quad": true,
+    "baseline_error_px": 0,
+    "render": "bilinear quad mesh",
+    "shadow": "2 px ambient seam"
   }
 ]

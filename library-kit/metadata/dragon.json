@@ -3,16 +3,16 @@
   "asset": "dragon",
   "label": "dragon",
   "transform": {
-    "x": 970,
-    "y": 518,
-    "width": 370,
-    "height": 246.66667,
+    "x": 980,
+    "y": 610,
+    "width": 360,
+    "height": 240.0,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.24088541666666666
+    "scale": 0.234375
   },
   "z": 50,
   "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -144,7 +144,7 @@
     "additional_pose_rasters_included": false
   },
   "calibration": {
-    "status": "Revision 2: calibrated against architecture coordinate guide",
+    "status": "Revision 3: thematic and support pass with wizard present",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
   },

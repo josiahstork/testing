@@ -3,16 +3,16 @@
   "asset": "teapot_lid",
   "label": "teapot lid",
   "transform": {
-    "x": 237.34,
-    "y": 652.88,
-    "width": 55,
-    "height": 36.66667,
+    "x": 182.0,
+    "y": 652.64534,
+    "width": 62,
+    "height": 41.33333,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.035807291666666664
+    "scale": 0.040364583333333336
   },
   "z": 76,
   "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -87,15 +87,15 @@
   "anchors": {
     "grip_knob": [
       0.5,
-      0.255
+      0.18
     ],
     "seat": [
       0.5,
-      0.756
+      0.85
     ],
     "base": [
       0.5,
-      0.78
+      0.87
     ]
   },
   "interaction": {
@@ -129,7 +129,7 @@
     "additional_pose_rasters_included": false
   },
   "calibration": {
-    "status": "Revision 2: calibrated against architecture coordinate guide",
+    "status": "Revision 3: thematic and support pass with wizard present",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
   },
@@ -144,18 +144,19 @@
       "teapot.lid_seat"
     ],
     "snap_radius_scene_px": 12,
-    "snap_preserves_scale": true
+    "snap_preserves_scale": true,
+    "idle_character_art_included": true
   },
   "render": {
     "shadow": {
       "anchor": "base",
       "radius": [
-        12.1,
+        13.64,
         2
       ],
       "opacity": 0.29
     },
-    "light": "warm upper-left; shaded underside",
-    "view_angle_down_deg_estimate": 12
+    "light": "warm painterly celestial ivory/cobalt/gold",
+    "view_angle_down_deg_estimate": 15
   }
 }

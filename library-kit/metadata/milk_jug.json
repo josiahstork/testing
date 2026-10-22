@@ -3,16 +3,16 @@
   "asset": "milk_jug",
   "label": "milk jug",
   "transform": {
-    "x": 520,
-    "y": 697.6,
-    "width": 72,
-    "height": 60.0,
+    "x": 550,
+    "y": 704.34667,
+    "width": 80,
+    "height": 53.33333,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.05240174672489083
+    "scale": 0.052083333333333336
   },
   "z": 79,
   "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -86,20 +86,20 @@
   },
   "anchors": {
     "grip_handle": [
-      0.15,
-      0.34
+      0.81,
+      0.43
     ],
     "spout_tip": [
-      0.946,
-      0.185
+      0.19,
+      0.14
     ],
     "mouth_center": [
-      0.58,
-      0.255
+      0.43,
+      0.195
     ],
     "base": [
-      0.56,
-      0.94
+      0.51,
+      0.931
     ]
   },
   "interaction": {
@@ -134,7 +134,7 @@
     "additional_pose_rasters_included": false
   },
   "calibration": {
-    "status": "Revision 2: calibrated against architecture coordinate guide",
+    "status": "Revision 3: thematic and support pass with wizard present",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
   },
@@ -153,7 +153,8 @@
     "target_acceptance_radius_scene_px": 8,
     "stop_when_empty_or_target_full": true,
     "interior_fill_art_included": false,
-    "note": "Empty initial state matches supplied raster. Filled state needs masked surface rendering."
+    "note": "Empty initial state matches supplied raster. Filled state needs masked surface rendering.",
+    "pour_direction": "left"
   },
   "pickup_contract": {
     "hand_anchor": "grip_handle",
@@ -166,8 +167,8 @@
     "max_translation_speed_scene_px_s": 240,
     "rotation_pivot": "grip_handle",
     "rotation_limits_deg": [
-      -10,
-      60
+      -60,
+      10
     ],
     "surface_clearance_before_rotation_scene_px": 18,
     "accept_drop_on": [
@@ -175,18 +176,20 @@
     ],
     "collision_with_other_teaware": true,
     "requires_character_pose": true,
-    "character_art_included": false
+    "character_art_included": false,
+    "note": "Pouring lip is at left in revision 3; tilt toward left around right handle.",
+    "idle_character_art_included": true
   },
   "render": {
     "shadow": {
       "anchor": "base",
       "radius": [
-        15.84,
+        17.6,
         2
       ],
       "opacity": 0.29
     },
-    "light": "warm upper-left; shaded underside",
-    "view_angle_down_deg_estimate": 12
+    "light": "warm painterly celestial ivory/cobalt/gold",
+    "view_angle_down_deg_estimate": 15
   }
 }

@@ -1,0 +1,178 @@
+{
+  "id": "spoon",
+  "asset": "spoon",
+  "label": "spoon",
+  "transform": {
+    "x": 655,
+    "y": 710,
+    "width": 66,
+    "height": 44.0,
+    "rotation_deg": 0,
+    "origin_uv": [
+      0,
+      0
+    ],
+    "scale": 0.04296875
+  },
+  "z": 80,
+  "depth_sort": "explicit_z; held objects reparent to character hand",
+  "support": "tea_table",
+  "physics": {
+    "body_type": "dynamic",
+    "mass_kg_estimate": 0.025,
+    "material": "gilded_metal",
+    "gravity_m_s2": 9.81,
+    "gravity_projected_px_s2": 0,
+    "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+    "friction_static": 0.65,
+    "friction_dynamic": 0.45,
+    "restitution": 0.03,
+    "center_of_mass_uv": [
+      0.5,
+      0.62
+    ],
+    "contact_uv": [
+      0.5,
+      0.94
+    ],
+    "collision": {
+      "type": "convex_polygon",
+      "space": "source_uv",
+      "vertices": [
+        [
+          0.04,
+          0.84
+        ],
+        [
+          0.11,
+          0.64
+        ],
+        [
+          0.28,
+          0.6
+        ],
+        [
+          0.77,
+          0.03
+        ],
+        [
+          0.98,
+          0.03
+        ],
+        [
+          0.9,
+          0.22
+        ],
+        [
+          0.4,
+          0.74
+        ],
+        [
+          0.33,
+          0.96
+        ],
+        [
+          0.1,
+          0.96
+        ]
+      ],
+      "accuracy": "conservative authored proxy; alpha hit testing is separate"
+    },
+    "rotation_constraints_deg": [
+      -15,
+      15
+    ],
+    "free_fall_enabled": false,
+    "breakage_enabled": false,
+    "design_values_only": true
+  },
+  "hit_test": {
+    "mode": "source_alpha",
+    "alpha_threshold": 32,
+    "skip_transparent_holes": true,
+    "inverse_transform_pointer": true,
+    "minimum_target_css_px": 24,
+    "hit_slop_css_px": 3,
+    "priority": 77,
+    "accessible_label": "saucer"
+  },
+  "anchors": {
+    "grip_handle": [
+      0.75,
+      0.25
+    ],
+    "bowl": [
+      0.22,
+      0.79
+    ],
+    "base": [
+      0.22,
+      0.79
+    ],
+    "handle_contact": [
+      0.8,
+      0.2
+    ]
+  },
+  "interaction": {
+    "clickable": true,
+    "draggable": true,
+    "pickup": true,
+    "return_on_invalid_drop": true,
+    "return_duration_ms": 300,
+    "keyboard": [
+      "Enter",
+      "Space"
+    ],
+    "actions": [
+      "inspect",
+      "pick_up",
+      "put_down"
+    ]
+  },
+  "shadow": {
+    "implementation": "runtime ellipse on support; never bake into sprite",
+    "opacity": 0.2,
+    "blur_scene_px": 6,
+    "detach_on_pickup": false,
+    "fade_with_lift": true
+  },
+  "states": {
+    "initial": "idle",
+    "available_raster_states": [
+      "idle"
+    ],
+    "additional_pose_rasters_included": false
+  },
+  "calibration": {
+    "status": "Revision 3: thematic and support pass with wizard present",
+    "anchors": "visually estimated against this exact generated raster",
+    "physics": "plausible design estimates, not measured physical properties"
+  },
+  "pickup_contract": {
+    "hand_anchor": "grip_handle",
+    "rotation_limits_deg": [
+      -180,
+      180
+    ],
+    "accept_drop_on": [
+      "tea_table"
+    ],
+    "held_z": 100,
+    "requires_character_pose": true,
+    "character_art_included": false,
+    "idle_character_art_included": true
+  },
+  "render": {
+    "shadow": {
+      "anchor": "base",
+      "radius": [
+        7,
+        1.5
+      ],
+      "opacity": 0.25
+    },
+    "light": "warm painterly celestial ivory/cobalt/gold",
+    "view_angle_down_deg_estimate": 15
+  }
+}

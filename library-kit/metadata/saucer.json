@@ -3,16 +3,16 @@
   "asset": "saucer",
   "label": "saucer",
   "transform": {
-    "x": 382,
-    "y": 734.15989,
-    "width": 104,
-    "height": 39.03812,
+    "x": 425,
+    "y": 739.324,
+    "width": 98,
+    "height": 32.66667,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.05083088954056696
+    "scale": 0.04511970534069982
   },
   "z": 77,
   "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -87,15 +87,15 @@
   "anchors": {
     "cup_seat": [
       0.5,
-      0.613
+      0.621
     ],
     "grip_edge": [
-      0.88,
-      0.58
+      0.86,
+      0.49
     ],
     "base": [
       0.5,
-      0.79
+      0.786
     ]
   },
   "interaction": {
@@ -129,7 +129,7 @@
     "additional_pose_rasters_included": false
   },
   "calibration": {
-    "status": "Revision 2: calibrated against architecture coordinate guide",
+    "status": "Revision 3: thematic and support pass with wizard present",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
   },
@@ -143,18 +143,19 @@
       "tea_table"
     ],
     "carry_contents_when_seated": true,
-    "cup_requires_second_hand_or_stable_slow_carry": true
+    "cup_requires_second_hand_or_stable_slow_carry": true,
+    "idle_character_art_included": true
   },
   "render": {
     "shadow": {
       "anchor": "base",
       "radius": [
-        22.88,
+        21.56,
         2
       ],
       "opacity": 0.29
     },
-    "light": "warm upper-left; shaded underside",
-    "view_angle_down_deg_estimate": 12
+    "light": "warm painterly celestial ivory/cobalt/gold",
+    "view_angle_down_deg_estimate": 15
   }
 }
