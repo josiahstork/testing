@@ -1,61 +1,73 @@
-# Wizard library asset kit — first pass
+# Wizard library asset kit — revision 2
 
-14 PNG raster files, 11 independently interactive object images, detailed scene JSON, per-object JSON, and a browser preview.
+[**View the revised scene**](composite.png) · [**Download the complete ZIP**](../library-kit.zip?raw=true) · [**Browse individual PNGs**](assets/) · [**Scene JSON**](scene.json)
 
-[**Download the complete kit ZIP**](../library-kit.zip?raw=true) · [**Browse the PNG images**](assets/) · [**Scene JSON**](scene.json)
+![Revised assembled library](composite.png)
 
-![Assembled library preview](preview.png)
+This revision addresses shelf alignment and empty shelves, smoke appearance, tea shading and perspective, cauldron placement and fire, potion-table grounding, and the rug's floor perspective. It contains 20 source/layer PNGs, 11 interactive object sprites, detailed JSON, and a browser preview.
 
-### Empty room
+## Changes
 
-![Empty architecture with transparent outdoor openings](assets/room.png)
+- **Books:** 64 separately positioned rows are fitted to traced shelf baselines across the visible shelf banks. Books are no longer baked into arbitrary floating decorative clusters. Each row's source crop, destination quad, supporting line, and height are recorded in JSON.
+- **Rug:** an orthographic textile texture is mapped into the floor plane with a mesh. It has no raised edge, warped stone-floor patch, or baked floor pixels. The exact four floor corners are in JSON.
+- **Potion table:** a new complete four-leg workbench replaces the floating grouped decoration. Its four foot locations and contact shadows are recorded; all projected feet lie within its floor-support region.
+- **Tea:** the teapot, removable lid, cup, saucer and creamer have new warm ivory glaze, shaded undersides, low viewing angles and localized tabletop contact shadows. Grip and seating anchors were recalibrated to the new art.
+- **Cauldron:** a smaller, lower-angle pot sits inside the firebox, behind the front stone sill. Separate hearth fire and rim flames render in the correct order and are clipped to the fireplace interior. Shortened banners leave the flames unobstructed.
+- **Dragon smoke:** a faint transparent raster wisp replaces circular particles. Two source points remain anchored to the muzzle; a cooldown prevents repeated clicks from producing a dense cloud. Reduced motion removes expansion and drift.
 
-### Outdoor world
+## Preview
 
-![Daytime exterior](assets/outside_day.png)
+From this folder, run:
 
-### Furnishings overlay
+```sh
+python -m http.server 8000 --bind 127.0.0.1
+```
 
-![Static furnishing overlay](assets/furnishings.png)
+Then open **http://127.0.0.1:8000/preview.html**. GitHub's file viewer does not run the interactive HTML; download the ZIP and run it locally.
 
-## Open the preview
-
-In this folder, run `python -m http.server 8000 --bind 127.0.0.1`, then open `http://127.0.0.1:8000/preview.html` in your browser. A server avoids browsers' local-file pixel-read restrictions. No dependencies or network services are needed by the preview.
-
-Click the dragon for procedural smoke; click the cauldron for steam. Drag tea pieces onto the tabletop. Cup and lid detach independently and can be seated again; moving a seated parent carries its child. Invalid drops return to the previous support. Escape cancels a drag. The object menu provides keyboard-accessible inspection and activation. Layer toggles reveal the empty architecture. Rain and night controls are procedural demonstrations affecting the exterior, not additional painted weather images.
+Click the dragon for smoke or the cauldron for steam. Drag tea pieces onto the tabletop, or seat the cup on its saucer and lid on the teapot. Moving a seated parent carries its child. Invalid drops return to the last support; Escape cancels a drag; Reset restores initial placement. The object menu supports keyboard activation. Layer toggles expose the blank architecture. Rain and night controls are exterior-only demonstrations, not alternate painted weather backgrounds.
 
 ## Files
 
-- `assets/outside_day.png`: opaque full-frame alpine exterior.
-- `assets/room.png`: empty room architecture; outdoor openings transparent, window mullions preserved.
-- `assets/furnishings.png`: single transparent grouped furnishing overlay, excluding interactive objects.
-- `assets/dragon.png`, `gargoyle.png`, `ladder.png`, `cauldron.png`, `chest.png`, `astrolabe.png`: transparent individual props.
-- `assets/teapot.png`, `teapot_lid.png`, `teacup.png`, `saucer.png`, `milk_jug.png`: independently movable tea pieces.
-- `scene.json`: authoritative canvas, layers, assets, transforms, interaction design, physical estimates, support surfaces, anchors, attachments, weather and character integration contracts.
-- `metadata/*.json`: convenient individual object copies of the corresponding scene objects.
-- `validation.json`: PNG decoding, dimensions, hashes, attachment coincidence and canvas bounds checks.
-- `preview-checks.json`: browser checks.
-- `preview.png`: rendered browser screenshot.
+| File | Purpose |
+| --- | --- |
+| `assets/outside_day.png` | Opaque alpine exterior behind the transparent openings. |
+| `assets/room.png` | Empty room architecture with transparent outdoor openings and preserved mullions. |
+| `assets/furnishings.png` | Full-canvas transparent convenience overlay, rendered from the exact book/rug/table/decor placement data. Excludes interactive objects and hearth effects. |
+| `assets/decor.png` | Short banners, chandelier, ivy, foreground tea table, chair and cushion, without books, floor rug or potion table. |
+| `assets/book_row.png` | Flat-baseline source book strip used by 64 shelf instances. |
+| `assets/rug.png` | Orthographic textile texture, projected by `floor_props` JSON. |
+| `assets/potion_table.png` | Full-legged potion workbench. |
+| `assets/hearth_fire.png` | Separate transparent logs/flames, with rear-fire and upper-flame crops in JSON. |
+| `assets/smoke_wisp.png` | Transparent wisp used for dragon smoke and optional cauldron vapor. |
+| `assets/dragon.png`, `gargoyle.png`, `ladder.png`, `cauldron.png`, `chest.png`, `astrolabe.png` | Individual interactive props. |
+| `assets/teapot.png`, `teapot_lid.png`, `teacup.png`, `saucer.png`, `milk_jug.png` | Independent tea pieces. |
+| `scene.json` | Authoritative transforms, depth, physics estimates, source crops, projective quads, anchors, contacts, click rules, weather and character-integration contracts. |
+| `metadata/*.json` | Object records plus shelf/rug/table placement data. |
+| `validation.json` | PNG/hash checks, attachment coincidence, table-foot support, tea-base support, book baselines, and hearth containment. |
+| `preview-checks.json` | Browser checks for dragging, reset, smoke cooldown, muzzle origins and blank-room isolation. |
+| `composite.png` | Native 1536 × 1024 assembled scene, without editor controls. |
+| `preview.png` | Full browser workbench screenshot. |
+| `smoke-preview.png` | Snapshot with the revised smoke active. |
 
-## Assembly and coordinates
+## Assembly
 
-Canvas: 1536 × 1024. Use a uniform contain scale; do not stretch props independently. Draw outside at z0, architecture at z10, static furnishings at z30, then props in ascending z. All full-size layers draw at (0,0). Prop transforms specify the entire source raster including transparent padding. Object widths and heights preserve original aspect ratios. JSON UV anchors use source-image coordinates, NOT cropped alpha-bounding-box coordinates. `scene_point = translation + rotation × scale × source_pixel`. Rotation is clockwise in screen coordinates, x right, y down.
+Canvas: **1536 × 1024**, origin at top left, x right, y down. Scale the scene uniformly. Source-raster UV anchors include transparent margins; they do not refer to alpha-cropped bounds. Individual prop images have different native dimensions. Use the recorded dimensions and transforms.
 
-Each prop keeps its own native resolution. Do not assume identical raster sizes. Use the recorded width/height and transforms. Click testing samples source alpha after inverse scene transform; threshold is 32/255, so transparent handle holes pass through. Do not use the conservative convex physics polygon as the click region.
+For exact preview reproduction, use `layers` and the separate `shelf_rows`, `floor_props`, `static_props`, `effects` and `objects` collections. Draw outside at z0, architecture at z10, books at z12, floor rug at z14, rear hearth fire at z22, cauldron at z24, rim flames at z25, potion table at z32, other props at their recorded depths, foreground decor at z60, and tea above the foreground table at z75–79. Held props temporarily move to z100. Clip hearth effects and cauldron to `hearth_interior`.
 
-The room's own alpha encodes outdoor cutouts. Render weather before the room so it cannot rain over indoor furniture. The room generator left opaque regions near 254/255 alpha, so minimal exterior bleed remains; a final matte pass would improve this. Do not use the screenshot as a source layer.
+`assets/furnishings.png` is a convenient preassembled raster alternative for the static portions. **Use it instead of the separate static collections, not in addition to them.** Keep `decor.png` separate when accurate foreground occlusion is needed. Never draw the room architecture into the outdoor layer.
 
-## Interaction and physics scope
+Book rows use their source strip crops and individually traced shelf quads. Rug and books are rendered as clipped affine triangle meshes over their stored quads. Contact shadows are generated separately at support points rather than baked into prop backgrounds.
 
-Physical mass, capacity, friction, temperature, collision proxies, and reach distances are authored estimates. They are not measured or recovered physical properties. Precise coordinate storage does not imply subpixel calibration accuracy. Scene metadata is a design specification; the browser is a lightweight demonstrator, not a rigid-body simulator.
+Alpha-based click testing uses threshold 32/255 after inverse coordinate conversion. Transparent handle holes pass clicks through. The preview also excludes hidden firebox regions and portions hidden behind foreground decor. Collision proxies are conservative approximations, not click masks.
 
-Tea props have grip points, supports, pouring origins, volume estimates, tilt limits and attachment rules. Lid and cup anchor coincidence is verified numerically. For character integration, split hands into palm-behind and fingers-in-front layers. A held prop must be attached at its grip point and clear the support before translating or tilting. Wizard poses are not included in this batch. Initial vessels are empty to match the artwork; filling requires a masked liquid surface. Pouring is specified but not implemented in the preview.
+## Interaction scope
 
-The dragon's smoke is procedural, emitted at two muzzle anchors. No smoke raster animation frames or dragon skeletal rig are included. Avoid scaling the entire dragon to simulate breathing because floor contacts would slide.
+Mass, capacity, friction, temperature, collision shapes and reach distances are authored design estimates. The browser is a lightweight interaction demonstrator, not a rigid-body simulator. Numeric precision does not imply measured physical accuracy.
 
-The gargoyle, chest and cauldron are heavy and fixed by default. The chest is deliberately a CLOSED combined sprite. Opening it requires separate body, lid and interior artwork; rotating the whole image would rotate the box, not open its lid. The armillary sphere likewise needs separate ring layers for physically correct gimbal motion. Ladder constraints are specified, but rail and foot alignment need further calibration before sliding or climbing. The preview does not fake these unavailable motions.
+Tea JSON includes grip points, seat constraints, pouring origins, tilt limits, volume estimates and a character-hand attachment contract. Actual wizard poses and hand occlusion artwork are not in this batch. Pouring and filled-vessel states remain specified rather than implemented.
 
-## Art limitations to review
+The chest remains a closed combined sprite; opening requires separate body/lid/interior artwork. The armillary sphere needs separate ring layers for gimbal motion. Ladder sliding/climbing needs a calibrated rail and character poses. No dragon skeletal rig is supplied; smoke is animated independently without moving its ground contacts.
 
-This is a new first-pass interpretation, not a pixel-exact decomposition of the original reference. Generated decorative book clusters do not all line up with shelf edges. The overlay includes warm baked candle highlights, so changing the exterior does not automatically relight the room. Arbitrary character walk-behind requires additional foreground occlusion masks; the single furnishings overlay intentionally groups decor. Contact shadows are specified for runtime but not separately supplied as raster files. Only daylight exterior artwork is supplied; night tint and rain are preview effects. A final alignment/matte pass and additional articulated art are still needed for a production scene.
-
+Warm highlights are baked into some props, so changing the exterior does not fully relight the room. Only daylight exterior art is included. Arbitrary character walk-behind still requires additional occlusion masks. Some generated opaque pixels remain at 254/255 alpha, allowing slight backdrop bleed. This remains a new interpretation of the reference rather than a pixel-exact reconstruction.

@@ -1,6 +1,6 @@
 {
-  "format_version": "1.0.0",
-  "title": "Wizard library layered interaction kit \u2014 first pass",
+  "format_version": "1.1.0",
+  "title": "Wizard library layered interaction kit \u2014 revision 2",
   "canvas": {
     "width": 1536,
     "height": 1024,
@@ -14,15 +14,14 @@
     "transform_formula": "scene_point = translation + rotation * scale * source_pixel"
   },
   "production_status": {
-    "art": "first-pass generated assets",
+    "art": "Revision 2: separate perspective-fitted decor and regenerated tea/hearth artwork",
     "exact_reference_reconstruction": false,
     "runtime": "preview implements selected interactions only",
     "physics": "authored design specification, not a physics simulation",
     "known_art_issues": [
-      "Some decorative book rows do not sit exactly on architecture shelf edges; furnishings need a final alignment pass.",
-      "Warm candle illumination is baked into static decorations; exterior switching alone does not relight the interior.",
-      "Room opaque regions have near-opaque alpha (max 254) from generator, allowing slight backdrop bleed.",
-      "No alternate lid-open chest, gargoyle pose, dragon skeletal rig, separate armillary rings, or wizard hand poses supplied."
+      "Warm highlights are baked into some props; exterior changes do not fully relight interior.",
+      "No separate chest lid, armillary ring layers, or wizard hand poses supplied.",
+      "Some opaque source pixels are near 254/255 alpha."
     ]
   },
   "assets": {
@@ -78,19 +77,19 @@
       "alpha_bbox_threshold_32": [
         0,
         0,
-        1536,
+        1535,
         1024
       ],
       "alpha_range": [
         0,
-        254
+        255
       ],
-      "sha256": "94fa1344338e5549fab3fa886b02f575b6ccdd48cc619d1fe18b9da26d18059b",
+      "sha256": "fb8a38844929b54774b513893984f7e50afd956d07b1811d6cfccd43edf7b2f7",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
       "anchor_coordinates": "normalized full source image, including transparent margins",
-      "source": "AI-generated raster; geometry and physics are authored estimates"
+      "source": "Deterministic browser canvas rendering of generated book rows, floor rug, potion table and decor using the exact scene placement data."
     },
     "dragon": {
       "id": "dragon",
@@ -187,25 +186,30 @@
     "cauldron": {
       "id": "cauldron",
       "file": "assets/cauldron.png",
-      "width": 1312,
-      "height": 1199,
+      "width": 1302,
+      "height": 1208,
       "mode": "RGBA",
       "alpha_bbox_threshold_32": [
-        32,
-        69,
-        1280,
-        1104
+        57,
+        103,
+        1248,
+        1121
+      ],
+      "content_bbox_threshold_128": [
+        58,
+        104,
+        1248,
+        1120
       ],
       "alpha_range": [
         0,
         255
       ],
-      "sha256": "3ae15df422334e63773285eb70927e28efe9cadd9788fc26abc08a725c9c3f6c",
+      "sha256": "cb9439fb691a52beb028be3a73df7189fe0dfff44b27d19ad00fcb62889f8422",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
-      "anchor_coordinates": "normalized full source image, including transparent margins",
-      "source": "AI-generated raster; geometry and physics are authored estimates"
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
     },
     "astrolabe": {
       "id": "astrolabe",
@@ -233,25 +237,30 @@
     "teapot": {
       "id": "teapot",
       "file": "assets/teapot.png",
-      "width": 1374,
-      "height": 1145,
+      "width": 1536,
+      "height": 1024,
       "mode": "RGBA",
       "alpha_bbox_threshold_32": [
-        18,
-        147,
-        1362,
-        1025
+        30,
+        123,
+        1519,
+        943
+      ],
+      "content_bbox_threshold_128": [
+        31,
+        123,
+        1519,
+        943
       ],
       "alpha_range": [
         0,
-        255
+        254
       ],
-      "sha256": "0a5c6ddf4ba7a55dde5dbc9d18f146000a3711a54bb2817cd2e9272efacb19ee",
+      "sha256": "41085ca2bc7979f0005858c057f575f6ed1a40c59c9b9294d6fa8a8214f1e4ee",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
-      "anchor_coordinates": "normalized full source image, including transparent margins",
-      "source": "AI-generated raster; geometry and physics are authored estimates"
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
     },
     "teapot_lid": {
       "id": "teapot_lid",
@@ -260,90 +269,278 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bbox_threshold_32": [
-        304,
-        93,
-        1232,
-        913
+        125,
+        186,
+        1411,
+        807
+      ],
+      "content_bbox_threshold_128": [
+        125,
+        187,
+        1410,
+        807
       ],
       "alpha_range": [
         0,
         254
       ],
-      "sha256": "e1e7f58c875bcbc080037f5a144e3fbe136fa1d30e4da1c297c98a0ef5bd83a4",
+      "sha256": "27b93066c164374261cea8f425944a56c116e460f94f1c33493d3495e93fc1f5",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
-      "anchor_coordinates": "normalized full source image, including transparent margins",
-      "source": "AI-generated raster; geometry and physics are authored estimates"
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
     },
     "teacup": {
       "id": "teacup",
       "file": "assets/teacup.png",
-      "width": 1312,
-      "height": 1199,
-      "mode": "RGBA",
-      "alpha_bbox_threshold_32": [
-        55,
-        139,
-        1297,
-        1094
-      ],
-      "alpha_range": [
-        0,
-        255
-      ],
-      "sha256": "9e5b2e4948e889803dd3324a833d81839c92f189c41d382c8ca849bf4d4d6fc6",
-      "color_space": "sRGB",
-      "alpha_encoding": "straight",
-      "trimmed": false,
-      "anchor_coordinates": "normalized full source image, including transparent margins",
-      "source": "AI-generated raster; geometry and physics are authored estimates"
-    },
-    "saucer": {
-      "id": "saucer",
-      "file": "assets/saucer.png",
       "width": 1536,
       "height": 1024,
       "mode": "RGBA",
       "alpha_bbox_threshold_32": [
-        73,
-        96,
-        1464,
-        912
+        184,
+        133,
+        1480,
+        924
+      ],
+      "content_bbox_threshold_128": [
+        185,
+        134,
+        1479,
+        923
       ],
       "alpha_range": [
         0,
         254
       ],
-      "sha256": "3b2bfbafb1d03681fe8f9263857684dccb40f81c83cd8f758cc49c78ff97e028",
+      "sha256": "35f980a8d8af7acb726d71c6d07bac7489446243a11f74cb096314b18e1920e4",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
-      "anchor_coordinates": "normalized full source image, including transparent margins",
-      "source": "AI-generated raster; geometry and physics are authored estimates"
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
     },
-    "milk_jug": {
-      "id": "milk_jug",
-      "file": "assets/milk_jug.png",
-      "width": 1310,
-      "height": 1200,
+    "saucer": {
+      "id": "saucer",
+      "file": "assets/saucer.png",
+      "width": 2046,
+      "height": 768,
       "mode": "RGBA",
       "alpha_bbox_threshold_32": [
-        50,
-        112,
-        1261,
-        1118
+        34,
+        265,
+        2013,
+        610
+      ],
+      "content_bbox_threshold_128": [
+        35,
+        266,
+        2012,
+        609
       ],
       "alpha_range": [
         0,
         255
       ],
-      "sha256": "7eb08f8825281b0ff04929d71d487b4da2845d1ffabacfa25bab0240e62a7e5f",
+      "sha256": "3a23cf7015b4fc19ad7fcd4855ff157320706d2a4af17ea9a5cbf061b8f6aced",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
-      "anchor_coordinates": "normalized full source image, including transparent margins",
-      "source": "AI-generated raster; geometry and physics are authored estimates"
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
+    },
+    "milk_jug": {
+      "id": "milk_jug",
+      "file": "assets/milk_jug.png",
+      "width": 1374,
+      "height": 1145,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        49,
+        86,
+        1333,
+        1085
+      ],
+      "content_bbox_threshold_128": [
+        50,
+        87,
+        1332,
+        1084
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "b43254fe3d793187cca33cf9ff717e25e4c05093b45da25fc0cc9c289476530e",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
+    },
+    "decor": {
+      "id": "decor",
+      "file": "assets/decor.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        0,
+        0,
+        1535,
+        1024
+      ],
+      "content_bbox_threshold_128": [
+        0,
+        0,
+        1534,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "6667ec77c4ee47ca2feef0df9d920c3c215374fa2acf32181f1bba675d44779e",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
+    },
+    "book_row": {
+      "id": "book_row",
+      "file": "assets/book_row.png",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        30,
+        115,
+        2143,
+        616
+      ],
+      "content_bbox_threshold_128": [
+        31,
+        116,
+        2142,
+        615
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "a12ec4de41cacb55a35980244f8454df172865235111bdf83af2537567299715",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
+    },
+    "rug": {
+      "id": "rug",
+      "file": "assets/rug.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        20,
+        57,
+        1517,
+        964
+      ],
+      "content_bbox_threshold_128": [
+        21,
+        58,
+        1516,
+        963
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "4ad6cead06dd481026699da6520369780081b59cbf99aafab90b84b7d4b5c91e",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
+    },
+    "potion_table": {
+      "id": "potion_table",
+      "file": "assets/potion_table.png",
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        10,
+        5,
+        1302,
+        1188
+      ],
+      "content_bbox_threshold_128": [
+        11,
+        6,
+        1302,
+        1187
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "9390e157039b3bfd44c162fd157ae028b81c21f198073fb1b0f7eba00d6e30f2",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
+    },
+    "hearth_fire": {
+      "id": "hearth_fire",
+      "file": "assets/hearth_fire.png",
+      "width": 1263,
+      "height": 1246,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        153,
+        12,
+        1132,
+        1204
+      ],
+      "content_bbox_threshold_128": [
+        153,
+        16,
+        1131,
+        1203
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "a6c0bfebe84cf33fdf8b0ae2d47a41f34ae7887fef522156642d94edd013d231",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
+    },
+    "smoke_wisp": {
+      "id": "smoke_wisp",
+      "file": "assets/smoke_wisp.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        250,
+        132,
+        1334,
+        863
+      ],
+      "content_bbox_threshold_128": [
+        268,
+        138,
+        1318,
+        858
+      ],
+      "alpha_range": [
+        0,
+        246
+      ],
+      "sha256": "26719fcc4ca9dec844b8e255b25afd98206229a17774e63f484679e27a63ce74",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
     }
   },
   "layers": [
@@ -357,7 +554,6 @@
         1536,
         1024
       ],
-      "blend": "source-over",
       "weather_replaceable": true
     },
     {
@@ -369,22 +565,41 @@
         0,
         1536,
         1024
-      ],
-      "blend": "source-over",
-      "openings": "encoded in image alpha; preserve window mullions"
+      ]
     },
     {
-      "id": "furnishings",
-      "asset": "furnishings",
-      "z": 30,
+      "id": "shelf_rows",
+      "collection": "shelf_rows",
+      "z": 12
+    },
+    {
+      "id": "rug",
+      "collection": "floor_props",
+      "z": 14
+    },
+    {
+      "id": "hearth_effects",
+      "collection": "effects",
+      "z": [
+        22,
+        25
+      ]
+    },
+    {
+      "id": "potion_table",
+      "collection": "static_props",
+      "z": 32
+    },
+    {
+      "id": "decor",
+      "asset": "decor",
+      "z": 60,
       "rect": [
         0,
         0,
         1536,
         1024
-      ],
-      "blend": "source-over",
-      "note": "Single grouped overlay; foreground furniture blocks character traversal."
+      ]
     }
   ],
   "objects": [
@@ -704,16 +919,16 @@
       "asset": "dragon",
       "label": "dragon",
       "transform": {
-        "x": 850,
-        "y": 470,
-        "width": 450,
-        "height": 300.0,
+        "x": 970,
+        "y": 518,
+        "width": 370,
+        "height": 246.66667,
         "rotation_deg": 0,
         "origin_uv": [
           0,
           0
         ],
-        "scale": 0.29296875
+        "scale": 0.24088541666666666
       },
       "z": 50,
       "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -845,7 +1060,7 @@
         "additional_pose_rasters_included": false
       },
       "calibration": {
-        "status": "first-pass authored placement",
+        "status": "Revision 2: calibrated against architecture coordinate guide",
         "anchors": "visually estimated against this exact generated raster",
         "physics": "plausible design estimates, not measured physical properties"
       },
@@ -863,67 +1078,37 @@
           "note": "No skeletal rig or alternate frames included. Do not scale floor-contact points."
         },
         "smoke": {
-          "type": "runtime_particles",
-          "raster_frames_included": false,
+          "type": "translucent_raster_wisp",
+          "asset": "smoke_wisp",
           "trigger": "click",
-          "cooldown_s": 1.8,
+          "cooldown_s": 2.2,
           "emitters": [
             {
               "anchor": "nostril_near",
-              "direction_uv": [
-                -0.95,
-                -0.32
-              ]
+              "strength": 1
             },
             {
               "anchor": "nostril_far",
-              "direction_uv": [
-                -0.95,
-                -0.28
-              ]
+              "strength": 0.5
             }
           ],
-          "burst_count_per_nostril": [
-            5,
-            8
+          "source_anchor_uv": [
+            0.855,
+            0.838
           ],
-          "duration_s": 0.65,
-          "particle_lifetime_s": [
-            1.1,
-            2.1
+          "max_opacity": 0.2,
+          "lifetime_s": 2.2,
+          "width_scene_px": [
+            55,
+            95
           ],
-          "speed_scene_px_s": [
-            12,
-            28
+          "drift_scene_px": [
+            -18,
+            -12
           ],
-          "buoyancy_scene_px_s2": -16,
-          "wind_source": "weather.interior_draft",
-          "radius_scene_px": [
-            2,
-            14
-          ],
-          "opacity_curve": [
-            [
-              0,
-              0
-            ],
-            [
-              0.15,
-              0.4
-            ],
-            [
-              0.6,
-              0.22
-            ],
-            [
-              1,
-              0
-            ]
-          ],
-          "color": "#b4b5c0",
-          "layer": "above dragon; respect foreground furnishing occlusion",
-          "max_live_particles": 48,
-          "reduced_motion": "single fading puff"
+          "pin_source_at_emission": true,
+          "reduced_motion": "one fixed faint wisp, opacity fade only",
+          "no_circular_particles": true
         }
       }
     },
@@ -932,18 +1117,18 @@
       "asset": "cauldron",
       "label": "cauldron",
       "transform": {
-        "x": 455,
-        "y": 380,
-        "width": 148,
-        "height": 135.253,
+        "x": 477,
+        "y": 387.73778,
+        "width": 111,
+        "height": 102.98618,
         "rotation_deg": 0,
         "origin_uv": [
           0,
           0
         ],
-        "scale": 0.11280487804878049
+        "scale": 0.08525345622119816
       },
-      "z": 46,
+      "z": 24,
       "depth_sort": "explicit_z; held objects reparent to character hand",
       "support": "hearth",
       "physics": {
@@ -1015,24 +1200,28 @@
       },
       "anchors": {
         "rim_center": [
-          0.52,
-          0.22
+          0.5,
+          0.166
         ],
         "handle_left": [
-          0.11,
-          0.37
+          0.095,
+          0.34
         ],
         "handle_right": [
           0.9,
-          0.39
+          0.34
         ],
         "steam_origin": [
-          0.52,
-          0.21
+          0.5,
+          0.166
         ],
         "fire_origin": [
-          0.52,
-          0.91
+          0.5,
+          0.88
+        ],
+        "base": [
+          0.5,
+          0.925
         ]
       },
       "interaction": {
@@ -1065,7 +1254,7 @@
         "additional_pose_rasters_included": false
       },
       "calibration": {
-        "status": "first-pass authored placement",
+        "status": "Revision 2: calibrated against architecture coordinate guide",
         "anchors": "visually estimated against this exact generated raster",
         "physics": "plausible design estimates, not measured physical properties"
       },
@@ -1074,14 +1263,15 @@
         "fill_fraction": 0.65,
         "temperature_c_estimate": 80,
         "surface_ellipse_uv": [
-          0.52,
-          0.22,
-          0.32,
-          0.105
+          0.5,
+          0.166,
+          0.28,
+          0.04
         ],
         "surface_art_baked": true,
         "pourable": false,
-        "hot_surface": true
+        "hot_surface": true,
+        "initial_color": "amber-green"
       },
       "animation": {
         "steam": {
@@ -1100,11 +1290,30 @@
           "opacity_max": 0.18
         },
         "fire": {
-          "anchor": "fire_origin",
-          "enabled": false,
-          "raster_included": false,
-          "note": "Fire must remain behind cauldron but in front of hearth."
+          "enabled": true,
+          "raster_included": true,
+          "asset": "hearth_fire",
+          "layers": [
+            "hearth_fire_back",
+            "potion_flames"
+          ],
+          "clip_surface": "hearth_interior",
+          "light_falloff_scene_px": 155,
+          "flicker": "small coherent opacity modulation; base stays fixed"
         }
+      },
+      "render": {
+        "clip_surface": "hearth_interior",
+        "shadow": {
+          "anchor": "base",
+          "radius": [
+            36,
+            4
+          ],
+          "opacity": 0.38
+        },
+        "view_angle_down_deg_estimate": 10,
+        "depth": "inside firebox; front masonry stays unobscured"
       }
     },
     {
@@ -1416,16 +1625,16 @@
       "asset": "teapot",
       "label": "teapot",
       "transform": {
-        "x": 178,
-        "y": 662,
-        "width": 152,
-        "height": 126.6667,
+        "x": 180,
+        "y": 656.408,
+        "width": 168,
+        "height": 112.0,
         "rotation_deg": 0,
         "origin_uv": [
           0,
           0
         ],
-        "scale": 0.11062590975254731
+        "scale": 0.109375
       },
       "z": 75,
       "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -1500,27 +1709,27 @@
       "anchors": {
         "grip_handle": [
           0.12,
-          0.35
+          0.38
         ],
         "grip_under_base": [
           0.52,
           0.88
         ],
         "spout_tip": [
-          0.949,
-          0.293
+          0.95,
+          0.256
         ],
         "mouth_center": [
-          0.514,
-          0.26
+          0.505,
+          0.216
         ],
         "lid_seat": [
-          0.514,
-          0.26
+          0.505,
+          0.216
         ],
         "base": [
-          0.51,
-          0.883
+          0.5,
+          0.916
         ]
       },
       "interaction": {
@@ -1555,7 +1764,7 @@
         "additional_pose_rasters_included": false
       },
       "calibration": {
-        "status": "first-pass authored placement",
+        "status": "Revision 2: calibrated against architecture coordinate guide",
         "anchors": "visually estimated against this exact generated raster",
         "physics": "plausible design estimates, not measured physical properties"
       },
@@ -1597,6 +1806,18 @@
         "collision_with_other_teaware": true,
         "requires_character_pose": true,
         "character_art_included": false
+      },
+      "render": {
+        "shadow": {
+          "anchor": "base",
+          "radius": [
+            36.96,
+            2
+          ],
+          "opacity": 0.29
+        },
+        "light": "warm upper-left; shaded underside",
+        "view_angle_down_deg_estimate": 12
       }
     },
     {
@@ -1604,16 +1825,16 @@
       "asset": "teapot_lid",
       "label": "teapot lid",
       "transform": {
-        "x": 213.628,
-        "y": 651.8667,
-        "width": 85,
-        "height": 56.6667,
+        "x": 237.34,
+        "y": 652.88,
+        "width": 55,
+        "height": 36.66667,
         "rotation_deg": 0,
         "origin_uv": [
           0,
           0
         ],
-        "scale": 0.055338541666666664
+        "scale": 0.035807291666666664
       },
       "z": 76,
       "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -1688,15 +1909,15 @@
       "anchors": {
         "grip_knob": [
           0.5,
-          0.18
+          0.255
         ],
         "seat": [
           0.5,
-          0.76
+          0.756
         ],
         "base": [
           0.5,
-          0.79
+          0.78
         ]
       },
       "interaction": {
@@ -1730,7 +1951,7 @@
         "additional_pose_rasters_included": false
       },
       "calibration": {
-        "status": "first-pass authored placement",
+        "status": "Revision 2: calibrated against architecture coordinate guide",
         "anchors": "visually estimated against this exact generated raster",
         "physics": "plausible design estimates, not measured physical properties"
       },
@@ -1746,6 +1967,18 @@
         ],
         "snap_radius_scene_px": 12,
         "snap_preserves_scale": true
+      },
+      "render": {
+        "shadow": {
+          "anchor": "base",
+          "radius": [
+            12.1,
+            2
+          ],
+          "opacity": 0.29
+        },
+        "light": "warm upper-left; shaded underside",
+        "view_angle_down_deg_estimate": 12
       }
     },
     {
@@ -1753,16 +1986,16 @@
       "asset": "saucer",
       "label": "saucer",
       "transform": {
-        "x": 365,
-        "y": 710,
-        "width": 100,
-        "height": 66.6667,
+        "x": 382,
+        "y": 734.15989,
+        "width": 104,
+        "height": 39.03812,
         "rotation_deg": 0,
         "origin_uv": [
           0,
           0
         ],
-        "scale": 0.06510416666666667
+        "scale": 0.05083088954056696
       },
       "z": 77,
       "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -1837,15 +2070,15 @@
       "anchors": {
         "cup_seat": [
           0.5,
-          0.55
+          0.613
         ],
         "grip_edge": [
-          0.86,
-          0.53
+          0.88,
+          0.58
         ],
         "base": [
           0.5,
-          0.8
+          0.79
         ]
       },
       "interaction": {
@@ -1879,7 +2112,7 @@
         "additional_pose_rasters_included": false
       },
       "calibration": {
-        "status": "first-pass authored placement",
+        "status": "Revision 2: calibrated against architecture coordinate guide",
         "anchors": "visually estimated against this exact generated raster",
         "physics": "plausible design estimates, not measured physical properties"
       },
@@ -1894,6 +2127,18 @@
         ],
         "carry_contents_when_seated": true,
         "cup_requires_second_hand_or_stable_slow_carry": true
+      },
+      "render": {
+        "shadow": {
+          "anchor": "base",
+          "radius": [
+            22.88,
+            2
+          ],
+          "opacity": 0.29
+        },
+        "light": "warm upper-left; shaded underside",
+        "view_angle_down_deg_estimate": 12
       }
     },
     {
@@ -1901,16 +2146,16 @@
       "asset": "teacup",
       "label": "teacup",
       "transform": {
-        "x": 381.03,
-        "y": 682.0514,
-        "width": 79,
-        "height": 72.1959,
+        "x": 395.75,
+        "y": 707.26025,
+        "width": 85,
+        "height": 56.66667,
         "rotation_deg": 0,
         "origin_uv": [
           0,
           0
         ],
-        "scale": 0.06021341463414634
+        "scale": 0.055338541666666664
       },
       "z": 78,
       "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -1984,20 +2229,20 @@
       },
       "anchors": {
         "grip_handle": [
-          0.87,
-          0.45
+          0.86,
+          0.43
         ],
         "rim_center": [
-          0.43,
-          0.29
+          0.45,
+          0.166
         ],
         "liquid_center": [
-          0.43,
-          0.29
+          0.45,
+          0.166
         ],
         "base": [
-          0.43,
-          0.895
+          0.45,
+          0.897
         ]
       },
       "interaction": {
@@ -2031,7 +2276,7 @@
         "additional_pose_rasters_included": false
       },
       "calibration": {
-        "status": "first-pass authored placement",
+        "status": "Revision 2: calibrated against architecture coordinate guide",
         "anchors": "visually estimated against this exact generated raster",
         "physics": "plausible design estimates, not measured physical properties"
       },
@@ -2073,6 +2318,18 @@
         "collision_with_other_teaware": true,
         "requires_character_pose": true,
         "character_art_included": false
+      },
+      "render": {
+        "shadow": {
+          "anchor": "base",
+          "radius": [
+            18.7,
+            2
+          ],
+          "opacity": 0.29
+        },
+        "light": "warm upper-left; shaded underside",
+        "view_angle_down_deg_estimate": 12
       }
     },
     {
@@ -2080,16 +2337,16 @@
       "asset": "milk_jug",
       "label": "milk jug",
       "transform": {
-        "x": 495,
-        "y": 691,
-        "width": 80,
-        "height": 73.2824,
+        "x": 520,
+        "y": 697.6,
+        "width": 72,
+        "height": 60.0,
         "rotation_deg": 0,
         "origin_uv": [
           0,
           0
         ],
-        "scale": 0.061068702290076333
+        "scale": 0.05240174672489083
       },
       "z": 79,
       "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -2164,19 +2421,19 @@
       "anchors": {
         "grip_handle": [
           0.15,
-          0.35
+          0.34
         ],
         "spout_tip": [
           0.946,
-          0.15
+          0.185
         ],
         "mouth_center": [
-          0.56,
-          0.225
+          0.58,
+          0.255
         ],
         "base": [
-          0.57,
-          0.93
+          0.56,
+          0.94
         ]
       },
       "interaction": {
@@ -2211,7 +2468,7 @@
         "additional_pose_rasters_included": false
       },
       "calibration": {
-        "status": "first-pass authored placement",
+        "status": "Revision 2: calibrated against architecture coordinate guide",
         "anchors": "visually estimated against this exact generated raster",
         "physics": "plausible design estimates, not measured physical properties"
       },
@@ -2253,6 +2510,18 @@
         "collision_with_other_teaware": true,
         "requires_character_pose": true,
         "character_art_included": false
+      },
+      "render": {
+        "shadow": {
+          "anchor": "base",
+          "radius": [
+            15.84,
+            2
+          ],
+          "opacity": 0.29
+        },
+        "light": "warm upper-left; shaded underside",
+        "view_angle_down_deg_estimate": 12
       }
     }
   ],
@@ -2291,23 +2560,24 @@
       "kind": "floor_covering",
       "polygon_scene": [
         [
-          670,
-          590
+          795,
+          625
         ],
         [
-          1290,
-          612
+          1250,
+          650
         ],
         [
-          1520,
-          853
+          1480,
+          878
         ],
         [
-          510,
-          704
+          520,
+          810
         ]
       ],
-      "support_height_m": 0.015
+      "support_height_m": 0.004,
+      "note": "Coplanar projective textile; no raised outline, no floor texture baked in."
     },
     "tea_table": {
       "kind": "tabletop",
@@ -2372,20 +2642,20 @@
       "kind": "raised_stone",
       "polygon_scene": [
         [
-          444,
-          481
+          474,
+          475
         ],
         [
-          628,
-          481
+          592,
+          475
         ],
         [
-          625,
-          508
+          592,
+          487
         ],
         [
-          445,
-          508
+          474,
+          487
         ]
       ],
       "height_m_estimate": 0.35
@@ -2403,6 +2673,61 @@
         ]
       ],
       "status": "needs final art rail alignment"
+    },
+    "hearth_interior": {
+      "kind": "firebox_interior",
+      "polygon_scene": [
+        [
+          475,
+          340
+        ],
+        [
+          505,
+          325
+        ],
+        [
+          558,
+          329
+        ],
+        [
+          587,
+          351
+        ],
+        [
+          591,
+          483
+        ],
+        [
+          475,
+          483
+        ]
+      ],
+      "front_lip_y": 488,
+      "depth": "behind front stone sill",
+      "heat_source": true
+    },
+    "potion_table_floor": {
+      "kind": "stone_floor",
+      "polygon_scene": [
+        [
+          795,
+          600
+        ],
+        [
+          1060,
+          600
+        ],
+        [
+          1060,
+          712
+        ],
+        [
+          795,
+          712
+        ]
+      ],
+      "height_m": 0,
+      "foot_contact_required": true
     }
   },
   "attachments": [
@@ -2511,7 +2836,2960 @@
   "validation": {
     "image_dimensions_and_checksums": "generated in validation.json",
     "attachments": "anchor coincidence validated numerically",
-    "art_alignment": "human review still needed for decorative shelves",
+    "art_alignment": "Shelf support lines, rug quad, hearth containment and foot projections recorded; assembled preview reviewed.",
     "coordinate_precision": "numbers are precise storage, not a claim of measurement accuracy"
+  },
+  "static_props": [
+    {
+      "id": "potion_table",
+      "asset": "potion_table",
+      "transform": {
+        "x": 790,
+        "y": 460,
+        "width": 260,
+        "height": 237.60670731707316
+      },
+      "z": 32,
+      "feet_uv": [
+        [
+          0.112,
+          0.735
+        ],
+        [
+          0.34,
+          0.647
+        ],
+        [
+          0.7,
+          0.97
+        ],
+        [
+          0.89,
+          0.815
+        ]
+      ],
+      "support": "potion_table_floor",
+      "shadow": {
+        "per_foot": true,
+        "radius_scene_px": [
+          10,
+          2.8
+        ],
+        "opacity": 0.34
+      },
+      "interactive": false,
+      "note": "All four complete feet visible; localized contact shadows, no unsupported group placement."
+    }
+  ],
+  "shelf_rows": [
+    {
+      "id": "back_a_1",
+      "asset": "book_row",
+      "source_rect": [
+        31,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          257
+        ],
+        [
+          892,
+          251
+        ],
+        [
+          892,
+          275
+        ],
+        [
+          801,
+          281
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          281
+        ],
+        [
+          892,
+          275
+        ]
+      ],
+      "height_px": 24,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_a_2",
+      "asset": "book_row",
+      "source_rect": [
+        228,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          294
+        ],
+        [
+          892,
+          288
+        ],
+        [
+          892,
+          318
+        ],
+        [
+          801,
+          324
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          324
+        ],
+        [
+          892,
+          318
+        ]
+      ],
+      "height_px": 30,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_a_3",
+      "asset": "book_row",
+      "source_rect": [
+        425,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          334
+        ],
+        [
+          892,
+          329
+        ],
+        [
+          892,
+          356
+        ],
+        [
+          801,
+          361
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          361
+        ],
+        [
+          892,
+          356
+        ]
+      ],
+      "height_px": 27,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_a_4",
+      "asset": "book_row",
+      "source_rect": [
+        622,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          372
+        ],
+        [
+          892,
+          368
+        ],
+        [
+          892,
+          396
+        ],
+        [
+          801,
+          400
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          400
+        ],
+        [
+          892,
+          396
+        ]
+      ],
+      "height_px": 28,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_a_5",
+      "asset": "book_row",
+      "source_rect": [
+        819,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          413
+        ],
+        [
+          892,
+          410
+        ],
+        [
+          892,
+          442
+        ],
+        [
+          801,
+          445
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          445
+        ],
+        [
+          892,
+          442
+        ]
+      ],
+      "height_px": 32,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_a_6",
+      "asset": "book_row",
+      "source_rect": [
+        1016,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          465
+        ],
+        [
+          892,
+          464
+        ],
+        [
+          892,
+          502
+        ],
+        [
+          801,
+          503
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          503
+        ],
+        [
+          892,
+          502
+        ]
+      ],
+      "height_px": 38,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_a_7",
+      "asset": "book_row",
+      "source_rect": [
+        1213,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          529
+        ],
+        [
+          892,
+          527
+        ],
+        [
+          892,
+          572
+        ],
+        [
+          801,
+          574
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          574
+        ],
+        [
+          892,
+          572
+        ]
+      ],
+      "height_px": 45,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_b_1",
+      "asset": "book_row",
+      "source_rect": [
+        179,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          920,
+          261
+        ],
+        [
+          1034,
+          252
+        ],
+        [
+          1034,
+          285
+        ],
+        [
+          920,
+          294
+        ]
+      ],
+      "support_line_scene": [
+        [
+          920,
+          294
+        ],
+        [
+          1034,
+          285
+        ]
+      ],
+      "height_px": 33,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_b_2",
+      "asset": "book_row",
+      "source_rect": [
+        376,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          920,
+          311
+        ],
+        [
+          1034,
+          304
+        ],
+        [
+          1034,
+          340
+        ],
+        [
+          920,
+          347
+        ]
+      ],
+      "support_line_scene": [
+        [
+          920,
+          347
+        ],
+        [
+          1034,
+          340
+        ]
+      ],
+      "height_px": 36,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_b_3",
+      "asset": "book_row",
+      "source_rect": [
+        573,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          920,
+          363
+        ],
+        [
+          1034,
+          357
+        ],
+        [
+          1034,
+          393
+        ],
+        [
+          920,
+          399
+        ]
+      ],
+      "support_line_scene": [
+        [
+          920,
+          399
+        ],
+        [
+          1034,
+          393
+        ]
+      ],
+      "height_px": 36,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_b_4",
+      "asset": "book_row",
+      "source_rect": [
+        770,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          920,
+          414
+        ],
+        [
+          1034,
+          410
+        ],
+        [
+          1034,
+          447
+        ],
+        [
+          920,
+          451
+        ]
+      ],
+      "support_line_scene": [
+        [
+          920,
+          451
+        ],
+        [
+          1034,
+          447
+        ]
+      ],
+      "height_px": 37,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_b_5",
+      "asset": "book_row",
+      "source_rect": [
+        967,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          920,
+          466
+        ],
+        [
+          1034,
+          466
+        ],
+        [
+          1034,
+          504
+        ],
+        [
+          920,
+          504
+        ]
+      ],
+      "support_line_scene": [
+        [
+          920,
+          504
+        ],
+        [
+          1034,
+          504
+        ]
+      ],
+      "height_px": 38,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_b_6",
+      "asset": "book_row",
+      "source_rect": [
+        1164,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          920,
+          528
+        ],
+        [
+          1034,
+          528
+        ],
+        [
+          1034,
+          574
+        ],
+        [
+          920,
+          574
+        ]
+      ],
+      "support_line_scene": [
+        [
+          920,
+          574
+        ],
+        [
+          1034,
+          574
+        ]
+      ],
+      "height_px": 46,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_c_1",
+      "asset": "book_row",
+      "source_rect": [
+        833,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1056,
+          263
+        ],
+        [
+          1105,
+          259
+        ],
+        [
+          1105,
+          288
+        ],
+        [
+          1056,
+          292
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1056,
+          292
+        ],
+        [
+          1105,
+          288
+        ]
+      ],
+      "height_px": 29,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_c_2",
+      "asset": "book_row",
+      "source_rect": [
+        1030,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1056,
+          307
+        ],
+        [
+          1105,
+          304
+        ],
+        [
+          1105,
+          337
+        ],
+        [
+          1056,
+          340
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1056,
+          340
+        ],
+        [
+          1105,
+          337
+        ]
+      ],
+      "height_px": 33,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_c_3",
+      "asset": "book_row",
+      "source_rect": [
+        1227,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1056,
+          358
+        ],
+        [
+          1105,
+          355
+        ],
+        [
+          1105,
+          395
+        ],
+        [
+          1056,
+          398
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1056,
+          398
+        ],
+        [
+          1105,
+          395
+        ]
+      ],
+      "height_px": 40,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_c_4",
+      "asset": "book_row",
+      "source_rect": [
+        1424,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1056,
+          414
+        ],
+        [
+          1105,
+          411
+        ],
+        [
+          1105,
+          445
+        ],
+        [
+          1056,
+          448
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1056,
+          448
+        ],
+        [
+          1105,
+          445
+        ]
+      ],
+      "height_px": 34,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_c_5",
+      "asset": "book_row",
+      "source_rect": [
+        1621,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1056,
+          464
+        ],
+        [
+          1105,
+          464
+        ],
+        [
+          1105,
+          504
+        ],
+        [
+          1056,
+          504
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1056,
+          504
+        ],
+        [
+          1105,
+          504
+        ]
+      ],
+      "height_px": 40,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_c_6",
+      "asset": "book_row",
+      "source_rect": [
+        59,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1056,
+          527
+        ],
+        [
+          1105,
+          527
+        ],
+        [
+          1105,
+          575
+        ],
+        [
+          1056,
+          575
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1056,
+          575
+        ],
+        [
+          1105,
+          575
+        ]
+      ],
+      "height_px": 48,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_d_1",
+      "asset": "book_row",
+      "source_rect": [
+        256,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1123,
+          239
+        ],
+        [
+          1166,
+          234
+        ],
+        [
+          1166,
+          261
+        ],
+        [
+          1123,
+          266
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1123,
+          266
+        ],
+        [
+          1166,
+          261
+        ]
+      ],
+      "height_px": 27,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_d_2",
+      "asset": "book_row",
+      "source_rect": [
+        453,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1123,
+          284
+        ],
+        [
+          1166,
+          278
+        ],
+        [
+          1166,
+          312
+        ],
+        [
+          1123,
+          318
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1123,
+          318
+        ],
+        [
+          1166,
+          312
+        ]
+      ],
+      "height_px": 34,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_d_3",
+      "asset": "book_row",
+      "source_rect": [
+        650,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1123,
+          336
+        ],
+        [
+          1166,
+          330
+        ],
+        [
+          1166,
+          366
+        ],
+        [
+          1123,
+          372
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1123,
+          372
+        ],
+        [
+          1166,
+          366
+        ]
+      ],
+      "height_px": 36,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_d_4",
+      "asset": "book_row",
+      "source_rect": [
+        847,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1123,
+          393
+        ],
+        [
+          1166,
+          389
+        ],
+        [
+          1166,
+          438
+        ],
+        [
+          1123,
+          442
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1123,
+          442
+        ],
+        [
+          1166,
+          438
+        ]
+      ],
+      "height_px": 49,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_d_5",
+      "asset": "book_row",
+      "source_rect": [
+        1044,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1123,
+          459
+        ],
+        [
+          1166,
+          461
+        ],
+        [
+          1166,
+          506
+        ],
+        [
+          1123,
+          504
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1123,
+          504
+        ],
+        [
+          1166,
+          506
+        ]
+      ],
+      "height_px": 45,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_d_6",
+      "asset": "book_row",
+      "source_rect": [
+        1241,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1123,
+          529
+        ],
+        [
+          1166,
+          532
+        ],
+        [
+          1166,
+          584
+        ],
+        [
+          1123,
+          581
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1123,
+          581
+        ],
+        [
+          1166,
+          584
+        ]
+      ],
+      "height_px": 52,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_a_1",
+      "asset": "book_row",
+      "source_rect": [
+        735,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1231,
+          221
+        ],
+        [
+          1321,
+          202
+        ],
+        [
+          1321,
+          236
+        ],
+        [
+          1231,
+          255
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1231,
+          255
+        ],
+        [
+          1321,
+          236
+        ]
+      ],
+      "height_px": 34,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_a_2",
+      "asset": "book_row",
+      "source_rect": [
+        932,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1231,
+          277
+        ],
+        [
+          1321,
+          259
+        ],
+        [
+          1321,
+          298
+        ],
+        [
+          1231,
+          316
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1231,
+          316
+        ],
+        [
+          1321,
+          298
+        ]
+      ],
+      "height_px": 39,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_a_3",
+      "asset": "book_row",
+      "source_rect": [
+        1129,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1231,
+          337
+        ],
+        [
+          1321,
+          321
+        ],
+        [
+          1321,
+          353
+        ],
+        [
+          1231,
+          369
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1231,
+          369
+        ],
+        [
+          1321,
+          353
+        ]
+      ],
+      "height_px": 32,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_a_4",
+      "asset": "book_row",
+      "source_rect": [
+        1326,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1231,
+          388
+        ],
+        [
+          1321,
+          378
+        ],
+        [
+          1321,
+          407
+        ],
+        [
+          1231,
+          417
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1231,
+          417
+        ],
+        [
+          1321,
+          407
+        ]
+      ],
+      "height_px": 29,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_a_5",
+      "asset": "book_row",
+      "source_rect": [
+        116,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1231,
+          463
+        ],
+        [
+          1321,
+          469
+        ],
+        [
+          1321,
+          516
+        ],
+        [
+          1231,
+          510
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1231,
+          510
+        ],
+        [
+          1321,
+          516
+        ]
+      ],
+      "height_px": 47,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_a_6",
+      "asset": "book_row",
+      "source_rect": [
+        313,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1231,
+          544
+        ],
+        [
+          1321,
+          555
+        ],
+        [
+          1321,
+          610
+        ],
+        [
+          1231,
+          599
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1231,
+          599
+        ],
+        [
+          1321,
+          610
+        ]
+      ],
+      "height_px": 55,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_edge_1",
+      "asset": "book_row",
+      "source_rect": [
+        862,
+        116,
+        792,
+        499
+      ],
+      "quad_scene": [
+        [
+          1440,
+          201
+        ],
+        [
+          1535,
+          185
+        ],
+        [
+          1535,
+          239
+        ],
+        [
+          1440,
+          255
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1440,
+          255
+        ],
+        [
+          1535,
+          239
+        ]
+      ],
+      "height_px": 54,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_edge_2",
+      "asset": "book_row",
+      "source_rect": [
+        1059,
+        116,
+        792,
+        499
+      ],
+      "quad_scene": [
+        [
+          1440,
+          284
+        ],
+        [
+          1535,
+          266
+        ],
+        [
+          1535,
+          328
+        ],
+        [
+          1440,
+          346
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1440,
+          346
+        ],
+        [
+          1535,
+          328
+        ]
+      ],
+      "height_px": 62,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_edge_3",
+      "asset": "book_row",
+      "source_rect": [
+        1256,
+        116,
+        792,
+        499
+      ],
+      "quad_scene": [
+        [
+          1440,
+          368
+        ],
+        [
+          1535,
+          355
+        ],
+        [
+          1535,
+          398
+        ],
+        [
+          1440,
+          411
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1440,
+          411
+        ],
+        [
+          1535,
+          398
+        ]
+      ],
+      "height_px": 43,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_narrow_1",
+      "asset": "book_row",
+      "source_rect": [
+        1452,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          381,
+          199
+        ],
+        [
+          429,
+          209
+        ],
+        [
+          429,
+          249
+        ],
+        [
+          381,
+          239
+        ]
+      ],
+      "support_line_scene": [
+        [
+          381,
+          239
+        ],
+        [
+          429,
+          249
+        ]
+      ],
+      "height_px": 40,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_narrow_2",
+      "asset": "book_row",
+      "source_rect": [
+        1649,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          381,
+          265
+        ],
+        [
+          429,
+          269
+        ],
+        [
+          429,
+          305
+        ],
+        [
+          381,
+          301
+        ]
+      ],
+      "support_line_scene": [
+        [
+          381,
+          301
+        ],
+        [
+          429,
+          305
+        ]
+      ],
+      "height_px": 36,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_narrow_3",
+      "asset": "book_row",
+      "source_rect": [
+        87,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          381,
+          320
+        ],
+        [
+          429,
+          321
+        ],
+        [
+          429,
+          352
+        ],
+        [
+          381,
+          351
+        ]
+      ],
+      "support_line_scene": [
+        [
+          381,
+          351
+        ],
+        [
+          429,
+          352
+        ]
+      ],
+      "height_px": 31,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_narrow_4",
+      "asset": "book_row",
+      "source_rect": [
+        284,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          381,
+          377
+        ],
+        [
+          429,
+          381
+        ],
+        [
+          429,
+          426
+        ],
+        [
+          381,
+          422
+        ]
+      ],
+      "support_line_scene": [
+        [
+          381,
+          422
+        ],
+        [
+          429,
+          426
+        ]
+      ],
+      "height_px": 45,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_narrow_5",
+      "asset": "book_row",
+      "source_rect": [
+        481,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          381,
+          430
+        ],
+        [
+          429,
+          431
+        ],
+        [
+          429,
+          454
+        ],
+        [
+          381,
+          453
+        ]
+      ],
+      "support_line_scene": [
+        [
+          381,
+          453
+        ],
+        [
+          429,
+          454
+        ]
+      ],
+      "height_px": 23,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_narrow_6",
+      "asset": "book_row",
+      "source_rect": [
+        678,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          381,
+          478
+        ],
+        [
+          429,
+          479
+        ],
+        [
+          429,
+          520
+        ],
+        [
+          381,
+          519
+        ]
+      ],
+      "support_line_scene": [
+        [
+          381,
+          519
+        ],
+        [
+          429,
+          520
+        ]
+      ],
+      "height_px": 41,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "center_arch_1",
+      "asset": "book_row",
+      "source_rect": [
+        1579,
+        116,
+        528,
+        499
+      ],
+      "quad_scene": [
+        [
+          655,
+          325
+        ],
+        [
+          726,
+          330
+        ],
+        [
+          726,
+          355
+        ],
+        [
+          655,
+          350
+        ]
+      ],
+      "support_line_scene": [
+        [
+          655,
+          350
+        ],
+        [
+          726,
+          355
+        ]
+      ],
+      "height_px": 25,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "center_arch_2",
+      "asset": "book_row",
+      "source_rect": [
+        193,
+        116,
+        528,
+        499
+      ],
+      "quad_scene": [
+        [
+          655,
+          362
+        ],
+        [
+          726,
+          369
+        ],
+        [
+          726,
+          396
+        ],
+        [
+          655,
+          389
+        ]
+      ],
+      "support_line_scene": [
+        [
+          655,
+          389
+        ],
+        [
+          726,
+          396
+        ]
+      ],
+      "height_px": 27,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "center_arch_3",
+      "asset": "book_row",
+      "source_rect": [
+        390,
+        116,
+        528,
+        499
+      ],
+      "quad_scene": [
+        [
+          655,
+          402
+        ],
+        [
+          726,
+          407
+        ],
+        [
+          726,
+          431
+        ],
+        [
+          655,
+          426
+        ]
+      ],
+      "support_line_scene": [
+        [
+          655,
+          426
+        ],
+        [
+          726,
+          431
+        ]
+      ],
+      "height_px": 24,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "center_arch_4",
+      "asset": "book_row",
+      "source_rect": [
+        587,
+        116,
+        528,
+        499
+      ],
+      "quad_scene": [
+        [
+          655,
+          438
+        ],
+        [
+          726,
+          441
+        ],
+        [
+          726,
+          460
+        ],
+        [
+          655,
+          457
+        ]
+      ],
+      "support_line_scene": [
+        [
+          655,
+          457
+        ],
+        [
+          726,
+          460
+        ]
+      ],
+      "height_px": 19,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_left_1",
+      "asset": "book_row",
+      "source_rect": [
+        259,
+        116,
+        1056,
+        499
+      ],
+      "quad_scene": [
+        [
+          475,
+          26
+        ],
+        [
+          609,
+          61
+        ],
+        [
+          609,
+          123
+        ],
+        [
+          475,
+          88
+        ]
+      ],
+      "support_line_scene": [
+        [
+          475,
+          88
+        ],
+        [
+          609,
+          123
+        ]
+      ],
+      "height_px": 62,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_left_2",
+      "asset": "book_row",
+      "source_rect": [
+        456,
+        116,
+        1056,
+        499
+      ],
+      "quad_scene": [
+        [
+          475,
+          116
+        ],
+        [
+          609,
+          147
+        ],
+        [
+          609,
+          204
+        ],
+        [
+          475,
+          173
+        ]
+      ],
+      "support_line_scene": [
+        [
+          475,
+          173
+        ],
+        [
+          609,
+          204
+        ]
+      ],
+      "height_px": 57,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_left_3",
+      "asset": "book_row",
+      "source_rect": [
+        653,
+        116,
+        1056,
+        499
+      ],
+      "quad_scene": [
+        [
+          475,
+          205
+        ],
+        [
+          609,
+          227
+        ],
+        [
+          609,
+          263
+        ],
+        [
+          475,
+          241
+        ]
+      ],
+      "support_line_scene": [
+        [
+          475,
+          241
+        ],
+        [
+          609,
+          263
+        ]
+      ],
+      "height_px": 36,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_middle_1",
+      "asset": "book_row",
+      "source_rect": [
+        1375,
+        116,
+        528,
+        499
+      ],
+      "quad_scene": [
+        [
+          665,
+          31
+        ],
+        [
+          729,
+          67
+        ],
+        [
+          729,
+          112
+        ],
+        [
+          665,
+          76
+        ]
+      ],
+      "support_line_scene": [
+        [
+          665,
+          76
+        ],
+        [
+          729,
+          112
+        ]
+      ],
+      "height_px": 45,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_middle_2",
+      "asset": "book_row",
+      "source_rect": [
+        1572,
+        116,
+        528,
+        499
+      ],
+      "quad_scene": [
+        [
+          665,
+          115
+        ],
+        [
+          729,
+          139
+        ],
+        [
+          729,
+          178
+        ],
+        [
+          665,
+          154
+        ]
+      ],
+      "support_line_scene": [
+        [
+          665,
+          154
+        ],
+        [
+          729,
+          178
+        ]
+      ],
+      "height_px": 39,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_back_1",
+      "asset": "book_row",
+      "source_rect": [
+        1067,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          781,
+          47
+        ],
+        [
+          889,
+          32
+        ],
+        [
+          889,
+          67
+        ],
+        [
+          781,
+          82
+        ]
+      ],
+      "support_line_scene": [
+        [
+          781,
+          82
+        ],
+        [
+          889,
+          67
+        ]
+      ],
+      "height_px": 35,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_back_2",
+      "asset": "book_row",
+      "source_rect": [
+        33,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          781,
+          104
+        ],
+        [
+          889,
+          87
+        ],
+        [
+          889,
+          133
+        ],
+        [
+          781,
+          150
+        ]
+      ],
+      "support_line_scene": [
+        [
+          781,
+          150
+        ],
+        [
+          889,
+          133
+        ]
+      ],
+      "height_px": 46,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_near_1",
+      "asset": "book_row",
+      "source_rect": [
+        1283,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1162,
+          20
+        ],
+        [
+          1210,
+          3
+        ],
+        [
+          1210,
+          31
+        ],
+        [
+          1162,
+          48
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1162,
+          48
+        ],
+        [
+          1210,
+          31
+        ]
+      ],
+      "height_px": 28,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_near_2",
+      "asset": "book_row",
+      "source_rect": [
+        1480,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1162,
+          71
+        ],
+        [
+          1210,
+          53
+        ],
+        [
+          1210,
+          84
+        ],
+        [
+          1162,
+          102
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1162,
+          102
+        ],
+        [
+          1210,
+          84
+        ]
+      ],
+      "height_px": 31,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_near_3",
+      "asset": "book_row",
+      "source_rect": [
+        1677,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1162,
+          122
+        ],
+        [
+          1210,
+          105
+        ],
+        [
+          1210,
+          137
+        ],
+        [
+          1162,
+          154
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1162,
+          154
+        ],
+        [
+          1210,
+          137
+        ]
+      ],
+      "height_px": 32,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_1",
+      "asset": "book_row",
+      "source_rect": [
+        820,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1238,
+          51
+        ],
+        [
+          1321,
+          25
+        ],
+        [
+          1321,
+          65
+        ],
+        [
+          1238,
+          91
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1238,
+          91
+        ],
+        [
+          1321,
+          65
+        ]
+      ],
+      "height_px": 40,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_2",
+      "asset": "book_row",
+      "source_rect": [
+        1017,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1238,
+          108
+        ],
+        [
+          1321,
+          79
+        ],
+        [
+          1321,
+          121
+        ],
+        [
+          1238,
+          150
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1238,
+          150
+        ],
+        [
+          1321,
+          121
+        ]
+      ],
+      "height_px": 42,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_edge_1",
+      "asset": "book_row",
+      "source_rect": [
+        426,
+        116,
+        1143,
+        499
+      ],
+      "quad_scene": [
+        [
+          1394,
+          18
+        ],
+        [
+          1535,
+          -37
+        ],
+        [
+          1535,
+          10
+        ],
+        [
+          1394,
+          65
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1394,
+          65
+        ],
+        [
+          1535,
+          10
+        ]
+      ],
+      "height_px": 47,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_edge_2",
+      "asset": "book_row",
+      "source_rect": [
+        623,
+        116,
+        1143,
+        499
+      ],
+      "quad_scene": [
+        [
+          1394,
+          88
+        ],
+        [
+          1535,
+          35
+        ],
+        [
+          1535,
+          87
+        ],
+        [
+          1394,
+          140
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1394,
+          140
+        ],
+        [
+          1535,
+          87
+        ]
+      ],
+      "height_px": 52,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_edge_1",
+      "asset": "book_row",
+      "source_rect": [
+        903,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          0,
+          59
+        ],
+        [
+          45,
+          68
+        ],
+        [
+          45,
+          158
+        ],
+        [
+          0,
+          149
+        ]
+      ],
+      "support_line_scene": [
+        [
+          0,
+          149
+        ],
+        [
+          45,
+          158
+        ]
+      ],
+      "height_px": 90,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_edge_2",
+      "asset": "book_row",
+      "source_rect": [
+        1100,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          0,
+          183
+        ],
+        [
+          45,
+          192
+        ],
+        [
+          45,
+          270
+        ],
+        [
+          0,
+          261
+        ]
+      ],
+      "support_line_scene": [
+        [
+          0,
+          261
+        ],
+        [
+          45,
+          270
+        ]
+      ],
+      "height_px": 78,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_edge_3",
+      "asset": "book_row",
+      "source_rect": [
+        1297,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          0,
+          294
+        ],
+        [
+          45,
+          305
+        ],
+        [
+          45,
+          363
+        ],
+        [
+          0,
+          352
+        ]
+      ],
+      "support_line_scene": [
+        [
+          0,
+          352
+        ],
+        [
+          45,
+          363
+        ]
+      ],
+      "height_px": 58,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_edge_4",
+      "asset": "book_row",
+      "source_rect": [
+        1494,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          0,
+          379
+        ],
+        [
+          45,
+          387
+        ],
+        [
+          45,
+          451
+        ],
+        [
+          0,
+          443
+        ]
+      ],
+      "support_line_scene": [
+        [
+          0,
+          443
+        ],
+        [
+          45,
+          451
+        ]
+      ],
+      "height_px": 64,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_edge_5",
+      "asset": "book_row",
+      "source_rect": [
+        1691,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          0,
+          470
+        ],
+        [
+          45,
+          473
+        ],
+        [
+          45,
+          533
+        ],
+        [
+          0,
+          530
+        ]
+      ],
+      "support_line_scene": [
+        [
+          0,
+          530
+        ],
+        [
+          45,
+          533
+        ]
+      ],
+      "height_px": 60,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_edge_6",
+      "asset": "book_row",
+      "source_rect": [
+        129,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          0,
+          573
+        ],
+        [
+          45,
+          579
+        ],
+        [
+          45,
+          644
+        ],
+        [
+          0,
+          638
+        ]
+      ],
+      "support_line_scene": [
+        [
+          0,
+          638
+        ],
+        [
+          45,
+          644
+        ]
+      ],
+      "height_px": 65,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    }
+  ],
+  "floor_props": [
+    {
+      "id": "rug",
+      "asset": "rug",
+      "source_rect": [
+        21,
+        58,
+        1495,
+        905
+      ],
+      "quad_scene": [
+        [
+          795,
+          625
+        ],
+        [
+          1250,
+          650
+        ],
+        [
+          1480,
+          878
+        ],
+        [
+          520,
+          810
+        ]
+      ],
+      "z": 14,
+      "render": "projective bilinear quad mesh",
+      "thickness_px": 0,
+      "casts_raised_shadow": false,
+      "clip_to_quad": true
+    }
+  ],
+  "effects": [
+    {
+      "id": "hearth_fire_back",
+      "asset": "hearth_fire",
+      "source_rect": [
+        153,
+        16,
+        978,
+        1187
+      ],
+      "rect_scene": [
+        477,
+        348,
+        112,
+        136
+      ],
+      "z": 22,
+      "clip_surface": "hearth_interior",
+      "flicker_opacity": [
+        0.83,
+        1
+      ],
+      "base_fixed": true
+    },
+    {
+      "id": "potion_flames",
+      "asset": "hearth_fire",
+      "source_rect": [
+        250,
+        12,
+        710,
+        750
+      ],
+      "rect_scene": [
+        505,
+        355,
+        54,
+        50
+      ],
+      "z": 25,
+      "clip_surface": "hearth_interior",
+      "opacity": 0.72,
+      "note": "Upper flame-only crop; no floating logs. Flames rise from potion rim."
+    }
+  ],
+  "revision_notes": [
+    "Replaced floating book clusters with individually traced support lines across all shelf banks.",
+    "Regenerated tea set with consistent low-angle warm dimensional shading and tabletop contact shadows.",
+    "Replaced floating alchemy bench with full-leg table and per-foot contacts.",
+    "Replaced old rug with flat orthographic textile, projectively fitted to floor.",
+    "Moved lower-angle cauldron inside clipped firebox with rear hearth fire and front rim flames.",
+    "Replaced circular dragon smoke particles with faint anchored raster wisps."
+  ],
+  "compositing": {
+    "furnishings.png": "Exported from the exact same shelf/rug/static-prop/decor placement data as preview; alpha-only full-canvas static overlay. Interactive sprites and hearth effects excluded.",
+    "ordering": "Use sorted runtime layers to support object/foreground depth. Flattened overlay is a convenience for static assembly.",
+    "projective_mapping": "Bilinear mesh with 20x12 cells and 2 triangles per cell; source and target quads are stored in JSON."
   }
 }

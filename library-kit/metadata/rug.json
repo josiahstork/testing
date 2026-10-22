@@ -1,0 +1,35 @@
+[
+  {
+    "id": "rug",
+    "asset": "rug",
+    "source_rect": [
+      21,
+      58,
+      1495,
+      905
+    ],
+    "quad_scene": [
+      [
+        795,
+        625
+      ],
+      [
+        1250,
+        650
+      ],
+      [
+        1480,
+        878
+      ],
+      [
+        520,
+        810
+      ]
+    ],
+    "z": 14,
+    "render": "projective bilinear quad mesh",
+    "thickness_px": 0,
+    "casts_raised_shadow": false,
+    "clip_to_quad": true
+  }
+]

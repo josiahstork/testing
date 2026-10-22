@@ -3,16 +3,16 @@
   "asset": "teapot_lid",
   "label": "teapot lid",
   "transform": {
-    "x": 213.628,
-    "y": 651.8667,
-    "width": 85,
-    "height": 56.6667,
+    "x": 237.34,
+    "y": 652.88,
+    "width": 55,
+    "height": 36.66667,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.055338541666666664
+    "scale": 0.035807291666666664
   },
   "z": 76,
   "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -87,15 +87,15 @@
   "anchors": {
     "grip_knob": [
       0.5,
-      0.18
+      0.255
     ],
     "seat": [
       0.5,
-      0.76
+      0.756
     ],
     "base": [
       0.5,
-      0.79
+      0.78
     ]
   },
   "interaction": {
@@ -129,7 +129,7 @@
     "additional_pose_rasters_included": false
   },
   "calibration": {
-    "status": "first-pass authored placement",
+    "status": "Revision 2: calibrated against architecture coordinate guide",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
   },
@@ -145,5 +145,17 @@
     ],
     "snap_radius_scene_px": 12,
     "snap_preserves_scale": true
+  },
+  "render": {
+    "shadow": {
+      "anchor": "base",
+      "radius": [
+        12.1,
+        2
+      ],
+      "opacity": 0.29
+    },
+    "light": "warm upper-left; shaded underside",
+    "view_angle_down_deg_estimate": 12
   }
 }

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "potion_table",
+    "asset": "potion_table",
+    "transform": {
+      "x": 790,
+      "y": 460,
+      "width": 260,
+      "height": 237.60670731707316
+    },
+    "z": 32,
+    "feet_uv": [
+      [
+        0.112,
+        0.735
+      ],
+      [
+        0.34,
+        0.647
+      ],
+      [
+        0.7,
+        0.97
+      ],
+      [
+        0.89,
+        0.815
+      ]
+    ],
+    "support": "potion_table_floor",
+    "shadow": {
+      "per_foot": true,
+      "radius_scene_px": [
+        10,
+        2.8
+      ],
+      "opacity": 0.34
+    },
+    "interactive": false,
+    "note": "All four complete feet visible; localized contact shadows, no unsupported group placement."
+  }
+]

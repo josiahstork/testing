@@ -3,18 +3,18 @@
   "asset": "cauldron",
   "label": "cauldron",
   "transform": {
-    "x": 455,
-    "y": 380,
-    "width": 148,
-    "height": 135.253,
+    "x": 477,
+    "y": 387.73778,
+    "width": 111,
+    "height": 102.98618,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.11280487804878049
+    "scale": 0.08525345622119816
   },
-  "z": 46,
+  "z": 24,
   "depth_sort": "explicit_z; held objects reparent to character hand",
   "support": "hearth",
   "physics": {
@@ -86,24 +86,28 @@
   },
   "anchors": {
     "rim_center": [
-      0.52,
-      0.22
+      0.5,
+      0.166
     ],
     "handle_left": [
-      0.11,
-      0.37
+      0.095,
+      0.34
     ],
     "handle_right": [
       0.9,
-      0.39
+      0.34
     ],
     "steam_origin": [
-      0.52,
-      0.21
+      0.5,
+      0.166
     ],
     "fire_origin": [
-      0.52,
-      0.91
+      0.5,
+      0.88
+    ],
+    "base": [
+      0.5,
+      0.925
     ]
   },
   "interaction": {
@@ -136,7 +140,7 @@
     "additional_pose_rasters_included": false
   },
   "calibration": {
-    "status": "first-pass authored placement",
+    "status": "Revision 2: calibrated against architecture coordinate guide",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
   },
@@ -145,14 +149,15 @@
     "fill_fraction": 0.65,
     "temperature_c_estimate": 80,
     "surface_ellipse_uv": [
-      0.52,
-      0.22,
-      0.32,
-      0.105
+      0.5,
+      0.166,
+      0.28,
+      0.04
     ],
     "surface_art_baked": true,
     "pourable": false,
-    "hot_surface": true
+    "hot_surface": true,
+    "initial_color": "amber-green"
   },
   "animation": {
     "steam": {
@@ -171,10 +176,29 @@
       "opacity_max": 0.18
     },
     "fire": {
-      "anchor": "fire_origin",
-      "enabled": false,
-      "raster_included": false,
-      "note": "Fire must remain behind cauldron but in front of hearth."
+      "enabled": true,
+      "raster_included": true,
+      "asset": "hearth_fire",
+      "layers": [
+        "hearth_fire_back",
+        "potion_flames"
+      ],
+      "clip_surface": "hearth_interior",
+      "light_falloff_scene_px": 155,
+      "flicker": "small coherent opacity modulation; base stays fixed"
     }
+  },
+  "render": {
+    "clip_surface": "hearth_interior",
+    "shadow": {
+      "anchor": "base",
+      "radius": [
+        36,
+        4
+      ],
+      "opacity": 0.38
+    },
+    "view_angle_down_deg_estimate": 10,
+    "depth": "inside firebox; front masonry stays unobscured"
   }
 }

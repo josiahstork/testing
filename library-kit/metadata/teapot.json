@@ -3,16 +3,16 @@
   "asset": "teapot",
   "label": "teapot",
   "transform": {
-    "x": 178,
-    "y": 662,
-    "width": 152,
-    "height": 126.6667,
+    "x": 180,
+    "y": 656.408,
+    "width": 168,
+    "height": 112.0,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.11062590975254731
+    "scale": 0.109375
   },
   "z": 75,
   "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -87,27 +87,27 @@
   "anchors": {
     "grip_handle": [
       0.12,
-      0.35
+      0.38
     ],
     "grip_under_base": [
       0.52,
       0.88
     ],
     "spout_tip": [
-      0.949,
-      0.293
+      0.95,
+      0.256
     ],
     "mouth_center": [
-      0.514,
-      0.26
+      0.505,
+      0.216
     ],
     "lid_seat": [
-      0.514,
-      0.26
+      0.505,
+      0.216
     ],
     "base": [
-      0.51,
-      0.883
+      0.5,
+      0.916
     ]
   },
   "interaction": {
@@ -142,7 +142,7 @@
     "additional_pose_rasters_included": false
   },
   "calibration": {
-    "status": "first-pass authored placement",
+    "status": "Revision 2: calibrated against architecture coordinate guide",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
   },
@@ -184,5 +184,17 @@
     "collision_with_other_teaware": true,
     "requires_character_pose": true,
     "character_art_included": false
+  },
+  "render": {
+    "shadow": {
+      "anchor": "base",
+      "radius": [
+        36.96,
+        2
+      ],
+      "opacity": 0.29
+    },
+    "light": "warm upper-left; shaded underside",
+    "view_angle_down_deg_estimate": 12
   }
 }

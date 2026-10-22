@@ -3,16 +3,16 @@
   "asset": "saucer",
   "label": "saucer",
   "transform": {
-    "x": 365,
-    "y": 710,
-    "width": 100,
-    "height": 66.6667,
+    "x": 382,
+    "y": 734.15989,
+    "width": 104,
+    "height": 39.03812,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.06510416666666667
+    "scale": 0.05083088954056696
   },
   "z": 77,
   "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -87,15 +87,15 @@
   "anchors": {
     "cup_seat": [
       0.5,
-      0.55
+      0.613
     ],
     "grip_edge": [
-      0.86,
-      0.53
+      0.88,
+      0.58
     ],
     "base": [
       0.5,
-      0.8
+      0.79
     ]
   },
   "interaction": {
@@ -129,7 +129,7 @@
     "additional_pose_rasters_included": false
   },
   "calibration": {
-    "status": "first-pass authored placement",
+    "status": "Revision 2: calibrated against architecture coordinate guide",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
   },
@@ -144,5 +144,17 @@
     ],
     "carry_contents_when_seated": true,
     "cup_requires_second_hand_or_stable_slow_carry": true
+  },
+  "render": {
+    "shadow": {
+      "anchor": "base",
+      "radius": [
+        22.88,
+        2
+      ],
+      "opacity": 0.29
+    },
+    "light": "warm upper-left; shaded underside",
+    "view_angle_down_deg_estimate": 12
   }
 }

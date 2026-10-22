@@ -1,10 +1,11 @@
 {
+  "revision": 2,
   "loaded": true,
-  "errors": [],
-  "smoke_trigger": true,
-  "cup_drag_changed_position": true,
-  "alpha_hit_test": {
-    "inside": true,
-    "outside": false
-  }
+  "script_errors": [],
+  "smoke_cooldown_limits_to_two_wisps": true,
+  "smoke_origins_match_muzzle": true,
+  "smoke_uses_raster": true,
+  "cup_valid_drag": true,
+  "reset_restores_cup": true,
+  "blank_room_has_no_decor_or_effect_leaks": true
 }

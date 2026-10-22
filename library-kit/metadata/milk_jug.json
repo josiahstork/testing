@@ -3,16 +3,16 @@
   "asset": "milk_jug",
   "label": "milk jug",
   "transform": {
-    "x": 495,
-    "y": 691,
-    "width": 80,
-    "height": 73.2824,
+    "x": 520,
+    "y": 697.6,
+    "width": 72,
+    "height": 60.0,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.061068702290076333
+    "scale": 0.05240174672489083
   },
   "z": 79,
   "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -87,19 +87,19 @@
   "anchors": {
     "grip_handle": [
       0.15,
-      0.35
+      0.34
     ],
     "spout_tip": [
       0.946,
-      0.15
+      0.185
     ],
     "mouth_center": [
-      0.56,
-      0.225
+      0.58,
+      0.255
     ],
     "base": [
-      0.57,
-      0.93
+      0.56,
+      0.94
     ]
   },
   "interaction": {
@@ -134,7 +134,7 @@
     "additional_pose_rasters_included": false
   },
   "calibration": {
-    "status": "first-pass authored placement",
+    "status": "Revision 2: calibrated against architecture coordinate guide",
     "anchors": "visually estimated against this exact generated raster",
     "physics": "plausible design estimates, not measured physical properties"
   },
@@ -176,5 +176,17 @@
     "collision_with_other_teaware": true,
     "requires_character_pose": true,
     "character_art_included": false
+  },
+  "render": {
+    "shadow": {
+      "anchor": "base",
+      "radius": [
+        15.84,
+        2
+      ],
+      "opacity": 0.29
+    },
+    "light": "warm upper-left; shaded underside",
+    "view_angle_down_deg_estimate": 12
   }
 }
