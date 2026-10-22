@@ -1,5 +1,5 @@
 {
-  "revision": 4,
+  "revision": 5,
   "script_errors": [],
   "daylight_changes_interior": true,
   "daylight_changes_exterior": true,
@@ -14,8 +14,8 @@
   "smoke_cooldown": true,
   "neutral_blank_room_isolated": true,
   "measurements": {
-    "interiorNoDaylight": 20.660674461840827,
-    "interiorFullDaylight": 50.768705777631084,
+    "interiorNoDaylight": 20.68129306184085,
+    "interiorFullDaylight": 50.769854569736424,
     "exteriorNoDaylight": 21.870723015870848,
     "exteriorFullDaylight": 224.58198414285613,
     "hearthOff": 16.249496466666525,

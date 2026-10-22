@@ -4,6 +4,8 @@
 
 [**Download all assets and metadata (ZIP)**](library-kit.zip?raw=true)
 
+[**Download the extra clutter pack (PNG + JSON)**](clutter-pack.zip?raw=true)
+
 [Browse the revised library kit and image previews](library-kit/README.md) · [Individual PNGs](library-kit/assets/) · [Scene JSON](library-kit/scene.json)
 
 ![Assembled wizard library](library-kit/composite.png)

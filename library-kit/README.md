@@ -1,10 +1,18 @@
-# Wizard library asset kit — revision 4: light and depth
+# Wizard library asset kit — revision 5: loose study clutter
 
 [**Compare the lighting presets**](lighting-comparison.png) · [**Before / after**](lighting-before-after.png) · [**View the daylight scene**](composite.png) · [**Download the ZIP**](../library-kit.zip?raw=true) · [**Scene JSON**](scene.json)
 
 ![Lighting presets](lighting-comparison.png)
 
-The room now has shared interior lighting, independently adjustable outdoor light, contact shadows, projected cast shadows, shelf occlusion, and separate candle/hearth light controls. The wizard, celestial tea service and scene layout are preserved. The package includes **23 art/layer PNGs**, **48 lighting/shadow PNG snapshots**, **14 interactive object records**, **65 shelf rows**, metadata, and the interactive preview.
+The room now has shared interior lighting, independently adjustable outdoor light, contact shadows, projected cast shadows, shelf occlusion, and separate candle/hearth light controls. The wizard, celestial tea service and scene layout are preserved. The package includes **29 art/layer PNGs**, **48 lighting/shadow PNG snapshots**, **22 interactive object records**, **65 shelf rows**, metadata, and the interactive preview.
+
+## Loose clutter pack
+
+Six original transparent PNGs add eight independent placements: two stacks of worn leather books, an open celestial grimoire, two brass trays of beeswax candles, a tied scroll bundle, a dark glass inkwell with feather quill, and a corked potion-bottle group. They remain separate from `furnishings.png`. [Download only the new clutter and its JSON](../clutter-pack.zip?raw=true).
+
+`metadata/clutter-pack.json` records the source rasters and every placed instance. Each instance includes untrimmed UV anchors, an aspect-preserving transform, support, depth, alpha click picking, a conservative collision proxy, mass/material estimates, grip/contact points, interaction limits, and its separate shadow rule. Candle flame origins and warm light pools are recorded; candle intensity follows the existing control. Flames are painted into the supplied idle sprite, so extinction and independent flame animation require additional art.
+
+The open grimoire, scrolls, and writing set can be dragged to clear spots on the tea table. Invalid drops return to the prior support. Floor groups and lit candle trays are inspect-only in this preview. Books, bottles, scrolls, and writing tools inside each sprite are rigid groups; their individual members are not segmented. No new wizard pickup pose is included.
 
 ## Light and depth controls
 

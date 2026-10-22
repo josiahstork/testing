@@ -97,7 +97,7 @@
         0,
         61
       ],
-      "sha256": "ee01412f45d370c29e74c81271a6dbc7c6a8afcedb2b3539f0013f37a69bf8fa",
+      "sha256": "330b87de8440b9c7e67e944490aa23545b256d9d5cf9b0ccbe010d350c13e4ef",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -115,14 +115,14 @@
       "alpha_bounds": [
         68,
         611,
-        1470,
+        1480,
         1014
       ],
       "alpha_range": [
         0,
         120
       ],
-      "sha256": "b1fe95ba801471fa726bd48e2d4c85075b319ac65b28248f0f24cc361fe4c2ad",
+      "sha256": "da090d29431e4c34d5c73ff93f18e9a65182345393f1be938c0be70503b0089f",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -192,7 +192,7 @@
         255,
         255
       ],
-      "sha256": "c550a32f047a435fb8b8d5a2e68b3c5a237084ca9e2dd40da98e342f887ba024",
+      "sha256": "0f8c4d0587324e3c45f2d69b3ff4af7834d5092c71a44205c127bf21c1bbf7a6",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -210,14 +210,14 @@
       "alpha_bounds": [
         324,
         516,
-        406,
+        440,
         537
       ],
       "alpha_range": [
         0,
         22
       ],
-      "sha256": "2d5d4c1a7fdfe5cc4635bbce35b1dcbadbcc2a37141dfb934ca6a1e6d9ae48f4",
+      "sha256": "3c141139d69f76e4e62f689cbfdff0c608643bc479318016445fcc9921d2ff5b",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -235,14 +235,14 @@
       "alpha_bounds": [
         333,
         520,
-        378,
-        526
+        430,
+        528
       ],
       "alpha_range": [
         0,
         88
       ],
-      "sha256": "3acc061bb41b700cc950cc8831341df1256e3441856d764fa4c9a1c58d61babd",
+      "sha256": "e37ecccdc84c95c47e92b92ac824d00a446882f5163b3e70d246642d5c50a420",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -303,16 +303,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        149,
-        740,
-        714,
-        776
+        18,
+        702,
+        790,
+        779
       ],
       "alpha_range": [
         0,
         30
       ],
-      "sha256": "ff0c9ec663c160a587dc8796a085a1096fae9585a5650424b4a8c1a8809e5fd3",
+      "sha256": "6887f7343363ce560eae997ccf2ac61834e3a3403592570b749a80a876cbc761",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -328,16 +328,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        182,
-        742,
-        684,
-        767
+        44,
+        708,
+        774,
+        768
       ],
       "alpha_range": [
         0,
         93
       ],
-      "sha256": "545470a04ce12ceafb94ef1f885a70ede53cdf974df621aad8b1f0c5b2dd01ab",
+      "sha256": "1ccaabd60651859b2dbf1c91b71da5da4a54b7e89d1caf1aaf8788d19a3a176a",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -387,7 +387,7 @@
         0,
         31
       ],
-      "sha256": "da15ebf16013073d887e8445f3a276a0f3fbd8551a43bb98315b5e102b4496a1",
+      "sha256": "67c058b15a443ef5471b2a439fb84d92b76ce040cc4c1c7068af340ce02dade6",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -405,14 +405,14 @@
       "alpha_bounds": [
         68,
         611,
-        1470,
+        1480,
         1014
       ],
       "alpha_range": [
         0,
         120
       ],
-      "sha256": "b1fe95ba801471fa726bd48e2d4c85075b319ac65b28248f0f24cc361fe4c2ad",
+      "sha256": "da090d29431e4c34d5c73ff93f18e9a65182345393f1be938c0be70503b0089f",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -482,7 +482,7 @@
         255,
         255
       ],
-      "sha256": "51e341b041c4dc7b8429b189842df136a8568535bcd78efd0ba060293f2ef59d",
+      "sha256": "1608e52b7a9ba38f7ee7a6548f48e11c399694db1a054c34559aba0a0c211635",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -499,15 +499,15 @@
       "mode": "RGBA",
       "alpha_bounds": [
         332,
-        515,
-        426,
+        514,
+        443,
         538
       ],
       "alpha_range": [
         0,
         8
       ],
-      "sha256": "df35dce37baef65f87a11908b00f60845fa331cc407cce330b0f43082847e083",
+      "sha256": "276e542db342b14051ddf20bcb7140d221fedabada091fa13c1cc7f3df96ff45",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -525,14 +525,14 @@
       "alpha_bounds": [
         333,
         520,
-        378,
-        526
+        430,
+        528
       ],
       "alpha_range": [
         0,
         88
       ],
-      "sha256": "3acc061bb41b700cc950cc8831341df1256e3441856d764fa4c9a1c58d61babd",
+      "sha256": "e37ecccdc84c95c47e92b92ac824d00a446882f5163b3e70d246642d5c50a420",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -593,16 +593,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        167,
-        742,
-        646,
-        782
+        23,
+        702,
+        800,
+        785
       ],
       "alpha_range": [
         0,
         12
       ],
-      "sha256": "d3cf657f2abe67945a0efe3bd7abf5adaff2006f4d049e19d7718df8a3aaaeda",
+      "sha256": "2ee041e0724ede4d71a14cc504fa508cd95327067db9b95cb8783dd0eba2b2e2",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -618,16 +618,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        182,
-        742,
-        684,
-        767
+        44,
+        708,
+        774,
+        768
       ],
       "alpha_range": [
         0,
         93
       ],
-      "sha256": "545470a04ce12ceafb94ef1f885a70ede53cdf974df621aad8b1f0c5b2dd01ab",
+      "sha256": "1ccaabd60651859b2dbf1c91b71da5da4a54b7e89d1caf1aaf8788d19a3a176a",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -677,7 +677,7 @@
         0,
         17
       ],
-      "sha256": "76fbe5838f820c9c6e1cb342965285536cd8d3da337a8c49edc05e06436032cf",
+      "sha256": "c495c61e00a61462d1687b4ec15abdb424e593af3f9a78fce3e4259caed537bc",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -695,14 +695,14 @@
       "alpha_bounds": [
         68,
         611,
-        1470,
+        1480,
         1014
       ],
       "alpha_range": [
         0,
         120
       ],
-      "sha256": "b1fe95ba801471fa726bd48e2d4c85075b319ac65b28248f0f24cc361fe4c2ad",
+      "sha256": "da090d29431e4c34d5c73ff93f18e9a65182345393f1be938c0be70503b0089f",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -772,7 +772,7 @@
         255,
         255
       ],
-      "sha256": "5197af82d1f3f0483c681c1925f3eaa0a82538ff8eeffbee396577167be1f1ea",
+      "sha256": "8383325ad9b9b5f7e82fa5d2dc2daf0010bbd54957f7657405621025f7000c15",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -790,14 +790,14 @@
       "alpha_bounds": [
         326,
         516,
-        382,
-        534
+        433,
+        535
       ],
       "alpha_range": [
         0,
         1
       ],
-      "sha256": "83e9e2eb5dde87ef857189b4e14f216a0714ec45bac15bc9875416772f077d31",
+      "sha256": "6e13092901340ca5e1a815150e92ea53dc38e7d0cb19610b4b10d049e525abde",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -815,14 +815,14 @@
       "alpha_bounds": [
         333,
         520,
-        378,
-        526
+        430,
+        528
       ],
       "alpha_range": [
         0,
         88
       ],
-      "sha256": "3acc061bb41b700cc950cc8831341df1256e3441856d764fa4c9a1c58d61babd",
+      "sha256": "e37ecccdc84c95c47e92b92ac824d00a446882f5163b3e70d246642d5c50a420",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -883,16 +883,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        137,
-        737,
-        629,
+        32,
+        702,
+        790,
         779
       ],
       "alpha_range": [
         0,
         6
       ],
-      "sha256": "773857a178cbc4fc89e632a08c50b15ed8a62acc797d732cc199024ef5b6633e",
+      "sha256": "8684a495e85e372fffe1e1f68d149732cafee0d267abe0f823909a86ab227f7d",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -908,16 +908,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        182,
-        742,
-        684,
-        767
+        44,
+        708,
+        774,
+        768
       ],
       "alpha_range": [
         0,
         93
       ],
-      "sha256": "545470a04ce12ceafb94ef1f885a70ede53cdf974df621aad8b1f0c5b2dd01ab",
+      "sha256": "1ccaabd60651859b2dbf1c91b71da5da4a54b7e89d1caf1aaf8788d19a3a176a",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -967,7 +967,7 @@
         0,
         17
       ],
-      "sha256": "ce3279d79d58485a5aa73be41173f22dc459c6c2c0d95cd9489b0e4dc4448b5f",
+      "sha256": "1e6fa700d604d4f3f44eb6ee6f77f966eef64d70b0b2acc6c1fa3f53be076d4c",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -985,14 +985,14 @@
       "alpha_bounds": [
         68,
         611,
-        1470,
+        1480,
         1014
       ],
       "alpha_range": [
         0,
         120
       ],
-      "sha256": "b1fe95ba801471fa726bd48e2d4c85075b319ac65b28248f0f24cc361fe4c2ad",
+      "sha256": "da090d29431e4c34d5c73ff93f18e9a65182345393f1be938c0be70503b0089f",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -1062,7 +1062,7 @@
         255,
         255
       ],
-      "sha256": "f24b8b4cfc7185d2d00064399e5ab7efa731d8708c2e3971903730dfc542ad57",
+      "sha256": "39b86e6e6c5977abaec2e48fb02ef3f9a1965ea60ecd3c7ac1566ab4e48dedb0",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -1105,14 +1105,14 @@
       "alpha_bounds": [
         333,
         520,
-        378,
-        526
+        430,
+        528
       ],
       "alpha_range": [
         0,
         88
       ],
-      "sha256": "3acc061bb41b700cc950cc8831341df1256e3441856d764fa4c9a1c58d61babd",
+      "sha256": "e37ecccdc84c95c47e92b92ac824d00a446882f5163b3e70d246642d5c50a420",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -1173,16 +1173,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        157,
-        740,
-        620,
+        38,
+        724,
+        784,
         781
       ],
       "alpha_range": [
         0,
         3
       ],
-      "sha256": "dbc6ba536ae39a7722bec874f3a5407b7abcda318291c1ca3e6c9c6a0546a4f6",
+      "sha256": "5bb5be75cba2f776f05e9c67df4b2ce8773ef32356d23e476938f7a225e06bc7",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -1198,16 +1198,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        182,
-        742,
-        684,
-        767
+        44,
+        708,
+        774,
+        768
       ],
       "alpha_range": [
         0,
         93
       ],
-      "sha256": "545470a04ce12ceafb94ef1f885a70ede53cdf974df621aad8b1f0c5b2dd01ab",
+      "sha256": "1ccaabd60651859b2dbf1c91b71da5da4a54b7e89d1caf1aaf8788d19a3a176a",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     }

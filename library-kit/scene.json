@@ -1,6 +1,6 @@
 {
   "format_version": "1.3.0",
-  "title": "Wizard library \u2014 revision 4, shared lighting and adjustable daylight",
+  "title": "Wizard library \u00b7 revision 5 \u00b7 loose study clutter",
   "canvas": {
     "width": 1536,
     "height": 1024,
@@ -643,6 +643,144 @@
       "alpha_encoding": "straight",
       "trimmed": false,
       "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "clutter_book_stack": {
+      "id": "clutter_book_stack",
+      "file": "assets/clutter_book_stack.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        194,
+        35,
+        1355,
+        1005
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "66420efd457104dd1c59d48cca97afcf4602c093a9b35130e3460caf74cd01b5",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source raster including transparent margins",
+      "source": "AI-generated original transparent raster; no background removal or painted shadow baked in."
+    },
+    "clutter_open_grimoire": {
+      "id": "clutter_open_grimoire",
+      "file": "assets/clutter_open_grimoire.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        35,
+        93,
+        1486,
+        990
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "ecf2230eb6ffddb845210e1d640766eb90a09628b06cfa9c819d653f88c37888",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source raster including transparent margins",
+      "source": "AI-generated original transparent raster; no background removal or painted shadow baked in."
+    },
+    "clutter_candles": {
+      "id": "clutter_candles",
+      "file": "assets/clutter_candles.png",
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        112,
+        35,
+        1278,
+        1135
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "23a697e17a2db16445054c49d7670fadb6fe504e09d7a644eed76b1acbaf598e",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source raster including transparent margins",
+      "source": "AI-generated original transparent raster; no background removal or painted shadow baked in."
+    },
+    "clutter_scrolls": {
+      "id": "clutter_scrolls",
+      "file": "assets/clutter_scrolls.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        90,
+        130,
+        1456,
+        912
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "b912c033325069ca469093328b9f02d536176b324015af2daf69140e1ae3a6f6",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source raster including transparent margins",
+      "source": "AI-generated original transparent raster; no background removal or painted shadow baked in."
+    },
+    "clutter_ink_quill": {
+      "id": "clutter_ink_quill",
+      "file": "assets/clutter_ink_quill.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        391,
+        16,
+        1391,
+        987
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "a80b258e93bed7c9f93b4fcc3e2e031d03bb1d2e0caf3d05eb8a08f6ad622a94",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source raster including transparent margins",
+      "source": "AI-generated original transparent raster; no background removal or painted shadow baked in."
+    },
+    "clutter_potion_bottles": {
+      "id": "clutter_potion_bottles",
+      "file": "assets/clutter_potion_bottles.png",
+      "width": 1357,
+      "height": 1159,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        172,
+        33,
+        1202,
+        1104
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "bfa04a3138aebb51f74702fe8356735c2e9ae192b487baa703df0a65009786da",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source raster including transparent margins",
+      "source": "AI-generated original transparent raster; no background removal or painted shadow baked in."
     }
   },
   "layers": [
@@ -3363,6 +3501,1326 @@
         "source_highlights": "baked",
         "lighting_map": "shared interior gain map",
         "keep_shadow_separate_from_sprite": true
+      }
+    },
+    {
+      "id": "study_books",
+      "asset": "clutter_book_stack",
+      "label": "study books",
+      "transform": {
+        "x": 507.5,
+        "y": 593.3333333333334,
+        "width": 125,
+        "height": 83.33333333333333,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.08138020833333333
+      },
+      "z": 35,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "floor",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 4.2,
+        "material": "leather and paper",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.65
+        ],
+        "contact_uv": [
+          0.5,
+          0.92
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.12630208333333334,
+              0.0341796875
+            ],
+            [
+              0.8821614583333334,
+              0.0341796875
+            ],
+            [
+              0.8821614583333334,
+              0.9814453125
+            ],
+            [
+              0.12630208333333334,
+              0.9814453125
+            ]
+          ],
+          "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 77,
+        "accessible_label": "study books"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.92
+        ],
+        "grip": [
+          0.5,
+          0.55
+        ],
+        "center": [
+          0.5,
+          0.5
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ],
+        "valid_drop_surfaces": []
+      },
+      "shadow": {
+        "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+        "opacity": 0.38,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "rotation_limits_deg": [
+          -180,
+          180
+        ],
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "held_z": 100,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "lighting": {
+        "rule": "study_books",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "clutter",
+      "group_contract": {
+        "single_rigid_raster": true,
+        "members_separately_pickable": false,
+        "separation_requires_new_art": true
+      }
+    },
+    {
+      "id": "spare_books",
+      "asset": "clutter_book_stack",
+      "label": "spare books",
+      "transform": {
+        "x": 1400.0,
+        "y": 878.6666666666666,
+        "width": 100,
+        "height": 66.66666666666667,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.06510416666666667
+      },
+      "z": 82,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "floor",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 4.2,
+        "material": "leather and paper",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.65
+        ],
+        "contact_uv": [
+          0.5,
+          0.92
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.12630208333333334,
+              0.0341796875
+            ],
+            [
+              0.8821614583333334,
+              0.0341796875
+            ],
+            [
+              0.8821614583333334,
+              0.9814453125
+            ],
+            [
+              0.12630208333333334,
+              0.9814453125
+            ]
+          ],
+          "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 77,
+        "accessible_label": "spare books"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.92
+        ],
+        "grip": [
+          0.5,
+          0.55
+        ],
+        "center": [
+          0.5,
+          0.5
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ],
+        "valid_drop_surfaces": []
+      },
+      "shadow": {
+        "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+        "opacity": 0.38,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "rotation_limits_deg": [
+          -180,
+          180
+        ],
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "held_z": 100,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "lighting": {
+        "rule": "spare_books",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "clutter",
+      "group_contract": {
+        "single_rigid_raster": true,
+        "members_separately_pickable": false,
+        "separation_requires_new_art": true
+      }
+    },
+    {
+      "id": "reading_grimoire",
+      "asset": "clutter_open_grimoire",
+      "label": "reading grimoire",
+      "transform": {
+        "x": 15.0,
+        "y": 688.5333333333333,
+        "width": 140,
+        "height": 93.33333333333333,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.09114583333333333
+      },
+      "z": 81,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "tea_table",
+      "physics": {
+        "body_type": "kinematic",
+        "mass_kg_estimate": 1.8,
+        "material": "leather and paper",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.65
+        ],
+        "contact_uv": [
+          0.5,
+          0.83
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.022786458333333332,
+              0.0908203125
+            ],
+            [
+              0.9674479166666666,
+              0.0908203125
+            ],
+            [
+              0.9674479166666666,
+              0.966796875
+            ],
+            [
+              0.022786458333333332,
+              0.966796875
+            ]
+          ],
+          "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 77,
+        "accessible_label": "reading grimoire"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.83
+        ],
+        "grip": [
+          0.5,
+          0.55
+        ],
+        "center": [
+          0.5,
+          0.5
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": true,
+        "pickup": true,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect",
+          "pick_up",
+          "put_down"
+        ],
+        "valid_drop_surfaces": [
+          "tea_table"
+        ]
+      },
+      "shadow": {
+        "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+        "opacity": 0.38,
+        "detach_on_pickup": true,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "rotation_limits_deg": [
+          -180,
+          180
+        ],
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "held_z": 100,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "lighting": {
+        "rule": "reading_grimoire",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "clutter",
+      "group_contract": {
+        "single_rigid_raster": true,
+        "members_separately_pickable": false,
+        "separation_requires_new_art": true
+      }
+    },
+    {
+      "id": "table_candles",
+      "asset": "clutter_candles",
+      "label": "table candles",
+      "transform": {
+        "x": 722.5,
+        "y": 687.9444740853659,
+        "width": 65,
+        "height": 59.40167682926829,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.04954268292682927
+      },
+      "z": 82,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "tea_table",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 0.9,
+        "material": "wax and brass",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.65
+        ],
+        "contact_uv": [
+          0.5,
+          0.91
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.08536585365853659,
+              0.029190992493744787
+            ],
+            [
+              0.9740853658536586,
+              0.029190992493744787
+            ],
+            [
+              0.9740853658536586,
+              0.9466221851542952
+            ],
+            [
+              0.08536585365853659,
+              0.9466221851542952
+            ]
+          ],
+          "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 77,
+        "accessible_label": "table candles"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.91
+        ],
+        "grip": [
+          0.5,
+          0.55
+        ],
+        "center": [
+          0.5,
+          0.5
+        ],
+        "flame_tall": [
+          0.46,
+          0.12
+        ],
+        "flame_medium": [
+          0.69,
+          0.36
+        ],
+        "flame_short": [
+          0.41,
+          0.59
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ],
+        "valid_drop_surfaces": []
+      },
+      "shadow": {
+        "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+        "opacity": 0.38,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "rotation_limits_deg": [
+          -180,
+          180
+        ],
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "held_z": 100,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "lighting": {
+        "rule": "table_candles",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "clutter",
+      "group_contract": {
+        "single_rigid_raster": true,
+        "members_separately_pickable": false,
+        "separation_requires_new_art": true
+      },
+      "emission": {
+        "type": "three candle flames",
+        "control": "candles",
+        "flame_origins_source_uv": [
+          [
+            0.46,
+            0.12
+          ],
+          [
+            0.69,
+            0.36
+          ],
+          [
+            0.41,
+            0.59
+          ]
+        ],
+        "color_rgb": [
+          255,
+          184,
+          105
+        ],
+        "raster_flames_baked": true,
+        "extinguished_raster_included": false,
+        "animation_note": "Idle only; use separate flame sprites for independent flame animation or extinction."
+      }
+    },
+    {
+      "id": "ledge_candles",
+      "asset": "clutter_candles",
+      "label": "ledge candles",
+      "transform": {
+        "x": 399.5,
+        "y": 493.5666844512195,
+        "width": 39,
+        "height": 35.641006097560975,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.02972560975609756
+      },
+      "z": 47,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "ledge",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 0.9,
+        "material": "wax and brass",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.65
+        ],
+        "contact_uv": [
+          0.5,
+          0.91
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.08536585365853659,
+              0.029190992493744787
+            ],
+            [
+              0.9740853658536586,
+              0.029190992493744787
+            ],
+            [
+              0.9740853658536586,
+              0.9466221851542952
+            ],
+            [
+              0.08536585365853659,
+              0.9466221851542952
+            ]
+          ],
+          "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 77,
+        "accessible_label": "ledge candles"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.91
+        ],
+        "grip": [
+          0.5,
+          0.55
+        ],
+        "center": [
+          0.5,
+          0.5
+        ],
+        "flame_tall": [
+          0.46,
+          0.12
+        ],
+        "flame_medium": [
+          0.69,
+          0.36
+        ],
+        "flame_short": [
+          0.41,
+          0.59
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ],
+        "valid_drop_surfaces": []
+      },
+      "shadow": {
+        "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+        "opacity": 0.38,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "rotation_limits_deg": [
+          -180,
+          180
+        ],
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "held_z": 100,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "lighting": {
+        "rule": "ledge_candles",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "clutter",
+      "group_contract": {
+        "single_rigid_raster": true,
+        "members_separately_pickable": false,
+        "separation_requires_new_art": true
+      },
+      "emission": {
+        "type": "three candle flames",
+        "control": "candles",
+        "flame_origins_source_uv": [
+          [
+            0.46,
+            0.12
+          ],
+          [
+            0.69,
+            0.36
+          ],
+          [
+            0.41,
+            0.59
+          ]
+        ],
+        "color_rgb": [
+          255,
+          184,
+          105
+        ],
+        "raster_flames_baked": true,
+        "extinguished_raster_included": false,
+        "animation_note": "Idle only; use separate flame sprites for independent flame animation or extinction."
+      }
+    },
+    {
+      "id": "desk_scrolls",
+      "asset": "clutter_scrolls",
+      "label": "desk scrolls",
+      "transform": {
+        "x": 492.5,
+        "y": 664.6666666666666,
+        "width": 85,
+        "height": 56.666666666666664,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.055338541666666664
+      },
+      "z": 74,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "tea_table",
+      "physics": {
+        "body_type": "kinematic",
+        "mass_kg_estimate": 0.25,
+        "material": "parchment and cord",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.65
+        ],
+        "contact_uv": [
+          0.5,
+          0.8
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.05859375,
+              0.126953125
+            ],
+            [
+              0.9479166666666666,
+              0.126953125
+            ],
+            [
+              0.9479166666666666,
+              0.890625
+            ],
+            [
+              0.05859375,
+              0.890625
+            ]
+          ],
+          "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 77,
+        "accessible_label": "desk scrolls"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.8
+        ],
+        "grip": [
+          0.5,
+          0.55
+        ],
+        "center": [
+          0.5,
+          0.5
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": true,
+        "pickup": true,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect",
+          "pick_up",
+          "put_down"
+        ],
+        "valid_drop_surfaces": [
+          "tea_table"
+        ]
+      },
+      "shadow": {
+        "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+        "opacity": 0.38,
+        "detach_on_pickup": true,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "rotation_limits_deg": [
+          -180,
+          180
+        ],
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "held_z": 100,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "lighting": {
+        "rule": "desk_scrolls",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "clutter",
+      "group_contract": {
+        "single_rigid_raster": true,
+        "members_separately_pickable": false,
+        "separation_requires_new_art": true
+      }
+    },
+    {
+      "id": "writing_set",
+      "asset": "clutter_ink_quill",
+      "label": "writing set",
+      "transform": {
+        "x": 261.04,
+        "y": 687.76,
+        "width": 72,
+        "height": 48.0,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.046875
+      },
+      "z": 80,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "tea_table",
+      "physics": {
+        "body_type": "kinematic",
+        "mass_kg_estimate": 0.3,
+        "material": "glass brass and feather",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.65
+        ],
+        "contact_uv": [
+          0.43,
+          0.88
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.2545572916666667,
+              0.015625
+            ],
+            [
+              0.9055989583333334,
+              0.015625
+            ],
+            [
+              0.9055989583333334,
+              0.9638671875
+            ],
+            [
+              0.2545572916666667,
+              0.9638671875
+            ]
+          ],
+          "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 77,
+        "accessible_label": "writing set"
+      },
+      "anchors": {
+        "base": [
+          0.43,
+          0.88
+        ],
+        "grip": [
+          0.5,
+          0.55
+        ],
+        "center": [
+          0.5,
+          0.5
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": true,
+        "pickup": true,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect",
+          "pick_up",
+          "put_down"
+        ],
+        "valid_drop_surfaces": [
+          "tea_table"
+        ]
+      },
+      "shadow": {
+        "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+        "opacity": 0.38,
+        "detach_on_pickup": true,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "rotation_limits_deg": [
+          -180,
+          180
+        ],
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "held_z": 100,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "lighting": {
+        "rule": "writing_set",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "clutter",
+      "group_contract": {
+        "single_rigid_raster": true,
+        "members_separately_pickable": false,
+        "separation_requires_new_art": true
+      }
+    },
+    {
+      "id": "spare_potions",
+      "asset": "clutter_potion_bottles",
+      "label": "spare potions",
+      "transform": {
+        "x": 1326.5,
+        "y": 877.926138540899,
+        "width": 67,
+        "height": 57.22402358142963,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.04937361827560796
+      },
+      "z": 82,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "floor",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 1.1,
+        "material": "glass liquid and cork",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.65
+        ],
+        "contact_uv": [
+          0.5,
+          0.91
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.12675018422991893,
+              0.028472821397756688
+            ],
+            [
+              0.8857774502579219,
+              0.028472821397756688
+            ],
+            [
+              0.8857774502579219,
+              0.9525452976704055
+            ],
+            [
+              0.12675018422991893,
+              0.9525452976704055
+            ]
+          ],
+          "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 77,
+        "accessible_label": "spare potions"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.91
+        ],
+        "grip": [
+          0.5,
+          0.55
+        ],
+        "center": [
+          0.5,
+          0.5
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ],
+        "valid_drop_surfaces": []
+      },
+      "shadow": {
+        "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+        "opacity": 0.38,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "rotation_limits_deg": [
+          -180,
+          180
+        ],
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "held_z": 100,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "lighting": {
+        "rule": "spare_potions",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "clutter",
+      "group_contract": {
+        "single_rigid_raster": true,
+        "members_separately_pickable": false,
+        "separation_requires_new_art": true
       }
     }
   ],
@@ -7338,6 +8796,110 @@
         "opacity": 0.38,
         "cast": true,
         "height_scale": 0.1
+      },
+      "study_books": {
+        "receiver": "floor",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          37.5,
+          4
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.55
+      },
+      "spare_books": {
+        "receiver": "floor",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          30.0,
+          4
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.55
+      },
+      "reading_grimoire": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          42.0,
+          2.5
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.25
+      },
+      "table_candles": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          19.5,
+          2.5
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.55
+      },
+      "ledge_candles": {
+        "receiver": "ledge",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          11.7,
+          2.5
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.55
+      },
+      "desk_scrolls": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          25.5,
+          2.5
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.25
+      },
+      "writing_set": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          21.599999999999998,
+          2.5
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.55
+      },
+      "spare_potions": {
+        "receiver": "floor",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          20.099999999999998,
+          4
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.55
       }
     },
     "static_contacts": [
@@ -7632,6 +9194,44 @@
         ],
         "control": "candles",
         "gain": 0.13
+      },
+      {
+        "id": "table_candles_pool",
+        "center_scene": [
+          755,
+          727
+        ],
+        "radius_px": 150,
+        "scale": [
+          1,
+          0.8
+        ],
+        "color_rgb": [
+          255,
+          184,
+          105
+        ],
+        "control": "candles",
+        "gain": 0.08
+      },
+      {
+        "id": "ledge_candles_pool",
+        "center_scene": [
+          419,
+          511
+        ],
+        "radius_px": 95,
+        "scale": [
+          1,
+          0.8
+        ],
+        "color_rgb": [
+          255,
+          184,
+          105
+        ],
+        "control": "candles",
+        "gain": 0.08
       }
     ],
     "ambient_gain": {
@@ -7738,7 +9338,7 @@
         0,
         61
       ],
-      "sha256": "ee01412f45d370c29e74c81271a6dbc7c6a8afcedb2b3539f0013f37a69bf8fa",
+      "sha256": "330b87de8440b9c7e67e944490aa23545b256d9d5cf9b0ccbe010d350c13e4ef",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -7756,14 +9356,14 @@
       "alpha_bounds": [
         68,
         611,
-        1470,
+        1480,
         1014
       ],
       "alpha_range": [
         0,
         120
       ],
-      "sha256": "b1fe95ba801471fa726bd48e2d4c85075b319ac65b28248f0f24cc361fe4c2ad",
+      "sha256": "da090d29431e4c34d5c73ff93f18e9a65182345393f1be938c0be70503b0089f",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -7833,7 +9433,7 @@
         255,
         255
       ],
-      "sha256": "c550a32f047a435fb8b8d5a2e68b3c5a237084ca9e2dd40da98e342f887ba024",
+      "sha256": "0f8c4d0587324e3c45f2d69b3ff4af7834d5092c71a44205c127bf21c1bbf7a6",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -7851,14 +9451,14 @@
       "alpha_bounds": [
         324,
         516,
-        406,
+        440,
         537
       ],
       "alpha_range": [
         0,
         22
       ],
-      "sha256": "2d5d4c1a7fdfe5cc4635bbce35b1dcbadbcc2a37141dfb934ca6a1e6d9ae48f4",
+      "sha256": "3c141139d69f76e4e62f689cbfdff0c608643bc479318016445fcc9921d2ff5b",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -7876,14 +9476,14 @@
       "alpha_bounds": [
         333,
         520,
-        378,
-        526
+        430,
+        528
       ],
       "alpha_range": [
         0,
         88
       ],
-      "sha256": "3acc061bb41b700cc950cc8831341df1256e3441856d764fa4c9a1c58d61babd",
+      "sha256": "e37ecccdc84c95c47e92b92ac824d00a446882f5163b3e70d246642d5c50a420",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -7944,16 +9544,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        149,
-        740,
-        714,
-        776
+        18,
+        702,
+        790,
+        779
       ],
       "alpha_range": [
         0,
         30
       ],
-      "sha256": "ff0c9ec663c160a587dc8796a085a1096fae9585a5650424b4a8c1a8809e5fd3",
+      "sha256": "6887f7343363ce560eae997ccf2ac61834e3a3403592570b749a80a876cbc761",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -7969,16 +9569,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        182,
-        742,
-        684,
-        767
+        44,
+        708,
+        774,
+        768
       ],
       "alpha_range": [
         0,
         93
       ],
-      "sha256": "545470a04ce12ceafb94ef1f885a70ede53cdf974df621aad8b1f0c5b2dd01ab",
+      "sha256": "1ccaabd60651859b2dbf1c91b71da5da4a54b7e89d1caf1aaf8788d19a3a176a",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8028,7 +9628,7 @@
         0,
         31
       ],
-      "sha256": "da15ebf16013073d887e8445f3a276a0f3fbd8551a43bb98315b5e102b4496a1",
+      "sha256": "67c058b15a443ef5471b2a439fb84d92b76ce040cc4c1c7068af340ce02dade6",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8046,14 +9646,14 @@
       "alpha_bounds": [
         68,
         611,
-        1470,
+        1480,
         1014
       ],
       "alpha_range": [
         0,
         120
       ],
-      "sha256": "b1fe95ba801471fa726bd48e2d4c85075b319ac65b28248f0f24cc361fe4c2ad",
+      "sha256": "da090d29431e4c34d5c73ff93f18e9a65182345393f1be938c0be70503b0089f",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8123,7 +9723,7 @@
         255,
         255
       ],
-      "sha256": "51e341b041c4dc7b8429b189842df136a8568535bcd78efd0ba060293f2ef59d",
+      "sha256": "1608e52b7a9ba38f7ee7a6548f48e11c399694db1a054c34559aba0a0c211635",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8140,15 +9740,15 @@
       "mode": "RGBA",
       "alpha_bounds": [
         332,
-        515,
-        426,
+        514,
+        443,
         538
       ],
       "alpha_range": [
         0,
         8
       ],
-      "sha256": "df35dce37baef65f87a11908b00f60845fa331cc407cce330b0f43082847e083",
+      "sha256": "276e542db342b14051ddf20bcb7140d221fedabada091fa13c1cc7f3df96ff45",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8166,14 +9766,14 @@
       "alpha_bounds": [
         333,
         520,
-        378,
-        526
+        430,
+        528
       ],
       "alpha_range": [
         0,
         88
       ],
-      "sha256": "3acc061bb41b700cc950cc8831341df1256e3441856d764fa4c9a1c58d61babd",
+      "sha256": "e37ecccdc84c95c47e92b92ac824d00a446882f5163b3e70d246642d5c50a420",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8234,16 +9834,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        167,
-        742,
-        646,
-        782
+        23,
+        702,
+        800,
+        785
       ],
       "alpha_range": [
         0,
         12
       ],
-      "sha256": "d3cf657f2abe67945a0efe3bd7abf5adaff2006f4d049e19d7718df8a3aaaeda",
+      "sha256": "2ee041e0724ede4d71a14cc504fa508cd95327067db9b95cb8783dd0eba2b2e2",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8259,16 +9859,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        182,
-        742,
-        684,
-        767
+        44,
+        708,
+        774,
+        768
       ],
       "alpha_range": [
         0,
         93
       ],
-      "sha256": "545470a04ce12ceafb94ef1f885a70ede53cdf974df621aad8b1f0c5b2dd01ab",
+      "sha256": "1ccaabd60651859b2dbf1c91b71da5da4a54b7e89d1caf1aaf8788d19a3a176a",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8318,7 +9918,7 @@
         0,
         17
       ],
-      "sha256": "76fbe5838f820c9c6e1cb342965285536cd8d3da337a8c49edc05e06436032cf",
+      "sha256": "c495c61e00a61462d1687b4ec15abdb424e593af3f9a78fce3e4259caed537bc",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8336,14 +9936,14 @@
       "alpha_bounds": [
         68,
         611,
-        1470,
+        1480,
         1014
       ],
       "alpha_range": [
         0,
         120
       ],
-      "sha256": "b1fe95ba801471fa726bd48e2d4c85075b319ac65b28248f0f24cc361fe4c2ad",
+      "sha256": "da090d29431e4c34d5c73ff93f18e9a65182345393f1be938c0be70503b0089f",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8413,7 +10013,7 @@
         255,
         255
       ],
-      "sha256": "5197af82d1f3f0483c681c1925f3eaa0a82538ff8eeffbee396577167be1f1ea",
+      "sha256": "8383325ad9b9b5f7e82fa5d2dc2daf0010bbd54957f7657405621025f7000c15",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8431,14 +10031,14 @@
       "alpha_bounds": [
         326,
         516,
-        382,
-        534
+        433,
+        535
       ],
       "alpha_range": [
         0,
         1
       ],
-      "sha256": "83e9e2eb5dde87ef857189b4e14f216a0714ec45bac15bc9875416772f077d31",
+      "sha256": "6e13092901340ca5e1a815150e92ea53dc38e7d0cb19610b4b10d049e525abde",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8456,14 +10056,14 @@
       "alpha_bounds": [
         333,
         520,
-        378,
-        526
+        430,
+        528
       ],
       "alpha_range": [
         0,
         88
       ],
-      "sha256": "3acc061bb41b700cc950cc8831341df1256e3441856d764fa4c9a1c58d61babd",
+      "sha256": "e37ecccdc84c95c47e92b92ac824d00a446882f5163b3e70d246642d5c50a420",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8524,16 +10124,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        137,
-        737,
-        629,
+        32,
+        702,
+        790,
         779
       ],
       "alpha_range": [
         0,
         6
       ],
-      "sha256": "773857a178cbc4fc89e632a08c50b15ed8a62acc797d732cc199024ef5b6633e",
+      "sha256": "8684a495e85e372fffe1e1f68d149732cafee0d267abe0f823909a86ab227f7d",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8549,16 +10149,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        182,
-        742,
-        684,
-        767
+        44,
+        708,
+        774,
+        768
       ],
       "alpha_range": [
         0,
         93
       ],
-      "sha256": "545470a04ce12ceafb94ef1f885a70ede53cdf974df621aad8b1f0c5b2dd01ab",
+      "sha256": "1ccaabd60651859b2dbf1c91b71da5da4a54b7e89d1caf1aaf8788d19a3a176a",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8608,7 +10208,7 @@
         0,
         17
       ],
-      "sha256": "ce3279d79d58485a5aa73be41173f22dc459c6c2c0d95cd9489b0e4dc4448b5f",
+      "sha256": "1e6fa700d604d4f3f44eb6ee6f77f966eef64d70b0b2acc6c1fa3f53be076d4c",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8626,14 +10226,14 @@
       "alpha_bounds": [
         68,
         611,
-        1470,
+        1480,
         1014
       ],
       "alpha_range": [
         0,
         120
       ],
-      "sha256": "b1fe95ba801471fa726bd48e2d4c85075b319ac65b28248f0f24cc361fe4c2ad",
+      "sha256": "da090d29431e4c34d5c73ff93f18e9a65182345393f1be938c0be70503b0089f",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8703,7 +10303,7 @@
         255,
         255
       ],
-      "sha256": "f24b8b4cfc7185d2d00064399e5ab7efa731d8708c2e3971903730dfc542ad57",
+      "sha256": "39b86e6e6c5977abaec2e48fb02ef3f9a1965ea60ecd3c7ac1566ab4e48dedb0",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8746,14 +10346,14 @@
       "alpha_bounds": [
         333,
         520,
-        378,
-        526
+        430,
+        528
       ],
       "alpha_range": [
         0,
         88
       ],
-      "sha256": "3acc061bb41b700cc950cc8831341df1256e3441856d764fa4c9a1c58d61babd",
+      "sha256": "e37ecccdc84c95c47e92b92ac824d00a446882f5163b3e70d246642d5c50a420",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8814,16 +10414,16 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        157,
-        740,
-        620,
+        38,
+        724,
+        784,
         781
       ],
       "alpha_range": [
         0,
         3
       ],
-      "sha256": "dbc6ba536ae39a7722bec874f3a5407b7abcda318291c1ca3e6c9c6a0546a4f6",
+      "sha256": "5bb5be75cba2f776f05e9c67df4b2ce8773ef32356d23e476938f7a225e06bc7",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -8839,18 +10439,37 @@
       "height": 1024,
       "mode": "RGBA",
       "alpha_bounds": [
-        182,
-        742,
-        684,
-        767
+        44,
+        708,
+        774,
+        768
       ],
       "alpha_range": [
         0,
         93
       ],
-      "sha256": "545470a04ce12ceafb94ef1f885a70ede53cdf974df621aad8b1f0c5b2dd01ab",
+      "sha256": "1ccaabd60651859b2dbf1c91b71da5da4a54b7e89d1caf1aaf8788d19a3a176a",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     }
-  ]
+  ],
+  "clutter_pack": {
+    "unique_rasters": 6,
+    "placed_instances": 8,
+    "objects": [
+      "study_books",
+      "spare_books",
+      "reading_grimoire",
+      "table_candles",
+      "ledge_candles",
+      "desk_scrolls",
+      "writing_set",
+      "spare_potions"
+    ],
+    "coordinate_space": "1536 x 1024 scene, source_uv on untrimmed original rasters",
+    "group_members": "Books, bottles, scrolls and candle clusters are rigid groups, not individually segmented members.",
+    "preview_behavior": "Open grimoire, scrolls and writing set can be dragged on the tea table; floor props and lit candles are inspect-only.",
+    "layering": "Individual instances in objects; not baked into furnishings.png.",
+    "physics_accuracy": "Authored design estimates, not measured simulation values."
+  }
 }

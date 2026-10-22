@@ -1,0 +1,154 @@
+{
+  "id": "study_books",
+  "asset": "clutter_book_stack",
+  "label": "study books",
+  "transform": {
+    "x": 507.5,
+    "y": 593.3333333333334,
+    "width": 125,
+    "height": 83.33333333333333,
+    "rotation_deg": 0,
+    "origin_uv": [
+      0,
+      0
+    ],
+    "scale": 0.08138020833333333
+  },
+  "z": 35,
+  "depth_sort": "explicit_z; held objects reparent to character hand",
+  "support": "floor",
+  "physics": {
+    "body_type": "static",
+    "mass_kg_estimate": 4.2,
+    "material": "leather and paper",
+    "gravity_m_s2": 9.81,
+    "gravity_projected_px_s2": 0,
+    "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+    "friction_static": 0.65,
+    "friction_dynamic": 0.45,
+    "restitution": 0.03,
+    "center_of_mass_uv": [
+      0.5,
+      0.65
+    ],
+    "contact_uv": [
+      0.5,
+      0.92
+    ],
+    "collision": {
+      "type": "convex_polygon",
+      "space": "source_uv",
+      "vertices": [
+        [
+          0.12630208333333334,
+          0.0341796875
+        ],
+        [
+          0.8821614583333334,
+          0.0341796875
+        ],
+        [
+          0.8821614583333334,
+          0.9814453125
+        ],
+        [
+          0.12630208333333334,
+          0.9814453125
+        ]
+      ],
+      "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+    },
+    "rotation_constraints_deg": [
+      0,
+      0
+    ],
+    "free_fall_enabled": false,
+    "breakage_enabled": false,
+    "design_values_only": true,
+    "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+  },
+  "hit_test": {
+    "mode": "source_alpha",
+    "alpha_threshold": 32,
+    "skip_transparent_holes": true,
+    "inverse_transform_pointer": true,
+    "minimum_target_css_px": 24,
+    "hit_slop_css_px": 3,
+    "priority": 77,
+    "accessible_label": "study books"
+  },
+  "anchors": {
+    "base": [
+      0.5,
+      0.92
+    ],
+    "grip": [
+      0.5,
+      0.55
+    ],
+    "center": [
+      0.5,
+      0.5
+    ]
+  },
+  "interaction": {
+    "clickable": true,
+    "draggable": false,
+    "pickup": false,
+    "return_on_invalid_drop": true,
+    "return_duration_ms": 300,
+    "keyboard": [
+      "Enter",
+      "Space"
+    ],
+    "actions": [
+      "inspect"
+    ],
+    "valid_drop_surfaces": []
+  },
+  "shadow": {
+    "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+    "opacity": 0.38,
+    "detach_on_pickup": false,
+    "fade_with_lift": true
+  },
+  "states": {
+    "initial": "idle",
+    "available_raster_states": [
+      "idle"
+    ],
+    "additional_pose_rasters_included": false
+  },
+  "calibration": {
+    "status": "Revision 3: thematic and support pass with wizard present",
+    "anchors": "visually estimated against this exact generated raster",
+    "physics": "plausible design estimates, not measured physical properties"
+  },
+  "pickup_contract": {
+    "hand_anchor": "grip_handle",
+    "rotation_limits_deg": [
+      -180,
+      180
+    ],
+    "accept_drop_on": [
+      "tea_table"
+    ],
+    "held_z": 100,
+    "requires_character_pose": true,
+    "character_art_included": false,
+    "idle_character_art_included": true
+  },
+  "lighting": {
+    "rule": "study_books",
+    "rebuild_shadow_when_moved": true,
+    "source_highlights": "baked",
+    "lighting_map": "shared interior gain map",
+    "keep_shadow_separate_from_sprite": true
+  },
+  "category": "clutter",
+  "group_contract": {
+    "single_rigid_raster": true,
+    "members_separately_pickable": false,
+    "separation_requires_new_art": true
+  }
+}

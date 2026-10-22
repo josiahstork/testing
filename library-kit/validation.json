@@ -1,8 +1,8 @@
 {
-  "revision": 4,
-  "asset_count": 23,
+  "revision": 5,
+  "asset_count": 29,
   "lighting_layer_count": 48,
-  "interactive_object_count": 14,
+  "interactive_object_count": 22,
   "checks": [
     {
       "attachment": "teapot_lid -> teapot",
@@ -17,15 +17,21 @@
     },
     {
       "shelf_rows": 65,
-      "object_shadow_rules": 14
+      "object_shadow_rules": 22
     },
     {
-      "art_pngs_verified": 23,
+      "clutter_instances": 8,
+      "unique_clutter_rasters": 6,
+      "clutter_support_points_valid": true,
+      "clutter_aspect_ratios_preserved": true
+    },
+    {
+      "art_pngs_verified": 29,
       "lighting_pngs_verified": 48,
       "hashes_valid": true
     },
     {
-      "receiver_clipping_samples": 490,
+      "receiver_clipping_samples": 534,
       "meaningful_shadow_pixels_outside_receiver": 0
     },
     {

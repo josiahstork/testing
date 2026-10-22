@@ -590,6 +590,110 @@
       "opacity": 0.38,
       "cast": true,
       "height_scale": 0.1
+    },
+    "study_books": {
+      "receiver": "floor",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        37.5,
+        4
+      ],
+      "opacity": 0.4,
+      "cast": true,
+      "height_scale": 0.55
+    },
+    "spare_books": {
+      "receiver": "floor",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        30.0,
+        4
+      ],
+      "opacity": 0.4,
+      "cast": true,
+      "height_scale": 0.55
+    },
+    "reading_grimoire": {
+      "receiver": "table",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        42.0,
+        2.5
+      ],
+      "opacity": 0.4,
+      "cast": true,
+      "height_scale": 0.25
+    },
+    "table_candles": {
+      "receiver": "table",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        19.5,
+        2.5
+      ],
+      "opacity": 0.4,
+      "cast": true,
+      "height_scale": 0.55
+    },
+    "ledge_candles": {
+      "receiver": "ledge",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        11.7,
+        2.5
+      ],
+      "opacity": 0.4,
+      "cast": true,
+      "height_scale": 0.55
+    },
+    "desk_scrolls": {
+      "receiver": "table",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        25.5,
+        2.5
+      ],
+      "opacity": 0.4,
+      "cast": true,
+      "height_scale": 0.25
+    },
+    "writing_set": {
+      "receiver": "table",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        21.599999999999998,
+        2.5
+      ],
+      "opacity": 0.4,
+      "cast": true,
+      "height_scale": 0.55
+    },
+    "spare_potions": {
+      "receiver": "floor",
+      "contacts": [
+        "base"
+      ],
+      "radius": [
+        20.099999999999998,
+        4
+      ],
+      "opacity": 0.4,
+      "cast": true,
+      "height_scale": 0.55
     }
   },
   "static_contacts": [
@@ -884,6 +988,44 @@
       ],
       "control": "candles",
       "gain": 0.13
+    },
+    {
+      "id": "table_candles_pool",
+      "center_scene": [
+        755,
+        727
+      ],
+      "radius_px": 150,
+      "scale": [
+        1,
+        0.8
+      ],
+      "color_rgb": [
+        255,
+        184,
+        105
+      ],
+      "control": "candles",
+      "gain": 0.08
+    },
+    {
+      "id": "ledge_candles_pool",
+      "center_scene": [
+        419,
+        511
+      ],
+      "radius_px": 95,
+      "scale": [
+        1,
+        0.8
+      ],
+      "color_rgb": [
+        255,
+        184,
+        105
+      ],
+      "control": "candles",
+      "gain": 0.08
     }
   ],
   "ambient_gain": {
