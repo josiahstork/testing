@@ -1,0 +1,80 @@
+{
+  "asset": {
+    "id": "tea_table",
+    "file": "assets/tea_table.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "sha256": "6c2aa690d98f25d155f4e288aaa8af9c432e8ef8dc7606551d6c8c92dfa4486e",
+    "color_space": "sRGB",
+    "alpha_encoding": "straight",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_bbox_threshold_32": [
+      22,
+      148,
+      1519,
+      926
+    ],
+    "trimmed": false,
+    "role": "New separate rigid-group sprite."
+  },
+  "object": {
+    "id": "tea_table",
+    "asset": "tea_table",
+    "label": "tea table",
+    "anchors": {
+      "base": [
+        0.5,
+        0.89
+      ],
+      "foot_left": [
+        0.2,
+        0.86
+      ],
+      "foot_right": [
+        0.92,
+        0.62
+      ]
+    },
+    "physics": {
+      "body_type": "static",
+      "material": "painted grouped prop",
+      "free_fall_enabled": false,
+      "breakage_enabled": false,
+      "design_values_only": true
+    },
+    "interaction": {
+      "clickable": true,
+      "draggable": false,
+      "actions": [
+        "inspect"
+      ],
+      "pickup": false
+    },
+    "states": {
+      "available_raster_states": [
+        "idle"
+      ],
+      "additional_pose_rasters_included": false
+    },
+    "z": 60,
+    "support": "floor",
+    "transform": {
+      "x": -25,
+      "y": 620,
+      "width": 760,
+      "height": 506.6666666666667,
+      "rotation_deg": 0,
+      "origin_uv": [
+        0,
+        0
+      ],
+      "scale": 0.4947916666666667
+    },
+    "preview_shadow": true,
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "asset": {
+    "id": "dragon",
+    "file": "assets/dragon.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "sha256": "6b87a75721a60d1c57a0dc8de1aae2511d69c4b9fb34f1c08b04a89660c0361a",
+    "color_space": "sRGB",
+    "alpha_encoding": "straight",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_bbox_threshold_32": [
+      11,
+      176,
+      1528,
+      894
+    ],
+    "trimmed": false,
+    "role": "New curled sleeping dragon redrawn from the atmosphere master."
+  },
+  "object": {
+    "id": "dragon",
+    "asset": "dragon",
+    "label": "dragon",
+    "transform": {
+      "x": 610,
+      "y": 365,
+      "width": 630,
+      "height": 420.0,
+      "rotation_deg": 0,
+      "origin_uv": [
+        0,
+        0
+      ],
+      "scale": 0.41015625
+    },
+    "z": 40,
+    "depth_sort": "explicit_z; held objects reparent to character hand",
+    "support": "rug",
+    "physics": {
+      "body_type": "kinematic",
+      "mass_kg_estimate": 450,
+      "material": "living_creature",
+      "gravity_m_s2": 0,
+      "gravity_projected_px_s2": 0,
+      "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+      "friction_static": 0.65,
+      "friction_dynamic": 0.45,
+      "restitution": 0.03,
+      "center_of_mass_uv": [
+        0.5,
+        0.62
+      ],
+      "contact_uv": [
+        0.55,
+        0.86
+      ],
+      "collision": {
+        "type": "convex_polygon",
+        "space": "source_uv",
+        "vertices": [
+          [
+            0.01,
+            0.7
+          ],
+          [
+            0.28,
+            0.26
+          ],
+          [
+            0.75,
+            0.15
+          ],
+          [
+            0.99,
+            0.64
+          ],
+          [
+            0.94,
+            0.86
+          ],
+          [
+            0.29,
+            0.88
+          ]
+        ],
+        "accuracy": "Conservative authored group proxy. Use alpha for selection."
+      },
+      "rotation_constraints_deg": [
+        0,
+        0
+      ],
+      "free_fall_enabled": false,
+      "breakage_enabled": false,
+      "design_values_only": true
+    },
+    "hit_test": {
+      "mode": "source_alpha",
+      "alpha_threshold": 32,
+      "skip_transparent_holes": true,
+      "inverse_transform_pointer": true,
+      "minimum_target_css_px": 24,
+      "hit_slop_css_px": 3,
+      "priority": 50,
+      "accessible_label": "dragon"
+    },
+    "anchors": {
+      "base": [
+        0.55,
+        0.86
+      ],
+      "head": [
+        0.15,
+        0.65
+      ],
+      "nostril_left": [
+        0.092,
+        0.753
+      ],
+      "nostril_right": [
+        0.112,
+        0.745
+      ],
+      "forepaw": [
+        0.26,
+        0.78
+      ],
+      "hindfoot": [
+        0.64,
+        0.79
+      ],
+      "tail_contact": [
+        0.74,
+        0.85
+      ]
+    },
+    "interaction": {
+      "clickable": true,
+      "draggable": false,
+      "pickup": false,
+      "return_on_invalid_drop": true,
+      "return_duration_ms": 300,
+      "keyboard": [
+        "Enter",
+        "Space"
+      ],
+      "actions": [
+        "inspect"
+      ]
+    },
+    "shadow": {
+      "implementation": "runtime ellipse on support; never bake into sprite",
+      "opacity": 0.2,
+      "blur_scene_px": 6,
+      "detach_on_pickup": false,
+      "fade_with_lift": true
+    },
+    "states": {
+      "initial": "idle",
+      "available_raster_states": [
+        "idle"
+      ],
+      "additional_pose_rasters_included": false
+    },
+    "calibration": {
+      "anchors": "New visually authored untrimmed source UV estimates; no smoke animation implemented in this preview.",
+      "physics": "Design estimates only."
+    },
+    "animation": {
+      "idle_breath": {
+        "implementation": "optional subtle local mesh deformation",
+        "period_s": 4.5,
+        "chest_scale_y": [
+          1,
+          1.012
+        ],
+        "pin_anchor": "ground",
+        "whole_sprite_scaling": false,
+        "enabled_by_default": false,
+        "note": "No skeletal rig or alternate frames included. Do not scale floor-contact points."
+      },
+      "smoke": {
+        "type": "translucent_raster_wisp",
+        "asset": "smoke_wisp",
+        "trigger": "click",
+        "cooldown_s": 2.2,
+        "emitters": [
+          {
+            "anchor": "nostril_near",
+            "strength": 1
+          },
+          {
+            "anchor": "nostril_far",
+            "strength": 0.5
+          }
+        ],
+        "source_anchor_uv": [
+          0.855,
+          0.838
+        ],
+        "max_opacity": 0.2,
+        "lifetime_s": 2.2,
+        "width_scene_px": [
+          55,
+          95
+        ],
+        "drift_scene_px": [
+          -18,
+          -12
+        ],
+        "pin_source_at_emission": true,
+        "reduced_motion": "one fixed faint wisp, opacity fade only",
+        "no_circular_particles": true
+      }
+    },
+    "preview_shadow": true,
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+  }
+}

@@ -17,3 +17,7 @@
 ## Teapot comparison
 
 [Compare all five teapots on the table](teapot-options/comparison-closeup.png) · [Full room](teapot-options/comparison.png) · [Download options PNGs, JSON and preview](teapot-options.zip?raw=true) · [Details](teapot-options/README.md)
+
+## Atmosphere revision
+
+[New composition painting](atmosphere-kit/assets/master.png) · [Actual separate-layer assembly](atmosphere-kit/layer-assembly.png) · [New images and metadata](atmosphere-kit/README.md) · [Download atmosphere pack](atmosphere-kit.zip?raw=true)

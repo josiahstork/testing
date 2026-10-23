@@ -1,0 +1,184 @@
+{
+  "asset": {
+    "id": "astrolabe",
+    "file": "retained/astrolabe.png",
+    "width": 1145,
+    "height": 1374,
+    "mode": "RGBA",
+    "sha256": "e253ce81681470800718d5fd0fbb1f38f87c1469a044555177db8f7969915a30",
+    "color_space": "sRGB",
+    "alpha_encoding": "straight",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bbox_threshold_32": [
+      78,
+      15,
+      1056,
+      1336
+    ],
+    "trimmed": false,
+    "role": "Existing source art reused in the new composition."
+  },
+  "object": {
+    "id": "astrolabe",
+    "asset": "astrolabe",
+    "label": "astrolabe",
+    "transform": {
+      "x": 297,
+      "y": 341,
+      "width": 100,
+      "height": 120.0,
+      "rotation_deg": 0,
+      "origin_uv": [
+        0,
+        0
+      ],
+      "scale": 0.08733624454148471
+    },
+    "z": 34,
+    "depth_sort": "explicit_z; held objects reparent to character hand",
+    "support": "ledge",
+    "physics": {
+      "body_type": "static",
+      "mass_kg_estimate": 5,
+      "material": "brass",
+      "gravity_m_s2": 0,
+      "gravity_projected_px_s2": 0,
+      "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+      "friction_static": 0.65,
+      "friction_dynamic": 0.45,
+      "restitution": 0.03,
+      "center_of_mass_uv": [
+        0.5,
+        0.62
+      ],
+      "contact_uv": [
+        0.5,
+        0.94
+      ],
+      "collision": {
+        "type": "convex_polygon",
+        "space": "source_uv",
+        "vertices": [
+          [
+            0.12,
+            0.18
+          ],
+          [
+            0.82,
+            0.12
+          ],
+          [
+            0.96,
+            0.5
+          ],
+          [
+            0.83,
+            0.94
+          ],
+          [
+            0.2,
+            0.94
+          ],
+          [
+            0.05,
+            0.55
+          ]
+        ],
+        "accuracy": "conservative authored proxy; alpha hit testing is separate"
+      },
+      "rotation_constraints_deg": [
+        0,
+        0
+      ],
+      "free_fall_enabled": false,
+      "breakage_enabled": false,
+      "design_values_only": true
+    },
+    "hit_test": {
+      "mode": "source_alpha",
+      "alpha_threshold": 32,
+      "skip_transparent_holes": true,
+      "inverse_transform_pointer": true,
+      "minimum_target_css_px": 24,
+      "hit_slop_css_px": 3,
+      "priority": 47,
+      "accessible_label": "astrolabe"
+    },
+    "anchors": {
+      "ring_center": [
+        0.5,
+        0.4
+      ],
+      "base": [
+        0.5,
+        0.97
+      ],
+      "ring_grip": [
+        0.8,
+        0.32
+      ]
+    },
+    "interaction": {
+      "clickable": true,
+      "draggable": false,
+      "pickup": false,
+      "return_on_invalid_drop": true,
+      "return_duration_ms": 300,
+      "keyboard": [
+        "Enter",
+        "Space"
+      ],
+      "actions": [
+        "inspect"
+      ]
+    },
+    "shadow": {
+      "implementation": "runtime ellipse on support; never bake into sprite",
+      "opacity": 0.2,
+      "blur_scene_px": 6,
+      "detach_on_pickup": false,
+      "fade_with_lift": true
+    },
+    "states": {
+      "initial": "idle",
+      "available_raster_states": [
+        "idle"
+      ],
+      "additional_pose_rasters_included": false
+    },
+    "calibration": {
+      "status": "Revision 3: thematic and support pass with wizard present",
+      "anchors": "visually estimated against this exact generated raster",
+      "physics": "plausible design estimates, not measured physical properties"
+    },
+    "mechanism": {
+      "type": "nested_gimbals",
+      "pivot_anchor": "ring_center",
+      "base_fixed": true,
+      "available": false,
+      "requires": "Separate ring rasters with back/front occlusion masks or 3D geometry. Whole-image rotation would wrongly rotate base.",
+      "ring_limits_deg": [
+        -35,
+        35
+      ]
+    },
+    "render": {
+      "shadow": {
+        "anchor": "base",
+        "radius": [
+          23,
+          3
+        ],
+        "opacity": 0.32
+      },
+      "view_angle_down_deg_estimate": 10,
+      "main_axis": "upright",
+      "base_alignment": "Shallow ellipse aligned to raised left stone ledge."
+    },
+    "preview_shadow": true,
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "asset": {
+    "id": "treasure_cluster",
+    "file": "assets/treasure_cluster.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "sha256": "4fc3ebd43864108ab9e0edb3221865cbd51ae4f1c6bb6b6a5807a3206d57b696",
+    "color_space": "sRGB",
+    "alpha_encoding": "straight",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_bbox_threshold_32": [
+      89,
+      17,
+      1475,
+      975
+    ],
+    "trimmed": false,
+    "role": "New separate rigid-group sprite."
+  },
+  "object": {
+    "id": "treasure_cluster",
+    "asset": "treasure_cluster",
+    "label": "treasure cluster",
+    "anchors": {
+      "base": [
+        0.67,
+        0.91
+      ],
+      "lid_hinge": [
+        0.69,
+        0.27
+      ]
+    },
+    "physics": {
+      "body_type": "static",
+      "material": "painted grouped prop",
+      "free_fall_enabled": false,
+      "breakage_enabled": false,
+      "design_values_only": true
+    },
+    "interaction": {
+      "clickable": true,
+      "draggable": false,
+      "actions": [
+        "inspect"
+      ],
+      "pickup": false
+    },
+    "states": {
+      "available_raster_states": [
+        "idle"
+      ],
+      "additional_pose_rasters_included": false
+    },
+    "z": 55,
+    "support": "floor",
+    "transform": {
+      "x": 1248,
+      "y": 635,
+      "width": 320,
+      "height": 213.33333333333334,
+      "rotation_deg": 0,
+      "origin_uv": [
+        0,
+        0
+      ],
+      "scale": 0.20833333333333334
+    },
+    "preview_shadow": true,
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "asset": {
+    "id": "shelf_cluster",
+    "file": "assets/shelf_cluster.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "sha256": "bb4a6400d18ecb0e5ae13ae0a3bba7744088cf6e01bc98ce3d2d3152036695ad",
+    "color_space": "sRGB",
+    "alpha_encoding": "straight",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_bbox_threshold_32": [
+      19,
+      82,
+      1523,
+      948
+    ],
+    "trimmed": false,
+    "role": "New separate rigid-group sprite."
+  },
+  "object": {
+    "id": "shelf_cluster",
+    "asset": "shelf_cluster",
+    "label": "shelf cluster",
+    "anchors": {
+      "base": [
+        0.5,
+        0.9
+      ]
+    },
+    "physics": {
+      "body_type": "static",
+      "material": "painted grouped prop",
+      "free_fall_enabled": false,
+      "breakage_enabled": false,
+      "design_values_only": true
+    },
+    "interaction": {
+      "clickable": true,
+      "draggable": false,
+      "actions": [
+        "inspect"
+      ],
+      "pickup": false
+    },
+    "states": {
+      "available_raster_states": [
+        "idle"
+      ],
+      "additional_pose_rasters_included": false
+    },
+    "z": 29,
+    "support": "ledge",
+    "transform": {
+      "x": 150,
+      "y": 442,
+      "width": 125,
+      "height": 83.33333333333333,
+      "rotation_deg": 0,
+      "origin_uv": [
+        0,
+        0
+      ],
+      "scale": 0.08138020833333333
+    },
+    "preview_shadow": false,
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+  }
+}

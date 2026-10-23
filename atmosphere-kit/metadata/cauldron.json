@@ -1,0 +1,242 @@
+{
+  "asset": {
+    "id": "cauldron",
+    "file": "retained/cauldron.png",
+    "width": 1302,
+    "height": 1208,
+    "mode": "RGBA",
+    "sha256": "cb9439fb691a52beb028be3a73df7189fe0dfff44b27d19ad00fcb62889f8422",
+    "color_space": "sRGB",
+    "alpha_encoding": "straight",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bbox_threshold_32": [
+      57,
+      103,
+      1248,
+      1121
+    ],
+    "trimmed": false,
+    "role": "Existing source art reused in the new composition."
+  },
+  "object": {
+    "id": "cauldron",
+    "asset": "cauldron",
+    "label": "cauldron",
+    "transform": {
+      "x": 435.5,
+      "y": 401.88709677419354,
+      "width": 105,
+      "height": 97.41935483870968,
+      "rotation_deg": 0,
+      "origin_uv": [
+        0,
+        0
+      ],
+      "scale": 0.08064516129032258
+    },
+    "z": 24,
+    "depth_sort": "explicit_z; held objects reparent to character hand",
+    "support": "hearth_floor",
+    "physics": {
+      "body_type": "static",
+      "mass_kg_estimate": 35,
+      "material": "cast_iron",
+      "gravity_m_s2": 0,
+      "gravity_projected_px_s2": 0,
+      "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+      "friction_static": 0.65,
+      "friction_dynamic": 0.45,
+      "restitution": 0.03,
+      "center_of_mass_uv": [
+        0.5,
+        0.62
+      ],
+      "contact_uv": [
+        0.5,
+        0.94
+      ],
+      "collision": {
+        "type": "convex_polygon",
+        "space": "source_uv",
+        "vertices": [
+          [
+            0.12,
+            0.18
+          ],
+          [
+            0.82,
+            0.12
+          ],
+          [
+            0.96,
+            0.5
+          ],
+          [
+            0.83,
+            0.94
+          ],
+          [
+            0.2,
+            0.94
+          ],
+          [
+            0.05,
+            0.55
+          ]
+        ],
+        "accuracy": "conservative authored proxy; alpha hit testing is separate"
+      },
+      "rotation_constraints_deg": [
+        0,
+        0
+      ],
+      "free_fall_enabled": false,
+      "breakage_enabled": false,
+      "design_values_only": true
+    },
+    "hit_test": {
+      "mode": "source_alpha",
+      "alpha_threshold": 32,
+      "skip_transparent_holes": true,
+      "inverse_transform_pointer": true,
+      "minimum_target_css_px": 24,
+      "hit_slop_css_px": 3,
+      "priority": 46,
+      "accessible_label": "cauldron"
+    },
+    "anchors": {
+      "rim_center": [
+        0.5,
+        0.166
+      ],
+      "handle_left": [
+        0.095,
+        0.34
+      ],
+      "handle_right": [
+        0.9,
+        0.34
+      ],
+      "steam_origin": [
+        0.5,
+        0.166
+      ],
+      "fire_origin": [
+        0.5,
+        0.88
+      ],
+      "base": [
+        0.5,
+        0.925
+      ],
+      "foot_left": [
+        0.26,
+        0.835
+      ],
+      "foot_right": [
+        0.775,
+        0.835
+      ]
+    },
+    "interaction": {
+      "clickable": true,
+      "draggable": false,
+      "pickup": false,
+      "return_on_invalid_drop": true,
+      "return_duration_ms": 300,
+      "keyboard": [
+        "Enter",
+        "Space"
+      ],
+      "actions": [
+        "inspect"
+      ]
+    },
+    "shadow": {
+      "implementation": "runtime ellipse on support; never bake into sprite",
+      "opacity": 0.2,
+      "blur_scene_px": 6,
+      "detach_on_pickup": false,
+      "fade_with_lift": true
+    },
+    "states": {
+      "initial": "idle",
+      "available_raster_states": [
+        "idle"
+      ],
+      "additional_pose_rasters_included": false
+    },
+    "calibration": {
+      "status": "Revision 2: calibrated against architecture coordinate guide",
+      "anchors": "visually estimated against this exact generated raster",
+      "physics": "plausible design estimates, not measured physical properties"
+    },
+    "liquid": {
+      "capacity_l_estimate": 20,
+      "fill_fraction": 0.65,
+      "temperature_c_estimate": 80,
+      "surface_ellipse_uv": [
+        0.5,
+        0.166,
+        0.28,
+        0.04
+      ],
+      "surface_art_baked": true,
+      "pourable": false,
+      "hot_surface": true,
+      "initial_color": "amber-green"
+    },
+    "animation": {
+      "steam": {
+        "anchor": "steam_origin",
+        "particle_count": 18,
+        "lifetime_s": [
+          1.2,
+          2.5
+        ],
+        "velocity_scene_px_s": [
+          0,
+          -15
+        ],
+        "spread_deg": 25,
+        "color": "#c3ddbe",
+        "opacity_max": 0.18
+      },
+      "fire": {
+        "enabled": true,
+        "raster_included": true,
+        "asset": "hearth_fire",
+        "layers": [
+          "hearth_fire_back",
+          "potion_flames"
+        ],
+        "clip_surface": "hearth_interior",
+        "light_falloff_scene_px": 155,
+        "flicker": "small coherent opacity modulation; base stays fixed"
+      }
+    },
+    "render": {
+      "clip_surface": "hearth_interior",
+      "shadow": {
+        "anchor": "base",
+        "radius": [
+          7,
+          2.2
+        ],
+        "opacity": 0.38
+      },
+      "view_angle_down_deg_estimate": 10,
+      "depth": "inside firebox; front masonry stays unobscured",
+      "contact_anchors": [
+        "foot_left",
+        "foot_right",
+        "base"
+      ]
+    },
+    "preview_shadow": true,
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+  }
+}

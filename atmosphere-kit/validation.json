@@ -1,0 +1,24 @@
+{
+  "art_pack": "atmosphere",
+  "new_images": 10,
+  "source_images": 24,
+  "placed_instances": 19,
+  "checks": [
+    {
+      "source_pngs_verified": 24,
+      "hashes_valid": true
+    },
+    {
+      "both_room_plates_have_transparent_exterior_openings": true
+    },
+    {
+      "cup_and_lid_seats_aligned": true
+    },
+    {
+      "all_sprite_aspect_ratios_preserved": true
+    },
+    {
+      "preview_and_offline_loader": "passed"
+    }
+  ]
+}

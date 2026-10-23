@@ -1,0 +1,72 @@
+{
+  "asset": {
+    "id": "chair",
+    "file": "assets/chair.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "sha256": "f6d4d6bd1d6cb7aa04bdc572040297225d8bd7569b06a5efdcd64245e570d8bb",
+    "color_space": "sRGB",
+    "alpha_encoding": "straight",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_bbox_threshold_32": [
+      243,
+      49,
+      1339,
+      974
+    ],
+    "trimmed": false,
+    "role": "New separate rigid-group sprite."
+  },
+  "object": {
+    "id": "chair",
+    "asset": "chair",
+    "label": "chair",
+    "anchors": {
+      "base": [
+        0.5,
+        0.9
+      ]
+    },
+    "physics": {
+      "body_type": "static",
+      "material": "painted grouped prop",
+      "free_fall_enabled": false,
+      "breakage_enabled": false,
+      "design_values_only": true
+    },
+    "interaction": {
+      "clickable": true,
+      "draggable": false,
+      "actions": [
+        "inspect"
+      ],
+      "pickup": false
+    },
+    "states": {
+      "available_raster_states": [
+        "idle"
+      ],
+      "additional_pose_rasters_included": false
+    },
+    "z": 30,
+    "support": "floor",
+    "transform": {
+      "x": -80,
+      "y": 580,
+      "width": 350,
+      "height": 233.33333333333334,
+      "rotation_deg": 0,
+      "origin_uv": [
+        0,
+        0
+      ],
+      "scale": 0.22786458333333334
+    },
+    "preview_shadow": true,
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+  }
+}

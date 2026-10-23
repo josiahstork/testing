@@ -1,0 +1,72 @@
+{
+  "asset": {
+    "id": "study_cluster",
+    "file": "assets/study_cluster.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "sha256": "e8c22bf47bb10d9345e63e22c32e0b1c24ef8746c355711e17439eb54e7ff365",
+    "color_space": "sRGB",
+    "alpha_encoding": "straight",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_bbox_threshold_32": [
+      46,
+      161,
+      1486,
+      941
+    ],
+    "trimmed": false,
+    "role": "New separate rigid-group sprite."
+  },
+  "object": {
+    "id": "study_cluster",
+    "asset": "study_cluster",
+    "label": "study cluster",
+    "anchors": {
+      "base": [
+        0.5,
+        0.9
+      ]
+    },
+    "physics": {
+      "body_type": "static",
+      "material": "painted grouped prop",
+      "free_fall_enabled": false,
+      "breakage_enabled": false,
+      "design_values_only": true
+    },
+    "interaction": {
+      "clickable": true,
+      "draggable": false,
+      "actions": [
+        "inspect"
+      ],
+      "pickup": false
+    },
+    "states": {
+      "available_raster_states": [
+        "idle"
+      ],
+      "additional_pose_rasters_included": false
+    },
+    "z": 80,
+    "support": "tea_table",
+    "transform": {
+      "x": 435,
+      "y": 685,
+      "width": 175,
+      "height": 116.66666666666667,
+      "rotation_deg": 0,
+      "origin_uv": [
+        0,
+        0
+      ],
+      "scale": 0.11393229166666667
+    },
+    "preview_shadow": true,
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+  }
+}

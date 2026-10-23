@@ -1,0 +1,225 @@
+{
+  "asset": {
+    "id": "milk_jug",
+    "file": "retained/milk_jug.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "sha256": "711b38e0f7f374848dbc66972649eac19710f7b806bb7129513b862e527461e1",
+    "color_space": "sRGB",
+    "alpha_encoding": "straight",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_bbox_threshold_32": [
+      210,
+      31,
+      1470,
+      996
+    ],
+    "trimmed": false,
+    "role": "Existing source art reused in the new composition."
+  },
+  "object": {
+    "id": "milk_jug",
+    "asset": "milk_jug",
+    "label": "milk jug",
+    "transform": {
+      "x": 340.0,
+      "y": 773.3666666666667,
+      "width": 70,
+      "height": 46.666666666666664,
+      "rotation_deg": 0,
+      "origin_uv": [
+        0,
+        0
+      ],
+      "scale": 0.045572916666666664
+    },
+    "z": 81,
+    "depth_sort": "explicit_z; held objects reparent to character hand",
+    "support": "tea_table",
+    "physics": {
+      "body_type": "dynamic",
+      "mass_kg_estimate": 0.2,
+      "material": "porcelain",
+      "gravity_m_s2": 9.81,
+      "gravity_projected_px_s2": 0,
+      "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+      "friction_static": 0.65,
+      "friction_dynamic": 0.45,
+      "restitution": 0.03,
+      "center_of_mass_uv": [
+        0.5,
+        0.62
+      ],
+      "contact_uv": [
+        0.5,
+        0.935
+      ],
+      "collision": {
+        "type": "convex_polygon",
+        "space": "source_uv",
+        "vertices": [
+          [
+            0.12,
+            0.18
+          ],
+          [
+            0.82,
+            0.12
+          ],
+          [
+            0.96,
+            0.5
+          ],
+          [
+            0.83,
+            0.94
+          ],
+          [
+            0.2,
+            0.94
+          ],
+          [
+            0.05,
+            0.55
+          ]
+        ],
+        "accuracy": "conservative authored proxy; alpha hit testing is separate"
+      },
+      "rotation_constraints_deg": [
+        -15,
+        15
+      ],
+      "free_fall_enabled": false,
+      "breakage_enabled": false,
+      "design_values_only": true
+    },
+    "hit_test": {
+      "mode": "source_alpha",
+      "alpha_threshold": 32,
+      "skip_transparent_holes": true,
+      "inverse_transform_pointer": true,
+      "minimum_target_css_px": 24,
+      "hit_slop_css_px": 3,
+      "priority": 79,
+      "accessible_label": "milk jug"
+    },
+    "anchors": {
+      "grip_handle": [
+        0.83,
+        0.42
+      ],
+      "spout_tip": [
+        0.15,
+        0.13
+      ],
+      "mouth_center": [
+        0.42,
+        0.18
+      ],
+      "base": [
+        0.5,
+        0.935
+      ]
+    },
+    "interaction": {
+      "clickable": true,
+      "draggable": false,
+      "pickup": false,
+      "return_on_invalid_drop": true,
+      "return_duration_ms": 300,
+      "keyboard": [
+        "Enter",
+        "Space"
+      ],
+      "actions": [
+        "inspect"
+      ]
+    },
+    "shadow": {
+      "implementation": "runtime ellipse on support; never bake into sprite",
+      "opacity": 0.2,
+      "blur_scene_px": 6,
+      "detach_on_pickup": false,
+      "fade_with_lift": true
+    },
+    "states": {
+      "initial": "idle",
+      "available_raster_states": [
+        "idle"
+      ],
+      "additional_pose_rasters_included": false
+    },
+    "calibration": {
+      "status": "Revision 3: thematic and support pass with wizard present",
+      "anchors": "Rechecked against new diffuse raster including transparent margins.",
+      "physics": "plausible design estimates, not measured physical properties"
+    },
+    "liquid": {
+      "capacity_ml_estimate": 200,
+      "initial_volume_ml": 0,
+      "temperature_c": 20,
+      "spills_enabled": false,
+      "spill_warning_tilt_deg": 20,
+      "pour_start_tilt_deg": 35,
+      "pour_stop_tilt_deg": 20,
+      "flow_ml_s": 15,
+      "volume_conservation_required": true,
+      "stream": "procedural quadratic curve from world transformed spout to cup liquid_center",
+      "stream_gravity_scene_px_s2": 350,
+      "target_acceptance_radius_scene_px": 8,
+      "stop_when_empty_or_target_full": true,
+      "interior_fill_art_included": false,
+      "note": "Empty initial state matches supplied raster. Filled state needs masked surface rendering.",
+      "pour_direction": "left"
+    },
+    "pickup_contract": {
+      "hand_anchor": "grip_handle",
+      "approach_clearance_scene_px": 12,
+      "finger_occlusion": "split character hand into palm behind prop and fingers in front",
+      "preserve_world_transform_on_reparent": true,
+      "held_z": 100,
+      "held_gravity": false,
+      "max_lift_scene_px": 180,
+      "max_translation_speed_scene_px_s": 240,
+      "rotation_pivot": "grip_handle",
+      "rotation_limits_deg": [
+        -60,
+        10
+      ],
+      "surface_clearance_before_rotation_scene_px": 18,
+      "accept_drop_on": [
+        "tea_table"
+      ],
+      "collision_with_other_teaware": true,
+      "requires_character_pose": true,
+      "character_art_included": false,
+      "note": "Pouring lip is at left in revision 3; tilt toward left around right handle.",
+      "idle_character_art_included": true
+    },
+    "render": {
+      "shadow": {
+        "anchor": "base",
+        "radius": [
+          17.6,
+          2
+        ],
+        "opacity": 0.29
+      },
+      "light": "warm painterly celestial ivory/cobalt/gold",
+      "view_angle_down_deg_estimate": 15,
+      "material_response": {
+        "brightness": 0.96,
+        "saturation": 0.94,
+        "contrast": 0.98,
+        "sepia": 0.02,
+        "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
+      }
+    },
+    "preview_shadow": true,
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+  }
+}

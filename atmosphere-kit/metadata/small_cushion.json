@@ -1,0 +1,72 @@
+{
+  "asset": {
+    "id": "small_cushion",
+    "file": "assets/small_cushion.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "sha256": "12f864f75509464812eb4378edcf21c8227fc34995d8fb88404af0e404563e46",
+    "color_space": "sRGB",
+    "alpha_encoding": "straight",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_bbox_threshold_32": [
+      72,
+      193,
+      1477,
+      926
+    ],
+    "trimmed": false,
+    "role": "New separate rigid-group sprite."
+  },
+  "object": {
+    "id": "small_cushion",
+    "asset": "small_cushion",
+    "label": "small cushion",
+    "anchors": {
+      "base": [
+        0.49,
+        0.89
+      ]
+    },
+    "physics": {
+      "body_type": "static",
+      "material": "painted grouped prop",
+      "free_fall_enabled": false,
+      "breakage_enabled": false,
+      "design_values_only": true
+    },
+    "interaction": {
+      "clickable": true,
+      "draggable": false,
+      "actions": [
+        "inspect"
+      ],
+      "pickup": false
+    },
+    "states": {
+      "available_raster_states": [
+        "idle"
+      ],
+      "additional_pose_rasters_included": false
+    },
+    "z": 70,
+    "support": "floor",
+    "transform": {
+      "x": 520,
+      "y": 880,
+      "width": 300,
+      "height": 200.0,
+      "rotation_deg": 0,
+      "origin_uv": [
+        0,
+        0
+      ],
+      "scale": 0.1953125
+    },
+    "preview_shadow": true,
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+  }
+}
