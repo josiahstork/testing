@@ -509,7 +509,7 @@
         32.12,
         2.6449999999999996
       ],
-      "opacity": 0.48,
+      "opacity": 0.46,
       "cast": true,
       "height_scale": 0.6
     },
@@ -522,7 +522,7 @@
         13.64,
         2.6449999999999996
       ],
-      "opacity": 0.48,
+      "opacity": 0.46,
       "cast": false,
       "height_scale": 0.6
     },
@@ -535,7 +535,7 @@
         17.16,
         2.6449999999999996
       ],
-      "opacity": 0.48,
+      "opacity": 0.46,
       "cast": true,
       "height_scale": 0.6
     },
@@ -548,7 +548,7 @@
         21.56,
         2.6449999999999996
       ],
-      "opacity": 0.48,
+      "opacity": 0.46,
       "cast": false,
       "height_scale": 0.6
     },
@@ -558,10 +558,10 @@
         "base"
       ],
       "radius": [
-        17.6,
+        16.72,
         2.6449999999999996
       ],
-      "opacity": 0.48,
+      "opacity": 0.46,
       "cast": true,
       "height_scale": 0.6
     },
@@ -571,10 +571,10 @@
         "base"
       ],
       "radius": [
-        19.36,
+        17.16,
         2.6449999999999996
       ],
-      "opacity": 0.48,
+      "opacity": 0.46,
       "cast": true,
       "height_scale": 0.6
     },
@@ -587,7 +587,7 @@
         14.52,
         2.6449999999999996
       ],
-      "opacity": 0.48,
+      "opacity": 0.46,
       "cast": true,
       "height_scale": 0.1
     },

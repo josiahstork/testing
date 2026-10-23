@@ -3,16 +3,16 @@
   "asset": "milk_jug",
   "label": "milk jug",
   "transform": {
-    "x": 550,
-    "y": 704.34667,
-    "width": 80,
-    "height": 53.33333,
+    "x": 472.0,
+    "y": 677.6266666666667,
+    "width": 76,
+    "height": 50.666666666666664,
     "rotation_deg": 0,
     "origin_uv": [
       0,
       0
     ],
-    "scale": 0.052083333333333336
+    "scale": 0.049479166666666664
   },
   "z": 79,
   "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -33,7 +33,7 @@
     ],
     "contact_uv": [
       0.5,
-      0.94
+      0.935
     ],
     "collision": {
       "type": "convex_polygon",
@@ -86,20 +86,20 @@
   },
   "anchors": {
     "grip_handle": [
-      0.81,
-      0.43
+      0.83,
+      0.42
     ],
     "spout_tip": [
-      0.19,
-      0.14
+      0.15,
+      0.13
     ],
     "mouth_center": [
-      0.43,
-      0.195
+      0.42,
+      0.18
     ],
     "base": [
-      0.51,
-      0.931
+      0.5,
+      0.935
     ]
   },
   "interaction": {
@@ -135,7 +135,7 @@
   },
   "calibration": {
     "status": "Revision 3: thematic and support pass with wizard present",
-    "anchors": "visually estimated against this exact generated raster",
+    "anchors": "Rechecked against new diffuse raster including transparent margins.",
     "physics": "plausible design estimates, not measured physical properties"
   },
   "liquid": {
@@ -192,17 +192,17 @@
     "light": "warm painterly celestial ivory/cobalt/gold",
     "view_angle_down_deg_estimate": 15,
     "material_response": {
-      "brightness": 0.8,
-      "saturation": 0.78,
-      "contrast": 0.9,
-      "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
-      "sepia": 0.08
+      "brightness": 0.96,
+      "saturation": 0.94,
+      "contrast": 0.98,
+      "sepia": 0.02,
+      "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
     }
   },
   "lighting": {
     "rule": "milk_jug",
     "rebuild_shadow_when_moved": true,
-    "source_highlights": "baked",
+    "source_highlights": "Specular streaks and bright reflected spots removed in the source drawing; mild diffuse/crease shading retained.",
     "lighting_map": "shared interior gain map",
     "keep_shadow_separate_from_sprite": true
   }

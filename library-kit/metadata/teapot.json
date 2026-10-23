@@ -3,10 +3,10 @@
   "asset": "teapot",
   "label": "teapot",
   "transform": {
-    "x": 140,
-    "y": 669.772,
+    "x": 252.0,
+    "y": 653.772,
     "width": 146,
-    "height": 97.33333,
+    "height": 97.33333333333333,
     "rotation_deg": 0,
     "origin_uv": [
       0,
@@ -143,7 +143,7 @@
   },
   "calibration": {
     "status": "Revision 3: thematic and support pass with wizard present",
-    "anchors": "visually estimated against this exact generated raster",
+    "anchors": "Rechecked against new diffuse raster including transparent margins.",
     "physics": "plausible design estimates, not measured physical properties"
   },
   "liquid": {
@@ -198,17 +198,17 @@
     "light": "warm painterly celestial ivory/cobalt/gold",
     "view_angle_down_deg_estimate": 15,
     "material_response": {
-      "brightness": 0.8,
-      "saturation": 0.78,
-      "contrast": 0.9,
-      "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
-      "sepia": 0.08
+      "brightness": 0.96,
+      "saturation": 0.94,
+      "contrast": 0.98,
+      "sepia": 0.02,
+      "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
     }
   },
   "lighting": {
     "rule": "teapot",
     "rebuild_shadow_when_moved": true,
-    "source_highlights": "baked",
+    "source_highlights": "Specular streaks and bright reflected spots removed in the source drawing; mild diffuse/crease shading retained.",
     "lighting_map": "shared interior gain map",
     "keep_shadow_separate_from_sprite": true
   }

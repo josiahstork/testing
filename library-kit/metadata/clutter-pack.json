@@ -1023,8 +1023,8 @@
       "asset": "clutter_scrolls",
       "label": "desk scrolls",
       "transform": {
-        "x": 492.5,
-        "y": 664.6666666666666,
+        "x": 597.5,
+        "y": 667.6666666666666,
         "width": 85,
         "height": 56.666666666666664,
         "rotation_deg": 0,
@@ -1190,8 +1190,8 @@
       "asset": "clutter_ink_quill",
       "label": "writing set",
       "transform": {
-        "x": 261.04,
-        "y": 687.76,
+        "x": 159.04,
+        "y": 695.76,
         "width": 72,
         "height": 48.0,
         "rotation_deg": 0,

@@ -1,6 +1,6 @@
 {
   "format_version": "1.3.0",
-  "title": "Wizard library \u00b7 revision 6 \u00b7 muted tabletop materials",
+  "title": "Wizard library \u00b7 revision 7 \u00b7 diffuse celestial tea service",
   "canvas": {
     "width": 1536,
     "height": 1024,
@@ -254,143 +254,118 @@
     },
     "teapot": {
       "id": "teapot",
-      "file": "assets/teapot.png",
+      "file": "assets/teapot_diffuse.png",
       "width": 1536,
       "height": 1024,
       "mode": "RGBA",
       "alpha_bbox_threshold_32": [
-        30,
-        72,
-        1513,
-        957
-      ],
-      "content_bbox_threshold_128": [
-        30,
-        73,
-        1513,
-        956
+        29,
+        71,
+        1514,
+        959
       ],
       "alpha_range": [
         0,
         254
       ],
-      "sha256": "4bfc866532ccbb562a166f373c428b6bfa321c20684144ac4baf064d6f1dcbac",
+      "sha256": "103c917a47326e70e79b9bdf9454affa525cb54b02d4e9f44b270303032defd4",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
-      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+      "source": "AI-redrawn from original celestial tea-service raster; specular streaks and glints removed; mild diffuse volume shading remains.",
+      "previous_source_file": "assets/teapot.png"
     },
     "teapot_lid": {
       "id": "teapot_lid",
-      "file": "assets/teapot_lid.png",
+      "file": "assets/teapot_lid_diffuse.png",
       "width": 1536,
       "height": 1024,
       "mode": "RGBA",
       "alpha_bbox_threshold_32": [
         80,
-        73,
-        1455,
-        916
-      ],
-      "content_bbox_threshold_128": [
-        81,
-        73,
-        1455,
-        915
+        69,
+        1456,
+        923
       ],
       "alpha_range": [
         0,
         254
       ],
-      "sha256": "ee9357128ec7c0a6e57f0012d064eae669737915e43627d13fde18eda71f75ed",
+      "sha256": "c0dcb6d1b7b9bcd5198e5c70c65bed8a1833a23960ad54f334ababb8bbca9b83",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
-      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+      "source": "AI-redrawn from original celestial tea-service raster; specular streaks and glints removed; mild diffuse volume shading remains.",
+      "previous_source_file": "assets/teapot_lid.png"
     },
     "teacup": {
       "id": "teacup",
-      "file": "assets/teacup.png",
+      "file": "assets/teacup_diffuse.png",
       "width": 1536,
       "height": 1024,
       "mode": "RGBA",
       "alpha_bbox_threshold_32": [
-        201,
-        93,
-        1490,
-        966
-      ],
-      "content_bbox_threshold_128": [
-        201,
-        93,
-        1489,
-        965
+        200,
+        90,
+        1491,
+        968
       ],
       "alpha_range": [
         0,
         254
       ],
-      "sha256": "806598ac4cef79e3f5adf8382745cc15bcc5ba074d30182932195a6fed6ccd0c",
+      "sha256": "07bb505d373a2e5ad10b5de72d435d32ed314c15b211ce792143f6d192c9425f",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
-      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+      "source": "AI-redrawn from original celestial tea-service raster; specular streaks and glints removed; mild diffuse volume shading remains.",
+      "previous_source_file": "assets/teacup.png"
     },
     "saucer": {
       "id": "saucer",
-      "file": "assets/saucer.png",
+      "file": "assets/saucer_diffuse.png",
       "width": 2172,
       "height": 724,
       "mode": "RGBA",
       "alpha_bbox_threshold_32": [
-        26,
-        212,
-        2147,
-        574
-      ],
-      "content_bbox_threshold_128": [
-        26,
-        212,
-        2146,
-        573
+        25,
+        198,
+        2145,
+        584
       ],
       "alpha_range": [
         0,
         255
       ],
-      "sha256": "08a03c2bf69ac9ab7acbb039006406c16be28109e48a88cd28ec974f6c81b740",
+      "sha256": "ee2877ff7e834644088b559f6f3a688c979335a1c2122227ab927d096184262e",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
-      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+      "source": "AI-redrawn from original celestial tea-service raster; specular streaks and glints removed; mild diffuse volume shading remains.",
+      "previous_source_file": "assets/saucer.png"
     },
     "milk_jug": {
       "id": "milk_jug",
-      "file": "assets/milk_jug.png",
+      "file": "assets/milk_jug_diffuse.png",
       "width": 1536,
       "height": 1024,
       "mode": "RGBA",
       "alpha_bbox_threshold_32": [
-        260,
-        76,
-        1419,
-        964
-      ],
-      "content_bbox_threshold_128": [
-        261,
-        77,
-        1419,
-        963
+        210,
+        31,
+        1470,
+        996
       ],
       "alpha_range": [
         0,
         254
       ],
-      "sha256": "66613602da9f886a75109257c778636e2a5a692d75597696cac098aab1bec444",
+      "sha256": "711b38e0f7f374848dbc66972649eac19710f7b806bb7129513b862e527461e1",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
-      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+      "source": "AI-redrawn from original celestial tea-service raster; specular streaks and glints removed; mild diffuse volume shading remains.",
+      "previous_source_file": "assets/milk_jug.png"
     },
     "decor": {
       "id": "decor",
@@ -590,59 +565,49 @@
     },
     "sugar_bowl": {
       "id": "sugar_bowl",
-      "file": "assets/sugar_bowl.png",
+      "file": "assets/sugar_bowl_diffuse.png",
       "width": 1536,
       "height": 1024,
       "mode": "RGBA",
       "alpha_bbox_threshold_32": [
-        276,
-        36,
-        1260,
-        978
-      ],
-      "content_bbox_threshold_128": [
-        276,
+        272,
         37,
-        1260,
-        977
+        1265,
+        981
       ],
       "alpha_range": [
         0,
         254
       ],
-      "sha256": "34ad447af8977299e331e7bfb093df787f639b9c1d84b107ff29d107090beba9",
+      "sha256": "a7a9fbd78eed8d85bb2e1a38248fb34ffaca1cd0f9605973f29e36f3baeb3827",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
-      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+      "source": "AI-redrawn from original celestial tea-service raster; specular streaks and glints removed; mild diffuse volume shading remains.",
+      "previous_source_file": "assets/sugar_bowl.png"
     },
     "spoon": {
       "id": "spoon",
-      "file": "assets/spoon.png",
+      "file": "assets/spoon_diffuse.png",
       "width": 1536,
       "height": 1024,
       "mode": "RGBA",
       "alpha_bbox_threshold_32": [
-        65,
-        34,
-        1510,
-        982
-      ],
-      "content_bbox_threshold_128": [
-        65,
-        34,
-        1510,
-        982
+        61,
+        26,
+        1513,
+        986
       ],
       "alpha_range": [
         0,
         254
       ],
-      "sha256": "ea3d29e8dcb611f8ceb8a57b90ac3de2c517eae7bb37bcfeb03feb54046f26ae",
+      "sha256": "ee21fff9f7091aa8b889b159deb3a6ff54f55563c14bcc5ce012ebef773b6163",
       "color_space": "sRGB",
       "alpha_encoding": "straight",
       "trimmed": false,
-      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+      "source": "AI-redrawn from original celestial tea-service raster; specular streaks and glints removed; mild diffuse volume shading remains.",
+      "previous_source_file": "assets/spoon.png"
     },
     "clutter_book_stack": {
       "id": "clutter_book_stack",
@@ -1982,10 +1947,10 @@
       "asset": "teapot",
       "label": "teapot",
       "transform": {
-        "x": 140,
-        "y": 669.772,
+        "x": 252.0,
+        "y": 653.772,
         "width": 146,
-        "height": 97.33333,
+        "height": 97.33333333333333,
         "rotation_deg": 0,
         "origin_uv": [
           0,
@@ -2122,7 +2087,7 @@
       },
       "calibration": {
         "status": "Revision 3: thematic and support pass with wizard present",
-        "anchors": "visually estimated against this exact generated raster",
+        "anchors": "Rechecked against new diffuse raster including transparent margins.",
         "physics": "plausible design estimates, not measured physical properties"
       },
       "liquid": {
@@ -2177,17 +2142,17 @@
         "light": "warm painterly celestial ivory/cobalt/gold",
         "view_angle_down_deg_estimate": 15,
         "material_response": {
-          "brightness": 0.8,
-          "saturation": 0.78,
-          "contrast": 0.9,
-          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
-          "sepia": 0.08
+          "brightness": 0.96,
+          "saturation": 0.94,
+          "contrast": 0.98,
+          "sepia": 0.02,
+          "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
         }
       },
       "lighting": {
         "rule": "teapot",
         "rebuild_shadow_when_moved": true,
-        "source_highlights": "baked",
+        "source_highlights": "Specular streaks and bright reflected spots removed in the source drawing; mild diffuse/crease shading retained.",
         "lighting_map": "shared interior gain map",
         "keep_shadow_separate_from_sprite": true
       }
@@ -2197,10 +2162,10 @@
       "asset": "teapot_lid",
       "label": "teapot lid",
       "transform": {
-        "x": 182.0,
-        "y": 652.64534,
+        "x": 294.0,
+        "y": 636.6453333333334,
         "width": 62,
-        "height": 41.33333,
+        "height": 41.333333333333336,
         "rotation_deg": 0,
         "origin_uv": [
           0,
@@ -2324,7 +2289,7 @@
       },
       "calibration": {
         "status": "Revision 3: thematic and support pass with wizard present",
-        "anchors": "visually estimated against this exact generated raster",
+        "anchors": "Rechecked against new diffuse raster including transparent margins.",
         "physics": "plausible design estimates, not measured physical properties"
       },
       "pickup_contract": {
@@ -2353,17 +2318,17 @@
         "light": "warm painterly celestial ivory/cobalt/gold",
         "view_angle_down_deg_estimate": 15,
         "material_response": {
-          "brightness": 0.8,
-          "saturation": 0.78,
-          "contrast": 0.9,
-          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
-          "sepia": 0.08
+          "brightness": 0.96,
+          "saturation": 0.94,
+          "contrast": 0.98,
+          "sepia": 0.02,
+          "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
         }
       },
       "lighting": {
         "rule": "teapot_lid",
         "rebuild_shadow_when_moved": true,
-        "source_highlights": "baked",
+        "source_highlights": "Specular streaks and bright reflected spots removed in the source drawing; mild diffuse/crease shading retained.",
         "lighting_map": "shared interior gain map",
         "keep_shadow_separate_from_sprite": true
       }
@@ -2373,10 +2338,10 @@
       "asset": "saucer",
       "label": "saucer",
       "transform": {
-        "x": 425,
+        "x": 401.0,
         "y": 739.324,
         "width": 98,
-        "height": 32.66667,
+        "height": 32.666666666666664,
         "rotation_deg": 0,
         "origin_uv": [
           0,
@@ -2500,7 +2465,7 @@
       },
       "calibration": {
         "status": "Revision 3: thematic and support pass with wizard present",
-        "anchors": "visually estimated against this exact generated raster",
+        "anchors": "Rechecked against new diffuse raster including transparent margins.",
         "physics": "plausible design estimates, not measured physical properties"
       },
       "pickup_contract": {
@@ -2528,17 +2493,17 @@
         "light": "warm painterly celestial ivory/cobalt/gold",
         "view_angle_down_deg_estimate": 15,
         "material_response": {
-          "brightness": 0.8,
-          "saturation": 0.78,
-          "contrast": 0.9,
-          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
-          "sepia": 0.08
+          "brightness": 0.96,
+          "saturation": 0.94,
+          "contrast": 0.98,
+          "sepia": 0.02,
+          "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
         }
       },
       "lighting": {
         "rule": "saucer",
         "rebuild_shadow_when_moved": true,
-        "source_highlights": "baked",
+        "source_highlights": "Specular streaks and bright reflected spots removed in the source drawing; mild diffuse/crease shading retained.",
         "lighting_map": "shared interior gain map",
         "keep_shadow_separate_from_sprite": true
       }
@@ -2548,8 +2513,8 @@
       "asset": "teacup",
       "label": "teacup",
       "transform": {
-        "x": 438.9,
-        "y": 711.094,
+        "x": 414.9,
+        "y": 711.0939999999999,
         "width": 78,
         "height": 52.0,
         "rotation_deg": 0,
@@ -2679,7 +2644,7 @@
       },
       "calibration": {
         "status": "Revision 3: thematic and support pass with wizard present",
-        "anchors": "visually estimated against this exact generated raster",
+        "anchors": "Rechecked against new diffuse raster including transparent margins.",
         "physics": "plausible design estimates, not measured physical properties"
       },
       "liquid": {
@@ -2734,17 +2699,17 @@
         "light": "warm painterly celestial ivory/cobalt/gold",
         "view_angle_down_deg_estimate": 15,
         "material_response": {
-          "brightness": 0.8,
-          "saturation": 0.78,
-          "contrast": 0.9,
-          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
-          "sepia": 0.08
+          "brightness": 0.96,
+          "saturation": 0.94,
+          "contrast": 0.98,
+          "sepia": 0.02,
+          "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
         }
       },
       "lighting": {
         "rule": "teacup",
         "rebuild_shadow_when_moved": true,
-        "source_highlights": "baked",
+        "source_highlights": "Specular streaks and bright reflected spots removed in the source drawing; mild diffuse/crease shading retained.",
         "lighting_map": "shared interior gain map",
         "keep_shadow_separate_from_sprite": true
       }
@@ -2754,16 +2719,16 @@
       "asset": "milk_jug",
       "label": "milk jug",
       "transform": {
-        "x": 550,
-        "y": 704.34667,
-        "width": 80,
-        "height": 53.33333,
+        "x": 472.0,
+        "y": 677.6266666666667,
+        "width": 76,
+        "height": 50.666666666666664,
         "rotation_deg": 0,
         "origin_uv": [
           0,
           0
         ],
-        "scale": 0.052083333333333336
+        "scale": 0.049479166666666664
       },
       "z": 79,
       "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -2784,7 +2749,7 @@
         ],
         "contact_uv": [
           0.5,
-          0.94
+          0.935
         ],
         "collision": {
           "type": "convex_polygon",
@@ -2837,20 +2802,20 @@
       },
       "anchors": {
         "grip_handle": [
-          0.81,
-          0.43
+          0.83,
+          0.42
         ],
         "spout_tip": [
-          0.19,
-          0.14
+          0.15,
+          0.13
         ],
         "mouth_center": [
-          0.43,
-          0.195
+          0.42,
+          0.18
         ],
         "base": [
-          0.51,
-          0.931
+          0.5,
+          0.935
         ]
       },
       "interaction": {
@@ -2886,7 +2851,7 @@
       },
       "calibration": {
         "status": "Revision 3: thematic and support pass with wizard present",
-        "anchors": "visually estimated against this exact generated raster",
+        "anchors": "Rechecked against new diffuse raster including transparent margins.",
         "physics": "plausible design estimates, not measured physical properties"
       },
       "liquid": {
@@ -2943,17 +2908,17 @@
         "light": "warm painterly celestial ivory/cobalt/gold",
         "view_angle_down_deg_estimate": 15,
         "material_response": {
-          "brightness": 0.8,
-          "saturation": 0.78,
-          "contrast": 0.9,
-          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
-          "sepia": 0.08
+          "brightness": 0.96,
+          "saturation": 0.94,
+          "contrast": 0.98,
+          "sepia": 0.02,
+          "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
         }
       },
       "lighting": {
         "rule": "milk_jug",
         "rebuild_shadow_when_moved": true,
-        "source_highlights": "baked",
+        "source_highlights": "Specular streaks and bright reflected spots removed in the source drawing; mild diffuse/crease shading retained.",
         "lighting_map": "shared interior gain map",
         "keep_shadow_separate_from_sprite": true
       }
@@ -2963,16 +2928,16 @@
       "asset": "sugar_bowl",
       "label": "sugar bowl",
       "transform": {
-        "x": 305,
-        "y": 703.56,
-        "width": 88,
-        "height": 58.66667,
+        "x": 401.0,
+        "y": 668.86,
+        "width": 78,
+        "height": 52.0,
         "rotation_deg": 0,
         "origin_uv": [
           0,
           0
         ],
-        "scale": 0.057291666666666664
+        "scale": 0.05078125
       },
       "z": 79,
       "depth_sort": "explicit_z; held objects reparent to character hand",
@@ -3094,7 +3059,7 @@
       },
       "calibration": {
         "status": "Revision 3: thematic and support pass with wizard present",
-        "anchors": "visually estimated against this exact generated raster",
+        "anchors": "Rechecked against new diffuse raster including transparent margins.",
         "physics": "plausible design estimates, not measured physical properties"
       },
       "pickup_contract": {
@@ -3134,11 +3099,11 @@
         "light": "warm painterly celestial ivory/cobalt/gold",
         "view_angle_down_deg_estimate": 15,
         "material_response": {
-          "brightness": 0.8,
-          "saturation": 0.78,
-          "contrast": 0.9,
-          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
-          "sepia": 0.08
+          "brightness": 0.96,
+          "saturation": 0.94,
+          "contrast": 0.98,
+          "sepia": 0.02,
+          "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
         }
       },
       "contents": {
@@ -3149,7 +3114,7 @@
       "lighting": {
         "rule": "sugar_bowl",
         "rebuild_shadow_when_moved": true,
-        "source_highlights": "baked",
+        "source_highlights": "Specular streaks and bright reflected spots removed in the source drawing; mild diffuse/crease shading retained.",
         "lighting_map": "shared interior gain map",
         "keep_shadow_separate_from_sprite": true
       }
@@ -3159,8 +3124,8 @@
       "asset": "spoon",
       "label": "spoon",
       "transform": {
-        "x": 655,
-        "y": 710,
+        "x": 520.48,
+        "y": 720.24,
         "width": 66,
         "height": 44.0,
         "rotation_deg": 0,
@@ -3302,7 +3267,7 @@
       },
       "calibration": {
         "status": "Revision 3: thematic and support pass with wizard present",
-        "anchors": "visually estimated against this exact generated raster",
+        "anchors": "Rechecked against new diffuse raster including transparent margins.",
         "physics": "plausible design estimates, not measured physical properties"
       },
       "pickup_contract": {
@@ -3331,17 +3296,17 @@
         "light": "warm painterly celestial ivory/cobalt/gold",
         "view_angle_down_deg_estimate": 15,
         "material_response": {
-          "brightness": 0.8,
-          "saturation": 0.78,
-          "contrast": 0.9,
-          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
-          "sepia": 0.08
+          "brightness": 0.96,
+          "saturation": 0.94,
+          "contrast": 0.98,
+          "sepia": 0.02,
+          "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
         }
       },
       "lighting": {
         "rule": "spoon",
         "rebuild_shadow_when_moved": true,
-        "source_highlights": "baked",
+        "source_highlights": "Specular streaks and bright reflected spots removed in the source drawing; mild diffuse/crease shading retained.",
         "lighting_map": "shared interior gain map",
         "keep_shadow_separate_from_sprite": true
       }
@@ -4416,8 +4381,8 @@
       "asset": "clutter_scrolls",
       "label": "desk scrolls",
       "transform": {
-        "x": 492.5,
-        "y": 664.6666666666666,
+        "x": 597.5,
+        "y": 667.6666666666666,
         "width": 85,
         "height": 56.666666666666664,
         "rotation_deg": 0,
@@ -4583,8 +4548,8 @@
       "asset": "clutter_ink_quill",
       "label": "writing set",
       "transform": {
-        "x": 261.04,
-        "y": 687.76,
+        "x": 159.04,
+        "y": 695.76,
         "width": 72,
         "height": 48.0,
         "rotation_deg": 0,
@@ -8791,7 +8756,7 @@
           32.12,
           2.6449999999999996
         ],
-        "opacity": 0.48,
+        "opacity": 0.46,
         "cast": true,
         "height_scale": 0.6
       },
@@ -8804,7 +8769,7 @@
           13.64,
           2.6449999999999996
         ],
-        "opacity": 0.48,
+        "opacity": 0.46,
         "cast": false,
         "height_scale": 0.6
       },
@@ -8817,7 +8782,7 @@
           17.16,
           2.6449999999999996
         ],
-        "opacity": 0.48,
+        "opacity": 0.46,
         "cast": true,
         "height_scale": 0.6
       },
@@ -8830,7 +8795,7 @@
           21.56,
           2.6449999999999996
         ],
-        "opacity": 0.48,
+        "opacity": 0.46,
         "cast": false,
         "height_scale": 0.6
       },
@@ -8840,10 +8805,10 @@
           "base"
         ],
         "radius": [
-          17.6,
+          16.72,
           2.6449999999999996
         ],
-        "opacity": 0.48,
+        "opacity": 0.46,
         "cast": true,
         "height_scale": 0.6
       },
@@ -8853,10 +8818,10 @@
           "base"
         ],
         "radius": [
-          19.36,
+          17.16,
           2.6449999999999996
         ],
-        "opacity": 0.48,
+        "opacity": 0.46,
         "cast": true,
         "height_scale": 0.6
       },
@@ -8869,7 +8834,7 @@
           14.52,
           2.6449999999999996
         ],
-        "opacity": 0.48,
+        "opacity": 0.46,
         "cast": true,
         "height_scale": 0.1
       },
@@ -9632,15 +9597,15 @@
       "mode": "RGBA",
       "alpha_bounds": [
         18,
-        702,
+        703,
         790,
         779
       ],
       "alpha_range": [
         0,
-        30
+        31
       ],
-      "sha256": "6887f7343363ce560eae997ccf2ac61834e3a3403592570b749a80a876cbc761",
+      "sha256": "2da392deadc54a4303bff80d67c2fa5875cd5b5e48bf229a9a38517c8223dc27",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -9657,15 +9622,15 @@
       "mode": "RGBA",
       "alpha_bounds": [
         44,
-        707,
+        710,
         774,
         769
       ],
       "alpha_range": [
         0,
-        117
+        112
       ],
-      "sha256": "3198e98bf63226dcffe1f71ad5d37c04b5f510ea224fc96243e77ba4fbea279d",
+      "sha256": "566bcdbad0079dbddb8ffba9364c069260323593ad92027bbfa32fdf2ed22dd5",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -9930,7 +9895,7 @@
         0,
         12
       ],
-      "sha256": "2ee041e0724ede4d71a14cc504fa508cd95327067db9b95cb8783dd0eba2b2e2",
+      "sha256": "c6540c77c930de7a37473123d691da9fd2e3c93edb2cfeedf2448f2a40b64bca",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -9947,15 +9912,15 @@
       "mode": "RGBA",
       "alpha_bounds": [
         44,
-        707,
+        710,
         774,
         769
       ],
       "alpha_range": [
         0,
-        117
+        112
       ],
-      "sha256": "3198e98bf63226dcffe1f71ad5d37c04b5f510ea224fc96243e77ba4fbea279d",
+      "sha256": "566bcdbad0079dbddb8ffba9364c069260323593ad92027bbfa32fdf2ed22dd5",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -10214,13 +10179,13 @@
         32,
         702,
         790,
-        779
+        778
       ],
       "alpha_range": [
         0,
         6
       ],
-      "sha256": "8684a495e85e372fffe1e1f68d149732cafee0d267abe0f823909a86ab227f7d",
+      "sha256": "83e1fb9b0e2623b6298b69073cb91721fa341399db63aeb309e21e1ca786279a",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -10237,15 +10202,15 @@
       "mode": "RGBA",
       "alpha_bounds": [
         44,
-        707,
+        710,
         774,
         769
       ],
       "alpha_range": [
         0,
-        117
+        112
       ],
-      "sha256": "3198e98bf63226dcffe1f71ad5d37c04b5f510ea224fc96243e77ba4fbea279d",
+      "sha256": "566bcdbad0079dbddb8ffba9364c069260323593ad92027bbfa32fdf2ed22dd5",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -10502,7 +10467,7 @@
       "mode": "RGBA",
       "alpha_bounds": [
         38,
-        724,
+        705,
         784,
         781
       ],
@@ -10510,7 +10475,7 @@
         0,
         3
       ],
-      "sha256": "5bb5be75cba2f776f05e9c67df4b2ce8773ef32356d23e476938f7a225e06bc7",
+      "sha256": "5bea44e711ceb1b2828a40050c1b07584e252505518ab18fa8601dbd81346824",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -10527,15 +10492,15 @@
       "mode": "RGBA",
       "alpha_bounds": [
         44,
-        707,
+        710,
         774,
         769
       ],
       "alpha_range": [
         0,
-        117
+        112
       ],
-      "sha256": "3198e98bf63226dcffe1f71ad5d37c04b5f510ea224fc96243e77ba4fbea279d",
+      "sha256": "566bcdbad0079dbddb8ffba9364c069260323593ad92027bbfa32fdf2ed22dd5",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     }
@@ -10558,5 +10523,12 @@
     "preview_behavior": "Open grimoire, scrolls and writing set can be dragged on the tea table; floor props and lit candles are inspect-only.",
     "layering": "Individual instances in objects; not baked into furnishings.png.",
     "physics_accuracy": "Authored design estimates, not measured simulation values."
+  },
+  "tea_service_revision": {
+    "source": "Seven new image-generation redraws from original tea-service rasters.",
+    "artwork": "Ivory, cobalt blue and old gold celestial designs retained; sharp specular highlights and reflections removed. Soft form shading remains to show volume.",
+    "placement": "Compact service near table center-left; teapot behind/left, sugar and creamer behind cup, spoon to right. Handles and spouts retain clear space.",
+    "runtime": "Shared room illumination and separate receiver shadows. These 2D sprites have no normal maps or physically calculated specular reflection.",
+    "prior_art": "Original seven PNGs remain in assets for the earlier teapot comparison and Git history; active asset records point to *_diffuse.png."
   }
 }

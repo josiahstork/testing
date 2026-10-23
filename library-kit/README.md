@@ -1,4 +1,4 @@
-# Wizard library asset kit — revision 6: muted tabletop materials
+# Wizard library asset kit — revision 7: diffuse celestial tea service
 
 [**Compare the lighting presets**](lighting-comparison.png) · [**Before / after**](lighting-before-after.png) · [**View the daylight scene**](composite.png) · [**Download the ZIP**](../library-kit.zip?raw=true) · [**Scene JSON**](scene.json)
 
@@ -6,11 +6,15 @@
 
 The room now has shared interior lighting, independently adjustable outdoor light, contact shadows, projected cast shadows, shelf occlusion, and separate candle/hearth light controls. The wizard, celestial tea service and scene layout are preserved. The package includes **29 art/layer PNGs**, **48 lighting/shadow PNG snapshots**, **22 interactive object records**, **65 shelf rows**, metadata, and the interactive preview.
 
-## Tabletop material integration
+## Redrawn tea service
 
-Tea brightness is reduced to 80%, saturation to 78%, and contrast to 90% before shared lighting. The open grimoire, scrolls and writing set use a gentler 88% brightness / 86% saturation / 90% contrast adjustment. A subtle 8% sepia tint warms these props. Contact shadows are deeper and slightly broader; candle flames retain their brightness. Both daylight and night previews include the adjustment.
+[Close-up of the complete service](tea-service-closeup.png)
 
-The source PNGs remain neutral originals. Apply each object's `render.material_response` in the order recorded by `lighting.material_response_contract`, then apply shared room lighting. The HTML preview implements this directly; raw PNGs alone do not include the material adjustment. Source alpha still drives picking and shadow silhouettes.
+All seven tea-service sprites were redrawn from the original ivory, cobalt-blue and gold celestial designs: open teapot body, removable lid, amber-filled cup, saucer, creamer, sugar bowl with cubes, and engraved spoon. The new `*_diffuse.png` drawings remove strong specular streaks, glints and reflected hot spots while retaining mild volume and crease shading. The service is grouped closer together, with sugar and creamer behind the seated cup, teapot to the left, and spoon to the right. Nearby scrolls and writing tools were moved aside.
+
+Active asset records point to these new drawings. Tea uses only a gentle 96% brightness / 94% saturation / 98% contrast / 2% sepia material response, followed by shared room illumination and separate support shadows. Individual handles, spouts, cup/saucer and lid/teapot seat anchors remain recorded. This is diffuse 2D artwork, not a normal-map or physically based specular renderer.
+
+The seven older glossy PNGs remain in the Git repository and the earlier teapot comparison archive. The updated main ZIP includes the 29 active art/layer files required by `scene.json`, excluding those seven superseded source files. Apply `render.material_response` in the order recorded by `lighting.material_response_contract` to reproduce the browser view.
 
 ## Loose clutter pack
 
