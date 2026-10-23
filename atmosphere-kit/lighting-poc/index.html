@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wizard · separable lighting experiment</title>
+<style>body{margin:0;background:#151c24;color:#e8e2d7;font:15px system-ui;padding:24px}h1{font-family:Georgia,serif}main{display:grid;grid-template-columns:minmax(300px,700px) minmax(260px,400px);gap:28px;align-items:start}canvas{width:100%;background:#21262c;border:1px solid #5e6470;touch-action:none;cursor:crosshair}label{display:block;margin:15px 0}input[type=range]{width:100%}button,select{background:#313c4e;border:1px solid #657285;color:white;padding:8px}code{color:#c3e0ff}.warning{background:#493b24;padding:12px}small{color:#bac5cf}@media(max-width:800px){main{grid-template-columns:1fr}}</style>
+<h1>Wizard-only adjustable lighting · provisional proof of concept</h1>
+<p class="warning"><strong>Not a neutral-albedo conversion.</strong> The source sprite retains baked illumination. Procedural normals are derived from luminance and can confuse pigment with geometry; they are for interaction testing only. No Laigter, Krita or Godot validation has been performed.</p>
+<main><div><canvas id="view" width="600" height="740" aria-label="Wizard lighting demonstration. Drag the circles to move light sources."></canvas><small>Drag the amber and blue light handles. Lighting applies only where the PNG has alpha. The original sprite is preserved, and this experiment does not modify the layer assembly.</small></div>
+<section><label>Source sprite <select id="source"><option value="../retained/wizard.png">Earlier wizard (less warm)</option><option value="../assets/wizard_warm.png">Warm redraw (baked amber)</option></select></label>
+<label><input id="warmOn" type="checkbox" checked> Warm candle / hearth contribution</label>
+<label>Warm intensity <input id="warm" type="range" min="0" max="3" step=".05" value="1.25"></label>
+<label>Warm radius <input id="warmRadius" type="range" min="80" max="800" value="480"></label>
+<label><input id="dayOn" type="checkbox" checked> Cool daylight contribution</label>
+<label>Daylight intensity <input id="day" type="range" min="0" max="3" step=".05" value=".75"></label>
+<label>Daylight radius <input id="dayRadius" type="range" min="80" max="800" value="560"></label>
+<label>Ambient illumination <input id="ambient" type="range" min="0" max="1.5" step=".05" value=".62"></label>
+<label>Normal strength (experimental) <input id="normal" type="range" min="0" max="3" step=".1" value=".5"></label>
+<label><input id="markers" type="checkbox" checked> Show draggable handles</label>
+<button id="reset">Reset lights</button> <button id="save">Download actual rendered preview PNG</button>
+<p><small>The flat grayscale image-derived normal estimate is recalculated only when the sprite loads. It is not an authored physical surface normal map. For production, replace the approximate base with artist-approved albedo and authored maps.</small></p>
+<p id="status" role="status">Loading…</p></section></main>
+<script>
+const W=600,H=740,c=document.querySelector('#view'),g=c.getContext('2d',{willReadFrequently:true});
+const controls=['source','warmOn','warm','warmRadius','dayOn','day','dayRadius','ambient','normal','markers'];
+const lightDefaults=[{x:100,y:505,rgb:[255,144,55]},{x:500,y:105,rgb:[118,176,255]}],lights=structuredClone(lightDefaults);
+let base=null, normals=null,drag=-1,renderWanted=false;
+const val=id=>document.getElementById(id),num=id=>+val(id).value;
+function load(){let im=new Image();im.onload=()=>{let p=document.createElement('canvas');p.width=W;p.height=H;let pg=p.getContext('2d',{willReadFrequently:true});pg.clearRect(0,0,W,H);const scale=Math.min(W/im.width,H/im.height)*.92,iw=im.width*scale,ih=im.height*scale;pg.drawImage(im,(W-iw)/2,(H-ih)/2,iw,ih);base=pg.getImageData(0,0,W,H);normals=new Float32Array(W*H*2);const d=base.data;function lum(x,y){x=Math.max(0,Math.min(W-1,x));y=Math.max(0,Math.min(H-1,y));let j=4*(y*W+x);return(.2126*d[j]+.7152*d[j+1]+.0722*d[j+2])/255}for(let y=1;y<H-1;y++)for(let x=1;x<W-1;x++){const i=y*W+x;normals[2*i]=(lum(x-1,y)-lum(x+1,y))*.9;normals[2*i+1]=(lum(x,y-1)-lum(x,y+1))*.9}val('status').textContent='Loaded '+val('source').value+'. Map is procedural and provisional.';requestRender()};im.onerror=()=>{val('status').textContent='Unable to load '+val('source').value+'. Open this page from its repository location, not as a standalone file.'};im.src=val('source').value}
+function draw(){renderWanted=false;if(!base)return;const out=new ImageData(new Uint8ClampedArray(base.data),W,H),d=base.data,o=out.data,ambient=num('ambient'),strength=num('normal');const active=[val('warmOn').checked,val('dayOn').checked],intensities=[num('warm'),num('day')],radii=[num('warmRadius'),num('dayRadius')];for(let y=0;y<H;y++)for(let x=0;x<W;x++){let i=y*W+x,k=i*4;if(d[k+3]===0)continue;let nx=normals[i*2]*strength,ny=normals[i*2+1]*strength,nz=1/Math.sqrt(1+nx*nx+ny*ny);nx*=nz;ny*=nz;let lr=ambient,lg=ambient,lb=ambient;for(let a=0;a<2;a++){if(!active[a])continue;const dx=lights[a].x-x,dy=lights[a].y-y,r=Math.hypot(dx,dy),rad=radii[a],fall=Math.pow(Math.max(0,1-r/rad),2);const lz=115,L=Math.hypot(dx,dy,lz),nd=Math.max(0,(nx*dx+ny*dy+nz*lz)/L);const f=intensities[a]*fall*nd*2.3;lr+=f*lights[a].rgb[0]/255;lg+=f*lights[a].rgb[1]/255;lb+=f*lights[a].rgb[2]/255}o[k]=Math.min(255,d[k]*lr);o[k+1]=Math.min(255,d[k+1]*lg);o[k+2]=Math.min(255,d[k+2]*lb)}g.putImageData(out,0,0);if(val('markers').checked){lights.forEach((l,i)=>{g.beginPath();g.arc(l.x,l.y,12,0,Math.PI*2);g.fillStyle=i===0?'#ffae5e':'#8fc5ff';g.fill();g.strokeStyle='#18202b';g.lineWidth=3;g.stroke();g.fillStyle='#142230';g.font='bold 12px sans-serif';g.textAlign='center';g.fillText(i===0?'W':'D',l.x,l.y+4)})}}
+function requestRender(){if(!renderWanted){renderWanted=true;requestAnimationFrame(draw)}}
+for(let id of controls)val(id).addEventListener('input',id==='source'?load:requestRender);
+val('reset').onclick=()=>{lightDefaults.forEach((l,i)=>{lights[i].x=l.x;lights[i].y=l.y});requestRender()};
+c.addEventListener('pointerdown',e=>{const p=pos(e);let idx=lights.findIndex(l=>Math.hypot(l.x-p.x,l.y-p.y)<25);if(idx>=0){drag=idx;c.setPointerCapture(e.pointerId)}});c.addEventListener('pointermove',e=>{if(drag<0)return;Object.assign(lights[drag],pos(e));requestRender()});c.addEventListener('pointerup',()=>drag=-1);c.addEventListener('pointercancel',()=>drag=-1);
+function pos(e){let r=c.getBoundingClientRect();return{x:(e.clientX-r.left)*W/r.width,y:(e.clientY-r.top)*H/r.height}}
+val('save').onclick=()=>{const old=val('markers').checked;val('markers').checked=false;draw();c.toBlob(blob=>{const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='wizard-lighting-provisional-preview.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);val('markers').checked=old;requestRender()},'image/png')};
+load();
+</script>
