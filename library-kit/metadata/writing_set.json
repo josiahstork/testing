@@ -154,5 +154,14 @@
     "single_rigid_raster": true,
     "members_separately_pickable": false,
     "separation_requires_new_art": true
+  },
+  "render": {
+    "material_response": {
+      "brightness": 0.88,
+      "saturation": 0.86,
+      "contrast": 0.9,
+      "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+      "sepia": 0.08
+    }
   }
 }

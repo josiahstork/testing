@@ -1,10 +1,16 @@
-# Wizard library asset kit — revision 5: loose study clutter
+# Wizard library asset kit — revision 6: muted tabletop materials
 
 [**Compare the lighting presets**](lighting-comparison.png) · [**Before / after**](lighting-before-after.png) · [**View the daylight scene**](composite.png) · [**Download the ZIP**](../library-kit.zip?raw=true) · [**Scene JSON**](scene.json)
 
 ![Lighting presets](lighting-comparison.png)
 
 The room now has shared interior lighting, independently adjustable outdoor light, contact shadows, projected cast shadows, shelf occlusion, and separate candle/hearth light controls. The wizard, celestial tea service and scene layout are preserved. The package includes **29 art/layer PNGs**, **48 lighting/shadow PNG snapshots**, **22 interactive object records**, **65 shelf rows**, metadata, and the interactive preview.
+
+## Tabletop material integration
+
+Tea brightness is reduced to 80%, saturation to 78%, and contrast to 90% before shared lighting. The open grimoire, scrolls and writing set use a gentler 88% brightness / 86% saturation / 90% contrast adjustment. A subtle 8% sepia tint warms these props. Contact shadows are deeper and slightly broader; candle flames retain their brightness. Both daylight and night previews include the adjustment.
+
+The source PNGs remain neutral originals. Apply each object's `render.material_response` in the order recorded by `lighting.material_response_contract`, then apply shared room lighting. The HTML preview implements this directly; raw PNGs alone do not include the material adjustment. Source alpha still drives picking and shadow silhouettes.
 
 ## Loose clutter pack
 

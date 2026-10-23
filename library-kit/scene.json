@@ -1,6 +1,6 @@
 {
   "format_version": "1.3.0",
-  "title": "Wizard library \u00b7 revision 5 \u00b7 loose study clutter",
+  "title": "Wizard library \u00b7 revision 6 \u00b7 muted tabletop materials",
   "canvas": {
     "width": 1536,
     "height": 1024,
@@ -2175,7 +2175,14 @@
           "opacity": 0.29
         },
         "light": "warm painterly celestial ivory/cobalt/gold",
-        "view_angle_down_deg_estimate": 15
+        "view_angle_down_deg_estimate": 15,
+        "material_response": {
+          "brightness": 0.8,
+          "saturation": 0.78,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       },
       "lighting": {
         "rule": "teapot",
@@ -2344,7 +2351,14 @@
           "opacity": 0.29
         },
         "light": "warm painterly celestial ivory/cobalt/gold",
-        "view_angle_down_deg_estimate": 15
+        "view_angle_down_deg_estimate": 15,
+        "material_response": {
+          "brightness": 0.8,
+          "saturation": 0.78,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       },
       "lighting": {
         "rule": "teapot_lid",
@@ -2512,7 +2526,14 @@
           "opacity": 0.29
         },
         "light": "warm painterly celestial ivory/cobalt/gold",
-        "view_angle_down_deg_estimate": 15
+        "view_angle_down_deg_estimate": 15,
+        "material_response": {
+          "brightness": 0.8,
+          "saturation": 0.78,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       },
       "lighting": {
         "rule": "saucer",
@@ -2711,7 +2732,14 @@
           "opacity": 0.29
         },
         "light": "warm painterly celestial ivory/cobalt/gold",
-        "view_angle_down_deg_estimate": 15
+        "view_angle_down_deg_estimate": 15,
+        "material_response": {
+          "brightness": 0.8,
+          "saturation": 0.78,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       },
       "lighting": {
         "rule": "teacup",
@@ -2913,7 +2941,14 @@
           "opacity": 0.29
         },
         "light": "warm painterly celestial ivory/cobalt/gold",
-        "view_angle_down_deg_estimate": 15
+        "view_angle_down_deg_estimate": 15,
+        "material_response": {
+          "brightness": 0.8,
+          "saturation": 0.78,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       },
       "lighting": {
         "rule": "milk_jug",
@@ -3097,7 +3132,14 @@
           "opacity": 0.29
         },
         "light": "warm painterly celestial ivory/cobalt/gold",
-        "view_angle_down_deg_estimate": 15
+        "view_angle_down_deg_estimate": 15,
+        "material_response": {
+          "brightness": 0.8,
+          "saturation": 0.78,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       },
       "contents": {
         "kind": "sugar_cubes",
@@ -3287,7 +3329,14 @@
           "opacity": 0.25
         },
         "light": "warm painterly celestial ivory/cobalt/gold",
-        "view_angle_down_deg_estimate": 15
+        "view_angle_down_deg_estimate": 15,
+        "material_response": {
+          "brightness": 0.8,
+          "saturation": 0.78,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       },
       "lighting": {
         "rule": "spoon",
@@ -3967,6 +4016,15 @@
         "single_rigid_raster": true,
         "members_separately_pickable": false,
         "separation_requires_new_art": true
+      },
+      "render": {
+        "material_response": {
+          "brightness": 0.88,
+          "saturation": 0.86,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       }
     },
     {
@@ -4509,6 +4567,15 @@
         "single_rigid_raster": true,
         "members_separately_pickable": false,
         "separation_requires_new_art": true
+      },
+      "render": {
+        "material_response": {
+          "brightness": 0.88,
+          "saturation": 0.86,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       }
     },
     {
@@ -4667,6 +4734,15 @@
         "single_rigid_raster": true,
         "members_separately_pickable": false,
         "separation_requires_new_art": true
+      },
+      "render": {
+        "material_response": {
+          "brightness": 0.88,
+          "saturation": 0.86,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       }
     },
     {
@@ -8713,9 +8789,9 @@
         ],
         "radius": [
           32.12,
-          2.3
+          2.6449999999999996
         ],
-        "opacity": 0.38,
+        "opacity": 0.48,
         "cast": true,
         "height_scale": 0.6
       },
@@ -8726,9 +8802,9 @@
         ],
         "radius": [
           13.64,
-          2.3
+          2.6449999999999996
         ],
-        "opacity": 0.38,
+        "opacity": 0.48,
         "cast": false,
         "height_scale": 0.6
       },
@@ -8739,9 +8815,9 @@
         ],
         "radius": [
           17.16,
-          2.3
+          2.6449999999999996
         ],
-        "opacity": 0.38,
+        "opacity": 0.48,
         "cast": true,
         "height_scale": 0.6
       },
@@ -8752,9 +8828,9 @@
         ],
         "radius": [
           21.56,
-          2.3
+          2.6449999999999996
         ],
-        "opacity": 0.38,
+        "opacity": 0.48,
         "cast": false,
         "height_scale": 0.6
       },
@@ -8765,9 +8841,9 @@
         ],
         "radius": [
           17.6,
-          2.3
+          2.6449999999999996
         ],
-        "opacity": 0.38,
+        "opacity": 0.48,
         "cast": true,
         "height_scale": 0.6
       },
@@ -8778,9 +8854,9 @@
         ],
         "radius": [
           19.36,
-          2.3
+          2.6449999999999996
         ],
-        "opacity": 0.38,
+        "opacity": 0.48,
         "cast": true,
         "height_scale": 0.6
       },
@@ -8791,9 +8867,9 @@
         ],
         "radius": [
           14.52,
-          2.3
+          2.6449999999999996
         ],
-        "opacity": 0.38,
+        "opacity": 0.48,
         "cast": true,
         "height_scale": 0.1
       },
@@ -8830,9 +8906,9 @@
         ],
         "radius": [
           42.0,
-          2.5
+          2.875
         ],
-        "opacity": 0.4,
+        "opacity": 0.5,
         "cast": true,
         "height_scale": 0.25
       },
@@ -8869,9 +8945,9 @@
         ],
         "radius": [
           25.5,
-          2.5
+          2.875
         ],
-        "opacity": 0.4,
+        "opacity": 0.5,
         "cast": true,
         "height_scale": 0.25
       },
@@ -8882,9 +8958,9 @@
         ],
         "radius": [
           21.599999999999998,
-          2.5
+          2.875
         ],
-        "opacity": 0.4,
+        "opacity": 0.5,
         "cast": true,
         "height_scale": 0.55
       },
@@ -9289,6 +9365,17 @@
       "night": "composite-night.png",
       "comparison": "lighting-comparison.png",
       "before_after": "lighting-before-after.png"
+    },
+    "material_response_contract": {
+      "location": "objects[].render.material_response",
+      "order": [
+        "saturate(saturation)",
+        "contrast(contrast)",
+        "brightness(brightness)",
+        "sepia(sepia)",
+        "shared room illumination"
+      ],
+      "note": "Render from original sprites directly. Shadows remain separate. Tea receives stronger brightness reduction than paper and writing props."
     }
   },
   "lighting_assets": [
@@ -9570,15 +9657,15 @@
       "mode": "RGBA",
       "alpha_bounds": [
         44,
-        708,
+        707,
         774,
-        768
+        769
       ],
       "alpha_range": [
         0,
-        93
+        117
       ],
-      "sha256": "1ccaabd60651859b2dbf1c91b71da5da4a54b7e89d1caf1aaf8788d19a3a176a",
+      "sha256": "3198e98bf63226dcffe1f71ad5d37c04b5f510ea224fc96243e77ba4fbea279d",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -9860,15 +9947,15 @@
       "mode": "RGBA",
       "alpha_bounds": [
         44,
-        708,
+        707,
         774,
-        768
+        769
       ],
       "alpha_range": [
         0,
-        93
+        117
       ],
-      "sha256": "1ccaabd60651859b2dbf1c91b71da5da4a54b7e89d1caf1aaf8788d19a3a176a",
+      "sha256": "3198e98bf63226dcffe1f71ad5d37c04b5f510ea224fc96243e77ba4fbea279d",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -10150,15 +10237,15 @@
       "mode": "RGBA",
       "alpha_bounds": [
         44,
-        708,
+        707,
         774,
-        768
+        769
       ],
       "alpha_range": [
         0,
-        93
+        117
       ],
-      "sha256": "1ccaabd60651859b2dbf1c91b71da5da4a54b7e89d1caf1aaf8788d19a3a176a",
+      "sha256": "3198e98bf63226dcffe1f71ad5d37c04b5f510ea224fc96243e77ba4fbea279d",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     },
@@ -10440,15 +10527,15 @@
       "mode": "RGBA",
       "alpha_bounds": [
         44,
-        708,
+        707,
         774,
-        768
+        769
       ],
       "alpha_range": [
         0,
-        93
+        117
       ],
-      "sha256": "1ccaabd60651859b2dbf1c91b71da5da4a54b7e89d1caf1aaf8788d19a3a176a",
+      "sha256": "3198e98bf63226dcffe1f71ad5d37c04b5f510ea224fc96243e77ba4fbea279d",
       "snapshot_objects": "Default arrangement with wizard visible; regenerate after object movement or visibility change.",
       "source": "Runtime canvas renderer; generated from lighting configuration and original alpha silhouettes, not new painted prop artwork."
     }

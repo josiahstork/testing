@@ -507,9 +507,9 @@
       ],
       "radius": [
         32.12,
-        2.3
+        2.6449999999999996
       ],
-      "opacity": 0.38,
+      "opacity": 0.48,
       "cast": true,
       "height_scale": 0.6
     },
@@ -520,9 +520,9 @@
       ],
       "radius": [
         13.64,
-        2.3
+        2.6449999999999996
       ],
-      "opacity": 0.38,
+      "opacity": 0.48,
       "cast": false,
       "height_scale": 0.6
     },
@@ -533,9 +533,9 @@
       ],
       "radius": [
         17.16,
-        2.3
+        2.6449999999999996
       ],
-      "opacity": 0.38,
+      "opacity": 0.48,
       "cast": true,
       "height_scale": 0.6
     },
@@ -546,9 +546,9 @@
       ],
       "radius": [
         21.56,
-        2.3
+        2.6449999999999996
       ],
-      "opacity": 0.38,
+      "opacity": 0.48,
       "cast": false,
       "height_scale": 0.6
     },
@@ -559,9 +559,9 @@
       ],
       "radius": [
         17.6,
-        2.3
+        2.6449999999999996
       ],
-      "opacity": 0.38,
+      "opacity": 0.48,
       "cast": true,
       "height_scale": 0.6
     },
@@ -572,9 +572,9 @@
       ],
       "radius": [
         19.36,
-        2.3
+        2.6449999999999996
       ],
-      "opacity": 0.38,
+      "opacity": 0.48,
       "cast": true,
       "height_scale": 0.6
     },
@@ -585,9 +585,9 @@
       ],
       "radius": [
         14.52,
-        2.3
+        2.6449999999999996
       ],
-      "opacity": 0.38,
+      "opacity": 0.48,
       "cast": true,
       "height_scale": 0.1
     },
@@ -624,9 +624,9 @@
       ],
       "radius": [
         42.0,
-        2.5
+        2.875
       ],
-      "opacity": 0.4,
+      "opacity": 0.5,
       "cast": true,
       "height_scale": 0.25
     },
@@ -663,9 +663,9 @@
       ],
       "radius": [
         25.5,
-        2.5
+        2.875
       ],
-      "opacity": 0.4,
+      "opacity": 0.5,
       "cast": true,
       "height_scale": 0.25
     },
@@ -676,9 +676,9 @@
       ],
       "radius": [
         21.599999999999998,
-        2.5
+        2.875
       ],
-      "opacity": 0.4,
+      "opacity": 0.5,
       "cast": true,
       "height_scale": 0.55
     },
@@ -1083,5 +1083,16 @@
     "night": "composite-night.png",
     "comparison": "lighting-comparison.png",
     "before_after": "lighting-before-after.png"
+  },
+  "material_response_contract": {
+    "location": "objects[].render.material_response",
+    "order": [
+      "saturate(saturation)",
+      "contrast(contrast)",
+      "brightness(brightness)",
+      "sepia(sepia)",
+      "shared room illumination"
+    ],
+    "note": "Render from original sprites directly. Shadows remain separate. Tea receives stronger brightness reduction than paper and writing props."
   }
 }

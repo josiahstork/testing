@@ -172,7 +172,14 @@
       "opacity": 0.29
     },
     "light": "warm painterly celestial ivory/cobalt/gold",
-    "view_angle_down_deg_estimate": 15
+    "view_angle_down_deg_estimate": 15,
+    "material_response": {
+      "brightness": 0.8,
+      "saturation": 0.78,
+      "contrast": 0.9,
+      "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+      "sepia": 0.08
+    }
   },
   "contents": {
     "kind": "sugar_cubes",

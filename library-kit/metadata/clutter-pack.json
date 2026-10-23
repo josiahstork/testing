@@ -623,6 +623,15 @@
         "single_rigid_raster": true,
         "members_separately_pickable": false,
         "separation_requires_new_art": true
+      },
+      "render": {
+        "material_response": {
+          "brightness": 0.88,
+          "saturation": 0.86,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       }
     },
     {
@@ -1165,6 +1174,15 @@
         "single_rigid_raster": true,
         "members_separately_pickable": false,
         "separation_requires_new_art": true
+      },
+      "render": {
+        "material_response": {
+          "brightness": 0.88,
+          "saturation": 0.86,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       }
     },
     {
@@ -1323,6 +1341,15 @@
         "single_rigid_raster": true,
         "members_separately_pickable": false,
         "separation_requires_new_art": true
+      },
+      "render": {
+        "material_response": {
+          "brightness": 0.88,
+          "saturation": 0.86,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
       }
     },
     {
@@ -1612,9 +1639,9 @@
       ],
       "radius": [
         42.0,
-        2.5
+        2.875
       ],
-      "opacity": 0.4,
+      "opacity": 0.5,
       "cast": true,
       "height_scale": 0.25
     },
@@ -1651,9 +1678,9 @@
       ],
       "radius": [
         25.5,
-        2.5
+        2.875
       ],
-      "opacity": 0.4,
+      "opacity": 0.5,
       "cast": true,
       "height_scale": 0.25
     },
@@ -1664,9 +1691,9 @@
       ],
       "radius": [
         21.599999999999998,
-        2.5
+        2.875
       ],
-      "opacity": 0.4,
+      "opacity": 0.5,
       "cast": true,
       "height_scale": 0.55
     },
@@ -1734,5 +1761,16 @@
     "lighting": "Multiply shared illumination into the interior buffer after props and separate shadows; preserve interior alpha.",
     "depth": "Use per-instance z, not filename order. Floor shadow z15, ledge shadow z46.5, table shadow z70.",
     "source_files": "Original untrimmed rasters. Do not crop without updating UV coordinates and transforms."
+  },
+  "material_response_contract": {
+    "location": "objects[].render.material_response",
+    "order": [
+      "saturate(saturation)",
+      "contrast(contrast)",
+      "brightness(brightness)",
+      "sepia(sepia)",
+      "shared room illumination"
+    ],
+    "note": "Render from original sprites directly. Shadows remain separate. Tea receives stronger brightness reduction than paper and writing props."
   }
 }
