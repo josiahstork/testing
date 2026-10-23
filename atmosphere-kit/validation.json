@@ -1,24 +1,28 @@
 {
-  "art_pack": "atmosphere",
-  "new_images": 10,
-  "source_images": 24,
+  "art_pack": "atmosphere matched tea",
+  "new_tea_rasters": 7,
+  "generated_sources": 17,
+  "active_source_images": 24,
   "placed_instances": 19,
   "checks": [
     {
-      "source_pngs_verified": 24,
+      "active_source_pngs_verified": 24,
       "hashes_valid": true
-    },
-    {
-      "both_room_plates_have_transparent_exterior_openings": true
     },
     {
       "cup_and_lid_seats_aligned": true
     },
     {
-      "all_sprite_aspect_ratios_preserved": true
+      "tea_support_points_on_table": true
     },
     {
-      "preview_and_offline_loader": "passed"
+      "sprite_aspect_ratios_preserved": true
+    },
+    {
+      "exterior_openings_transparent": true
+    },
+    {
+      "preview_and_folder_loader": "passed"
     }
   ]
 }

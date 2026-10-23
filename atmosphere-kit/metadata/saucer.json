@@ -1,11 +1,11 @@
 {
   "asset": {
     "id": "saucer",
-    "file": "retained/saucer.png",
+    "file": "assets/saucer_matched.png",
     "width": 1536,
     "height": 1024,
     "mode": "RGBA",
-    "sha256": "22da86a02b338c97cb5271e638e64af5ab3083250cda584077e15ef7bd80d085",
+    "sha256": "33ffb380c3900caa0236b03e0bed46a48981606d313fe190cdc45e10f9610dbe",
     "color_space": "sRGB",
     "alpha_encoding": "straight",
     "alpha_range": [
@@ -13,13 +13,13 @@
       254
     ],
     "alpha_bbox_threshold_32": [
-      16,
-      123,
-      1520,
-      904
+      73,
+      169,
+      1467,
+      921
     ],
     "trimmed": false,
-    "role": "Retained source art, placed at new scale; saucer uses the recent deeper-rim redraw."
+    "role": "New individual tea sprite redrawn directly from the foreground service in assets/master.png; warm worn ivory/cobalt/aged-brass design."
   },
   "object": {
     "id": "saucer",
@@ -27,7 +27,7 @@
     "label": "saucer",
     "transform": {
       "x": 262.5,
-      "y": 797.85,
+      "y": 797.5333333333333,
       "width": 95,
       "height": 63.333333333333336,
       "rotation_deg": 0,
@@ -56,7 +56,7 @@
       ],
       "contact_uv": [
         0.5,
-        0.94
+        0.86
       ],
       "collision": {
         "type": "convex_polygon",
@@ -64,30 +64,30 @@
         "vertices": [
           [
             0.12,
-            0.18
+            0.24
           ],
           [
-            0.82,
+            0.78,
             0.12
           ],
           [
             0.96,
-            0.5
+            0.38
           ],
           [
             0.83,
-            0.94
+            0.82
           ],
           [
-            0.2,
-            0.94
+            0.35,
+            0.92
           ],
           [
-            0.05,
-            0.55
+            0.08,
+            0.58
           ]
         ],
-        "accuracy": "conservative authored proxy; alpha hit testing is separate"
+        "accuracy": "Conservative authored proxy. Preview click picking uses exact source alpha."
       },
       "rotation_constraints_deg": [
         -15,
@@ -110,11 +110,11 @@
     "anchors": {
       "base": [
         0.5,
-        0.855
+        0.86
       ],
       "cup_seat": [
         0.5,
-        0.58
+        0.56
       ],
       "grip_edge": [
         0.88,
@@ -150,9 +150,8 @@
       "additional_pose_rasters_included": false
     },
     "calibration": {
-      "status": "Revision 3: thematic and support pass with wizard present",
-      "anchors": "Rechecked against new diffuse raster including transparent margins.",
-      "physics": "plausible design estimates, not measured physical properties"
+      "anchors": "Re-authored against new matched source; normalized full untrimmed raster.",
+      "physics": "Design estimates only."
     },
     "pickup_contract": {
       "hand_anchor": "grip_edge",
@@ -168,25 +167,16 @@
       "idle_character_art_included": true
     },
     "render": {
-      "shadow": {
-        "anchor": "base",
-        "radius": [
-          21.56,
-          2
-        ],
-        "opacity": 0.29
-      },
-      "light": "warm painterly celestial ivory/cobalt/gold",
-      "view_angle_down_deg_estimate": 15,
       "material_response": {
-        "brightness": 0.96,
-        "saturation": 0.94,
-        "contrast": 0.98,
-        "sepia": 0.02,
-        "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
+        "brightness": 0.87,
+        "saturation": 0.86,
+        "contrast": 1,
+        "sepia": 0,
+        "implementation": "Direct Canvas2D filter; final image exported from these actual sprites."
       }
     },
     "preview_shadow": true,
-    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation.",
+    "source_design": "assets/master.png foreground tea-service reference; redrawn rather than pixel extracted."
   }
 }

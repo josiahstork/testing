@@ -1,11 +1,11 @@
 {
   "asset": {
     "id": "teacup",
-    "file": "retained/teacup.png",
+    "file": "assets/teacup_matched.png",
     "width": 1536,
     "height": 1024,
     "mode": "RGBA",
-    "sha256": "07bb505d373a2e5ad10b5de72d435d32ed314c15b211ce792143f6d192c9425f",
+    "sha256": "a73aa2818ac95bad9e010a9ed12c371f97fdc319630902b79d4cb18b0678d53e",
     "color_space": "sRGB",
     "alpha_encoding": "straight",
     "alpha_range": [
@@ -13,13 +13,13 @@
       254
     ],
     "alpha_bbox_threshold_32": [
-      200,
-      90,
-      1491,
-      968
+      193,
+      131,
+      1419,
+      928
     ],
     "trimmed": false,
-    "role": "Existing source art reused in the new composition."
+    "role": "New individual tea sprite redrawn directly from the foreground service in assets/master.png; warm worn ivory/cobalt/aged-brass design."
   },
   "object": {
     "id": "teacup",
@@ -27,7 +27,7 @@
     "label": "teacup",
     "transform": {
       "x": 277.6,
-      "y": 789.7993333333334,
+      "y": 790.52,
       "width": 72,
       "height": 48.0,
       "rotation_deg": 0,
@@ -55,8 +55,8 @@
         0.62
       ],
       "contact_uv": [
-        0.5,
-        0.94
+        0.45,
+        0.885
       ],
       "collision": {
         "type": "convex_polygon",
@@ -64,30 +64,30 @@
         "vertices": [
           [
             0.12,
-            0.18
+            0.24
           ],
           [
-            0.82,
+            0.78,
             0.12
           ],
           [
             0.96,
-            0.5
+            0.38
           ],
           [
             0.83,
-            0.94
+            0.82
           ],
           [
-            0.2,
-            0.94
+            0.35,
+            0.92
           ],
           [
-            0.05,
-            0.55
+            0.08,
+            0.58
           ]
         ],
-        "accuracy": "conservative authored proxy; alpha hit testing is separate"
+        "accuracy": "Conservative authored proxy. Preview click picking uses exact source alpha."
       },
       "rotation_constraints_deg": [
         -15,
@@ -108,21 +108,21 @@
       "accessible_label": "teacup"
     },
     "anchors": {
-      "grip_handle": [
-        0.85,
-        0.42
-      ],
-      "rim_center": [
-        0.45,
-        0.192
-      ],
-      "liquid_center": [
-        0.45,
-        0.192
-      ],
       "base": [
         0.45,
-        0.933
+        0.885
+      ],
+      "grip_handle": [
+        0.84,
+        0.46
+      ],
+      "rim_center": [
+        0.44,
+        0.24
+      ],
+      "liquid_center": [
+        0.44,
+        0.26
       ]
     },
     "interaction": {
@@ -154,9 +154,8 @@
       "additional_pose_rasters_included": false
     },
     "calibration": {
-      "status": "Revision 3: thematic and support pass with wizard present",
-      "anchors": "Rechecked against new diffuse raster including transparent margins.",
-      "physics": "plausible design estimates, not measured physical properties"
+      "anchors": "Re-authored against new matched source; normalized full untrimmed raster.",
+      "physics": "Design estimates only."
     },
     "liquid": {
       "capacity_ml_estimate": 180,
@@ -199,25 +198,16 @@
       "idle_character_art_included": true
     },
     "render": {
-      "shadow": {
-        "anchor": "base",
-        "radius": [
-          17.16,
-          2
-        ],
-        "opacity": 0.29
-      },
-      "light": "warm painterly celestial ivory/cobalt/gold",
-      "view_angle_down_deg_estimate": 15,
       "material_response": {
-        "brightness": 0.96,
-        "saturation": 0.94,
-        "contrast": 0.98,
-        "sepia": 0.02,
-        "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
+        "brightness": 0.87,
+        "saturation": 0.86,
+        "contrast": 1,
+        "sepia": 0,
+        "implementation": "Direct Canvas2D filter; final image exported from these actual sprites."
       }
     },
     "preview_shadow": true,
-    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation.",
+    "source_design": "assets/master.png foreground tea-service reference; redrawn rather than pixel extracted."
   }
 }

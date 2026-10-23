@@ -20,4 +20,4 @@
 
 ## Atmosphere revision
 
-[New composition painting](atmosphere-kit/assets/master.png) · [Actual separate-layer assembly](atmosphere-kit/layer-assembly.png) · [New images and metadata](atmosphere-kit/README.md) · [Download atmosphere pack](atmosphere-kit.zip?raw=true)
+[Current composition — actual sprites](atmosphere-kit/layer-assembly.png) · [Matched tea close-up](atmosphere-kit/tea-service-closeup.png) · [New images and metadata](atmosphere-kit/README.md) · [Download atmosphere pack](atmosphere-kit.zip?raw=true)

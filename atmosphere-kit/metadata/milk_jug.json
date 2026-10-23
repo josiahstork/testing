@@ -1,11 +1,11 @@
 {
   "asset": {
     "id": "milk_jug",
-    "file": "retained/milk_jug.png",
+    "file": "assets/milk_jug_matched.png",
     "width": 1536,
     "height": 1024,
     "mode": "RGBA",
-    "sha256": "711b38e0f7f374848dbc66972649eac19710f7b806bb7129513b862e527461e1",
+    "sha256": "9da4c0fd44b371a662ed03e2470fd42881605c382b61785585307cca56274b88",
     "color_space": "sRGB",
     "alpha_encoding": "straight",
     "alpha_range": [
@@ -13,21 +13,21 @@
       254
     ],
     "alpha_bbox_threshold_32": [
-      210,
-      31,
-      1470,
-      996
+      305,
+      136,
+      1334,
+      912
     ],
     "trimmed": false,
-    "role": "Existing source art reused in the new composition."
+    "role": "New individual tea sprite redrawn directly from the foreground service in assets/master.png; warm worn ivory/cobalt/aged-brass design."
   },
   "object": {
     "id": "milk_jug",
     "asset": "milk_jug",
     "label": "milk jug",
     "transform": {
-      "x": 340.0,
-      "y": 773.3666666666667,
+      "x": 339.3,
+      "y": 775.9333333333334,
       "width": 70,
       "height": 46.666666666666664,
       "rotation_deg": 0,
@@ -55,8 +55,8 @@
         0.62
       ],
       "contact_uv": [
-        0.5,
-        0.935
+        0.51,
+        0.88
       ],
       "collision": {
         "type": "convex_polygon",
@@ -64,30 +64,30 @@
         "vertices": [
           [
             0.12,
-            0.18
+            0.24
           ],
           [
-            0.82,
+            0.78,
             0.12
           ],
           [
             0.96,
-            0.5
+            0.38
           ],
           [
             0.83,
-            0.94
+            0.82
           ],
           [
-            0.2,
-            0.94
+            0.35,
+            0.92
           ],
           [
-            0.05,
-            0.55
+            0.08,
+            0.58
           ]
         ],
-        "accuracy": "conservative authored proxy; alpha hit testing is separate"
+        "accuracy": "Conservative authored proxy. Preview click picking uses exact source alpha."
       },
       "rotation_constraints_deg": [
         -15,
@@ -108,21 +108,21 @@
       "accessible_label": "milk jug"
     },
     "anchors": {
+      "base": [
+        0.51,
+        0.88
+      ],
       "grip_handle": [
-        0.83,
-        0.42
+        0.825,
+        0.436
       ],
       "spout_tip": [
-        0.15,
-        0.13
+        0.21,
+        0.208
       ],
       "mouth_center": [
-        0.42,
-        0.18
-      ],
-      "base": [
-        0.5,
-        0.935
+        0.46,
+        0.24
       ]
     },
     "interaction": {
@@ -154,9 +154,8 @@
       "additional_pose_rasters_included": false
     },
     "calibration": {
-      "status": "Revision 3: thematic and support pass with wizard present",
-      "anchors": "Rechecked against new diffuse raster including transparent margins.",
-      "physics": "plausible design estimates, not measured physical properties"
+      "anchors": "Re-authored against new matched source; normalized full untrimmed raster.",
+      "physics": "Design estimates only."
     },
     "liquid": {
       "capacity_ml_estimate": 200,
@@ -201,25 +200,16 @@
       "idle_character_art_included": true
     },
     "render": {
-      "shadow": {
-        "anchor": "base",
-        "radius": [
-          17.6,
-          2
-        ],
-        "opacity": 0.29
-      },
-      "light": "warm painterly celestial ivory/cobalt/gold",
-      "view_angle_down_deg_estimate": 15,
       "material_response": {
-        "brightness": 0.96,
-        "saturation": 0.94,
-        "contrast": 0.98,
-        "sepia": 0.02,
-        "implementation": "Direct Canvas2D filter before shared room illumination; source is newly redrawn diffuse artwork."
+        "brightness": 0.87,
+        "saturation": 0.86,
+        "contrast": 1,
+        "sepia": 0,
+        "implementation": "Direct Canvas2D filter; final image exported from these actual sprites."
       }
     },
     "preview_shadow": true,
-    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation.",
+    "source_design": "assets/master.png foreground tea-service reference; redrawn rather than pixel extracted."
   }
 }

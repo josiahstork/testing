@@ -1,12 +1,16 @@
-# Library atmosphere art pack
+# Library atmosphere art pack · matched tea service
 
-[**New composition painting**](assets/master.png) · [**Actual separate-layer assembly**](layer-assembly.png) · [**Download PNGs, JSON and preview**](../atmosphere-kit.zip?raw=true)
+[**Current composition — actual sprites**](layer-assembly.png) · [**Tea close-up from the same render**](tea-service-closeup.png) · [**Download PNGs, JSON and preview**](../atmosphere-kit.zip?raw=true)
 
-![New composition painting](assets/master.png)
+![Current actual layer assembly](layer-assembly.png)
 
-Ten new images move the room toward the original inspiration: a larger central sleeping dragon, a smaller wizard beside the rear workbench, a cropped worn oak tea table, subdued chair, modest footrest, irregular belongings, and distributed candle pools. The original interactive kit remains in `library-kit/`.
+The seven tea pieces are now individually redrawn from the earlier composition painting's foreground service: rounder vessels, broader worn cobalt/old-brass decoration, warmer ivory, a deeper saucer and separate cup/lid seating. The authoritative final image is **layer-assembly.png**, rendered from the actual PNG assets and JSON. The close-up is cropped from that same render.
 
-## New images
+[The earlier concept painting](assets/master.png) is retained as a design reference only; it is not a sprite export or the current final image. The new pieces are redraws from that reference, not pixel-exact extractions. The preview now opens on the actual assembly and labels the older concept explicitly.
+
+The room keeps its larger central sleeping dragon, smaller wizard beside the rear workbench, cropped worn oak table, modest footrest, irregular belongings and distributed candle pools. The original interactive kit remains in `library-kit/`.
+
+## Room and furniture images
 
 | File | Purpose |
 | --- | --- |
@@ -21,7 +25,11 @@ Ten new images move the room toward the original inspiration: a larger central s
 | `assets/study_cluster.png` | Separate layered books, manuscript, ink/quill and purple flowers; one rigid group. |
 | `assets/dragon.png` | New quiet curled sleeping dragon painted to match the master. |
 
-The `retained/` folder supplies fourteen earlier sources used by the assembly: outdoor landscape, wizard, gargoyle, ladder, cauldron, astronomical instrument, fire and seven tea pieces. The saucer uses the recent deeper-rim redraw. Original sources remain separate PNGs; no Python image processing was used to repaint or extract the artwork.
+## Matched tea sprites
+
+`assets/teapot_matched.png`, `teapot_lid_matched.png`, `teacup_matched.png`, `saucer_matched.png`, `milk_jug_matched.png`, `sugar_bowl_matched.png` and `spoon_matched.png` are seven independent transparent rasters. Metadata includes recalibrated UV anchors, grips, spout points, contact points, source dimensions, hashes, material response and transforms. Cup and lid remain separate from their parent vessels.
+
+Seven active older sources remain in `retained/`: outdoor landscape, wizard, gargoyle, ladder, cauldron, astronomical instrument and fire. The seven superseded tea sources remain in Git history and the repository, but are not loaded or included in the updated ZIP. The ZIP contains all 24 active source PNGs plus exported previews, JSON and HTML.
 
 ## Assembly and metadata
 
