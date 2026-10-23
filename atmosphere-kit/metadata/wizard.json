@@ -1,11 +1,11 @@
 {
   "asset": {
     "id": "wizard",
-    "file": "retained/wizard.png",
+    "file": "assets/wizard_warm.png",
     "width": 1024,
     "height": 1536,
     "mode": "RGBA",
-    "sha256": "d62d894fb23030e2949383e435c386ef154e34e1835ce99dfcc89f5847801df0",
+    "sha256": "04a4199a398d57f0e6e1ae300ef8d4aa27ce54948a066fb746b716bf2f510b57",
     "color_space": "sRGB",
     "alpha_encoding": "straight",
     "alpha_range": [
@@ -13,13 +13,13 @@
       254
     ],
     "alpha_bbox_threshold_32": [
-      147,
+      138,
       6,
-      895,
+      901,
       1513
     ],
     "trimmed": false,
-    "role": "Existing source art reused in the new composition."
+    "role": "New character redraw with hearth amber illumination and warm umber shadows; same pose and framing."
   },
   "object": {
     "id": "wizard",
@@ -177,24 +177,17 @@
     },
     "calibration": {
       "status": "Revision 3: thematic and support pass with wizard present",
-      "anchors": "visually estimated against this exact generated raster",
+      "anchors": "Rechecked against warm redraw with preserved source dimensions and pose; untrimmed source UVs.",
       "physics": "plausible design estimates, not measured physical properties"
     },
     "render": {
-      "contact_anchors": [
-        "foot_left",
-        "foot_right"
-      ],
-      "shadow": {
-        "anchor": "base",
-        "radius": [
-          18,
-          3.5
-        ],
-        "opacity": 0.36
-      },
-      "visibility_control": "wizard",
-      "foreground_occlusion": "Behind foreground tea table; in front of midground workbench."
+      "material_response": {
+        "brightness": 0.9,
+        "saturation": 0.92,
+        "contrast": 1,
+        "sepia": 0,
+        "implementation": "Direct Canvas2D filter on new warm redraw; no additional sepia warming."
+      }
     },
     "character": {
       "height_m_design_estimate": 1.9,
@@ -220,6 +213,7 @@
       "reach_poses_included": false
     },
     "preview_shadow": true,
-    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation."
+    "preview_contract": "Inspect-only composition preview; prior animation/rigging specifications are design references, not active implementation.",
+    "source_design": "Existing character identity, redrawn using the actual layer assembly as the lighting reference."
   }
 }

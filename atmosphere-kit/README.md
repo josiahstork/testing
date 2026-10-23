@@ -29,7 +29,7 @@ The room keeps its larger central sleeping dragon, smaller wizard beside the rea
 
 `assets/teapot_matched.png`, `teapot_lid_matched.png`, `teacup_matched.png`, `saucer_matched.png`, `milk_jug_matched.png`, `sugar_bowl_matched.png` and `spoon_matched.png` are seven independent transparent rasters. Metadata includes recalibrated UV anchors, grips, spout points, contact points, source dimensions, hashes, material response and transforms. Cup and lid remain separate from their parent vessels.
 
-Seven active older sources remain in `retained/`: outdoor landscape, wizard, gargoyle, ladder, cauldron, astronomical instrument and fire. The seven superseded tea sources remain in Git history and the repository, but are not loaded or included in the updated ZIP. The ZIP contains all 24 active source PNGs plus exported previews, JSON and HTML.
+The wizard is now redrawn as `assets/wizard_warm.png`, with amber hearth light and warm brown shadows matched to his room location. His identity, pose and placement are retained. Six active older sources remain in `retained/`: outdoor landscape, gargoyle, ladder, cauldron, astronomical instrument and fire. The seven superseded tea sources remain in Git history and the repository, but are not loaded or included in the updated ZIP. The ZIP contains all 24 active source PNGs plus exported previews, JSON and HTML.
 
 ## Assembly and metadata
 
