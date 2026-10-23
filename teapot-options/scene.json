@@ -1,0 +1,8691 @@
+{
+  "format_version": "1.3.0",
+  "title": "Teapot comparison \u00b7 five options on the main table",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "origin": "top-left",
+    "x_axis": "right",
+    "y_axis": "down",
+    "unit": "scene pixels",
+    "rotation_positive": "clockwise",
+    "object_anchor_space": "normalized full raster dimensions",
+    "responsive": "uniform contain scale with letterboxing; invert letterbox transform before hit tests",
+    "transform_formula": "scene_point = translation + rotation * scale * source_pixel"
+  },
+  "production_status": {
+    "art": "Revision 4: unchanged character/prop art with shared image-based lighting and receiver shadows",
+    "exact_reference_reconstruction": false,
+    "runtime": "preview implements selected interactions only",
+    "physics": "authored design specification, not a physics simulation",
+    "known_art_issues": [
+      "Existing painted highlights remain in the source images.",
+      "Light maps estimate broad surface illumination without per-pixel normals.",
+      "Night exterior is a graded version of the daylight landscape, not new night landscape art.",
+      "Static grouped furniture uses authored shadow proxies rather than recovered silhouettes.",
+      "Wizard has idle pose only; no walking, reaching, gripping or pouring poses.",
+      "Chest lid and armillary rings are still combined rasters."
+    ]
+  },
+  "assets": {
+    "room": {
+      "id": "room",
+      "file": "../library-kit/assets/room.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "content_bbox_threshold_128": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "c14e613757df7a066645a3228b343f50b6f2be860491d10c8e5fc356e64e90ef",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "outside_day": {
+      "id": "outside_day",
+      "file": "../library-kit/assets/outside_day.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "alpha_bbox_threshold_32": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alpha_range": null,
+      "sha256": "1c340d9c353b5fe03468914b486547f56734e51d5c13b63c6a55befaba47c0b6",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source image, including transparent margins",
+      "source": "AI-generated raster; geometry and physics are authored estimates"
+    },
+    "furnishings": {
+      "id": "furnishings",
+      "file": "../library-kit/assets/furnishings.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "46abbdad73121cb3338ed445448baab981533cefa50ac4879bbd80f1bd58c545",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source image, including transparent margins",
+      "source": "Neutral static composition. Dynamic contact shadows, cast shadows and shared light maps are supplied separately."
+    },
+    "dragon": {
+      "id": "dragon",
+      "file": "../library-kit/assets/dragon.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        51,
+        86,
+        1530,
+        920
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "18e8494e169182a1f4941c8a0244ae3fd68f0b24ea88b08a9b137ab61df975f0",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source image, including transparent margins",
+      "source": "AI-generated raster; geometry and physics are authored estimates"
+    },
+    "gargoyle": {
+      "id": "gargoyle",
+      "file": "../library-kit/assets/gargoyle.png",
+      "width": 1226,
+      "height": 1283,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        172,
+        16,
+        1176,
+        1229
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "c6ca869d1d34b42c1223f4b115259f2d831e598a10fd3f6c1dc827bf743a5643",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source image, including transparent margins",
+      "source": "AI-generated raster; geometry and physics are authored estimates"
+    },
+    "ladder": {
+      "id": "ladder",
+      "file": "../library-kit/assets/ladder.png",
+      "width": 728,
+      "height": 2159,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        125,
+        14,
+        603,
+        2136
+      ],
+      "content_bbox_threshold_128": [
+        125,
+        15,
+        603,
+        2136
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "1c8a5d72b98dfbd5f514cb62bf1d48e7cad43846b493c12d7098d6ff7c68f30b",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "chest": {
+      "id": "chest",
+      "file": "../library-kit/assets/chest.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        126,
+        18,
+        1410,
+        1016
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "145f6eef6403854f628615f19564f97836174b9ac810aa5262e4acd8b0c81e69",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source image, including transparent margins",
+      "source": "AI-generated raster; geometry and physics are authored estimates"
+    },
+    "cauldron": {
+      "id": "cauldron",
+      "file": "../library-kit/assets/cauldron.png",
+      "width": 1302,
+      "height": 1208,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        57,
+        103,
+        1248,
+        1121
+      ],
+      "content_bbox_threshold_128": [
+        58,
+        104,
+        1248,
+        1120
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "cb9439fb691a52beb028be3a73df7189fe0dfff44b27d19ad00fcb62889f8422",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
+    },
+    "astrolabe": {
+      "id": "astrolabe",
+      "file": "../library-kit/assets/astrolabe.png",
+      "width": 1145,
+      "height": 1374,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        78,
+        15,
+        1056,
+        1336
+      ],
+      "content_bbox_threshold_128": [
+        79,
+        16,
+        1055,
+        1335
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "e253ce81681470800718d5fd0fbb1f38f87c1469a044555177db8f7969915a30",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "teapot": {
+      "id": "teapot",
+      "file": "../library-kit/assets/teapot.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        30,
+        72,
+        1513,
+        957
+      ],
+      "content_bbox_threshold_128": [
+        30,
+        73,
+        1513,
+        956
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "4bfc866532ccbb562a166f373c428b6bfa321c20684144ac4baf064d6f1dcbac",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "teapot_lid": {
+      "id": "teapot_lid",
+      "file": "../library-kit/assets/teapot_lid.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        80,
+        73,
+        1455,
+        916
+      ],
+      "content_bbox_threshold_128": [
+        81,
+        73,
+        1455,
+        915
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "ee9357128ec7c0a6e57f0012d064eae669737915e43627d13fde18eda71f75ed",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "teacup": {
+      "id": "teacup",
+      "file": "../library-kit/assets/teacup.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        201,
+        93,
+        1490,
+        966
+      ],
+      "content_bbox_threshold_128": [
+        201,
+        93,
+        1489,
+        965
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "806598ac4cef79e3f5adf8382745cc15bcc5ba074d30182932195a6fed6ccd0c",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "saucer": {
+      "id": "saucer",
+      "file": "../library-kit/assets/saucer.png",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        26,
+        212,
+        2147,
+        574
+      ],
+      "content_bbox_threshold_128": [
+        26,
+        212,
+        2146,
+        573
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "08a03c2bf69ac9ab7acbb039006406c16be28109e48a88cd28ec974f6c81b740",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "milk_jug": {
+      "id": "milk_jug",
+      "file": "../library-kit/assets/milk_jug.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        260,
+        76,
+        1419,
+        964
+      ],
+      "content_bbox_threshold_128": [
+        261,
+        77,
+        1419,
+        963
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "66613602da9f886a75109257c778636e2a5a692d75597696cac098aab1bec444",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "decor": {
+      "id": "decor",
+      "file": "../library-kit/assets/decor.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "content_bbox_threshold_128": [
+        0,
+        0,
+        1535,
+        1024
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "893642c4bf295c2e80b3ddc289b6f01afc8b189db8551f29cdd4f5e7635c8586",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "book_row": {
+      "id": "book_row",
+      "file": "../library-kit/assets/book_row.png",
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        30,
+        115,
+        2143,
+        616
+      ],
+      "content_bbox_threshold_128": [
+        31,
+        116,
+        2142,
+        615
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "a12ec4de41cacb55a35980244f8454df172865235111bdf83af2537567299715",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
+    },
+    "rug": {
+      "id": "rug",
+      "file": "../library-kit/assets/rug.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        29,
+        50,
+        1509,
+        954
+      ],
+      "content_bbox_threshold_128": [
+        30,
+        50,
+        1508,
+        954
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "08ba81096afd72a7997a0efb158d4b315fab5bedc15ecf255bb5d783ea29140e",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "potion_table": {
+      "id": "potion_table",
+      "file": "../library-kit/assets/potion_table.png",
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        10,
+        5,
+        1302,
+        1188
+      ],
+      "content_bbox_threshold_128": [
+        11,
+        6,
+        1302,
+        1187
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "9390e157039b3bfd44c162fd157ae028b81c21f198073fb1b0f7eba00d6e30f2",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
+    },
+    "hearth_fire": {
+      "id": "hearth_fire",
+      "file": "../library-kit/assets/hearth_fire.png",
+      "width": 1263,
+      "height": 1246,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        153,
+        12,
+        1132,
+        1204
+      ],
+      "content_bbox_threshold_128": [
+        153,
+        16,
+        1131,
+        1203
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "a6c0bfebe84cf33fdf8b0ae2d47a41f34ae7887fef522156642d94edd013d231",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
+    },
+    "smoke_wisp": {
+      "id": "smoke_wisp",
+      "file": "../library-kit/assets/smoke_wisp.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        250,
+        132,
+        1334,
+        863
+      ],
+      "content_bbox_threshold_128": [
+        268,
+        138,
+        1318,
+        858
+      ],
+      "alpha_range": [
+        0,
+        246
+      ],
+      "sha256": "26719fcc4ca9dec844b8e255b25afd98206229a17774e63f484679e27a63ce74",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated raster; original pixels preserved. Placement is separate scene data."
+    },
+    "wizard": {
+      "id": "wizard",
+      "file": "../library-kit/assets/wizard.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        147,
+        6,
+        895,
+        1513
+      ],
+      "content_bbox_threshold_128": [
+        147,
+        7,
+        895,
+        1512
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "d62d894fb23030e2949383e435c386ef154e34e1835ce99dfcc89f5847801df0",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "sugar_bowl": {
+      "id": "sugar_bowl",
+      "file": "../library-kit/assets/sugar_bowl.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        276,
+        36,
+        1260,
+        978
+      ],
+      "content_bbox_threshold_128": [
+        276,
+        37,
+        1260,
+        977
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "34ad447af8977299e331e7bfb093df787f639b9c1d84b107ff29d107090beba9",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "spoon": {
+      "id": "spoon",
+      "file": "../library-kit/assets/spoon.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        65,
+        34,
+        1510,
+        982
+      ],
+      "content_bbox_threshold_128": [
+        65,
+        34,
+        1510,
+        982
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "ea3d29e8dcb611f8ceb8a57b90ac3de2c517eae7bb37bcfeb03feb54046f26ae",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated illustration; original raster preserved; scene placement authored separately."
+    },
+    "clutter_book_stack": {
+      "id": "clutter_book_stack",
+      "file": "../library-kit/assets/clutter_book_stack.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        194,
+        35,
+        1355,
+        1005
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "66420efd457104dd1c59d48cca97afcf4602c093a9b35130e3460caf74cd01b5",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source raster including transparent margins",
+      "source": "AI-generated original transparent raster; no background removal or painted shadow baked in."
+    },
+    "clutter_open_grimoire": {
+      "id": "clutter_open_grimoire",
+      "file": "../library-kit/assets/clutter_open_grimoire.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        35,
+        93,
+        1486,
+        990
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "ecf2230eb6ffddb845210e1d640766eb90a09628b06cfa9c819d653f88c37888",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source raster including transparent margins",
+      "source": "AI-generated original transparent raster; no background removal or painted shadow baked in."
+    },
+    "clutter_candles": {
+      "id": "clutter_candles",
+      "file": "../library-kit/assets/clutter_candles.png",
+      "width": 1312,
+      "height": 1199,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        112,
+        35,
+        1278,
+        1135
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "23a697e17a2db16445054c49d7670fadb6fe504e09d7a644eed76b1acbaf598e",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source raster including transparent margins",
+      "source": "AI-generated original transparent raster; no background removal or painted shadow baked in."
+    },
+    "clutter_scrolls": {
+      "id": "clutter_scrolls",
+      "file": "../library-kit/assets/clutter_scrolls.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        90,
+        130,
+        1456,
+        912
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "b912c033325069ca469093328b9f02d536176b324015af2daf69140e1ae3a6f6",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source raster including transparent margins",
+      "source": "AI-generated original transparent raster; no background removal or painted shadow baked in."
+    },
+    "clutter_ink_quill": {
+      "id": "clutter_ink_quill",
+      "file": "../library-kit/assets/clutter_ink_quill.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        391,
+        16,
+        1391,
+        987
+      ],
+      "alpha_range": [
+        0,
+        254
+      ],
+      "sha256": "a80b258e93bed7c9f93b4fcc3e2e031d03bb1d2e0caf3d05eb8a08f6ad622a94",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source raster including transparent margins",
+      "source": "AI-generated original transparent raster; no background removal or painted shadow baked in."
+    },
+    "clutter_potion_bottles": {
+      "id": "clutter_potion_bottles",
+      "file": "../library-kit/assets/clutter_potion_bottles.png",
+      "width": 1357,
+      "height": 1159,
+      "mode": "RGBA",
+      "alpha_bbox_threshold_32": [
+        172,
+        33,
+        1202,
+        1104
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "bfa04a3138aebb51f74702fe8356735c2e9ae192b487baa703df0a65009786da",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "anchor_coordinates": "normalized full source raster including transparent margins",
+      "source": "AI-generated original transparent raster; no background removal or painted shadow baked in."
+    },
+    "A_celestial": {
+      "id": "A_celestial",
+      "file": "assets/A_celestial.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox_threshold_32": [
+        52,
+        86,
+        1487,
+        949
+      ],
+      "sha256": "5bedb616b9cade957bc2359d6338ab5f23e07a92c47bb524f9fc4bc0f0ea9731",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated original transparent raster; closed complete teapot, lid is not separately segmented."
+    },
+    "B_stoneware": {
+      "id": "B_stoneware",
+      "file": "assets/B_stoneware.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox_threshold_32": [
+        48,
+        79,
+        1504,
+        955
+      ],
+      "sha256": "43e3bfdfd23e4076feb032014505aa13efec7685b1a1fa0db48a04ad0c313b4a",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated original transparent raster; closed complete teapot, lid is not separately segmented."
+    },
+    "C_copper": {
+      "id": "C_copper",
+      "file": "assets/C_copper.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox_threshold_32": [
+        50,
+        77,
+        1513,
+        955
+      ],
+      "sha256": "904f8aa96145d03bf5f5f73bdea8ce8b7ce29cb3a5a1a152674de12bab46ea14",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated original transparent raster; closed complete teapot, lid is not separately segmented."
+    },
+    "D_iron": {
+      "id": "D_iron",
+      "file": "assets/D_iron.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_bbox_threshold_32": [
+        33,
+        126,
+        1513,
+        946
+      ],
+      "sha256": "62f16aa535665519c32b19eefb5389501d34c9e2abd78f9ce0ed55a0deb2d19d",
+      "color_space": "sRGB",
+      "alpha_encoding": "straight",
+      "trimmed": false,
+      "source": "AI-generated original transparent raster; closed complete teapot, lid is not separately segmented."
+    }
+  },
+  "layers": [
+    {
+      "id": "outside",
+      "asset": "outside_day",
+      "z": 0,
+      "rect": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "weather_replaceable": true
+    },
+    {
+      "id": "room",
+      "asset": "room",
+      "z": 10,
+      "rect": [
+        0,
+        0,
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "shelf_rows",
+      "collection": "shelf_rows",
+      "z": 12
+    },
+    {
+      "id": "rug",
+      "collection": "floor_props",
+      "z": 14
+    },
+    {
+      "id": "hearth_effects",
+      "collection": "effects",
+      "z": [
+        22,
+        25
+      ]
+    },
+    {
+      "id": "potion_table",
+      "collection": "static_props",
+      "z": 32
+    },
+    {
+      "id": "decor",
+      "asset": "decor",
+      "z": 60,
+      "rect": [
+        0,
+        0,
+        1536,
+        1024
+      ]
+    },
+    {
+      "id": "ladder_rail",
+      "collection": "static_primitives",
+      "z": 46
+    }
+  ],
+  "objects": [
+    {
+      "id": "gargoyle",
+      "asset": "gargoyle",
+      "label": "gargoyle",
+      "transform": {
+        "x": 1329,
+        "y": 219,
+        "width": 181,
+        "height": 189.4152,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.14763458401305057
+      },
+      "z": 65,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "pedestal",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 200,
+        "material": "stone",
+        "gravity_m_s2": 0,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.62
+        ],
+        "contact_uv": [
+          0.5,
+          0.94
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.12,
+              0.18
+            ],
+            [
+              0.82,
+              0.12
+            ],
+            [
+              0.96,
+              0.5
+            ],
+            [
+              0.83,
+              0.94
+            ],
+            [
+              0.2,
+              0.94
+            ],
+            [
+              0.05,
+              0.55
+            ]
+          ],
+          "accuracy": "conservative authored proxy; alpha hit testing is separate"
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Anchored to pedestal; no drag, bounce or arbitrary rocking. Animation requires new pose art or local mesh."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 45,
+        "accessible_label": "gargoyle"
+      },
+      "anchors": {
+        "base": [
+          0.53,
+          0.93
+        ],
+        "head": [
+          0.29,
+          0.3
+        ],
+        "eye": [
+          0.22,
+          0.225
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ]
+      },
+      "shadow": {
+        "implementation": "runtime ellipse on support; never bake into sprite",
+        "opacity": 0.2,
+        "blur_scene_px": 6,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "first-pass authored placement",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "render": {
+        "clear_vines": true,
+        "note": "Statue silhouette remains unobscured; vegetation removed in decor raster."
+      },
+      "lighting": {
+        "rule": "gargoyle",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      }
+    },
+    {
+      "id": "ladder",
+      "asset": "ladder",
+      "label": "ladder",
+      "transform": {
+        "x": 1090,
+        "y": 185,
+        "width": 150,
+        "height": 444.8489,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.20604395604395603
+      },
+      "z": 48,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "library_rail",
+      "physics": {
+        "body_type": "kinematic",
+        "mass_kg_estimate": 20,
+        "material": "oak_brass",
+        "gravity_m_s2": 0,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.62
+        ],
+        "contact_uv": [
+          0.5,
+          0.94
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.33,
+              0.01
+            ],
+            [
+              0.75,
+              0.01
+            ],
+            [
+              0.84,
+              0.99
+            ],
+            [
+              0.15,
+              0.99
+            ]
+          ],
+          "accuracy": "conservative authored proxy; alpha hit testing is separate"
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 48,
+        "accessible_label": "ladder"
+      },
+      "anchors": {
+        "rail_hook_left": [
+          0.36,
+          0.04
+        ],
+        "rail_hook_right": [
+          0.68,
+          0.04
+        ],
+        "foot_left": [
+          0.239,
+          0.972
+        ],
+        "foot_right": [
+          0.725,
+          0.98
+        ],
+        "grip": [
+          0.51,
+          0.52
+        ],
+        "base": [
+          0.48,
+          0.976
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect",
+          "slide_along_rail"
+        ]
+      },
+      "shadow": {
+        "implementation": "runtime ellipse on support; never bake into sprite",
+        "opacity": 0.2,
+        "blur_scene_px": 6,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "mechanism": {
+        "type": "guided_rail",
+        "axis_scene": [
+          1,
+          0
+        ],
+        "translation_range_scene_px": [
+          -100,
+          15
+        ],
+        "initial_offset_px": 0,
+        "movement_speed_px_s": 50,
+        "max_acceleration_px_s2": 80,
+        "top_hooks_remain_attached": true,
+        "foot_contact_must_follow_floor": true,
+        "climbable_in_current_art": false,
+        "dependencies": [
+          "rail must be provided by architecture or separate rail prop"
+        ],
+        "status": "Fixed corrected idle placement; no rail-slide animation supplied.",
+        "rung_count_visible": 9,
+        "rung_uv_y": [
+          0.12,
+          0.22,
+          0.31,
+          0.41,
+          0.51,
+          0.61,
+          0.71,
+          0.81,
+          0.9
+        ],
+        "available": false,
+        "lean_back_deg_design_estimate": 12,
+        "contact_constraints": [
+          "both feet on floor",
+          "both hooks on brass rail"
+        ],
+        "hook_world_scene": [
+          [
+            1144.0,
+            202.793956
+          ],
+          [
+            1192.0,
+            202.793956
+          ]
+        ],
+        "floor_support": "ladder_floor"
+      },
+      "render": {
+        "contact_anchors": [
+          "foot_left",
+          "foot_right"
+        ],
+        "shadow": {
+          "anchor": "base",
+          "radius": [
+            8,
+            2.5
+          ],
+          "opacity": 0.35
+        },
+        "clear_vines": true
+      },
+      "lighting": {
+        "rule": "ladder",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      }
+    },
+    {
+      "id": "dragon",
+      "asset": "dragon",
+      "label": "dragon",
+      "transform": {
+        "x": 980,
+        "y": 610,
+        "width": 360,
+        "height": 240.0,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.234375
+      },
+      "z": 50,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "rug",
+      "physics": {
+        "body_type": "kinematic",
+        "mass_kg_estimate": 450,
+        "material": "living_creature",
+        "gravity_m_s2": 0,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.62
+        ],
+        "contact_uv": [
+          0.5,
+          0.94
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.035,
+              0.72
+            ],
+            [
+              0.32,
+              0.35
+            ],
+            [
+              0.46,
+              0.1
+            ],
+            [
+              0.84,
+              0.17
+            ],
+            [
+              0.98,
+              0.64
+            ],
+            [
+              0.94,
+              0.88
+            ],
+            [
+              0.55,
+              0.9
+            ],
+            [
+              0.12,
+              0.8
+            ]
+          ],
+          "accuracy": "conservative authored proxy; alpha hit testing is separate"
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 50,
+        "accessible_label": "dragon"
+      },
+      "anchors": {
+        "nostril_near": [
+          0.076,
+          0.738
+        ],
+        "nostril_far": [
+          0.038,
+          0.751
+        ],
+        "chest": [
+          0.5,
+          0.63
+        ],
+        "head": [
+          0.17,
+          0.68
+        ],
+        "ground": [
+          0.62,
+          0.88
+        ],
+        "head_contact": [
+          0.19,
+          0.8
+        ],
+        "torso_contact": [
+          0.62,
+          0.88
+        ],
+        "tail_contact": [
+          0.9,
+          0.86
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect",
+          "exhale_smoke"
+        ]
+      },
+      "shadow": {
+        "implementation": "runtime ellipse on support; never bake into sprite",
+        "opacity": 0.2,
+        "blur_scene_px": 6,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "animation": {
+        "idle_breath": {
+          "implementation": "optional subtle local mesh deformation",
+          "period_s": 4.5,
+          "chest_scale_y": [
+            1,
+            1.012
+          ],
+          "pin_anchor": "ground",
+          "whole_sprite_scaling": false,
+          "enabled_by_default": false,
+          "note": "No skeletal rig or alternate frames included. Do not scale floor-contact points."
+        },
+        "smoke": {
+          "type": "translucent_raster_wisp",
+          "asset": "smoke_wisp",
+          "trigger": "click",
+          "cooldown_s": 2.2,
+          "emitters": [
+            {
+              "anchor": "nostril_near",
+              "strength": 1
+            },
+            {
+              "anchor": "nostril_far",
+              "strength": 0.5
+            }
+          ],
+          "source_anchor_uv": [
+            0.855,
+            0.838
+          ],
+          "max_opacity": 0.2,
+          "lifetime_s": 2.2,
+          "width_scene_px": [
+            55,
+            95
+          ],
+          "drift_scene_px": [
+            -18,
+            -12
+          ],
+          "pin_source_at_emission": true,
+          "reduced_motion": "one fixed faint wisp, opacity fade only",
+          "no_circular_particles": true
+        }
+      },
+      "lighting": {
+        "rule": "dragon",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      }
+    },
+    {
+      "id": "cauldron",
+      "asset": "cauldron",
+      "label": "cauldron",
+      "transform": {
+        "x": 477,
+        "y": 381.73778,
+        "width": 111,
+        "height": 102.98618,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.08525345622119816
+      },
+      "z": 24,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "hearth_floor",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 35,
+        "material": "cast_iron",
+        "gravity_m_s2": 0,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.62
+        ],
+        "contact_uv": [
+          0.5,
+          0.94
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.12,
+              0.18
+            ],
+            [
+              0.82,
+              0.12
+            ],
+            [
+              0.96,
+              0.5
+            ],
+            [
+              0.83,
+              0.94
+            ],
+            [
+              0.2,
+              0.94
+            ],
+            [
+              0.05,
+              0.55
+            ]
+          ],
+          "accuracy": "conservative authored proxy; alpha hit testing is separate"
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 46,
+        "accessible_label": "cauldron"
+      },
+      "anchors": {
+        "rim_center": [
+          0.5,
+          0.166
+        ],
+        "handle_left": [
+          0.095,
+          0.34
+        ],
+        "handle_right": [
+          0.9,
+          0.34
+        ],
+        "steam_origin": [
+          0.5,
+          0.166
+        ],
+        "fire_origin": [
+          0.5,
+          0.88
+        ],
+        "base": [
+          0.5,
+          0.925
+        ],
+        "foot_left": [
+          0.26,
+          0.835
+        ],
+        "foot_right": [
+          0.775,
+          0.835
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect",
+          "toggle_steam"
+        ]
+      },
+      "shadow": {
+        "implementation": "runtime ellipse on support; never bake into sprite",
+        "opacity": 0.2,
+        "blur_scene_px": 6,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 2: calibrated against architecture coordinate guide",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "liquid": {
+        "capacity_l_estimate": 20,
+        "fill_fraction": 0.65,
+        "temperature_c_estimate": 80,
+        "surface_ellipse_uv": [
+          0.5,
+          0.166,
+          0.28,
+          0.04
+        ],
+        "surface_art_baked": true,
+        "pourable": false,
+        "hot_surface": true,
+        "initial_color": "amber-green"
+      },
+      "animation": {
+        "steam": {
+          "anchor": "steam_origin",
+          "particle_count": 18,
+          "lifetime_s": [
+            1.2,
+            2.5
+          ],
+          "velocity_scene_px_s": [
+            0,
+            -15
+          ],
+          "spread_deg": 25,
+          "color": "#c3ddbe",
+          "opacity_max": 0.18
+        },
+        "fire": {
+          "enabled": true,
+          "raster_included": true,
+          "asset": "hearth_fire",
+          "layers": [
+            "hearth_fire_back",
+            "potion_flames"
+          ],
+          "clip_surface": "hearth_interior",
+          "light_falloff_scene_px": 155,
+          "flicker": "small coherent opacity modulation; base stays fixed"
+        }
+      },
+      "render": {
+        "clip_surface": "hearth_interior",
+        "shadow": {
+          "anchor": "base",
+          "radius": [
+            7,
+            2.2
+          ],
+          "opacity": 0.38
+        },
+        "view_angle_down_deg_estimate": 10,
+        "depth": "inside firebox; front masonry stays unobscured",
+        "contact_anchors": [
+          "foot_left",
+          "foot_right",
+          "base"
+        ]
+      },
+      "lighting": {
+        "rule": "cauldron",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      }
+    },
+    {
+      "id": "chest",
+      "asset": "chest",
+      "label": "chest",
+      "transform": {
+        "x": 1310,
+        "y": 720,
+        "width": 190,
+        "height": 126.66667,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.12369791666666667
+      },
+      "z": 57,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "floor",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 45,
+        "material": "oak_brass",
+        "gravity_m_s2": 0,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.62
+        ],
+        "contact_uv": [
+          0.5,
+          0.94
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.12,
+              0.18
+            ],
+            [
+              0.82,
+              0.12
+            ],
+            [
+              0.96,
+              0.5
+            ],
+            [
+              0.83,
+              0.94
+            ],
+            [
+              0.2,
+              0.94
+            ],
+            [
+              0.05,
+              0.55
+            ]
+          ],
+          "accuracy": "conservative authored proxy; alpha hit testing is separate"
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 57,
+        "accessible_label": "chest"
+      },
+      "anchors": {
+        "latch": [
+          0.384,
+          0.61
+        ],
+        "lid_hinge_left": [
+          0.185,
+          0.11
+        ],
+        "lid_hinge_right": [
+          0.83,
+          0.26
+        ],
+        "handle": [
+          0.85,
+          0.64
+        ],
+        "base": [
+          0.5,
+          0.92
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ]
+      },
+      "shadow": {
+        "implementation": "runtime ellipse on support; never bake into sprite",
+        "opacity": 0.2,
+        "blur_scene_px": 6,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "mechanism": {
+        "type": "rear_hinged_lid",
+        "hinge_anchors": [
+          "lid_hinge_left",
+          "lid_hinge_right"
+        ],
+        "open_angle_deg": 100,
+        "duration_ms": 900,
+        "requires": [
+          "separate chest body",
+          "separate lid",
+          "interior and treasure raster"
+        ],
+        "available": false,
+        "reason": "Only closed combined sprite exists; rotating whole chest cannot simulate lid opening.",
+        "latch_requires_unlock": true
+      },
+      "lighting": {
+        "rule": "chest",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      }
+    },
+    {
+      "id": "astrolabe",
+      "asset": "astrolabe",
+      "label": "astrolabe",
+      "transform": {
+        "x": 310,
+        "y": 417.076,
+        "width": 91,
+        "height": 109.2,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.0794759825327511
+      },
+      "z": 47,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "left_stone_shelf",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 5,
+        "material": "brass",
+        "gravity_m_s2": 0,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.62
+        ],
+        "contact_uv": [
+          0.5,
+          0.94
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.12,
+              0.18
+            ],
+            [
+              0.82,
+              0.12
+            ],
+            [
+              0.96,
+              0.5
+            ],
+            [
+              0.83,
+              0.94
+            ],
+            [
+              0.2,
+              0.94
+            ],
+            [
+              0.05,
+              0.55
+            ]
+          ],
+          "accuracy": "conservative authored proxy; alpha hit testing is separate"
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 47,
+        "accessible_label": "astrolabe"
+      },
+      "anchors": {
+        "ring_center": [
+          0.5,
+          0.4
+        ],
+        "base": [
+          0.5,
+          0.97
+        ],
+        "ring_grip": [
+          0.8,
+          0.32
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ]
+      },
+      "shadow": {
+        "implementation": "runtime ellipse on support; never bake into sprite",
+        "opacity": 0.2,
+        "blur_scene_px": 6,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "mechanism": {
+        "type": "nested_gimbals",
+        "pivot_anchor": "ring_center",
+        "base_fixed": true,
+        "available": false,
+        "requires": "Separate ring rasters with back/front occlusion masks or 3D geometry. Whole-image rotation would wrongly rotate base.",
+        "ring_limits_deg": [
+          -35,
+          35
+        ]
+      },
+      "render": {
+        "shadow": {
+          "anchor": "base",
+          "radius": [
+            23,
+            3
+          ],
+          "opacity": 0.32
+        },
+        "view_angle_down_deg_estimate": 10,
+        "main_axis": "upright",
+        "base_alignment": "Shallow ellipse aligned to raised left stone ledge."
+      },
+      "lighting": {
+        "rule": "astrolabe",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      }
+    },
+    {
+      "id": "teapot",
+      "asset": "teapot",
+      "label": "0 \u00b7 Current ivory and gold",
+      "transform": {
+        "x": 27.5,
+        "y": 678.5699999999999,
+        "width": 135,
+        "height": 90,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.087890625
+      },
+      "z": 75,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "tea_table",
+      "physics": {
+        "body_type": "dynamic",
+        "mass_kg_estimate": 0.65,
+        "material": "porcelain",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.62
+        ],
+        "contact_uv": [
+          0.5,
+          0.94
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.12,
+              0.18
+            ],
+            [
+              0.82,
+              0.12
+            ],
+            [
+              0.96,
+              0.5
+            ],
+            [
+              0.83,
+              0.94
+            ],
+            [
+              0.2,
+              0.94
+            ],
+            [
+              0.05,
+              0.55
+            ]
+          ],
+          "accuracy": "conservative authored proxy; alpha hit testing is separate"
+        },
+        "rotation_constraints_deg": [
+          -15,
+          15
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 75,
+        "accessible_label": "teapot"
+      },
+      "anchors": {
+        "grip_handle": [
+          0.13,
+          0.38
+        ],
+        "grip_under_base": [
+          0.52,
+          0.88
+        ],
+        "spout_tip": [
+          0.943,
+          0.156
+        ],
+        "mouth_center": [
+          0.5,
+          0.185
+        ],
+        "lid_seat": [
+          0.5,
+          0.185
+        ],
+        "base": [
+          0.5,
+          0.927
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": true,
+        "pickup": true,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect",
+          "pick_up",
+          "put_down",
+          "pour"
+        ]
+      },
+      "shadow": {
+        "implementation": "runtime ellipse on support; never bake into sprite",
+        "opacity": 0.2,
+        "blur_scene_px": 6,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "liquid": {
+        "capacity_ml_estimate": 900,
+        "initial_volume_ml": 0,
+        "temperature_c": 20,
+        "spills_enabled": false,
+        "spill_warning_tilt_deg": 20,
+        "pour_start_tilt_deg": 35,
+        "pour_stop_tilt_deg": 20,
+        "flow_ml_s": 40,
+        "volume_conservation_required": true,
+        "stream": "procedural quadratic curve from world transformed spout to cup liquid_center",
+        "stream_gravity_scene_px_s2": 350,
+        "target_acceptance_radius_scene_px": 8,
+        "stop_when_empty_or_target_full": true,
+        "interior_fill_art_included": false,
+        "note": "Empty initial state matches supplied raster. Filled state needs masked surface rendering."
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "approach_clearance_scene_px": 12,
+        "finger_occlusion": "split character hand into palm behind prop and fingers in front",
+        "preserve_world_transform_on_reparent": true,
+        "held_z": 100,
+        "held_gravity": false,
+        "max_lift_scene_px": 180,
+        "max_translation_speed_scene_px_s": 240,
+        "rotation_pivot": "grip_handle",
+        "rotation_limits_deg": [
+          -10,
+          60
+        ],
+        "surface_clearance_before_rotation_scene_px": 18,
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "collision_with_other_teaware": true,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "render": {
+        "shadow": {
+          "anchor": "base",
+          "radius": [
+            32.12,
+            2
+          ],
+          "opacity": 0.29
+        },
+        "light": "warm painterly celestial ivory/cobalt/gold",
+        "view_angle_down_deg_estimate": 15,
+        "material_response": {
+          "brightness": 0.8,
+          "saturation": 0.78,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
+      },
+      "lighting": {
+        "rule": "teapot",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      }
+    },
+    {
+      "id": "teapot_lid",
+      "asset": "teapot_lid",
+      "label": "teapot lid",
+      "transform": {
+        "x": 66.33561643835617,
+        "y": 662.7337047945205,
+        "width": 57.328767123287676,
+        "height": 38.219175,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.03732341609589041
+      },
+      "z": 76,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "teapot",
+      "physics": {
+        "body_type": "dynamic",
+        "mass_kg_estimate": 0.1,
+        "material": "porcelain",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.62
+        ],
+        "contact_uv": [
+          0.5,
+          0.94
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.12,
+              0.18
+            ],
+            [
+              0.82,
+              0.12
+            ],
+            [
+              0.96,
+              0.5
+            ],
+            [
+              0.83,
+              0.94
+            ],
+            [
+              0.2,
+              0.94
+            ],
+            [
+              0.05,
+              0.55
+            ]
+          ],
+          "accuracy": "conservative authored proxy; alpha hit testing is separate"
+        },
+        "rotation_constraints_deg": [
+          -15,
+          15
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 76,
+        "accessible_label": "teapot lid"
+      },
+      "anchors": {
+        "grip_knob": [
+          0.5,
+          0.18
+        ],
+        "seat": [
+          0.5,
+          0.85
+        ],
+        "base": [
+          0.5,
+          0.87
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": true,
+        "pickup": true,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect",
+          "pick_up",
+          "put_down"
+        ]
+      },
+      "shadow": {
+        "implementation": "runtime ellipse on support; never bake into sprite",
+        "opacity": 0.2,
+        "blur_scene_px": 6,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_knob",
+        "rotation_limits_deg": [
+          -10,
+          10
+        ],
+        "accept_drop_on": [
+          "tea_table",
+          "teapot.lid_seat"
+        ],
+        "snap_radius_scene_px": 12,
+        "snap_preserves_scale": true,
+        "idle_character_art_included": true
+      },
+      "render": {
+        "shadow": {
+          "anchor": "base",
+          "radius": [
+            13.64,
+            2
+          ],
+          "opacity": 0.29
+        },
+        "light": "warm painterly celestial ivory/cobalt/gold",
+        "view_angle_down_deg_estimate": 15,
+        "material_response": {
+          "brightness": 0.8,
+          "saturation": 0.78,
+          "contrast": 0.9,
+          "implementation": "Direct Canvas2D saturation, contrast, brightness and subtle sepia filters before shared room illumination; preserves original source raster and source-alpha picking.",
+          "sepia": 0.08
+        }
+      },
+      "lighting": {
+        "rule": "teapot_lid",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      }
+    },
+    {
+      "id": "wizard",
+      "asset": "wizard",
+      "label": "Wizard \u00b7 idle scale reference",
+      "transform": {
+        "x": 700,
+        "y": 260,
+        "width": 335,
+        "height": 502.5,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.3271484375
+      },
+      "z": 54,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "floor",
+      "physics": {
+        "body_type": "kinematic",
+        "mass_kg_estimate": 85,
+        "material": "character",
+        "gravity_m_s2": 0,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.55
+        ],
+        "contact_uv": [
+          0.5,
+          0.94
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.26,
+              0.15
+            ],
+            [
+              0.72,
+              0.15
+            ],
+            [
+              0.88,
+              0.9
+            ],
+            [
+              0.64,
+              0.99
+            ],
+            [
+              0.3,
+              0.99
+            ],
+            [
+              0.15,
+              0.8
+            ],
+            [
+              0.2,
+              0.3
+            ]
+          ],
+          "accuracy": "conservative authored proxy; alpha hit testing is separate"
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Idle pose for thematic scale review. No walking or reach animation is included.",
+        "world_footprint_m_estimate": [
+          0.46,
+          0.28
+        ],
+        "height_m_estimate": 1.9
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 45,
+        "accessible_label": "gargoyle"
+      },
+      "anchors": {
+        "hat_flower": [
+          0.48,
+          0.073
+        ],
+        "face": [
+          0.55,
+          0.14
+        ],
+        "left_hand_grip": [
+          0.45,
+          0.44
+        ],
+        "right_hand_grip": [
+          0.72,
+          0.52
+        ],
+        "foot_left": [
+          0.35,
+          0.976
+        ],
+        "foot_right": [
+          0.625,
+          0.945
+        ],
+        "base": [
+          0.49,
+          0.961
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ]
+      },
+      "shadow": {
+        "implementation": "runtime ellipse on support; never bake into sprite",
+        "opacity": 0.2,
+        "blur_scene_px": 6,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "render": {
+        "contact_anchors": [
+          "foot_left",
+          "foot_right"
+        ],
+        "shadow": {
+          "anchor": "base",
+          "radius": [
+            18,
+            3.5
+          ],
+          "opacity": 0.36
+        },
+        "visibility_control": "wizard",
+        "foreground_occlusion": "Behind foreground tea table; in front of midground workbench."
+      },
+      "character": {
+        "height_m_design_estimate": 1.9,
+        "pose": "idle",
+        "identity_details": [
+          "olive crooked witch hat",
+          "purple flower",
+          "shaggy black hair",
+          "wire spectacles",
+          "gold earrings",
+          "olive coat",
+          "burgundy wrap shirt",
+          "dark trousers",
+          "brown boots"
+        ],
+        "reference_fidelity": "New illustration based on the supplied character design; not a pixel extraction.",
+        "costume_palette": [
+          "#534c2d",
+          "#50312b",
+          "#242321",
+          "#694e32"
+        ],
+        "reach_poses_included": false
+      },
+      "lighting": {
+        "rule": "wizard",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      }
+    },
+    {
+      "id": "study_books",
+      "asset": "clutter_book_stack",
+      "label": "study books",
+      "transform": {
+        "x": 507.5,
+        "y": 593.3333333333334,
+        "width": 125,
+        "height": 83.33333333333333,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.08138020833333333
+      },
+      "z": 35,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "floor",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 4.2,
+        "material": "leather and paper",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.65
+        ],
+        "contact_uv": [
+          0.5,
+          0.92
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.12630208333333334,
+              0.0341796875
+            ],
+            [
+              0.8821614583333334,
+              0.0341796875
+            ],
+            [
+              0.8821614583333334,
+              0.9814453125
+            ],
+            [
+              0.12630208333333334,
+              0.9814453125
+            ]
+          ],
+          "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 77,
+        "accessible_label": "study books"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.92
+        ],
+        "grip": [
+          0.5,
+          0.55
+        ],
+        "center": [
+          0.5,
+          0.5
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ],
+        "valid_drop_surfaces": []
+      },
+      "shadow": {
+        "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+        "opacity": 0.38,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "rotation_limits_deg": [
+          -180,
+          180
+        ],
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "held_z": 100,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "lighting": {
+        "rule": "study_books",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "clutter",
+      "group_contract": {
+        "single_rigid_raster": true,
+        "members_separately_pickable": false,
+        "separation_requires_new_art": true
+      }
+    },
+    {
+      "id": "spare_books",
+      "asset": "clutter_book_stack",
+      "label": "spare books",
+      "transform": {
+        "x": 1400.0,
+        "y": 878.6666666666666,
+        "width": 100,
+        "height": 66.66666666666667,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.06510416666666667
+      },
+      "z": 82,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "floor",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 4.2,
+        "material": "leather and paper",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.65
+        ],
+        "contact_uv": [
+          0.5,
+          0.92
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.12630208333333334,
+              0.0341796875
+            ],
+            [
+              0.8821614583333334,
+              0.0341796875
+            ],
+            [
+              0.8821614583333334,
+              0.9814453125
+            ],
+            [
+              0.12630208333333334,
+              0.9814453125
+            ]
+          ],
+          "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 77,
+        "accessible_label": "spare books"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.92
+        ],
+        "grip": [
+          0.5,
+          0.55
+        ],
+        "center": [
+          0.5,
+          0.5
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ],
+        "valid_drop_surfaces": []
+      },
+      "shadow": {
+        "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+        "opacity": 0.38,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "rotation_limits_deg": [
+          -180,
+          180
+        ],
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "held_z": 100,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "lighting": {
+        "rule": "spare_books",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "clutter",
+      "group_contract": {
+        "single_rigid_raster": true,
+        "members_separately_pickable": false,
+        "separation_requires_new_art": true
+      }
+    },
+    {
+      "id": "ledge_candles",
+      "asset": "clutter_candles",
+      "label": "ledge candles",
+      "transform": {
+        "x": 399.5,
+        "y": 493.5666844512195,
+        "width": 39,
+        "height": 35.641006097560975,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.02972560975609756
+      },
+      "z": 47,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "ledge",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 0.9,
+        "material": "wax and brass",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.65
+        ],
+        "contact_uv": [
+          0.5,
+          0.91
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.08536585365853659,
+              0.029190992493744787
+            ],
+            [
+              0.9740853658536586,
+              0.029190992493744787
+            ],
+            [
+              0.9740853658536586,
+              0.9466221851542952
+            ],
+            [
+              0.08536585365853659,
+              0.9466221851542952
+            ]
+          ],
+          "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 77,
+        "accessible_label": "ledge candles"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.91
+        ],
+        "grip": [
+          0.5,
+          0.55
+        ],
+        "center": [
+          0.5,
+          0.5
+        ],
+        "flame_tall": [
+          0.46,
+          0.12
+        ],
+        "flame_medium": [
+          0.69,
+          0.36
+        ],
+        "flame_short": [
+          0.41,
+          0.59
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ],
+        "valid_drop_surfaces": []
+      },
+      "shadow": {
+        "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+        "opacity": 0.38,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "rotation_limits_deg": [
+          -180,
+          180
+        ],
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "held_z": 100,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "lighting": {
+        "rule": "ledge_candles",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "clutter",
+      "group_contract": {
+        "single_rigid_raster": true,
+        "members_separately_pickable": false,
+        "separation_requires_new_art": true
+      },
+      "emission": {
+        "type": "three candle flames",
+        "control": "candles",
+        "flame_origins_source_uv": [
+          [
+            0.46,
+            0.12
+          ],
+          [
+            0.69,
+            0.36
+          ],
+          [
+            0.41,
+            0.59
+          ]
+        ],
+        "color_rgb": [
+          255,
+          184,
+          105
+        ],
+        "raster_flames_baked": true,
+        "extinguished_raster_included": false,
+        "animation_note": "Idle only; use separate flame sprites for independent flame animation or extinction."
+      }
+    },
+    {
+      "id": "spare_potions",
+      "asset": "clutter_potion_bottles",
+      "label": "spare potions",
+      "transform": {
+        "x": 1326.5,
+        "y": 877.926138540899,
+        "width": 67,
+        "height": 57.22402358142963,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.04937361827560796
+      },
+      "z": 82,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "floor",
+      "physics": {
+        "body_type": "static",
+        "mass_kg_estimate": 1.1,
+        "material": "glass liquid and cork",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.65
+        ],
+        "contact_uv": [
+          0.5,
+          0.91
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.12675018422991893,
+              0.028472821397756688
+            ],
+            [
+              0.8857774502579219,
+              0.028472821397756688
+            ],
+            [
+              0.8857774502579219,
+              0.9525452976704055
+            ],
+            [
+              0.12675018422991893,
+              0.9525452976704055
+            ]
+          ],
+          "accuracy": "Conservative full-group bounds; use alpha for click picking. Not a per-member collision mesh."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true,
+        "note": "Grouped rigid prop. Gravity acts toward its support plane; never integrate screen-down gravity. Preview drag is supported only for tabletop props."
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 77,
+        "accessible_label": "spare potions"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.91
+        ],
+        "grip": [
+          0.5,
+          0.55
+        ],
+        "center": [
+          0.5,
+          0.5
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": false,
+        "pickup": false,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect"
+        ],
+        "valid_drop_surfaces": []
+      },
+      "shadow": {
+        "implementation": "separate receiver-clipped contact and alpha-projected cast layers",
+        "opacity": 0.38,
+        "detach_on_pickup": false,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "idle",
+        "available_raster_states": [
+          "idle"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "status": "Revision 3: thematic and support pass with wizard present",
+        "anchors": "visually estimated against this exact generated raster",
+        "physics": "plausible design estimates, not measured physical properties"
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "rotation_limits_deg": [
+          -180,
+          180
+        ],
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "held_z": 100,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "lighting": {
+        "rule": "spare_potions",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "clutter",
+      "group_contract": {
+        "single_rigid_raster": true,
+        "members_separately_pickable": false,
+        "separation_requires_new_art": true
+      }
+    },
+    {
+      "id": "A_celestial",
+      "asset": "A_celestial",
+      "label": "A \u00b7 Worn celestial blue",
+      "transform": {
+        "x": 182.5,
+        "y": 675.2,
+        "width": 135,
+        "height": 90.0,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.087890625
+      },
+      "z": 78,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "tea_table",
+      "physics": {
+        "body_type": "dynamic",
+        "mass_kg_estimate": 0.85,
+        "material": "ceramic",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.62
+        ],
+        "contact_uv": [
+          0.5,
+          0.92
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.05,
+              0.3
+            ],
+            [
+              0.5,
+              0.08
+            ],
+            [
+              0.97,
+              0.22
+            ],
+            [
+              0.86,
+              0.65
+            ],
+            [
+              0.65,
+              0.94
+            ],
+            [
+              0.33,
+              0.94
+            ],
+            [
+              0.06,
+              0.65
+            ]
+          ],
+          "accuracy": "Conservative authored proxy; source alpha used for picking."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 75,
+        "accessible_label": "A \u00b7 Worn celestial blue"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.92
+        ],
+        "grip_handle": [
+          0.13,
+          0.45
+        ],
+        "grip_under_base": [
+          0.5,
+          0.87
+        ],
+        "spout_tip": [
+          0.94,
+          0.3
+        ],
+        "lid_knob": [
+          0.5,
+          0.15
+        ],
+        "mouth_center": [
+          0.5,
+          0.29
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": true,
+        "pickup": true,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect",
+          "pick_up",
+          "put_down"
+        ],
+        "valid_drop_surfaces": [
+          "tea_table"
+        ]
+      },
+      "shadow": {
+        "implementation": "Separate receiver-clipped contact and alpha-projected cast shadows",
+        "opacity": 0.47,
+        "blur_scene_px": 6,
+        "detach_on_pickup": true,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "closed",
+        "available_raster_states": [
+          "closed"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "anchors": "Visually authored UV estimates against this exact source raster, including transparent margins.",
+        "physics": "Design estimates; not measured."
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "approach_clearance_scene_px": 12,
+        "finger_occlusion": "split character hand into palm behind prop and fingers in front",
+        "preserve_world_transform_on_reparent": true,
+        "held_z": 100,
+        "held_gravity": false,
+        "max_lift_scene_px": 180,
+        "max_translation_speed_scene_px_s": 240,
+        "rotation_pivot": "grip_handle",
+        "rotation_limits_deg": [
+          0,
+          0
+        ],
+        "surface_clearance_before_rotation_scene_px": 18,
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "collision_with_other_teaware": true,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "render": {
+        "material_response": {
+          "brightness": 0.96,
+          "saturation": 0.92,
+          "contrast": 0.98,
+          "sepia": 0.025,
+          "implementation": "Direct Canvas2D filter before shared room lighting; original PNG preserved."
+        }
+      },
+      "lighting": {
+        "rule": "A_celestial",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "teapot_candidate",
+      "lid_contract": {
+        "integrated_in_raster": true,
+        "removable": false,
+        "note": "Separate lid/body art required after choosing a design."
+      }
+    },
+    {
+      "id": "B_stoneware",
+      "asset": "B_stoneware",
+      "label": "B \u00b7 Moss stoneware",
+      "transform": {
+        "x": 337.5,
+        "y": 667.2,
+        "width": 135,
+        "height": 90.0,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.087890625
+      },
+      "z": 78,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "tea_table",
+      "physics": {
+        "body_type": "dynamic",
+        "mass_kg_estimate": 1.1,
+        "material": "stoneware",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.62
+        ],
+        "contact_uv": [
+          0.5,
+          0.92
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.05,
+              0.3
+            ],
+            [
+              0.5,
+              0.08
+            ],
+            [
+              0.97,
+              0.22
+            ],
+            [
+              0.86,
+              0.65
+            ],
+            [
+              0.65,
+              0.94
+            ],
+            [
+              0.33,
+              0.94
+            ],
+            [
+              0.06,
+              0.65
+            ]
+          ],
+          "accuracy": "Conservative authored proxy; source alpha used for picking."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 75,
+        "accessible_label": "B \u00b7 Moss stoneware"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.92
+        ],
+        "grip_handle": [
+          0.13,
+          0.45
+        ],
+        "grip_under_base": [
+          0.5,
+          0.87
+        ],
+        "spout_tip": [
+          0.94,
+          0.3
+        ],
+        "lid_knob": [
+          0.5,
+          0.15
+        ],
+        "mouth_center": [
+          0.5,
+          0.29
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": true,
+        "pickup": true,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect",
+          "pick_up",
+          "put_down"
+        ],
+        "valid_drop_surfaces": [
+          "tea_table"
+        ]
+      },
+      "shadow": {
+        "implementation": "Separate receiver-clipped contact and alpha-projected cast shadows",
+        "opacity": 0.47,
+        "blur_scene_px": 6,
+        "detach_on_pickup": true,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "closed",
+        "available_raster_states": [
+          "closed"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "anchors": "Visually authored UV estimates against this exact source raster, including transparent margins.",
+        "physics": "Design estimates; not measured."
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "approach_clearance_scene_px": 12,
+        "finger_occlusion": "split character hand into palm behind prop and fingers in front",
+        "preserve_world_transform_on_reparent": true,
+        "held_z": 100,
+        "held_gravity": false,
+        "max_lift_scene_px": 180,
+        "max_translation_speed_scene_px_s": 240,
+        "rotation_pivot": "grip_handle",
+        "rotation_limits_deg": [
+          0,
+          0
+        ],
+        "surface_clearance_before_rotation_scene_px": 18,
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "collision_with_other_teaware": true,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "render": {
+        "material_response": {
+          "brightness": 0.96,
+          "saturation": 0.92,
+          "contrast": 0.98,
+          "sepia": 0.025,
+          "implementation": "Direct Canvas2D filter before shared room lighting; original PNG preserved."
+        }
+      },
+      "lighting": {
+        "rule": "B_stoneware",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "teapot_candidate",
+      "lid_contract": {
+        "integrated_in_raster": true,
+        "removable": false,
+        "note": "Separate lid/body art required after choosing a design."
+      }
+    },
+    {
+      "id": "C_copper",
+      "asset": "C_copper",
+      "label": "C \u00b7 Hammered copper",
+      "transform": {
+        "x": 492.5,
+        "y": 661.2,
+        "width": 135,
+        "height": 90.0,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.087890625
+      },
+      "z": 78,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "tea_table",
+      "physics": {
+        "body_type": "dynamic",
+        "mass_kg_estimate": 0.8,
+        "material": "copper and wood",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.62
+        ],
+        "contact_uv": [
+          0.5,
+          0.92
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.05,
+              0.3
+            ],
+            [
+              0.5,
+              0.08
+            ],
+            [
+              0.97,
+              0.22
+            ],
+            [
+              0.86,
+              0.65
+            ],
+            [
+              0.65,
+              0.94
+            ],
+            [
+              0.33,
+              0.94
+            ],
+            [
+              0.06,
+              0.65
+            ]
+          ],
+          "accuracy": "Conservative authored proxy; source alpha used for picking."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 75,
+        "accessible_label": "C \u00b7 Hammered copper"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.92
+        ],
+        "grip_handle": [
+          0.13,
+          0.45
+        ],
+        "grip_under_base": [
+          0.5,
+          0.87
+        ],
+        "spout_tip": [
+          0.94,
+          0.3
+        ],
+        "lid_knob": [
+          0.5,
+          0.15
+        ],
+        "mouth_center": [
+          0.5,
+          0.29
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": true,
+        "pickup": true,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect",
+          "pick_up",
+          "put_down"
+        ],
+        "valid_drop_surfaces": [
+          "tea_table"
+        ]
+      },
+      "shadow": {
+        "implementation": "Separate receiver-clipped contact and alpha-projected cast shadows",
+        "opacity": 0.47,
+        "blur_scene_px": 6,
+        "detach_on_pickup": true,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "closed",
+        "available_raster_states": [
+          "closed"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "anchors": "Visually authored UV estimates against this exact source raster, including transparent margins.",
+        "physics": "Design estimates; not measured."
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "approach_clearance_scene_px": 12,
+        "finger_occlusion": "split character hand into palm behind prop and fingers in front",
+        "preserve_world_transform_on_reparent": true,
+        "held_z": 100,
+        "held_gravity": false,
+        "max_lift_scene_px": 180,
+        "max_translation_speed_scene_px_s": 240,
+        "rotation_pivot": "grip_handle",
+        "rotation_limits_deg": [
+          0,
+          0
+        ],
+        "surface_clearance_before_rotation_scene_px": 18,
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "collision_with_other_teaware": true,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "render": {
+        "material_response": {
+          "brightness": 0.96,
+          "saturation": 0.92,
+          "contrast": 0.98,
+          "sepia": 0.025,
+          "implementation": "Direct Canvas2D filter before shared room lighting; original PNG preserved."
+        }
+      },
+      "lighting": {
+        "rule": "C_copper",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "teapot_candidate",
+      "lid_contract": {
+        "integrated_in_raster": true,
+        "removable": false,
+        "note": "Separate lid/body art required after choosing a design."
+      }
+    },
+    {
+      "id": "D_iron",
+      "asset": "D_iron",
+      "label": "D \u00b7 Leaf-pattern cast iron",
+      "transform": {
+        "x": 647.5,
+        "y": 655.2,
+        "width": 135,
+        "height": 90.0,
+        "rotation_deg": 0,
+        "origin_uv": [
+          0,
+          0
+        ],
+        "scale": 0.087890625
+      },
+      "z": 78,
+      "depth_sort": "explicit_z; held objects reparent to character hand",
+      "support": "tea_table",
+      "physics": {
+        "body_type": "dynamic",
+        "mass_kg_estimate": 1.6,
+        "material": "cast iron",
+        "gravity_m_s2": 9.81,
+        "gravity_projected_px_s2": 0,
+        "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+        "friction_static": 0.65,
+        "friction_dynamic": 0.45,
+        "restitution": 0.03,
+        "center_of_mass_uv": [
+          0.5,
+          0.62
+        ],
+        "contact_uv": [
+          0.5,
+          0.92
+        ],
+        "collision": {
+          "type": "convex_polygon",
+          "space": "source_uv",
+          "vertices": [
+            [
+              0.05,
+              0.3
+            ],
+            [
+              0.5,
+              0.08
+            ],
+            [
+              0.97,
+              0.22
+            ],
+            [
+              0.86,
+              0.65
+            ],
+            [
+              0.65,
+              0.94
+            ],
+            [
+              0.33,
+              0.94
+            ],
+            [
+              0.06,
+              0.65
+            ]
+          ],
+          "accuracy": "Conservative authored proxy; source alpha used for picking."
+        },
+        "rotation_constraints_deg": [
+          0,
+          0
+        ],
+        "free_fall_enabled": false,
+        "breakage_enabled": false,
+        "design_values_only": true
+      },
+      "hit_test": {
+        "mode": "source_alpha",
+        "alpha_threshold": 32,
+        "skip_transparent_holes": true,
+        "inverse_transform_pointer": true,
+        "minimum_target_css_px": 24,
+        "hit_slop_css_px": 3,
+        "priority": 75,
+        "accessible_label": "D \u00b7 Leaf-pattern cast iron"
+      },
+      "anchors": {
+        "base": [
+          0.5,
+          0.92
+        ],
+        "grip_handle": [
+          0.13,
+          0.45
+        ],
+        "grip_under_base": [
+          0.5,
+          0.87
+        ],
+        "spout_tip": [
+          0.94,
+          0.3
+        ],
+        "lid_knob": [
+          0.5,
+          0.15
+        ],
+        "mouth_center": [
+          0.5,
+          0.29
+        ]
+      },
+      "interaction": {
+        "clickable": true,
+        "draggable": true,
+        "pickup": true,
+        "return_on_invalid_drop": true,
+        "return_duration_ms": 300,
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "actions": [
+          "inspect",
+          "pick_up",
+          "put_down"
+        ],
+        "valid_drop_surfaces": [
+          "tea_table"
+        ]
+      },
+      "shadow": {
+        "implementation": "Separate receiver-clipped contact and alpha-projected cast shadows",
+        "opacity": 0.47,
+        "blur_scene_px": 6,
+        "detach_on_pickup": true,
+        "fade_with_lift": true
+      },
+      "states": {
+        "initial": "closed",
+        "available_raster_states": [
+          "closed"
+        ],
+        "additional_pose_rasters_included": false
+      },
+      "calibration": {
+        "anchors": "Visually authored UV estimates against this exact source raster, including transparent margins.",
+        "physics": "Design estimates; not measured."
+      },
+      "pickup_contract": {
+        "hand_anchor": "grip_handle",
+        "approach_clearance_scene_px": 12,
+        "finger_occlusion": "split character hand into palm behind prop and fingers in front",
+        "preserve_world_transform_on_reparent": true,
+        "held_z": 100,
+        "held_gravity": false,
+        "max_lift_scene_px": 180,
+        "max_translation_speed_scene_px_s": 240,
+        "rotation_pivot": "grip_handle",
+        "rotation_limits_deg": [
+          0,
+          0
+        ],
+        "surface_clearance_before_rotation_scene_px": 18,
+        "accept_drop_on": [
+          "tea_table"
+        ],
+        "collision_with_other_teaware": true,
+        "requires_character_pose": true,
+        "character_art_included": false,
+        "idle_character_art_included": true
+      },
+      "render": {
+        "material_response": {
+          "brightness": 0.96,
+          "saturation": 0.92,
+          "contrast": 0.98,
+          "sepia": 0.025,
+          "implementation": "Direct Canvas2D filter before shared room lighting; original PNG preserved."
+        }
+      },
+      "lighting": {
+        "rule": "D_iron",
+        "rebuild_shadow_when_moved": true,
+        "source_highlights": "baked",
+        "lighting_map": "shared interior gain map",
+        "keep_shadow_separate_from_sprite": true
+      },
+      "category": "teapot_candidate",
+      "lid_contract": {
+        "integrated_in_raster": true,
+        "removable": false,
+        "note": "Separate lid/body art required after choosing a design."
+      }
+    }
+  ],
+  "surfaces": {
+    "floor": {
+      "kind": "walkable_plane",
+      "polygon_scene": [
+        [
+          450,
+          675
+        ],
+        [
+          1280,
+          610
+        ],
+        [
+          1510,
+          1010
+        ],
+        [
+          0,
+          1010
+        ]
+      ],
+      "obstacles": [
+        "tea_table",
+        "armchair",
+        "gargoyle",
+        "dragon",
+        "chest",
+        "ladder"
+      ],
+      "not_a_navigation_mesh": true
+    },
+    "rug": {
+      "kind": "floor_covering",
+      "polygon_scene": [
+        [
+          795,
+          625
+        ],
+        [
+          1250,
+          650
+        ],
+        [
+          1480,
+          878
+        ],
+        [
+          520,
+          810
+        ]
+      ],
+      "support_height_m": 0.006,
+      "note": "Low wool pile with brown fringe; mapped onto floor plane, not printed flat paper."
+    },
+    "tea_table": {
+      "kind": "tabletop",
+      "polygon_scene": [
+        [
+          15,
+          716
+        ],
+        [
+          655,
+          699
+        ],
+        [
+          820,
+          745
+        ],
+        [
+          20,
+          792
+        ]
+      ],
+      "height_m_estimate": 0.75,
+      "accepts": [
+        "teapot",
+        "teapot_lid",
+        "teacup",
+        "saucer",
+        "milk_jug"
+      ],
+      "note": "Validate projected base anchor inside surface; reject overlapping footprints."
+    },
+    "pedestal": {
+      "kind": "fixed_shelf",
+      "contact_line_scene": [
+        [
+          1350,
+          395
+        ],
+        [
+          1495,
+          395
+        ]
+      ],
+      "height_m_estimate": 1.3,
+      "occupied_by": "gargoyle"
+    },
+    "left_stone_shelf": {
+      "kind": "fixed_shelf",
+      "contact_line_scene": [
+        [
+          312,
+          524
+        ],
+        [
+          440,
+          524
+        ]
+      ],
+      "height_m_estimate": 0.8
+    },
+    "hearth": {
+      "kind": "raised_stone",
+      "polygon_scene": [
+        [
+          474,
+          475
+        ],
+        [
+          592,
+          475
+        ],
+        [
+          592,
+          487
+        ],
+        [
+          474,
+          487
+        ]
+      ],
+      "height_m_estimate": 0.35
+    },
+    "library_rail": {
+      "kind": "guided_constraint",
+      "line_scene": [
+        [
+          1124.0,
+          202.793956
+        ],
+        [
+          1215.0,
+          202.793956
+        ]
+      ],
+      "status": "Visible short brass rail aligned to top-hook contact centers."
+    },
+    "hearth_interior": {
+      "kind": "firebox_interior",
+      "polygon_scene": [
+        [
+          474,
+          342
+        ],
+        [
+          505,
+          326
+        ],
+        [
+          557,
+          330
+        ],
+        [
+          587,
+          350
+        ],
+        [
+          591,
+          482
+        ],
+        [
+          473,
+          482
+        ]
+      ],
+      "front_lip_y": 488,
+      "depth": "behind front stone sill",
+      "heat_source": true
+    },
+    "potion_table_floor": {
+      "kind": "stone_floor",
+      "polygon_scene": [
+        [
+          795,
+          600
+        ],
+        [
+          1060,
+          600
+        ],
+        [
+          1060,
+          712
+        ],
+        [
+          795,
+          712
+        ]
+      ],
+      "height_m": 0,
+      "foot_contact_required": true
+    },
+    "hearth_floor": {
+      "kind": "recessed_stone_slab",
+      "polygon_scene": [
+        [
+          469,
+          465
+        ],
+        [
+          590,
+          465
+        ],
+        [
+          594,
+          482
+        ],
+        [
+          467,
+          482
+        ]
+      ],
+      "contact_note": "Front foot at y477; rear feet recede toward y468 on the same visible slab.",
+      "height_m_estimate": 0.38
+    },
+    "ladder_floor": {
+      "kind": "stone_floor",
+      "polygon_scene": [
+        [
+          1100,
+          610
+        ],
+        [
+          1225,
+          610
+        ],
+        [
+          1225,
+          635
+        ],
+        [
+          1100,
+          635
+        ]
+      ]
+    }
+  },
+  "attachments": [
+    {
+      "child": "teapot_lid",
+      "parent": "teapot",
+      "parent_anchor": "lid_seat",
+      "child_anchor": "seat",
+      "type": "gravity_seated_removable",
+      "detach_before_tilt_over_deg": 20,
+      "remove_before_pour": true
+    }
+  ],
+  "weather": {
+    "current": "day_clear",
+    "available_raster_assets": [
+      "outside_day"
+    ],
+    "variants_not_yet_generated": [
+      "dusk",
+      "night",
+      "rain",
+      "snow"
+    ],
+    "exterior_render_order": [
+      "landscape",
+      "clouds",
+      "precipitation",
+      "room"
+    ],
+    "opening_mask": "room alpha; outdoor effects must render before room",
+    "rain_direction_scene": [
+      0.2,
+      1
+    ],
+    "indoor_precipitation": false,
+    "interior_draft": [
+      0,
+      0
+    ],
+    "indoor_lighting_layer_included": true,
+    "lighting_control": "lighting.daylight and lighting presets"
+  },
+  "character_integration": {
+    "reference": "Original supplied olive coat wizard design; revision 3 includes a new idle sprite.",
+    "required_anchors": [
+      "left_hand_grip",
+      "right_hand_grip",
+      "feet_ground"
+    ],
+    "occlusion": "Idle sprite remains behind foreground tea table. Hand picking and placing still need separate pose/hand rasters.",
+    "object_pickup_transaction": [
+      "reserve object",
+      "move character to reachable stance",
+      "reach hand without penetration",
+      "attach grip while preserving world transform",
+      "disable support constraint and gravity",
+      "lift clear before translating",
+      "validate destination footprint",
+      "lower until base contacts support",
+      "detach from hand and restore support",
+      "release reservation"
+    ],
+    "reach_distance_m_estimate": 0.65,
+    "heavy_objects_never_single_hand_pickup": [
+      "dragon",
+      "gargoyle",
+      "chest",
+      "cauldron"
+    ],
+    "idle_asset": "wizard",
+    "idle_pose_included": true,
+    "character_raster_included": true,
+    "required_additional_poses": [
+      "reach left handle",
+      "reach right handle",
+      "carry cup",
+      "pour teapot",
+      "place object"
+    ],
+    "scale_review": "Wizard displayed behind foreground table and in front of workbench; can be toggled independently."
+  },
+  "global_interaction": {
+    "one_pointer_drag_at_a_time": true,
+    "topmost_alpha_hit_wins": true,
+    "transparent_handle_holes_pass_through": true,
+    "drop_outside_scene": "return_to_last_valid_support",
+    "cancel": "Escape returns to pre-action state",
+    "reduced_motion_supported": true,
+    "click_sound_files_included": false
+  },
+  "units": {
+    "mass": "kg estimates",
+    "volume": "ml unless explicitly liters",
+    "time": "seconds except _ms fields",
+    "angle": "degrees",
+    "anchors": "UV normalized source raster",
+    "world_geometry": "2.5D authored approximation; pixels are not meters"
+  },
+  "validation": {
+    "image_dimensions_and_checksums": "generated in validation.json",
+    "attachments": "anchor coincidence validated numerically",
+    "art_alignment": "Shelf support lines, rug quad, hearth containment and foot projections recorded; assembled preview reviewed.",
+    "coordinate_precision": "numbers are precise storage, not a claim of measurement accuracy"
+  },
+  "static_props": [
+    {
+      "id": "potion_table",
+      "asset": "potion_table",
+      "transform": {
+        "x": 790,
+        "y": 460,
+        "width": 260,
+        "height": 237.60670731707316
+      },
+      "z": 32,
+      "feet_uv": [
+        [
+          0.112,
+          0.735
+        ],
+        [
+          0.34,
+          0.647
+        ],
+        [
+          0.7,
+          0.97
+        ],
+        [
+          0.89,
+          0.815
+        ]
+      ],
+      "support": "potion_table_floor",
+      "shadow": {
+        "per_foot": true,
+        "radius_scene_px": [
+          10,
+          2.8
+        ],
+        "opacity": 0.34
+      },
+      "interactive": false,
+      "note": "All four complete feet visible; localized contact shadows, no unsupported group placement."
+    }
+  ],
+  "shelf_rows": [
+    {
+      "id": "back_a_1",
+      "asset": "book_row",
+      "source_rect": [
+        31,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          257
+        ],
+        [
+          892,
+          251
+        ],
+        [
+          892,
+          275
+        ],
+        [
+          801,
+          281
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          281
+        ],
+        [
+          892,
+          275
+        ]
+      ],
+      "height_px": 24,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_a_2",
+      "asset": "book_row",
+      "source_rect": [
+        228,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          294
+        ],
+        [
+          892,
+          288
+        ],
+        [
+          892,
+          318
+        ],
+        [
+          801,
+          324
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          324
+        ],
+        [
+          892,
+          318
+        ]
+      ],
+      "height_px": 30,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_a_3",
+      "asset": "book_row",
+      "source_rect": [
+        425,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          334
+        ],
+        [
+          892,
+          329
+        ],
+        [
+          892,
+          356
+        ],
+        [
+          801,
+          361
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          361
+        ],
+        [
+          892,
+          356
+        ]
+      ],
+      "height_px": 27,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_a_4",
+      "asset": "book_row",
+      "source_rect": [
+        622,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          372
+        ],
+        [
+          892,
+          368
+        ],
+        [
+          892,
+          396
+        ],
+        [
+          801,
+          400
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          400
+        ],
+        [
+          892,
+          396
+        ]
+      ],
+      "height_px": 28,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_a_5",
+      "asset": "book_row",
+      "source_rect": [
+        819,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          413
+        ],
+        [
+          892,
+          410
+        ],
+        [
+          892,
+          442
+        ],
+        [
+          801,
+          445
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          445
+        ],
+        [
+          892,
+          442
+        ]
+      ],
+      "height_px": 32,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_a_6",
+      "asset": "book_row",
+      "source_rect": [
+        1016,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          465
+        ],
+        [
+          892,
+          464
+        ],
+        [
+          892,
+          502
+        ],
+        [
+          801,
+          503
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          503
+        ],
+        [
+          892,
+          502
+        ]
+      ],
+      "height_px": 38,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_a_7",
+      "asset": "book_row",
+      "source_rect": [
+        1213,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          801,
+          529
+        ],
+        [
+          892,
+          527
+        ],
+        [
+          892,
+          572
+        ],
+        [
+          801,
+          574
+        ]
+      ],
+      "support_line_scene": [
+        [
+          801,
+          574
+        ],
+        [
+          892,
+          572
+        ]
+      ],
+      "height_px": 45,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_b_1",
+      "asset": "book_row",
+      "source_rect": [
+        179,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          920,
+          261
+        ],
+        [
+          1034,
+          252
+        ],
+        [
+          1034,
+          285
+        ],
+        [
+          920,
+          294
+        ]
+      ],
+      "support_line_scene": [
+        [
+          920,
+          294
+        ],
+        [
+          1034,
+          285
+        ]
+      ],
+      "height_px": 33,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_b_2",
+      "asset": "book_row",
+      "source_rect": [
+        376,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          920,
+          311
+        ],
+        [
+          1034,
+          304
+        ],
+        [
+          1034,
+          340
+        ],
+        [
+          920,
+          347
+        ]
+      ],
+      "support_line_scene": [
+        [
+          920,
+          347
+        ],
+        [
+          1034,
+          340
+        ]
+      ],
+      "height_px": 36,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_b_3",
+      "asset": "book_row",
+      "source_rect": [
+        573,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          920,
+          363
+        ],
+        [
+          1034,
+          357
+        ],
+        [
+          1034,
+          393
+        ],
+        [
+          920,
+          399
+        ]
+      ],
+      "support_line_scene": [
+        [
+          920,
+          399
+        ],
+        [
+          1034,
+          393
+        ]
+      ],
+      "height_px": 36,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_b_4",
+      "asset": "book_row",
+      "source_rect": [
+        770,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          920,
+          414
+        ],
+        [
+          1034,
+          410
+        ],
+        [
+          1034,
+          447
+        ],
+        [
+          920,
+          451
+        ]
+      ],
+      "support_line_scene": [
+        [
+          920,
+          451
+        ],
+        [
+          1034,
+          447
+        ]
+      ],
+      "height_px": 37,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_b_5",
+      "asset": "book_row",
+      "source_rect": [
+        967,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          920,
+          466
+        ],
+        [
+          1034,
+          466
+        ],
+        [
+          1034,
+          504
+        ],
+        [
+          920,
+          504
+        ]
+      ],
+      "support_line_scene": [
+        [
+          920,
+          504
+        ],
+        [
+          1034,
+          504
+        ]
+      ],
+      "height_px": 38,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_b_6",
+      "asset": "book_row",
+      "source_rect": [
+        1164,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          920,
+          528
+        ],
+        [
+          1034,
+          528
+        ],
+        [
+          1034,
+          574
+        ],
+        [
+          920,
+          574
+        ]
+      ],
+      "support_line_scene": [
+        [
+          920,
+          574
+        ],
+        [
+          1034,
+          574
+        ]
+      ],
+      "height_px": 46,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_c_1",
+      "asset": "book_row",
+      "source_rect": [
+        833,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1056,
+          263
+        ],
+        [
+          1105,
+          259
+        ],
+        [
+          1105,
+          288
+        ],
+        [
+          1056,
+          292
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1056,
+          292
+        ],
+        [
+          1105,
+          288
+        ]
+      ],
+      "height_px": 29,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_c_2",
+      "asset": "book_row",
+      "source_rect": [
+        1030,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1056,
+          307
+        ],
+        [
+          1105,
+          304
+        ],
+        [
+          1105,
+          337
+        ],
+        [
+          1056,
+          340
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1056,
+          340
+        ],
+        [
+          1105,
+          337
+        ]
+      ],
+      "height_px": 33,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_c_3",
+      "asset": "book_row",
+      "source_rect": [
+        1227,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1056,
+          358
+        ],
+        [
+          1105,
+          355
+        ],
+        [
+          1105,
+          395
+        ],
+        [
+          1056,
+          398
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1056,
+          398
+        ],
+        [
+          1105,
+          395
+        ]
+      ],
+      "height_px": 40,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_c_4",
+      "asset": "book_row",
+      "source_rect": [
+        1424,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1056,
+          414
+        ],
+        [
+          1105,
+          411
+        ],
+        [
+          1105,
+          445
+        ],
+        [
+          1056,
+          448
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1056,
+          448
+        ],
+        [
+          1105,
+          445
+        ]
+      ],
+      "height_px": 34,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_c_5",
+      "asset": "book_row",
+      "source_rect": [
+        1621,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1056,
+          464
+        ],
+        [
+          1105,
+          464
+        ],
+        [
+          1105,
+          504
+        ],
+        [
+          1056,
+          504
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1056,
+          504
+        ],
+        [
+          1105,
+          504
+        ]
+      ],
+      "height_px": 40,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_c_6",
+      "asset": "book_row",
+      "source_rect": [
+        59,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1056,
+          527
+        ],
+        [
+          1105,
+          527
+        ],
+        [
+          1105,
+          575
+        ],
+        [
+          1056,
+          575
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1056,
+          575
+        ],
+        [
+          1105,
+          575
+        ]
+      ],
+      "height_px": 48,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_d_1",
+      "asset": "book_row",
+      "source_rect": [
+        256,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1123,
+          239
+        ],
+        [
+          1166,
+          234
+        ],
+        [
+          1166,
+          261
+        ],
+        [
+          1123,
+          266
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1123,
+          266
+        ],
+        [
+          1166,
+          261
+        ]
+      ],
+      "height_px": 27,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_d_2",
+      "asset": "book_row",
+      "source_rect": [
+        453,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1123,
+          284
+        ],
+        [
+          1166,
+          278
+        ],
+        [
+          1166,
+          312
+        ],
+        [
+          1123,
+          318
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1123,
+          318
+        ],
+        [
+          1166,
+          312
+        ]
+      ],
+      "height_px": 34,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_d_3",
+      "asset": "book_row",
+      "source_rect": [
+        650,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1123,
+          336
+        ],
+        [
+          1166,
+          330
+        ],
+        [
+          1166,
+          366
+        ],
+        [
+          1123,
+          372
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1123,
+          372
+        ],
+        [
+          1166,
+          366
+        ]
+      ],
+      "height_px": 36,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_d_4",
+      "asset": "book_row",
+      "source_rect": [
+        847,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1123,
+          393
+        ],
+        [
+          1166,
+          389
+        ],
+        [
+          1166,
+          438
+        ],
+        [
+          1123,
+          442
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1123,
+          442
+        ],
+        [
+          1166,
+          438
+        ]
+      ],
+      "height_px": 49,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_d_5",
+      "asset": "book_row",
+      "source_rect": [
+        1044,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1123,
+          459
+        ],
+        [
+          1166,
+          461
+        ],
+        [
+          1166,
+          506
+        ],
+        [
+          1123,
+          504
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1123,
+          504
+        ],
+        [
+          1166,
+          506
+        ]
+      ],
+      "height_px": 45,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "back_d_6",
+      "asset": "book_row",
+      "source_rect": [
+        1241,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1123,
+          529
+        ],
+        [
+          1166,
+          532
+        ],
+        [
+          1166,
+          584
+        ],
+        [
+          1123,
+          581
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1123,
+          581
+        ],
+        [
+          1166,
+          584
+        ]
+      ],
+      "height_px": 52,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_a_1",
+      "asset": "book_row",
+      "source_rect": [
+        735,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1231,
+          221
+        ],
+        [
+          1321,
+          202
+        ],
+        [
+          1321,
+          236
+        ],
+        [
+          1231,
+          255
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1231,
+          255
+        ],
+        [
+          1321,
+          236
+        ]
+      ],
+      "height_px": 34,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_a_2",
+      "asset": "book_row",
+      "source_rect": [
+        932,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1231,
+          277
+        ],
+        [
+          1321,
+          259
+        ],
+        [
+          1321,
+          298
+        ],
+        [
+          1231,
+          316
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1231,
+          316
+        ],
+        [
+          1321,
+          298
+        ]
+      ],
+      "height_px": 39,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_a_3",
+      "asset": "book_row",
+      "source_rect": [
+        1129,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1231,
+          337
+        ],
+        [
+          1321,
+          321
+        ],
+        [
+          1321,
+          353
+        ],
+        [
+          1231,
+          369
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1231,
+          369
+        ],
+        [
+          1321,
+          353
+        ]
+      ],
+      "height_px": 32,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_a_4",
+      "asset": "book_row",
+      "source_rect": [
+        1326,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1231,
+          388
+        ],
+        [
+          1321,
+          378
+        ],
+        [
+          1321,
+          407
+        ],
+        [
+          1231,
+          417
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1231,
+          417
+        ],
+        [
+          1321,
+          407
+        ]
+      ],
+      "height_px": 29,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_a_5",
+      "asset": "book_row",
+      "source_rect": [
+        116,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1231,
+          463
+        ],
+        [
+          1321,
+          469
+        ],
+        [
+          1321,
+          516
+        ],
+        [
+          1231,
+          510
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1231,
+          510
+        ],
+        [
+          1321,
+          516
+        ]
+      ],
+      "height_px": 47,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_a_6",
+      "asset": "book_row",
+      "source_rect": [
+        313,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1231,
+          544
+        ],
+        [
+          1321,
+          555
+        ],
+        [
+          1321,
+          610
+        ],
+        [
+          1231,
+          599
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1231,
+          599
+        ],
+        [
+          1321,
+          610
+        ]
+      ],
+      "height_px": 55,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_edge_1",
+      "asset": "book_row",
+      "source_rect": [
+        862,
+        116,
+        792,
+        499
+      ],
+      "quad_scene": [
+        [
+          1440,
+          201
+        ],
+        [
+          1535,
+          185
+        ],
+        [
+          1535,
+          239
+        ],
+        [
+          1440,
+          255
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1440,
+          255
+        ],
+        [
+          1535,
+          239
+        ]
+      ],
+      "height_px": 54,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_edge_2",
+      "asset": "book_row",
+      "source_rect": [
+        1059,
+        116,
+        792,
+        499
+      ],
+      "quad_scene": [
+        [
+          1440,
+          284
+        ],
+        [
+          1535,
+          266
+        ],
+        [
+          1535,
+          328
+        ],
+        [
+          1440,
+          346
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1440,
+          346
+        ],
+        [
+          1535,
+          328
+        ]
+      ],
+      "height_px": 62,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "right_edge_3",
+      "asset": "book_row",
+      "source_rect": [
+        1256,
+        116,
+        792,
+        499
+      ],
+      "quad_scene": [
+        [
+          1440,
+          368
+        ],
+        [
+          1535,
+          355
+        ],
+        [
+          1535,
+          398
+        ],
+        [
+          1440,
+          411
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1440,
+          411
+        ],
+        [
+          1535,
+          398
+        ]
+      ],
+      "height_px": 43,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_narrow_1",
+      "asset": "book_row",
+      "source_rect": [
+        1452,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          381,
+          199
+        ],
+        [
+          429,
+          209
+        ],
+        [
+          429,
+          249
+        ],
+        [
+          381,
+          239
+        ]
+      ],
+      "support_line_scene": [
+        [
+          381,
+          239
+        ],
+        [
+          429,
+          249
+        ]
+      ],
+      "height_px": 40,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_narrow_2",
+      "asset": "book_row",
+      "source_rect": [
+        1649,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          381,
+          265
+        ],
+        [
+          429,
+          269
+        ],
+        [
+          429,
+          305
+        ],
+        [
+          381,
+          301
+        ]
+      ],
+      "support_line_scene": [
+        [
+          381,
+          301
+        ],
+        [
+          429,
+          305
+        ]
+      ],
+      "height_px": 36,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_narrow_3",
+      "asset": "book_row",
+      "source_rect": [
+        87,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          381,
+          320
+        ],
+        [
+          429,
+          321
+        ],
+        [
+          429,
+          352
+        ],
+        [
+          381,
+          351
+        ]
+      ],
+      "support_line_scene": [
+        [
+          381,
+          351
+        ],
+        [
+          429,
+          352
+        ]
+      ],
+      "height_px": 31,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_narrow_4",
+      "asset": "book_row",
+      "source_rect": [
+        284,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          381,
+          377
+        ],
+        [
+          429,
+          381
+        ],
+        [
+          429,
+          426
+        ],
+        [
+          381,
+          422
+        ]
+      ],
+      "support_line_scene": [
+        [
+          381,
+          422
+        ],
+        [
+          429,
+          426
+        ]
+      ],
+      "height_px": 45,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_narrow_5",
+      "asset": "book_row",
+      "source_rect": [
+        481,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          381,
+          430
+        ],
+        [
+          429,
+          431
+        ],
+        [
+          429,
+          454
+        ],
+        [
+          381,
+          453
+        ]
+      ],
+      "support_line_scene": [
+        [
+          381,
+          453
+        ],
+        [
+          429,
+          454
+        ]
+      ],
+      "height_px": 23,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_narrow_6",
+      "asset": "book_row",
+      "source_rect": [
+        678,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          381,
+          478
+        ],
+        [
+          429,
+          479
+        ],
+        [
+          429,
+          520
+        ],
+        [
+          381,
+          519
+        ]
+      ],
+      "support_line_scene": [
+        [
+          381,
+          519
+        ],
+        [
+          429,
+          520
+        ]
+      ],
+      "height_px": 41,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_left_1",
+      "asset": "book_row",
+      "source_rect": [
+        259,
+        116,
+        1056,
+        499
+      ],
+      "quad_scene": [
+        [
+          475,
+          26
+        ],
+        [
+          609,
+          61
+        ],
+        [
+          609,
+          123
+        ],
+        [
+          475,
+          88
+        ]
+      ],
+      "support_line_scene": [
+        [
+          475,
+          88
+        ],
+        [
+          609,
+          123
+        ]
+      ],
+      "height_px": 62,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_left_2",
+      "asset": "book_row",
+      "source_rect": [
+        456,
+        116,
+        1056,
+        499
+      ],
+      "quad_scene": [
+        [
+          475,
+          116
+        ],
+        [
+          609,
+          147
+        ],
+        [
+          609,
+          204
+        ],
+        [
+          475,
+          173
+        ]
+      ],
+      "support_line_scene": [
+        [
+          475,
+          173
+        ],
+        [
+          609,
+          204
+        ]
+      ],
+      "height_px": 57,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_left_3",
+      "asset": "book_row",
+      "source_rect": [
+        653,
+        116,
+        1056,
+        499
+      ],
+      "quad_scene": [
+        [
+          475,
+          205
+        ],
+        [
+          609,
+          227
+        ],
+        [
+          609,
+          263
+        ],
+        [
+          475,
+          241
+        ]
+      ],
+      "support_line_scene": [
+        [
+          475,
+          241
+        ],
+        [
+          609,
+          263
+        ]
+      ],
+      "height_px": 36,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_middle_1",
+      "asset": "book_row",
+      "source_rect": [
+        1375,
+        116,
+        528,
+        499
+      ],
+      "quad_scene": [
+        [
+          665,
+          31
+        ],
+        [
+          729,
+          67
+        ],
+        [
+          729,
+          112
+        ],
+        [
+          665,
+          76
+        ]
+      ],
+      "support_line_scene": [
+        [
+          665,
+          76
+        ],
+        [
+          729,
+          112
+        ]
+      ],
+      "height_px": 45,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_middle_2",
+      "asset": "book_row",
+      "source_rect": [
+        1572,
+        116,
+        528,
+        499
+      ],
+      "quad_scene": [
+        [
+          665,
+          115
+        ],
+        [
+          729,
+          139
+        ],
+        [
+          729,
+          178
+        ],
+        [
+          665,
+          154
+        ]
+      ],
+      "support_line_scene": [
+        [
+          665,
+          154
+        ],
+        [
+          729,
+          178
+        ]
+      ],
+      "height_px": 39,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_back_1",
+      "asset": "book_row",
+      "source_rect": [
+        1067,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          781,
+          47
+        ],
+        [
+          889,
+          32
+        ],
+        [
+          889,
+          67
+        ],
+        [
+          781,
+          82
+        ]
+      ],
+      "support_line_scene": [
+        [
+          781,
+          82
+        ],
+        [
+          889,
+          67
+        ]
+      ],
+      "height_px": 35,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_back_2",
+      "asset": "book_row",
+      "source_rect": [
+        33,
+        116,
+        880,
+        499
+      ],
+      "quad_scene": [
+        [
+          781,
+          104
+        ],
+        [
+          889,
+          87
+        ],
+        [
+          889,
+          133
+        ],
+        [
+          781,
+          150
+        ]
+      ],
+      "support_line_scene": [
+        [
+          781,
+          150
+        ],
+        [
+          889,
+          133
+        ]
+      ],
+      "height_px": 46,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_near_1",
+      "asset": "book_row",
+      "source_rect": [
+        1283,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1162,
+          20
+        ],
+        [
+          1210,
+          3
+        ],
+        [
+          1210,
+          31
+        ],
+        [
+          1162,
+          48
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1162,
+          48
+        ],
+        [
+          1210,
+          31
+        ]
+      ],
+      "height_px": 28,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_near_2",
+      "asset": "book_row",
+      "source_rect": [
+        1480,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1162,
+          71
+        ],
+        [
+          1210,
+          53
+        ],
+        [
+          1210,
+          84
+        ],
+        [
+          1162,
+          102
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1162,
+          102
+        ],
+        [
+          1210,
+          84
+        ]
+      ],
+      "height_px": 31,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_near_3",
+      "asset": "book_row",
+      "source_rect": [
+        1677,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          1162,
+          122
+        ],
+        [
+          1210,
+          105
+        ],
+        [
+          1210,
+          137
+        ],
+        [
+          1162,
+          154
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1162,
+          154
+        ],
+        [
+          1210,
+          137
+        ]
+      ],
+      "height_px": 32,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_1",
+      "asset": "book_row",
+      "source_rect": [
+        820,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1238,
+          51
+        ],
+        [
+          1321,
+          25
+        ],
+        [
+          1321,
+          65
+        ],
+        [
+          1238,
+          91
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1238,
+          91
+        ],
+        [
+          1321,
+          65
+        ]
+      ],
+      "height_px": 40,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_2",
+      "asset": "book_row",
+      "source_rect": [
+        1017,
+        116,
+        704,
+        499
+      ],
+      "quad_scene": [
+        [
+          1238,
+          108
+        ],
+        [
+          1321,
+          79
+        ],
+        [
+          1321,
+          121
+        ],
+        [
+          1238,
+          150
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1238,
+          150
+        ],
+        [
+          1321,
+          121
+        ]
+      ],
+      "height_px": 42,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_edge_1",
+      "asset": "book_row",
+      "source_rect": [
+        426,
+        116,
+        1143,
+        499
+      ],
+      "quad_scene": [
+        [
+          1394,
+          18
+        ],
+        [
+          1535,
+          -37
+        ],
+        [
+          1535,
+          10
+        ],
+        [
+          1394,
+          65
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1394,
+          65
+        ],
+        [
+          1535,
+          10
+        ]
+      ],
+      "height_px": 47,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "upper_right_edge_2",
+      "asset": "book_row",
+      "source_rect": [
+        623,
+        116,
+        1143,
+        499
+      ],
+      "quad_scene": [
+        [
+          1394,
+          88
+        ],
+        [
+          1535,
+          35
+        ],
+        [
+          1535,
+          87
+        ],
+        [
+          1394,
+          140
+        ]
+      ],
+      "support_line_scene": [
+        [
+          1394,
+          140
+        ],
+        [
+          1535,
+          87
+        ]
+      ],
+      "height_px": 52,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_edge_1",
+      "asset": "book_row",
+      "source_rect": [
+        903,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          0,
+          59
+        ],
+        [
+          45,
+          68
+        ],
+        [
+          45,
+          158
+        ],
+        [
+          0,
+          149
+        ]
+      ],
+      "support_line_scene": [
+        [
+          0,
+          149
+        ],
+        [
+          45,
+          158
+        ]
+      ],
+      "height_px": 90,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_edge_2",
+      "asset": "book_row",
+      "source_rect": [
+        1100,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          0,
+          183
+        ],
+        [
+          45,
+          192
+        ],
+        [
+          45,
+          270
+        ],
+        [
+          0,
+          261
+        ]
+      ],
+      "support_line_scene": [
+        [
+          0,
+          261
+        ],
+        [
+          45,
+          270
+        ]
+      ],
+      "height_px": 78,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_edge_3",
+      "asset": "book_row",
+      "source_rect": [
+        1297,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          0,
+          294
+        ],
+        [
+          45,
+          305
+        ],
+        [
+          45,
+          363
+        ],
+        [
+          0,
+          352
+        ]
+      ],
+      "support_line_scene": [
+        [
+          0,
+          352
+        ],
+        [
+          45,
+          363
+        ]
+      ],
+      "height_px": 58,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_edge_4",
+      "asset": "book_row",
+      "source_rect": [
+        1494,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          0,
+          379
+        ],
+        [
+          45,
+          387
+        ],
+        [
+          45,
+          451
+        ],
+        [
+          0,
+          443
+        ]
+      ],
+      "support_line_scene": [
+        [
+          0,
+          443
+        ],
+        [
+          45,
+          451
+        ]
+      ],
+      "height_px": 64,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_edge_5",
+      "asset": "book_row",
+      "source_rect": [
+        1691,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          0,
+          470
+        ],
+        [
+          45,
+          473
+        ],
+        [
+          45,
+          533
+        ],
+        [
+          0,
+          530
+        ]
+      ],
+      "support_line_scene": [
+        [
+          0,
+          530
+        ],
+        [
+          45,
+          533
+        ]
+      ],
+      "height_px": 60,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "left_edge_6",
+      "asset": "book_row",
+      "source_rect": [
+        129,
+        116,
+        352,
+        499
+      ],
+      "quad_scene": [
+        [
+          0,
+          573
+        ],
+        [
+          45,
+          579
+        ],
+        [
+          45,
+          644
+        ],
+        [
+          0,
+          638
+        ]
+      ],
+      "support_line_scene": [
+        [
+          0,
+          638
+        ],
+        [
+          45,
+          644
+        ]
+      ],
+      "height_px": 65,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam at support line"
+    },
+    {
+      "id": "new_straight_bookcase_1",
+      "asset": "book_row",
+      "source_rect": [
+        250,
+        116,
+        600,
+        499
+      ],
+      "quad_scene": [
+        [
+          664,
+          257
+        ],
+        [
+          734,
+          257
+        ],
+        [
+          734,
+          289
+        ],
+        [
+          664,
+          289
+        ]
+      ],
+      "support_line_scene": [
+        [
+          664,
+          289
+        ],
+        [
+          734,
+          289
+        ]
+      ],
+      "height_px": 32,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam"
+    },
+    {
+      "id": "new_straight_bookcase_2",
+      "asset": "book_row",
+      "source_rect": [
+        381,
+        116,
+        600,
+        499
+      ],
+      "quad_scene": [
+        [
+          664,
+          304
+        ],
+        [
+          734,
+          304
+        ],
+        [
+          734,
+          336
+        ],
+        [
+          664,
+          336
+        ]
+      ],
+      "support_line_scene": [
+        [
+          664,
+          336
+        ],
+        [
+          734,
+          336
+        ]
+      ],
+      "height_px": 32,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam"
+    },
+    {
+      "id": "new_straight_bookcase_3",
+      "asset": "book_row",
+      "source_rect": [
+        512,
+        116,
+        600,
+        499
+      ],
+      "quad_scene": [
+        [
+          664,
+          350
+        ],
+        [
+          734,
+          350
+        ],
+        [
+          734,
+          382
+        ],
+        [
+          664,
+          382
+        ]
+      ],
+      "support_line_scene": [
+        [
+          664,
+          382
+        ],
+        [
+          734,
+          382
+        ]
+      ],
+      "height_px": 32,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam"
+    },
+    {
+      "id": "new_straight_bookcase_4",
+      "asset": "book_row",
+      "source_rect": [
+        643,
+        116,
+        600,
+        499
+      ],
+      "quad_scene": [
+        [
+          664,
+          397
+        ],
+        [
+          734,
+          397
+        ],
+        [
+          734,
+          426
+        ],
+        [
+          664,
+          426
+        ]
+      ],
+      "support_line_scene": [
+        [
+          664,
+          426
+        ],
+        [
+          734,
+          426
+        ]
+      ],
+      "height_px": 29,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam"
+    },
+    {
+      "id": "new_straight_bookcase_5",
+      "asset": "book_row",
+      "source_rect": [
+        774,
+        116,
+        600,
+        499
+      ],
+      "quad_scene": [
+        [
+          664,
+          440
+        ],
+        [
+          734,
+          440
+        ],
+        [
+          734,
+          472
+        ],
+        [
+          664,
+          472
+        ]
+      ],
+      "support_line_scene": [
+        [
+          664,
+          472
+        ],
+        [
+          734,
+          472
+        ]
+      ],
+      "height_px": 32,
+      "z": 12,
+      "clip_to_quad": true,
+      "baseline_error_px": 0,
+      "render": "bilinear quad mesh",
+      "shadow": "2 px ambient seam"
+    }
+  ],
+  "floor_props": [
+    {
+      "id": "rug",
+      "asset": "rug",
+      "source_rect": [
+        30,
+        50,
+        1478,
+        904
+      ],
+      "quad_scene": [
+        [
+          795,
+          625
+        ],
+        [
+          1250,
+          650
+        ],
+        [
+          1480,
+          878
+        ],
+        [
+          520,
+          810
+        ]
+      ],
+      "z": 14,
+      "render": "projective bilinear quad mesh",
+      "thickness_px": 1,
+      "casts_raised_shadow": false,
+      "clip_to_quad": true,
+      "pile_height_m_estimate": 0.006,
+      "fringe": "short dark brown/tan; no bright white band",
+      "texture": "woven nap with subtle self-shading"
+    }
+  ],
+  "effects": [
+    {
+      "id": "hearth_fire_back",
+      "asset": "hearth_fire",
+      "source_rect": [
+        153,
+        16,
+        978,
+        1187
+      ],
+      "rect_scene": [
+        475,
+        344,
+        115,
+        135
+      ],
+      "z": 22,
+      "clip_surface": "hearth_interior",
+      "flicker_opacity": [
+        0.83,
+        1
+      ],
+      "base_fixed": true
+    },
+    {
+      "id": "potion_flames",
+      "asset": "hearth_fire",
+      "source_rect": [
+        250,
+        12,
+        710,
+        750
+      ],
+      "rect_scene": [
+        505,
+        349,
+        54,
+        50
+      ],
+      "z": 25,
+      "clip_surface": "hearth_interior",
+      "opacity": 0.72,
+      "note": "Upper flame-only crop; no floating logs. Flames rise from potion rim."
+    }
+  ],
+  "revision_notes": [
+    "Added independently adjustable exterior light, warmth and sun height.",
+    "Added independent candle and hearth light controls and four lighting presets.",
+    "Added receiver-clipped contact and cast shadows, including dynamic teaware shadows.",
+    "Added shelf occlusion, rug-edge contact, and shared interior illumination.",
+    "Kept neutral rasters, shadows, light maps and environmental artwork separate."
+  ],
+  "compositing": {
+    "furnishings.png": "Exported from the exact same shelf/rug/static-prop/decor placement data as preview; alpha-only full-canvas static overlay. Interactive sprites and hearth effects excluded.",
+    "ordering": "Use sorted runtime layers to support object/foreground depth. Flattened overlay is a convenience for static assembly.",
+    "projective_mapping": "Bilinear mesh with 20x12 cells and 2 triangles per cell; source and target quads are stored in JSON.",
+    "lighting": "Use lighting.render_pipeline; do not draw opaque RGB light maps directly over the exterior."
+  },
+  "static_primitives": [
+    {
+      "id": "ladder_rail",
+      "type": "brass_rail",
+      "line_scene": [
+        [
+          1124.0,
+          202.793956
+        ],
+        [
+          1215.0,
+          202.793956
+        ]
+      ],
+      "z": 46,
+      "width_px": 4,
+      "mount_brackets": true
+    }
+  ],
+  "lighting": {
+    "version": "1.0.0",
+    "model": "2.5D image-based lighting, approximate diffuse light maps and alpha-silhouette shadow projection",
+    "preserve_original_rasters": true,
+    "color_pipeline": "sRGB artistic compositing; not radiometrically calibrated",
+    "defaults": {
+      "preset": "daylight",
+      "daylight": 70,
+      "kelvin": 6400,
+      "sunElevation": 38,
+      "candles": 65,
+      "hearth": 70,
+      "enabled": true,
+      "shadows": true
+    },
+    "controls": {
+      "daylight": {
+        "label": "Outdoor light",
+        "min": 0,
+        "max": 100,
+        "unit": "percent",
+        "affects": [
+          "exterior exposure",
+          "interior fill",
+          "floor light patch",
+          "cast-shadow strength"
+        ]
+      },
+      "kelvin": {
+        "label": "Outdoor warmth",
+        "min": 2800,
+        "max": 8500,
+        "unit": "K",
+        "affects": [
+          "daylight color",
+          "interior daylight tint"
+        ]
+      },
+      "sunElevation": {
+        "label": "Sun height",
+        "min": 12,
+        "max": 75,
+        "unit": "degrees",
+        "affects": [
+          "shadow length",
+          "floor-light direction"
+        ]
+      },
+      "candles": {
+        "label": "Candlelight",
+        "min": 0,
+        "max": 100,
+        "unit": "percent",
+        "independent_of_daylight": true
+      },
+      "hearth": {
+        "label": "Hearth light",
+        "min": 0,
+        "max": 100,
+        "unit": "percent",
+        "independent_of_daylight": true
+      },
+      "enabled": {
+        "label": "Shared lighting",
+        "type": "boolean"
+      },
+      "shadows": {
+        "label": "Contact and cast shadows",
+        "type": "boolean"
+      }
+    },
+    "presets": {
+      "daylight": {
+        "label": "Sunlit day",
+        "daylight": 70,
+        "kelvin": 6400,
+        "sunElevation": 38,
+        "candles": 65,
+        "hearth": 70,
+        "direct": 0.8,
+        "softness": 4,
+        "weather": "day"
+      },
+      "overcast": {
+        "label": "Overcast",
+        "daylight": 36,
+        "kelvin": 7600,
+        "sunElevation": 48,
+        "candles": 72,
+        "hearth": 76,
+        "direct": 0.2,
+        "softness": 11,
+        "weather": "rain"
+      },
+      "evening": {
+        "label": "Evening",
+        "daylight": 22,
+        "kelvin": 3400,
+        "sunElevation": 16,
+        "candles": 82,
+        "hearth": 86,
+        "direct": 0.6,
+        "softness": 7,
+        "weather": "day"
+      },
+      "night": {
+        "label": "Candlelit night",
+        "daylight": 3,
+        "kelvin": 8200,
+        "sunElevation": 35,
+        "candles": 90,
+        "hearth": 92,
+        "direct": 0.05,
+        "softness": 12,
+        "weather": "night"
+      }
+    },
+    "sources": [
+      {
+        "id": "arch_daylight",
+        "type": "large_opening",
+        "opening_polygon_scene": [
+          [
+            77,
+            489
+          ],
+          [
+            78,
+            174
+          ],
+          [
+            108,
+            105
+          ],
+          [
+            153,
+            93
+          ],
+          [
+            210,
+            143
+          ],
+          [
+            249,
+            215
+          ],
+          [
+            249,
+            489
+          ]
+        ],
+        "falloff_center_scene": [
+          185,
+          310
+        ],
+        "falloff_radius_px": 1050,
+        "light_direction_scene": [
+          1,
+          0.35
+        ],
+        "intensity_control": "daylight",
+        "color_control": "kelvin",
+        "casts_shadows": true
+      },
+      {
+        "id": "upper_window",
+        "type": "large_opening",
+        "opening_polygon_scene": [
+          [
+            983,
+            143
+          ],
+          [
+            982,
+            65
+          ],
+          [
+            1003,
+            30
+          ],
+          [
+            1028,
+            33
+          ],
+          [
+            1041,
+            67
+          ],
+          [
+            1042,
+            143
+          ]
+        ],
+        "falloff_center_scene": [
+          1008,
+          160
+        ],
+        "falloff_radius_px": 500,
+        "intensity_control": "daylight",
+        "relative_strength": 0.23
+      },
+      {
+        "id": "chandelier",
+        "type": "warm_area",
+        "position_scene": [
+          620,
+          145
+        ],
+        "floor_pool_center_scene": [
+          650,
+          540
+        ],
+        "falloff_radius_px": 620,
+        "color_rgb": [
+          255,
+          186,
+          103
+        ],
+        "intensity_control": "candles",
+        "casts_shadows": true
+      },
+      {
+        "id": "hearth",
+        "type": "warm_area",
+        "position_scene": [
+          534,
+          432
+        ],
+        "floor_pool_center_scene": [
+          545,
+          535
+        ],
+        "falloff_radius_px": 430,
+        "color_rgb": [
+          255,
+          137,
+          62
+        ],
+        "intensity_control": "hearth",
+        "casts_shadows": true
+      },
+      {
+        "id": "alchemy_flame",
+        "type": "small_warm_area",
+        "position_scene": [
+          980,
+          500
+        ],
+        "falloff_radius_px": 130,
+        "color_rgb": [
+          248,
+          172,
+          80
+        ],
+        "intensity_control": "candles",
+        "relative_strength": 0.12
+      }
+    ],
+    "receivers": {
+      "floor": {
+        "polygon_scene": [
+          [
+            0,
+            703
+          ],
+          [
+            320,
+            654
+          ],
+          [
+            450,
+            622
+          ],
+          [
+            840,
+            599
+          ],
+          [
+            1280,
+            610
+          ],
+          [
+            1536,
+            705
+          ],
+          [
+            1536,
+            1024
+          ],
+          [
+            0,
+            1024
+          ]
+        ],
+        "occluders_scene": [
+          [
+            [
+              1324,
+              383
+            ],
+            [
+              1512,
+              383
+            ],
+            [
+              1515,
+              711
+            ],
+            [
+              1320,
+              711
+            ]
+          ]
+        ]
+      },
+      "table": {
+        "polygon_scene": [
+          [
+            15,
+            716
+          ],
+          [
+            655,
+            699
+          ],
+          [
+            820,
+            745
+          ],
+          [
+            20,
+            792
+          ]
+        ]
+      },
+      "ledge": {
+        "polygon_scene": [
+          [
+            309,
+            519
+          ],
+          [
+            440,
+            511
+          ],
+          [
+            444,
+            534
+          ],
+          [
+            310,
+            539
+          ]
+        ]
+      },
+      "hearth_floor": {
+        "polygon_scene": [
+          [
+            469,
+            465
+          ],
+          [
+            590,
+            465
+          ],
+          [
+            594,
+            482
+          ],
+          [
+            467,
+            482
+          ]
+        ]
+      },
+      "pedestal": {
+        "polygon_scene": [
+          [
+            1346,
+            385
+          ],
+          [
+            1497,
+            385
+          ],
+          [
+            1502,
+            410
+          ],
+          [
+            1340,
+            410
+          ]
+        ]
+      }
+    },
+    "object_rules": {
+      "wizard": {
+        "receiver": "floor",
+        "contacts": [
+          "foot_left",
+          "foot_right"
+        ],
+        "radius": [
+          17,
+          4
+        ],
+        "opacity": 0.48,
+        "cast": true,
+        "height_scale": 1
+      },
+      "dragon": {
+        "receiver": "floor",
+        "contacts": [
+          "head_contact",
+          "torso_contact",
+          "tail_contact"
+        ],
+        "radii": [
+          [
+            30,
+            5
+          ],
+          [
+            84,
+            10
+          ],
+          [
+            35,
+            5
+          ]
+        ],
+        "opacity": 0.43,
+        "cast": true,
+        "height_scale": 0.65
+      },
+      "chest": {
+        "receiver": "floor",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          65,
+          9
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.8
+      },
+      "ladder": {
+        "receiver": "floor",
+        "contacts": [
+          "foot_left",
+          "foot_right"
+        ],
+        "radius": [
+          8,
+          2.5
+        ],
+        "opacity": 0.48,
+        "cast": true,
+        "height_scale": 0.85
+      },
+      "gargoyle": {
+        "receiver": "pedestal",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          65,
+          4
+        ],
+        "opacity": 0.47,
+        "cast": false
+      },
+      "astrolabe": {
+        "receiver": "ledge",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          23,
+          3
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.4
+      },
+      "cauldron": {
+        "receiver": "hearth_floor",
+        "contacts": [
+          "foot_left",
+          "foot_right",
+          "base"
+        ],
+        "radius": [
+          8,
+          2.5
+        ],
+        "opacity": 0.48,
+        "cast": false
+      },
+      "teapot": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          29,
+          2.8
+        ],
+        "opacity": 0.48,
+        "cast": true,
+        "height_scale": 0.6
+      },
+      "teapot_lid": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          13.64,
+          2.6449999999999996
+        ],
+        "opacity": 0.48,
+        "cast": false,
+        "height_scale": 0.6
+      },
+      "teacup": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          17.16,
+          2.6449999999999996
+        ],
+        "opacity": 0.48,
+        "cast": true,
+        "height_scale": 0.6
+      },
+      "saucer": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          21.56,
+          2.6449999999999996
+        ],
+        "opacity": 0.48,
+        "cast": false,
+        "height_scale": 0.6
+      },
+      "milk_jug": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          17.6,
+          2.6449999999999996
+        ],
+        "opacity": 0.48,
+        "cast": true,
+        "height_scale": 0.6
+      },
+      "sugar_bowl": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          19.36,
+          2.6449999999999996
+        ],
+        "opacity": 0.48,
+        "cast": true,
+        "height_scale": 0.6
+      },
+      "spoon": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          14.52,
+          2.6449999999999996
+        ],
+        "opacity": 0.48,
+        "cast": true,
+        "height_scale": 0.1
+      },
+      "study_books": {
+        "receiver": "floor",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          37.5,
+          4
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.55
+      },
+      "spare_books": {
+        "receiver": "floor",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          30.0,
+          4
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.55
+      },
+      "reading_grimoire": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          42.0,
+          2.875
+        ],
+        "opacity": 0.5,
+        "cast": true,
+        "height_scale": 0.25
+      },
+      "table_candles": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          19.5,
+          2.5
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.55
+      },
+      "ledge_candles": {
+        "receiver": "ledge",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          11.7,
+          2.5
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.55
+      },
+      "desk_scrolls": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          25.5,
+          2.875
+        ],
+        "opacity": 0.5,
+        "cast": true,
+        "height_scale": 0.25
+      },
+      "writing_set": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          21.599999999999998,
+          2.875
+        ],
+        "opacity": 0.5,
+        "cast": true,
+        "height_scale": 0.55
+      },
+      "spare_potions": {
+        "receiver": "floor",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          20.099999999999998,
+          4
+        ],
+        "opacity": 0.4,
+        "cast": true,
+        "height_scale": 0.55
+      },
+      "A_celestial": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          29,
+          2.8
+        ],
+        "opacity": 0.47,
+        "cast": true,
+        "height_scale": 0.6
+      },
+      "B_stoneware": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          29,
+          2.8
+        ],
+        "opacity": 0.47,
+        "cast": true,
+        "height_scale": 0.6
+      },
+      "C_copper": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          29,
+          2.8
+        ],
+        "opacity": 0.47,
+        "cast": true,
+        "height_scale": 0.6
+      },
+      "D_iron": {
+        "receiver": "table",
+        "contacts": [
+          "base"
+        ],
+        "radius": [
+          29,
+          2.8
+        ],
+        "opacity": 0.47,
+        "cast": true,
+        "height_scale": 0.6
+      }
+    },
+    "static_contacts": [
+      {
+        "id": "foreground_table",
+        "receiver": "floor",
+        "points_scene": [
+          [
+            145,
+            1001
+          ],
+          [
+            603,
+            937
+          ],
+          [
+            746,
+            1009
+          ]
+        ],
+        "radius_scene_px": [
+          27,
+          5
+        ],
+        "opacity": 0.44
+      },
+      {
+        "id": "chair",
+        "receiver": "floor",
+        "points_scene": [
+          [
+            90,
+            825
+          ],
+          [
+            290,
+            840
+          ]
+        ],
+        "radius_scene_px": [
+          22,
+          5
+        ],
+        "opacity": 0.25
+      },
+      {
+        "id": "cushion",
+        "receiver": "floor",
+        "points_scene": [
+          [
+            1024,
+            987
+          ]
+        ],
+        "radius_scene_px": [
+          175,
+          22
+        ],
+        "opacity": 0.39
+      }
+    ],
+    "static_cast_proxies": [
+      {
+        "id": "foreground_table",
+        "receiver": "floor",
+        "polygon_scene": [
+          [
+            0,
+            948
+          ],
+          [
+            580,
+            915
+          ],
+          [
+            790,
+            983
+          ],
+          [
+            75,
+            1080
+          ]
+        ],
+        "opacity": 0.2,
+        "height_px": 190
+      },
+      {
+        "id": "chair",
+        "receiver": "floor",
+        "polygon_scene": [
+          [
+            0,
+            788
+          ],
+          [
+            180,
+            755
+          ],
+          [
+            363,
+            837
+          ],
+          [
+            234,
+            920
+          ]
+        ],
+        "opacity": 0.16,
+        "height_px": 200
+      }
+    ],
+    "shadow_projection": {
+      "formula": "worldX + directionX*(supportY-worldY)*k; supportY + directionY*(supportY-worldY)*k + floorSlope*(worldX-supportX)",
+      "floor_slope": 0.035,
+      "sun_height_length_factor": ".30 / tan(sunElevation), clamped .09..1.05",
+      "contact_shadows": "Soft receiver-clipped ellipses at explicit supports; independent of directional-light strength.",
+      "dominant_key": "Daylight when strong enough; otherwise hearth, then chandelier.",
+      "held_objects": "Contact darkening removed; tabletop shadow follows projected horizontal location, fades and softens with estimated lift.",
+      "rebuild_on": [
+        "object translation",
+        "object visibility",
+        "lighting controls",
+        "preset",
+        "reset"
+      ],
+      "limitations": "Authored 2.5D projection; no recovered depth map, normal map or 3D light transport.",
+      "sun_length_coefficient": 0.3,
+      "sun_length_min": 0.09,
+      "sun_length_max": 1.05,
+      "daylight_opacity_base": 0.16,
+      "daylight_direct_opacity": 0.23
+    },
+    "render_pipeline": [
+      "render outside with exposure and atmosphere",
+      "render room and neutral static layers into interior buffer",
+      "render floor contact/cast shadows above rug but below props",
+      "render local receiver shadows before props and teaware",
+      "render props, character, foreground furniture and effects",
+      "multiply shared illumination over interior buffer",
+      "restore original interior alpha to preserve outdoor openings",
+      "composite interior over outside"
+    ],
+    "export_contract": {
+      "lighting_maps": "RGB gain maps for multiply, not opaque scene overlays. Restore interior alpha after multiplying.",
+      "shadow_maps": "Transparent black rasters, source-over on the indicated receiver at the indicated depth.",
+      "neutral_assets": "Art assets remain unchanged; existing source highlights are not removed.",
+      "snapshot_states": "Daylight, overcast, evening, night with wizard; daylight also without wizard. All snapshot maps use the default object arrangement."
+    },
+    "limitations": [
+      "Existing painted highlights remain in the source images.",
+      "Light maps estimate broad surface illumination without per-pixel normals.",
+      "Night exterior is a graded version of the daylight landscape, not new night landscape art.",
+      "Static grouped furniture uses authored shadow proxies rather than recovered silhouettes."
+    ],
+    "illumination_fields": [
+      {
+        "id": "arch_fill",
+        "center_scene": [
+          185,
+          310
+        ],
+        "radius_px": 1030,
+        "scale": [
+          1.12,
+          0.92
+        ],
+        "temperature_driven": true,
+        "control": "daylight",
+        "gain": 0.62
+      },
+      {
+        "id": "upper_window_fill",
+        "center_scene": [
+          1008,
+          170
+        ],
+        "radius_px": 550,
+        "scale": [
+          0.88,
+          1.3
+        ],
+        "temperature_driven": true,
+        "control": "daylight",
+        "gain": 0.25
+      },
+      {
+        "id": "floor_bounce",
+        "center_scene": [
+          500,
+          790
+        ],
+        "radius_px": 680,
+        "scale": [
+          1.25,
+          0.52
+        ],
+        "temperature_driven": true,
+        "control": "daylight",
+        "gain": 0.18
+      },
+      {
+        "id": "chandelier_near",
+        "center_scene": [
+          620,
+          150
+        ],
+        "radius_px": 550,
+        "scale": [
+          1.08,
+          0.9
+        ],
+        "color_rgb": [
+          255,
+          185,
+          105
+        ],
+        "control": "candles",
+        "gain": 0.31
+      },
+      {
+        "id": "chandelier_floor",
+        "center_scene": [
+          650,
+          525
+        ],
+        "radius_px": 590,
+        "scale": [
+          1.1,
+          0.85
+        ],
+        "color_rgb": [
+          255,
+          184,
+          105
+        ],
+        "control": "candles",
+        "gain": 0.22
+      },
+      {
+        "id": "hearth_near",
+        "center_scene": [
+          534,
+          432
+        ],
+        "radius_px": 350,
+        "scale": [
+          1,
+          0.95
+        ],
+        "color_rgb": [
+          255,
+          133,
+          56
+        ],
+        "control": "hearth",
+        "gain": 0.47
+      },
+      {
+        "id": "hearth_floor",
+        "center_scene": [
+          545,
+          560
+        ],
+        "radius_px": 390,
+        "scale": [
+          1.2,
+          0.75
+        ],
+        "color_rgb": [
+          255,
+          147,
+          68
+        ],
+        "control": "hearth",
+        "gain": 0.24
+      },
+      {
+        "id": "alchemy",
+        "center_scene": [
+          980,
+          500
+        ],
+        "radius_px": 140,
+        "scale": [
+          1,
+          1
+        ],
+        "color_rgb": [
+          255,
+          183,
+          102
+        ],
+        "control": "candles",
+        "gain": 0.13
+      },
+      {
+        "id": "table_candles_pool",
+        "center_scene": [
+          755,
+          727
+        ],
+        "radius_px": 150,
+        "scale": [
+          1,
+          0.8
+        ],
+        "color_rgb": [
+          255,
+          184,
+          105
+        ],
+        "control": "candles",
+        "gain": 0.08
+      },
+      {
+        "id": "ledge_candles_pool",
+        "center_scene": [
+          419,
+          511
+        ],
+        "radius_px": 95,
+        "scale": [
+          1,
+          0.8
+        ],
+        "color_rgb": [
+          255,
+          184,
+          105
+        ],
+        "control": "candles",
+        "gain": 0.08
+      }
+    ],
+    "ambient_gain": {
+      "base_rgb": [
+        66,
+        69,
+        80
+      ],
+      "daylight_bounce_rgb": [
+        90,
+        92,
+        100
+      ],
+      "note": "RGB gain factors on 0..255 multiply scale, plus colored area-light fields."
+    },
+    "daylight_floor_patch": {
+      "polygon_scene": [
+        [
+          73,
+          492
+        ],
+        [
+          244,
+          493
+        ],
+        [
+          1045,
+          921
+        ],
+        [
+          796,
+          1010
+        ]
+      ],
+      "gradient_scene": [
+        [
+          150,
+          500
+        ],
+        [
+          1050,
+          950
+        ]
+      ],
+      "gain": 0.17,
+      "opacity_start": 0.9
+    },
+    "snapshot_manifest": "lighting/manifest.json",
+    "reference_renderer": "lighting.js",
+    "minimum_ambient": "At zero added daylight/candles/hearth, ambient_gain.base_rgb retains a small artistic readability fill. Edit this RGB term for total darkness.",
+    "snapshots": {
+      "daylight": "composite.png",
+      "overcast": "composite-overcast.png",
+      "evening": "composite-evening.png",
+      "night": "composite-night.png",
+      "comparison": "lighting-comparison.png",
+      "before_after": "lighting-before-after.png"
+    },
+    "material_response_contract": {
+      "location": "objects[].render.material_response",
+      "order": [
+        "saturate(saturation)",
+        "contrast(contrast)",
+        "brightness(brightness)",
+        "sepia(sepia)",
+        "shared room illumination"
+      ],
+      "note": "Render from original sprites directly. Shadows remain separate. Tea receives stronger brightness reduction than paper and writing props."
+    }
+  },
+  "teapot_choices": {
+    "purpose": "Compare five teapots in the existing room; no design selected yet.",
+    "choices": [
+      {
+        "id": "teapot",
+        "letter": "0",
+        "name": "Current ivory / gold",
+        "base_scene": [
+          95,
+          762
+        ]
+      },
+      {
+        "id": "A_celestial",
+        "letter": "A",
+        "name": "Worn celestial blue",
+        "base_scene": [
+          250,
+          758
+        ]
+      },
+      {
+        "id": "B_stoneware",
+        "letter": "B",
+        "name": "Moss stoneware",
+        "base_scene": [
+          405,
+          750
+        ]
+      },
+      {
+        "id": "C_copper",
+        "letter": "C",
+        "name": "Hammered copper",
+        "base_scene": [
+          560,
+          744
+        ]
+      },
+      {
+        "id": "D_iron",
+        "letter": "D",
+        "name": "Leaf-pattern cast iron",
+        "base_scene": [
+          715,
+          738
+        ]
+      }
+    ],
+    "comparison_only_changes": "Other loose tea-table objects temporarily omitted so pots have unobstructed support. Main library scene remains unchanged.",
+    "scale": "All pots share 135 px raster width; aspect ratios preserved. Approximate comparable vessel size, not physically measured volume.",
+    "labels": "Screen-space annotation at y650, outside prop rasters.",
+    "base_scene_original": "library-kit/scene.json"
+  }
+}

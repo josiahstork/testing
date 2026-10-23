@@ -1,0 +1,223 @@
+{
+  "asset": {
+    "id": "C_copper",
+    "file": "assets/C_copper.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_bbox_threshold_32": [
+      50,
+      77,
+      1513,
+      955
+    ],
+    "sha256": "904f8aa96145d03bf5f5f73bdea8ce8b7ce29cb3a5a1a152674de12bab46ea14",
+    "color_space": "sRGB",
+    "alpha_encoding": "straight",
+    "trimmed": false,
+    "source": "AI-generated original transparent raster; closed complete teapot, lid is not separately segmented."
+  },
+  "object": {
+    "id": "C_copper",
+    "asset": "C_copper",
+    "label": "C \u00b7 Hammered copper",
+    "transform": {
+      "x": 492.5,
+      "y": 661.2,
+      "width": 135,
+      "height": 90.0,
+      "rotation_deg": 0,
+      "origin_uv": [
+        0,
+        0
+      ],
+      "scale": 0.087890625
+    },
+    "z": 78,
+    "depth_sort": "explicit_z; held objects reparent to character hand",
+    "support": "tea_table",
+    "physics": {
+      "body_type": "dynamic",
+      "mass_kg_estimate": 0.8,
+      "material": "copper and wood",
+      "gravity_m_s2": 9.81,
+      "gravity_projected_px_s2": 0,
+      "gravity_note": "2.5D support surfaces; do not apply screen-down gravity on tabletop or shelf. Use world height then project.",
+      "friction_static": 0.65,
+      "friction_dynamic": 0.45,
+      "restitution": 0.03,
+      "center_of_mass_uv": [
+        0.5,
+        0.62
+      ],
+      "contact_uv": [
+        0.5,
+        0.92
+      ],
+      "collision": {
+        "type": "convex_polygon",
+        "space": "source_uv",
+        "vertices": [
+          [
+            0.05,
+            0.3
+          ],
+          [
+            0.5,
+            0.08
+          ],
+          [
+            0.97,
+            0.22
+          ],
+          [
+            0.86,
+            0.65
+          ],
+          [
+            0.65,
+            0.94
+          ],
+          [
+            0.33,
+            0.94
+          ],
+          [
+            0.06,
+            0.65
+          ]
+        ],
+        "accuracy": "Conservative authored proxy; source alpha used for picking."
+      },
+      "rotation_constraints_deg": [
+        0,
+        0
+      ],
+      "free_fall_enabled": false,
+      "breakage_enabled": false,
+      "design_values_only": true
+    },
+    "hit_test": {
+      "mode": "source_alpha",
+      "alpha_threshold": 32,
+      "skip_transparent_holes": true,
+      "inverse_transform_pointer": true,
+      "minimum_target_css_px": 24,
+      "hit_slop_css_px": 3,
+      "priority": 75,
+      "accessible_label": "C \u00b7 Hammered copper"
+    },
+    "anchors": {
+      "base": [
+        0.5,
+        0.92
+      ],
+      "grip_handle": [
+        0.13,
+        0.45
+      ],
+      "grip_under_base": [
+        0.5,
+        0.87
+      ],
+      "spout_tip": [
+        0.94,
+        0.3
+      ],
+      "lid_knob": [
+        0.5,
+        0.15
+      ],
+      "mouth_center": [
+        0.5,
+        0.29
+      ]
+    },
+    "interaction": {
+      "clickable": true,
+      "draggable": true,
+      "pickup": true,
+      "return_on_invalid_drop": true,
+      "return_duration_ms": 300,
+      "keyboard": [
+        "Enter",
+        "Space"
+      ],
+      "actions": [
+        "inspect",
+        "pick_up",
+        "put_down"
+      ],
+      "valid_drop_surfaces": [
+        "tea_table"
+      ]
+    },
+    "shadow": {
+      "implementation": "Separate receiver-clipped contact and alpha-projected cast shadows",
+      "opacity": 0.47,
+      "blur_scene_px": 6,
+      "detach_on_pickup": true,
+      "fade_with_lift": true
+    },
+    "states": {
+      "initial": "closed",
+      "available_raster_states": [
+        "closed"
+      ],
+      "additional_pose_rasters_included": false
+    },
+    "calibration": {
+      "anchors": "Visually authored UV estimates against this exact source raster, including transparent margins.",
+      "physics": "Design estimates; not measured."
+    },
+    "pickup_contract": {
+      "hand_anchor": "grip_handle",
+      "approach_clearance_scene_px": 12,
+      "finger_occlusion": "split character hand into palm behind prop and fingers in front",
+      "preserve_world_transform_on_reparent": true,
+      "held_z": 100,
+      "held_gravity": false,
+      "max_lift_scene_px": 180,
+      "max_translation_speed_scene_px_s": 240,
+      "rotation_pivot": "grip_handle",
+      "rotation_limits_deg": [
+        0,
+        0
+      ],
+      "surface_clearance_before_rotation_scene_px": 18,
+      "accept_drop_on": [
+        "tea_table"
+      ],
+      "collision_with_other_teaware": true,
+      "requires_character_pose": true,
+      "character_art_included": false,
+      "idle_character_art_included": true
+    },
+    "render": {
+      "material_response": {
+        "brightness": 0.96,
+        "saturation": 0.92,
+        "contrast": 0.98,
+        "sepia": 0.025,
+        "implementation": "Direct Canvas2D filter before shared room lighting; original PNG preserved."
+      }
+    },
+    "lighting": {
+      "rule": "C_copper",
+      "rebuild_shadow_when_moved": true,
+      "source_highlights": "baked",
+      "lighting_map": "shared interior gain map",
+      "keep_shadow_separate_from_sprite": true
+    },
+    "category": "teapot_candidate",
+    "lid_contract": {
+      "integrated_in_raster": true,
+      "removable": false,
+      "note": "Separate lid/body art required after choosing a design."
+    }
+  }
+}

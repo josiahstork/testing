@@ -1,0 +1,62 @@
+{
+  "script_errors": [],
+  "choices": [
+    {
+      "id": "teapot",
+      "base": [
+        95,
+        762
+      ],
+      "support_valid": true,
+      "aspect_preserved": true,
+      "shadow_rule": true,
+      "pickable": true
+    },
+    {
+      "id": "A_celestial",
+      "base": [
+        250,
+        758
+      ],
+      "support_valid": true,
+      "aspect_preserved": true,
+      "shadow_rule": true,
+      "pickable": true
+    },
+    {
+      "id": "B_stoneware",
+      "base": [
+        405,
+        750
+      ],
+      "support_valid": true,
+      "aspect_preserved": true,
+      "shadow_rule": true,
+      "pickable": true
+    },
+    {
+      "id": "C_copper",
+      "base": [
+        560,
+        744
+      ],
+      "support_valid": true,
+      "aspect_preserved": true,
+      "shadow_rule": true,
+      "pickable": true
+    },
+    {
+      "id": "D_iron",
+      "base": [
+        715,
+        738
+      ],
+      "support_valid": true,
+      "aspect_preserved": true,
+      "shadow_rule": true,
+      "pickable": true
+    }
+  ],
+  "tabletop_drag_works": true,
+  "offline_folder_loading": true
+}
