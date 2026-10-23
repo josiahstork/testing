@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.1.0-provisional",
+  "status": "procedural_preview_only",
+  "source": {
+    "preferred": "atmosphere-kit/retained/wizard.png",
+    "alternate": "atmosphere-kit/assets/wizard_warm.png",
+    "neutral_albedo_verified": false,
+    "original_pose_preserved": true,
+    "lighting_baked_in": true
+  },
+  "rendering": {
+    "implementation": "HTML Canvas2D CPU pixel lighting (prototype, no WebGL shader)",
+    "preview": "atmosphere-kit/lighting-poc/index.html",
+    "coordinate_system": {
+      "origin": "top-left",
+      "positive_x": "right",
+      "positive_y": "down",
+      "units": "prototype canvas pixels",
+      "canvas": [
+        600,
+        740
+      ]
+    },
+    "normal_estimation": {
+      "method": "central luminance derivative",
+      "map_exported": false,
+      "physically_accurate": false,
+      "limitations": [
+        "Pigment and baked shading may be mistaken for depth",
+        "No authored normals; no geometry-verified material boundaries"
+      ]
+    },
+    "blending": {
+      "operation": "RGB channel multiplication on source straight-alpha RGBA; alpha unchanged",
+      "ambient": 0.62,
+      "falloff": "pow(max(0,1-distance/radius),2)",
+      "direction": "normalized vector (light.x-pixel.x, light.y-pixel.y, 115)",
+      "lambert": "max(0,dot(approx_normal, light_direction))"
+    }
+  },
+  "lights": [
+    {
+      "id": "hearth",
+      "color_srgb": "#ff9037",
+      "enabled": true,
+      "intensity": 1.25,
+      "radius_px": 480,
+      "position_px": [
+        100,
+        505
+      ],
+      "movable": true
+    },
+    {
+      "id": "daylight",
+      "color_srgb": "#76b0ff",
+      "enabled": true,
+      "intensity": 0.75,
+      "radius_px": 560,
+      "position_px": [
+        500,
+        105
+      ],
+      "movable": true
+    }
+  ],
+  "proposed_deliverables": [
+    "wizard_albedo.png",
+    "wizard_normal.png",
+    "wizard_specular.png",
+    "wizard_ao.png"
+  ],
+  "validation": {
+    "status": "not_started",
+    "requires": [
+      "Verify exact transparency against original",
+      "Remove baked warm edge contamination",
+      "Test light off, light from left, right, top and bottom",
+      "Visually review normals for fabric vs jewelry",
+      "Confirm Godot or shader output on actual assembled scene"
+    ]
+  },
+  "warnings": [
+    "No map PNGs were generated or validated",
+    "Not an artifact-ready relighting result",
+    "This demo affects only the wizard; atmosphere-kit/preview.html is untouched"
+  ]
+}
